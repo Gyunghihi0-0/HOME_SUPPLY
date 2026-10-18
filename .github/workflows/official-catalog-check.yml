@@ -1,0 +1,64 @@
+name: Verify official housing catalog
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/official-catalog-check.yml']
+permissions:
+  contents: read
+jobs:
+  catalog:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Inspect allowlisted public housing fields without checkout
+        env:
+          APPLYHOME_SERVICE_KEY: ${{ secrets.APPLYHOME_SERVICE_KEY }}
+        shell: python
+        run: |
+          import os,json,re,time
+          from datetime import datetime,timedelta,timezone
+          from urllib.request import Request,build_opener,HTTPRedirectHandler
+          from urllib.parse import urlencode
+          from urllib.error import HTTPError
+          class NoRedirect(HTTPRedirectHandler):
+           def redirect_request(self,*a,**k):return None
+          opener=build_opener(NoRedirect())
+          key=os.environ.get('APPLYHOME_SERVICE_KEY','').strip()
+          if not key:raise SystemExit('missing_applyhome_key')
+          base='https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/'
+          def get(endpoint,params):
+           params=dict(params,serviceKey=key)
+           try:
+            with opener.open(Request(base+endpoint+'?'+urlencode(params)),timeout=45) as r:d=json.loads(r.read(10000000))
+           except HTTPError as e:raise SystemExit('official_api_http_'+str(e.code)) from None
+           except Exception:raise SystemExit('official_api_request_failed') from None
+           if not isinstance(d.get('data'),list):raise SystemExit('official_api_invalid_response')
+           return d
+          norm=lambda s:re.sub(r'[^가-힣A-Za-z0-9]','',s or '').upper()
+          labels=["아르뮤제이","광교 자연앤 센트레빌","안산신길2 B-1","한화포레나 지제역","시흥 거모 S-1블록 공공분양주택 장애인 특별공급 안내","구리갈매역세권 B-1블록 신안인스빌 디센트","고덕 우미 린 더 프리미어","계양신도시 카이브 유보라","경기광주역 롯데캐슬 시그니처 2단지","엘리프 시흥 더프라임","중앙하이츠 구성 플랫폼시티","부천대장 하우스스토리 디센트","아크메르 동탄 95, 99","향남 롯데캐슬 시그니처","GTX운정중앙역 시티프라디움 4블록","GTX운정중앙역 시티프라디움 3블록","청라 아크원 푸르지오","경기광주역 롯데캐슬 시그니처 2단지","향남역 그로브 스위첸","쌍용 더 플래티넘 한강","화서역 호수공원 아너스빌","시티프라디움 에듀하임","검단 센트레빌 그랑포레","중동역 다채로움 더원","인천계양 A6블록 공공분양주택 장애인 특별공급 안내","동백호수공원 두산위브더제니스","부천대장 하우스스토리 디센트","힐스테이트 고덕엘리스트","더샵 분당하이스트","동백호수공원 두산위브더제니스","산곡역자이힐스테이트&하늘채"]
+          cutoff=(datetime.now(timezone(timedelta(hours=9))).date()-timedelta(days=120)).isoformat()
+          rows=[]
+          for page in range(1,11):
+           d=get('getAPTLttotPblancDetail',{'page':page,'perPage':100,'cond[RCRIT_PBLANC_DE::GTE]':cutoff})
+           rows.extend(d['data'])
+           if len(rows)>=int(d['totalCount']):break
+           time.sleep(0.3)
+          else:raise SystemExit('catalog_pagination_limit')
+          fields=['HOUSE_MANAGE_NO','PBLANC_NO','HOUSE_NM','HSSPLY_ADRES','RCRIT_PBLANC_DE','MVN_PREARNGE_YM','HOUSE_DTL_SECD']
+          count=0
+          for row in rows:
+           name=norm(row.get('HOUSE_NM'))
+           if not any(len(norm(label))>=5 and (norm(label) in name or name in norm(label)) for label in labels):continue
+           public={k:row.get(k) for k in fields}
+           models=get('getAPTLttotPblancMdl',{'page':1,'perPage':100,'cond[HOUSE_MANAGE_NO::EQ]':row['HOUSE_MANAGE_NO'],'cond[PBLANC_NO::EQ]':row['PBLANC_NO']})
+           if int(models['totalCount'])>100:raise SystemExit('model_pagination_required')
+           public['models']=[{k:m.get(k) for k in ['HOUSE_MANAGE_NO','PBLANC_NO','MODEL_NO','HOUSE_TY','LTTOT_TOP_AMOUNT']} for m in models['data']]
+           print('PUBLIC_HOUSING_CATALOG '+json.dumps(public,ensure_ascii=False))
+           count+=1;time.sleep(0.5)
+          print('PUBLIC_HOUSING_CATALOG_COUNT '+str(count))
+          
