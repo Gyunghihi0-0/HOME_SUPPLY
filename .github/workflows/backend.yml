@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '17 23 * * *'
   workflow_dispatch:
+    inputs:
+      refresh_data:
+        description: Refresh official data before deployment
+        type: boolean
+        default: true
   push:
     branches: [main]
     paths: ['scripts/**', 'config/**', 'contracts/**', 'tests/backend/**', 'requirements.txt', '.github/workflows/backend.yml', 'docs/**']
@@ -48,6 +53,7 @@ jobs:
           key: official-api-${{ github.run_id }}
           restore-keys: official-api-
       - name: Collect official data
+        if: github.event_name != 'workflow_dispatch' || inputs.refresh_data
         id: collect
         continue-on-error: true
         env:
@@ -90,3 +96,4 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/deploy-pages@v4
         id: deployment
+
