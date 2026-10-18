@@ -1,0 +1,238 @@
+[
+  {
+    "id": "gg_266126622",
+    "name": "아크메르 동탄 95, 99",
+    "address": "화성특례시 동탄구 반송동 95, 99 번지",
+    "region": "화성특례시",
+    "district": "동탄구",
+    "housing_type": "unknown",
+    "status": "closed",
+    "apply_start_at": "2026-10-06T09:00:00+09:00",
+    "apply_end_at": "2026-10-13T18:00:00+09:00",
+    "deadline_note": null,
+    "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266126622",
+    "notice_updated_at": "2026-09-30",
+    "updated_at": "2026-10-18T14:20:34.756633+09:00",
+    "eligibility": {
+      "yongin_status": "eligible",
+      "disability_scope": "both",
+      "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=902976",
+      "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+      "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+      "conditions": [
+        "신청마감일 당시(’26. 10. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+      ],
+      "rule_version": "1.1.0"
+    },
+    "units": [
+      {
+        "type_id": "아크메르 동탄 95:84C",
+        "area_sqm": null,
+        "allocation_count": 4,
+        "sale_price_krw": null,
+        "sale_price_basis": "unknown",
+        "sale_price_evidence_url": null,
+        "comparison_median_krw": null,
+        "estimated_gap_krw": null,
+        "gap_rate_pct": null,
+        "comparables_count": 0,
+        "confidence": "unavailable",
+        "analysis_reason": "sale_price_and_exclusive_area_pending",
+        "analysis_policy_version": null,
+        "comparables": []
+      },
+      {
+        "type_id": "아크메르 동탄 95:84F",
+        "area_sqm": null,
+        "allocation_count": 2,
+        "sale_price_krw": null,
+        "sale_price_basis": "unknown",
+        "sale_price_evidence_url": null,
+        "comparison_median_krw": null,
+        "estimated_gap_krw": null,
+        "gap_rate_pct": null,
+        "comparables_count": 0,
+        "confidence": "unavailable",
+        "analysis_reason": "sale_price_and_exclusive_area_pending",
+        "analysis_policy_version": null,
+        "comparables": []
+      },
+      {
+        "type_id": "아크메르 동탄 99:84A",
+        "area_sqm": null,
+        "allocation_count": 7,
+        "sale_price_krw": null,
+        "sale_price_basis": "unknown",
+        "sale_price_evidence_url": null,
+        "comparison_median_krw": null,
+        "estimated_gap_krw": null,
+        "gap_rate_pct": null,
+        "comparables_count": 0,
+        "confidence": "unavailable",
+        "analysis_reason": "sale_price_and_exclusive_area_pending",
+        "analysis_policy_version": null,
+        "comparables": []
+      },
+      {
+        "type_id": "아크메르 동탄 99:84B",
+        "area_sqm": null,
+        "allocation_count": 1,
+        "sale_price_krw": null,
+        "sale_price_basis": "unknown",
+        "sale_price_evidence_url": null,
+        "comparison_median_krw": null,
+        "estimated_gap_krw": null,
+        "gap_rate_pct": null,
+        "comparables_count": 0,
+        "confidence": "unavailable",
+        "analysis_reason": "sale_price_and_exclusive_area_pending",
+        "analysis_policy_version": null,
+        "comparables": []
+      },
+      {
+        "type_id": "아크메르 동탄 99:84C",
+        "area_sqm": null,
+        "allocation_count": 3,
+        "sale_price_krw": null,
+        "sale_price_basis": "unknown",
+        "sale_price_evidence_url": null,
+        "comparison_median_krw": null,
+        "estimated_gap_krw": null,
+        "gap_rate_pct": null,
+        "comparables_count": 0,
+        "confidence": "unavailable",
+        "analysis_reason": "sale_price_and_exclusive_area_pending",
+        "analysis_policy_version": null,
+        "comparables": []
+      },
+      {
+        "type_id": "아크메르 동탄 99:84D",
+        "area_sqm": null,
+        "allocation_count": 3,
+        "sale_price_krw": null,
+        "sale_price_basis": "unknown",
+        "sale_price_evidence_url": null,
+        "comparison_median_krw": null,
+        "estimated_gap_krw": null,
+        "gap_rate_pct": null,
+        "comparables_count": 0,
+        "confidence": "unavailable",
+        "analysis_reason": "sale_price_and_exclusive_area_pending",
+        "analysis_policy_version": null,
+        "comparables": []
+      },
+      {
+        "type_id": "아크메르 동탄 99:84E",
+        "area_sqm": null,
+        "allocation_count": 3,
+        "sale_price_krw": null,
+        "sale_price_basis": "unknown",
+        "sale_price_evidence_url": null,
+        "comparison_median_krw": null,
+        "estimated_gap_krw": null,
+        "gap_rate_pct": null,
+        "comparables_count": 0,
+        "confidence": "unavailable",
+        "analysis_reason": "sale_price_and_exclusive_area_pending",
+        "analysis_policy_version": null,
+        "comparables": []
+      }
+    ],
+    "attachments": [
+      {
+        "url": "https://www.gg.go.kr/cmmn/download.do?idx=902976",
+        "name": "붙임2) 화성 「아크메르 동탄」  장애인 특별공급 안내 및 관련서식.hwpx",
+        "parse_status": "parsed",
+        "error_code": null
+      },
+      {
+        "url": "https://www.gg.go.kr/cmmn/download.do?idx=903151",
+        "name": "붙임3) 화성 「아크메르 동탄」  기관추천 안내문.pdf",
+        "parse_status": "parsed",
+        "error_code": null
+      }
+    ],
+    "notice_history": [
+      {
+        "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266126622",
+        "published_on": "2026-09-30",
+        "content_sha256": "31d875b8304a4791863f9f8848be6e4bfb04881a20e57d6f98bc8595b3f4b7cf",
+        "observed_at": "2026-10-18T14:13:21.958272+09:00",
+        "change_type": "initial"
+      }
+    ],
+    "housing_manage_no": null,
+    "pblanc_no": null,
+    "location_verified": false,
+    "collection_issues": [
+      "announcement_only_update",
+      "attachment_text_extracted",
+      "multi_project_notice_requires_block_match",
+      "official_project_not_matched"
+    ]
+  },
+  {
+    "id": "gg_258477426",
+    "name": "힐스테이트 고덕엘리스트",
+    "address": "경기도 평택시 고덕국제화계획지구 A12BL, A65BL",
+    "region": "평택시",
+    "district": "고덕국제화계획지구",
+    "housing_type": "unknown",
+    "status": "closed",
+    "apply_start_at": "2026-09-01T09:00:00+09:00",
+    "apply_end_at": "2026-09-07T18:00:00+09:00",
+    "deadline_note": null,
+    "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477426",
+    "notice_updated_at": "2026-08-27",
+    "updated_at": "2026-10-18T14:13:21.958272+09:00",
+    "eligibility": {
+      "yongin_status": "eligible",
+      "disability_scope": "both",
+      "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=900741",
+      "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 7.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+      "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+      "conditions": [
+        "신청마감일 당시(’26. 9. 7.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+      ],
+      "rule_version": "1.1.0"
+    },
+    "units": [],
+    "attachments": [
+      {
+        "url": "https://www.gg.go.kr/cmmn/download.do?idx=900741",
+        "name": "붙임2) 평택 「힐스테이트 고덕엘리스트」  A12BL 및 A65BL 장애인 특별공급 안내 및 관련서식.hwpx",
+        "parse_status": "parsed",
+        "error_code": null
+      },
+      {
+        "url": "https://www.gg.go.kr/cmmn/download.do?idx=900742",
+        "name": "붙임3-1) 힐스테이트 고덕엘리스트 A12BL_기관추천 특별공급 안내문(최종).pdf",
+        "parse_status": "parsed",
+        "error_code": null
+      },
+      {
+        "url": "https://www.gg.go.kr/cmmn/download.do?idx=900743",
+        "name": "붙임3-2) 힐스테이트 고덕엘리스트 A65BL_기관추천 특별공급 안내문(최종).pdf",
+        "parse_status": "parsed",
+        "error_code": null
+      }
+    ],
+    "notice_history": [
+      {
+        "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477426",
+        "published_on": "2026-08-27",
+        "content_sha256": "b41bf51ca99a14f52b271bab9488366d85fecce1ed61b279143d7ee4c8491165",
+        "observed_at": "2026-10-18T14:13:21.958272+09:00",
+        "change_type": "initial"
+      }
+    ],
+    "housing_manage_no": null,
+    "pblanc_no": null,
+    "location_verified": false,
+    "collection_issues": [
+      "announcement_only_update",
+      "attachment_text_extracted",
+      "official_project_not_matched"
+    ]
+  }
+]

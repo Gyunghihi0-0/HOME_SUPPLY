@@ -31,10 +31,13 @@ def schema():
         "price_krw": {"type":"integer","exclusiveMinimum":0}, "build_year": nullable("integer",minimum=1900),
         "distance_m": nullable("number",minimum=0), "source_url": URL, "collected_at": STAMP})
     unit = obj({"type_id":{"type":"string"}, "area_sqm": nullable("number",exclusiveMinimum=0), "allocation_count":COUNT,
-        "sale_price_krw":nullable("integer",exclusiveMinimum=0), "sale_price_basis":enum("maximum_base_price","exact_base_price","unknown"),
+        "sale_price_krw":nullable("integer",exclusiveMinimum=0), "sale_price_basis":enum("maximum_base_price","exact_base_price","unknown","area_family_maximum"),
         "sale_price_evidence_url":URL, "comparison_median_krw":NUM, "estimated_gap_krw":NUM, "gap_rate_pct":NUM,
         "comparables_count":{"type":"integer","minimum":0}, "confidence":enum("high","medium","low","unavailable"),
         "analysis_reason":TEXT, "analysis_policy_version":TEXT, "comparables":array("comparable")})
+    unit['properties'].update(sale_price_range_krw=obj({'min':MONEY,'max':MONEY}),
+        price_candidate_types={'type':'array','items':{'type':'string'},'minItems':1,'uniqueItems':True},
+        estimated_gap_range_krw={'anyOf':[{'type':'null'},obj({'min':NUM,'max':NUM})]})
     eligibility = obj({"yongin_status":enum("eligible","ineligible","unknown"),
         "disability_scope":enum("both","mild_only","severe_only","unknown"), "evidence_url":URL,
         "evidence_text":TEXT, "scoring_note":TEXT, "conditions":{"type":"array","items":{"type":"string"}},

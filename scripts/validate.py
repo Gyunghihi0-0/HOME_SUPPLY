@@ -32,6 +32,15 @@ def validate(data):
         if (e['yongin_status']!='unknown' or e['disability_scope']!='unknown') and not (e['evidence_url'] and e['evidence_text']):
             raise ValueError('eligibility requires evidence')
         for u in listing['units']:
+            if u['sale_price_basis']=='area_family_maximum':
+                bounds=u.get('sale_price_range_krw',{})
+                if not bounds.get('min') or not bounds.get('max') or bounds['min']>bounds['max'] or u['sale_price_krw']!=bounds['max'] or not u.get('price_candidate_types'):
+                    raise ValueError('invalid area family price range')
+                gap_range=u.get('estimated_gap_range_krw')
+                if u['confidence']=='unavailable':
+                    if gap_range is not None:raise ValueError('unavailable range must be null')
+                elif u['confidence']!='low' or gap_range!={'min':u['comparison_median_krw']-bounds['max'],'max':u['comparison_median_krw']-bounds['min']}:
+                    raise ValueError('invalid area family gap range')
             if u['comparables_count']!=len(u['comparables']):
                 raise ValueError('comparable count mismatch')
             metrics=[u[k] for k in ['comparison_median_krw','estimated_gap_krw','gap_rate_pct']]

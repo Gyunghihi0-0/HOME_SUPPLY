@@ -149,7 +149,8 @@
           "enum": [
             "maximum_base_price",
             "exact_base_price",
-            "unknown"
+            "unknown",
+            "area_family_maximum"
           ]
         },
         "sale_price_evidence_url": {
@@ -207,6 +208,67 @@
           "items": {
             "$ref": "#/$defs/comparable"
           }
+        },
+        "sale_price_range_krw": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false
+        },
+        "price_candidate_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "estimated_gap_range_krw": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "max": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "min",
+                "max"
+              ],
+              "additionalProperties": false
+            }
+          ]
         }
       },
       "required": [

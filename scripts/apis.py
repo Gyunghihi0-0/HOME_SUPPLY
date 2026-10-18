@@ -1,7 +1,7 @@
 import hashlib
 import json
 import math
-from datetime import date
+from datetime import date, timedelta
 from decimal import Decimal
 from defusedxml import ElementTree as ET
 from scripts.http_client import SourceError
@@ -50,13 +50,18 @@ class Applyhome:
 
     def discover(self,listing):
         from scripts.matching import select_project
-        # Service-side title filter reduces calls; matching still requires address evidence.
-        candidates=self.get('getAPTLttotPblancDetail',{'cond[HOUSE_NM::LIKE]':listing['name']})
+        candidates=self.catalog()
         row=select_project(listing,candidates)
         mapping=dict(housing_manage_no=str(row['HOUSE_MANAGE_NO']),pblanc_no=str(row['PBLANC_NO']),
             official_address=row['HSSPLY_ADRES'],evidence_url=listing['notice_url'])
         detail,models=self.project(mapping)
         return mapping,detail,models
+
+    def catalog(self):
+        if not hasattr(self,'_catalog'):
+            cutoff=(date.today()-timedelta(days=180)).isoformat()
+            self._catalog=self.get('getAPTLttotPblancDetail',{'cond[RCRIT_PBLANC_DE::GTE]':cutoff})
+        return self._catalog
 
 class Molit:
     def __init__(self,client,key,allow_general_fallback=False,general_key=None):

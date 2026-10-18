@@ -15,6 +15,7 @@ def distance(a,b):
 
 def calculate(unit,trades,target,locations,policy,today,audit=None):
     result=dict(unit)
+    if 'estimated_gap_range_krw' in result:result['estimated_gap_range_krw']=None
     result.update(comparison_median_krw=None,estimated_gap_krw=None,gap_rate_pct=None,comparables_count=0,
         comparables=[],confidence='unavailable',analysis_policy_version=policy['version'])
     if not policy['approved']:
@@ -55,4 +56,9 @@ def calculate(unit,trades,target,locations,policy,today,audit=None):
     result.update(comparison_median_krw=mid,estimated_gap_krw=gap,gap_rate_pct=round(gap/unit['sale_price_krw']*100,2),
         comparables_count=len(chosen),comparables=sorted(chosen,key=lambda t:(t['trade_date'],t['id'])),
         confidence='high' if high else 'medium' if len(recent)>=3 and len(chosen)>=5 else 'low',analysis_reason='six_month_window' if chosen is recent else 'extended_to_twelve_months')
+    if unit.get('sale_price_basis')=='area_family_maximum':
+        bounds=unit['sale_price_range_krw']
+        result['estimated_gap_range_krw']={'min':mid-bounds['max'],'max':mid-bounds['min']}
+        result['confidence']='low'
+        result['analysis_reason']+='; area_family_type_unconfirmed; conservative_family_maximum_price'
     return result

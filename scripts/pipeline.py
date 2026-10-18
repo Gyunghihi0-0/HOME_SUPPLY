@@ -13,6 +13,8 @@ from scripts.analysis import calculate,months_before
 from scripts.validate import validate,freshness
 from scripts.matching import address_key,compact
 from scripts.structured import normalize_type
+from scripts.price_ranges import family_price
+from scripts.project_groups import expand_projects
 from scripts.geocoding import VWorld
 from scripts.kakao import Kakao
 
@@ -38,7 +40,7 @@ def merge(previous,items,now):
                 and (not p['pblanc_no'] or not new['pblanc_no'] or p['pblanc_no']==new['pblanc_no'])]
             if len(established)==1:new=deepcopy(new);new['id']=established[0]['id']
         if new['id'] not in result:
-            owners=[x for x in result.values() if any(h['notice_url']==new['notice_url'] for h in x['notice_history'])]
+            owners=[x for x in result.values() if '_p' not in x['id'] and '_p' not in new['id'] and any(h['notice_url']==new['notice_url'] for h in x['notice_history'])]
             if len(owners)==1:new=deepcopy(new);new['id']=owners[0]['id']
         # Exact address + exact project name only. Never merge a later supply round,
         # multi-block title, or an announcement whose address is missing.
@@ -82,6 +84,10 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
     apply=apply_client or Applyhome(client,apply_key); molit=Molit(client,trade_key,os.getenv('MOLIT_ALLOW_GENERAL_FALLBACK','').lower()=='true',general_key=os.getenv('MOLIT_GENERAL_SERVICE_KEY'))
     geo=Kakao(client,os.getenv('KAKAO_REST_API_KEY')) if os.getenv('KAKAO_REST_API_KEY') else VWorld(client,os.getenv('VWORLD_API_KEY'),os.getenv('VWORLD_DOMAIN'))
     price_error=None;trade_error=None;price_count=0;trade_count=0;trade_cache={};connected=0;geo_error=None
+    if hasattr(apply,'catalog'):
+        try:items[:]=expand_projects(items,apply.catalog())
+        except SourceError:
+            pass  # Per-listing discovery records the source failure below.
     for item in items:
         print('enrich_start: '+item['id'],flush=True)
         mapping=config['projects'].get(item['id'])
@@ -118,9 +124,12 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                 if not matches:
                     matches=[m for m in models if str(m['MODEL_NO'])==original['type_id'] and str(m['MODEL_NO']) in mapping.get('units',{})]
                 if len(matches)!=1:
-                    units.append(dict(original,analysis_reason='unit_model_not_unique'));continue
+                    fallback=family_price(original,models)
+                    units.append(fallback or dict(original,analysis_reason='unit_model_not_unique'));continue
                 model=matches[0]
                 unit=dict(original)
+                for field in ('sale_price_range_krw','price_candidate_types','estimated_gap_range_krw'):
+                    unit.pop(field,None)
                 unit_mapping=mapping.get('units',{}).get(str(model['MODEL_NO']))
                 if unit_mapping:
                     if unit_mapping['house_ty']!=model['HOUSE_TY'] or not unit_mapping.get('evidence_url'):raise SourceError('unit_evidence_mismatch')
@@ -224,6 +233,8 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                 trade_error='comparison_geocode_budget_reached'
                 item['units']=[dict(u,comparison_median_krw=None,estimated_gap_krw=None,gap_rate_pct=None,
                     comparables=[],comparables_count=0,confidence='unavailable',analysis_reason=trade_error) for u in item['units']]
+                for u in item['units']:
+                    if 'estimated_gap_range_krw' in u:u['estimated_gap_range_krw']=None
             elif any(x in item['collection_issues'] for x in ('some_comparison_locations_unverified','district_coverage_sampled')):
                 for u in item['units']:
                     if u['confidence']!='unavailable':
