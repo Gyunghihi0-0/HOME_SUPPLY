@@ -22,7 +22,7 @@ class Client:
         self.robots={}
         self.failed_origins={}
 
-    def request(self,url,method='GET',params=None,data=None,ttl=0,robots=False):
+    def request(self,url,method='GET',params=None,data=None,ttl=0,robots=False,headers=None):
         if urlsplit(url).scheme!='https':
             raise SourceError('insecure_url')
         if robots:
@@ -39,7 +39,7 @@ class Client:
             raise SourceError(self.failed_origins[origin])
         try:
             time.sleep(self.pause)
-            with self.session.request(method,url,params=params,data=data,timeout=(8,20),stream=True,allow_redirects=False) as response:
+            with self.session.request(method,url,params=params,data=data,headers=headers,timeout=(8,20),stream=True,allow_redirects=False) as response:
                 if response.status_code!=200:
                     if response.status_code==429 or response.status_code>=500:
                         self.failed_origins[origin]=f'http_{response.status_code}'

@@ -65,5 +65,5 @@ def test_vworld_failure_is_not_reported_as_molit_transport_failure(monkeypatch):
     result = enrich([item],BrokenGeo(),NOW,dict(projects={},trade_locations={}),dict(version='test',approved=True),
                     None,'trade-test-key',apply_client=CapturedApplyhome(capture),diagnostics=diagnostics)
     assert result[5] == 'verified_target_location_required'
-    assert diagnostics == dict(vworld_error='vworld_network_error',molit_requested=False)
+    assert diagnostics == dict(vworld_error='vworld_network_error',geocoder='vworld',molit_requested=False)
     assert item['units'][0]['analysis_reason'] == 'verified_coordinates_missing'

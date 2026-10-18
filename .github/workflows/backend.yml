@@ -36,7 +36,7 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: test
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     permissions:
       contents: write
     outputs:
@@ -59,9 +59,10 @@ jobs:
         if: github.event_name != 'workflow_dispatch' || inputs.refresh_data
         id: collect
         continue-on-error: true
-        timeout-minutes: 11
+        timeout-minutes: 13
         env:
           APPLYHOME_SERVICE_KEY: ${{ secrets.APPLYHOME_SERVICE_KEY }}
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
           MOLIT_SERVICE_KEY: ${{ secrets.MOLIT_SERVICE_KEY }}
           MOLIT_GENERAL_SERVICE_KEY: ${{ secrets.MOLIT_GENERAL_SERVICE_KEY }}
           MOLIT_ALLOW_GENERAL_FALLBACK: ${{ vars.MOLIT_ALLOW_GENERAL_FALLBACK }}
