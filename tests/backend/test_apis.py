@@ -74,10 +74,30 @@ def test_required_field_missing_is_explicit(field):
 
 def test_optional_fallback_replaces_month_and_tracks_source():
     row=trade_row();del row['floor']
-    c=FakeClient([xml_response([row]),xml_response([trade_row()])]);api=Molit(c,'secret',allow_general_fallback=True)
+    c=FakeClient([xml_response([row]),xml_response([trade_row()])]);api=Molit(c,'detail-test-key',allow_general_fallback=True,general_key='general-test-key')
     result=api.month('41463','202610',NOW)
     assert [x[0][0] for x in c.calls]==[MOLIT,MOLIT_GENERAL]
     assert len(result)==1 and result[0]['source_url']==TRADE_GENERAL_SOURCE and api.fallback_used
+    assert c.calls[0][1]['params']['serviceKey']=='detail-test-key'
+    assert c.calls[1][1]['params']['serviceKey']=='general-test-key'
+
+def test_general_key_is_required_and_never_reuses_detail_key():
+    c=FakeClient([])
+    with pytest.raises(SourceError,match='missing_molit_general_key'):
+        Molit(c,'detail-test-key').general_month('41463','202610',NOW)
+    assert c.calls==[]
+    row=trade_row();del row['floor']
+    c=FakeClient([xml_response([row])])
+    with pytest.raises(SourceError,match='missing_molit_general_key'):
+        Molit(c,'detail-test-key',allow_general_fallback=True).month('41463','202610',NOW)
+    assert len(c.calls)==1
+
+def test_general_probe_can_run_independently_of_detail_key():
+    c=FakeClient([xml_response([trade_row()])])
+    result=Molit(c,None,general_key='general-test-key').general_month('41463','202610',NOW)
+    assert c.calls[0][0][0]==MOLIT_GENERAL
+    assert c.calls[0][1]['params']['serviceKey']=='general-test-key'
+    assert result[0]['source_url']==TRADE_GENERAL_SOURCE
 
 def test_empty_or_auth_failure_does_not_fallback():
     c=FakeClient([xml_response([])]);api=Molit(c,'secret',allow_general_fallback=True)

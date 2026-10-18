@@ -54,7 +54,7 @@ def merge(previous,items,now):
     return sorted(result.values(),key=lambda x:(x['notice_updated_at'] or '',x['id']),reverse=True)
 
 def enrich(items,client,now,config,policy,apply_key,trade_key):
-    apply=Applyhome(client,apply_key); molit=Molit(client,trade_key,os.getenv('MOLIT_ALLOW_GENERAL_FALLBACK','').lower()=='true')
+    apply=Applyhome(client,apply_key); molit=Molit(client,trade_key,os.getenv('MOLIT_ALLOW_GENERAL_FALLBACK','').lower()=='true',general_key=os.getenv('MOLIT_GENERAL_SERVICE_KEY'))
     price_error=None;trade_error=None;price_count=0;trade_count=0;trade_cache={}
     for item in items:
         mapping=config['projects'].get(item['id'])

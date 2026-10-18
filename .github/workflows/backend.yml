@@ -53,6 +53,8 @@ jobs:
         env:
           APPLYHOME_SERVICE_KEY: ${{ secrets.APPLYHOME_SERVICE_KEY }}
           MOLIT_SERVICE_KEY: ${{ secrets.MOLIT_SERVICE_KEY }}
+          MOLIT_GENERAL_SERVICE_KEY: ${{ secrets.MOLIT_GENERAL_SERVICE_KEY }}
+          MOLIT_ALLOW_GENERAL_FALLBACK: ${{ vars.MOLIT_ALLOW_GENERAL_FALLBACK }}
         run: python -m scripts.pipeline
       - run: python -m scripts.validate docs/data/latest.json
       - name: Commit only generated data

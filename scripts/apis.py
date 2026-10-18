@@ -47,29 +47,33 @@ class Applyhome:
         return row,units
 
 class Molit:
-    def __init__(self,client,key,allow_general_fallback=False):
+    def __init__(self,client,key,allow_general_fallback=False,general_key=None):
         self.client,self.key=client,key
+        self.general_key=general_key
         self.allow_general_fallback=allow_general_fallback
         self.fallback_used=False
         self.last_source_url=TRADE_SOURCE
     def month(self,lawd,month,now):
         if not self.key:raise SourceError('missing_molit_key')
         try:
-            result=normalize_trades(self._rows(MOLIT,lawd,month),lawd,now,TRADE_SOURCE)
+            result=normalize_trades(self._rows(MOLIT,lawd,month,self.key),lawd,now,TRADE_SOURCE)
             self.last_source_url=TRADE_SOURCE
             return result
         except SourceError as exc:
             # No fallback for authentication, quota, outages, empty success, or
             # invalid values. Only an explicitly enabled missing-field fallback.
             if str(exc)!='trade_required_fields_missing' or not self.allow_general_fallback:raise
-        result=normalize_trades(self._rows(MOLIT_GENERAL,lawd,month),lawd,now,TRADE_GENERAL_SOURCE)
+        result=self.general_month(lawd,month,now)
         self.fallback_used=True
         self.last_source_url=TRADE_GENERAL_SOURCE
         return result
-    def _rows(self,endpoint,lawd,month):
+    def general_month(self,lawd,month,now):
+        if not self.general_key:raise SourceError('missing_molit_general_key')
+        return normalize_trades(self._rows(MOLIT_GENERAL,lawd,month,self.general_key),lawd,now,TRADE_GENERAL_SOURCE)
+    def _rows(self,endpoint,lawd,month,key):
         rows=[]
         for page in range(1,101):
-            raw=self.client.request(endpoint,params=dict(serviceKey=self.key,LAWD_CD=lawd,DEAL_YMD=month,pageNo=page,numOfRows=1000),ttl=20*3600)
+            raw=self.client.request(endpoint,params=dict(serviceKey=key,LAWD_CD=lawd,DEAL_YMD=month,pageNo=page,numOfRows=1000),ttl=20*3600)
             try:root=ET.fromstring(raw)
             except Exception:raise SourceError('molit_invalid_xml') from None
             if root.findtext('.//resultCode') not in ('000','00'):raise SourceError('molit_api_error')

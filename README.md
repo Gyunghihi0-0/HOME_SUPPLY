@@ -22,11 +22,21 @@ python -m scripts.validate contracts/example-latest.json docs/data/latest.json
 
 ## 무료 API 키 발급과 GitHub 설정
 
+세 서비스를 각각 승인받았다면 [GitHub Secrets 설정](https://github.com/Gyunghihi0-0/HOME_SUPPLY/settings/secrets/actions)에서 **New repository secret**을 세 번 눌러 다음과 같이 등록합니다. 각 Secret 입력칸에는 키 한 개만 넣습니다.
+
+| 승인받은 서비스 | Secret Name | Secret 값 |
+|---|---|---|
+| 국토부 아파트 매매 실거래가 **일반자료** 15126469 | `MOLIT_GENERAL_SERVICE_KEY` | 일반자료의 일반 인증키(Decoding) |
+| 국토부 아파트 매매 실거래가 **상세자료** 15126468 | `MOLIT_SERVICE_KEY` | 상세자료의 일반 인증키(Decoding) |
+| 한국부동산원 **청약홈 분양정보** 15098547 | `APPLYHOME_SERVICE_KEY` | 청약홈의 일반 인증키(Decoding) |
+
+기존 Secret이 있으면 Update로 값을 바꿉니다. 키 값이 같아도 위 세 이름으로 각각 저장합니다. 일반자료 전용 키는 상세자료 키로 자동 대체하지 않습니다.
+
 1. [공공데이터포털](https://www.data.go.kr/)에 로그인합니다.
 2. [청약홈 분양정보](https://www.data.go.kr/data/15098547/openapi.do)에서 활용신청합니다. 개발계정 승인과 해당 서비스 이용권한을 확인합니다.
 3. [아파트 매매 실거래가 상세자료](https://www.data.go.kr/data/15126468/openapi.do)도 별도로 활용신청합니다. 같은 키여도 서비스별 신청이 필요합니다.
 4. 마이페이지 → 데이터활용 → Open API → 인증키에서 **일반 인증키(Decoding)**를 확인합니다. 이 코드는 requests가 쿼리를 인코딩하므로 Encoding 키를 그대로 넣지 않습니다.
-5. GitHub `Gyunghihi0-0/HOME_SUPPLY` → Settings → Secrets and variables → Actions → New repository secret에서 `APPLYHOME_SERVICE_KEY`, `MOLIT_SERVICE_KEY` 두 개를 등록합니다. 같은 일반 키에 두 서비스가 승인되었다면 같은 값을 각각 넣을 수 있습니다. 키를 채팅·커밋·공개 JSON에 넣지 마세요.
+5. GitHub `Gyunghihi0-0/HOME_SUPPLY` → Settings → Secrets and variables → Actions → New repository secret에서 `APPLYHOME_SERVICE_KEY`, `MOLIT_SERVICE_KEY`, `MOLIT_GENERAL_SERVICE_KEY` 세 개를 각각 등록합니다. 각 Secret에는 해당 서비스의 일반 인증키(Decoding)를 한 개씩 입력합니다. 키 값이 동일해도 Secret은 세 개로 나누어 등록합니다. 키를 채팅·커밋·공개 JSON에 넣지 마세요.
 6. 백엔드 PR 병합 후 Actions → Official data and Pages → Run workflow를 실행합니다. 로그의 출처별 상태와 결과 JSON을 확인합니다. 키만 등록해도 프로젝트 매핑이 자동 검증되는 것은 아니므로 아래 검토 단계가 필요합니다.
 
 로컬 키 설정 후 `python -m scripts.probe_apis`로 인증과 응답 규격을 먼저 검사할 수 있습니다. 이 명령은 공고·거래 응답이나 키를 파일/로그에 공개하지 않고 출처별 성공 여부와 건수만 출력합니다. 현재월 데이터가 0건이어도 정상 응답과 인증 실패를 구분합니다.
@@ -37,7 +47,7 @@ python -m scripts.validate contracts/example-latest.json docs/data/latest.json
 
 국토부 조회는 **상세자료 15126468**이 기본입니다. 기존 `MOLIT_SERVICE_KEY` Secret에 상세자료 활용신청이 승인된 일반 인증키(Decoding)를 입력하세요. 일반자료만 신청했다면 상세자료를 추가 신청해야 합니다. 직접 입력 페이지: https://github.com/Gyunghihi0-0/HOME_SUPPLY/settings/secrets/actions → New repository secret 또는 기존 MOLIT_SERVICE_KEY → Update. Name은 `MOLIT_SERVICE_KEY`, Secret에 키 값을 입력하고 저장합니다. 프론트엔드 파일이나 GitHub Variables에 키를 넣지 않습니다.
 
-상세자료 명세에는 거래금액·전용면적·계약일·층·건축년도·해제 여부/해제일이 모두 있습니다. 검증과 일반자료 보조 조회 정책은 [국토부 API 검증 문서](contracts/molit-api.md)를 참고하세요. 보조 API는 기본 비활성화이며, 별도 환경변수 `MOLIT_ALLOW_GENERAL_FALLBACK=true`를 명시한 실행에서 필수 필드 누락이 발생할 때에만 사용합니다. 두 API 서비스 승인에 같은 기존 Secret을 사용하며 별도 키 이름을 추가하지 않습니다. 현재 workflow는 상세자료만 사용합니다.
+상세자료 명세에는 거래금액·전용면적·계약일·층·건축년도·해제 여부/해제일이 모두 있습니다. 검증과 일반자료 보조 조회 정책은 [국토부 API 검증 문서](contracts/molit-api.md)를 참고하세요. 보조 API는 기본 비활성화이며, 별도 환경변수 `MOLIT_ALLOW_GENERAL_FALLBACK=true`를 명시한 실행에서 필수 필드 누락이 발생할 때에만 사용합니다. 상세자료는 `MOLIT_SERVICE_KEY`, 일반자료는 `MOLIT_GENERAL_SERVICE_KEY`를 각각 사용하며 키를 서로 대체하지 않습니다. GitHub Actions Variables에 `MOLIT_ALLOW_GENERAL_FALLBACK=true`를 등록한 경우에만 일반자료 보조 조회를 허용합니다. 키만 세 개 등록하면 기본 조회는 계속 상세자료 우선입니다.
 
 [데이터 계약](contracts/data-contract.md)과 `config/projects.json`을 참고해 공고번호·주소·주택형·전용면적·장애인 배정물량·공식 좌표를 검토합니다. 단지명 유사도만으로 연결하지 않습니다. 청약홈 공급면적을 전용면적으로 사용하지 않습니다. 분양금액은 API 제공 최고금액(만원→원)임을 표시합니다.
 
