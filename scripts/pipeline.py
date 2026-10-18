@@ -12,7 +12,7 @@ from scripts.apis import Applyhome,Molit,APPLY_SOURCE,TRADE_SOURCE,empty_unit,wo
 from scripts.analysis import calculate,months_before
 from scripts.validate import validate,freshness
 from scripts.matching import address_key,compact
-from scripts.structured import normalize_type
+from scripts.structured import normalize_type,official_type_area
 from scripts.geocoding import VWorld
 from scripts.kakao import Kakao
 
@@ -125,6 +125,11 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                 if unit_mapping:
                     if unit_mapping['house_ty']!=model['HOUSE_TY'] or not unit_mapping.get('evidence_url'):raise SourceError('unit_evidence_mismatch')
                     unit['area_sqm']=unit_mapping.get('area_sqm');unit['allocation_count']=unit_mapping.get('disability_allocation_count')
+                # The verified official HOUSE_TY can encode exact exclusive
+                # area (e.g. 084.9947A). Never use supply area (SUPLY_AR).
+                explicit_area=official_type_area(model.get('HOUSE_TY'))
+                if unit['area_sqm'] is None and explicit_area is not None:
+                    unit['area_sqm']=explicit_area
                 if unit['area_sqm'] is not None:
                     import re
                     number=re.match(r'0*(\d+(?:\.\d+)?)',model['HOUSE_TY'])
