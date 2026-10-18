@@ -20,7 +20,7 @@ jobs:
         shell: python
         run: |
           """Fixed read-only trade/coordinate capture; embedded inline, no repository checkout."""
-          import os,json,re,math,calendar,hashlib
+          import os,json,re,math,calendar,hashlib,time
           from statistics import median
           from decimal import Decimal
           from datetime import datetime,date,timezone,timedelta
@@ -39,10 +39,16 @@ jobs:
               now=datetime.now(timezone(timedelta(hours=9)));key=os.environ.get('MOLIT_SERVICE_KEY','').strip();kakao=os.environ.get('KAKAO_REST_API_KEY','').strip()
               if not key or not kakao:raise SystemExit('missing_secret')
               def get(url,params,headers=None):
-                  try:
-                      with build_opener(NoRedirect()).open(Request(url+'?'+urlencode(params),headers=headers or {}),timeout=25) as response:return response.read(15000000)
-                  except HTTPError as exc:raise RuntimeError('http_'+str(exc.code)) from None
-                  except Exception:raise RuntimeError('transport_error') from None
+                  code='transport_error'
+                  for attempt in range(3):
+                      try:
+                          with build_opener(NoRedirect()).open(Request(url+'?'+urlencode(params),headers=headers or {}),timeout=25) as response:return response.read(15000000)
+                      except HTTPError as exc:
+                          code='http_'+str(exc.code)
+                          if exc.code not in (429,500,502,503,504):raise RuntimeError(code) from None
+                      except Exception:code='transport_error'
+                      time.sleep(attempt+1)
+                  raise RuntimeError(code) from None
               def local(path,params):return json.loads(get('https://dapi.kakao.com/v2/local/'+path,params,{'Authorization':'KakaoAK '+kakao}))['documents']
               districts=set();prefixes={}
               for target in TARGETS:
@@ -54,14 +60,18 @@ jobs:
                                   codes.add(row['code'][:5]);prefixes[row['code'][:5]]=row['region_1depth_name']+' '+row['region_2depth_name']
                   target['lawd_codes']=sorted(codes);districts.update(codes)
               print('TRADE_META '+json.dumps({'observed_at':now.isoformat(),'targets':TARGETS,'coverage':'nine_point_district_sampling_incomplete'},ensure_ascii=False),flush=True)
-              locations=set();records=0;all_rows=[]
+              locations=set();records=0;all_rows=[];failed_districts=set()
               oldest=now.date().replace(year=now.year-1,day=min(now.day,calendar.monthrange(now.year-1,now.month)[1]))
               month=oldest.replace(day=1)
               while month<=now.date():
                   for district in sorted(districts):
                       candidates=[t for t in TARGETS if district in t['lawd_codes']];rows=[];total=0;cancelled=0;invalid=0
                       for page in range(1,31):
-                          raw=get('https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev',{'serviceKey':key,'LAWD_CD':district,'DEAL_YMD':month.strftime('%Y%m'),'pageNo':page,'numOfRows':1000})
+                          try:raw=get('https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev',{'serviceKey':key,'LAWD_CD':district,'DEAL_YMD':month.strftime('%Y%m'),'pageNo':page,'numOfRows':1000})
+                          except RuntimeError as exc:
+                              failed_districts.add(district)
+                              print('TRADE_MONTH_ERROR '+json.dumps({'district':district,'month':month.strftime('%Y%m'),'page':page,'code':str(exc)}),flush=True)
+                              break
                           root=ET.fromstring(raw)
                           if root.findtext('.//resultCode') not in ('000','00'):raise RuntimeError('molit_application_error')
                           total=int(root.findtext('.//totalCount'));items=root.findall('.//items/item')
@@ -131,6 +141,7 @@ jobs:
                       chosen=last6 if len(last6)>=3 else values;mid=median([r['price_krw'] for r in chosen]) if chosen else None
                       reason='sample_insufficient' if len(chosen)<3 else 'outlier_review_required' if max(abs(r['price_krw']-mid)/mid for r in chosen)>.5 else 'verified'
                       if budget_missing:reason='geocode_budget_exhausted'
+                      if failed_districts.intersection(target['lawd_codes']):reason='trade_query_incomplete'
                       for row in chosen:project_evidence[row['id']]=row
                       print('TRADE_ANALYSIS '+json.dumps({'housing_manage_no':target['housing_manage_no'],'type':unit['type'],'area':area,'count':len(chosen),'price':unit['price'],
                           'median':mid if reason=='verified' else None,'gap':mid-unit['price'] if reason=='verified' else None,
@@ -138,6 +149,6 @@ jobs:
                   sample=sorted(project_evidence.values(),key=lambda r:(r['trade_date'],r['id']))[:10]
                   print('TRADE_PROJECT_EVIDENCE '+json.dumps({'housing_manage_no':target['housing_manage_no'],
                       'sample':[{k:r[k] for k in ['apartment_name','trade_date','area_sqm','price_krw','build_year','distance_m']} for r in sample]},ensure_ascii=False),flush=True)
-              print('TRADE_COMPLETE '+json.dumps({'rows':records,'unique_locations':len(locations),'attempted_locations':len(selected),'truncated':len(locations)>500}),flush=True)
+              print('TRADE_COMPLETE '+json.dumps({'rows':records,'unique_locations':len(locations),'attempted_locations':len(selected),'truncated':len(locations)>500,'failed_districts':sorted(failed_districts)}),flush=True)
           
           if __name__=='__main__':main()
