@@ -1,51 +1,51 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-18T14:24:41.983734+09:00",
+  "generated_at": "2026-10-18T17:40:33.027466+09:00",
   "last_success_at": null,
-  "data_status": "partial",
+  "data_status": "stale",
   "sources": [
     {
       "id": "gg",
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
-      "status": "partial",
-      "checked_at": "2026-10-18T14:13:21.958272+09:00",
+      "status": "error",
+      "checked_at": "2026-10-18T17:38:24.538416+09:00",
       "last_success_at": null,
-      "error_code": "notice_or_attachment_failed",
-      "message": "notice_or_attachment_failed",
-      "records_count": 41
+      "error_code": "network_error",
+      "message": "network_error",
+      "records_count": null
     },
     {
       "id": "applyhome",
       "name": "청약홈 분양정보",
       "url": "https://www.data.go.kr/data/15098547/openapi.do",
       "status": "partial",
-      "checked_at": "2026-10-18T05:07:16Z",
+      "checked_at": "2026-10-18T17:38:24.538416+09:00",
       "last_success_at": null,
       "error_code": "official_project_not_matched",
-      "message": "Verified official API capture: https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39099431673",
-      "records_count": 6
+      "message": "official_project_not_matched",
+      "records_count": 7
     },
     {
       "id": "molit",
       "name": "국토교통부 실거래가",
       "url": "https://www.data.go.kr/data/15126468/openapi.do",
       "status": "partial",
-      "checked_at": "2026-10-18T14:13:21.958272+09:00",
+      "checked_at": "2026-10-18T17:38:24.538416+09:00",
       "last_success_at": null,
-      "error_code": "comparison_not_run_missing_coordinates",
-      "message": "Price capture replay; live comparison was not run",
+      "error_code": "network_error",
+      "message": "network_error",
       "records_count": 0
     },
     {
       "id": "vworld",
       "name": "브이월드 공식 좌표",
       "url": "https://www.vworld.kr/",
-      "status": "not_checked",
-      "checked_at": "2026-10-18T14:24:41.983734+09:00",
+      "status": "partial",
+      "checked_at": "2026-10-18T17:38:24.538416+09:00",
       "last_success_at": null,
-      "error_code": "live_geocoding_not_run",
-      "message": "live_geocoding_not_run",
+      "error_code": "coordinates_not_fully_verified",
+      "message": "coordinates_not_fully_verified",
       "records_count": 0
     }
   ],
@@ -2083,7 +2083,7 @@
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "missing_vworld_key"
+        "network_error"
       ]
     },
     {
@@ -2190,7 +2190,7 @@
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "missing_vworld_key"
+        "network_error"
       ]
     },
     {
@@ -2320,7 +2320,7 @@
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "missing_vworld_key"
+        "network_error"
       ]
     },
     {
@@ -2427,7 +2427,7 @@
       "location_verified": false,
       "collection_issues": [
         "application_schedule_postponed",
-        "missing_vworld_key"
+        "network_error"
       ]
     },
     {
@@ -2725,8 +2725,7 @@
       "collection_issues": [
         "application_schedule_postponed",
         "attachment_text_extracted",
-        "disability_allocation_table_required",
-        "missing_vworld_key"
+        "network_error"
       ]
     },
     {
@@ -2842,7 +2841,7 @@
       "address": "경기도 용인시 기흥구 동백동 478-10 번지 일원",
       "region": "용인시",
       "district": "기흥구",
-      "housing_type": "unknown",
+      "housing_type": "private_apt",
       "status": "closed",
       "apply_start_at": "2026-08-18T09:00:00+09:00",
       "apply_end_at": "2026-08-25T18:00:00+09:00",
@@ -2866,15 +2865,15 @@
           "type_id": "61A",
           "area_sqm": null,
           "allocation_count": 1,
-          "sale_price_krw": null,
-          "sale_price_basis": "unknown",
-          "sale_price_evidence_url": null,
+          "sale_price_krw": 480000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
           "comparison_median_krw": null,
           "estimated_gap_krw": null,
           "gap_rate_pct": null,
           "comparables_count": 0,
           "confidence": "unavailable",
-          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_reason": "exclusive_area_unverified",
           "analysis_policy_version": null,
           "comparables": []
         }
@@ -2903,12 +2902,12 @@
           "change_type": "correction"
         }
       ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
+      "housing_manage_no": "2022000596",
+      "pblanc_no": "2022000596",
       "location_verified": false,
       "collection_issues": [
         "announcement_only_update",
-        "official_project_not_matched"
+        "network_error"
       ]
     },
     {
@@ -3079,7 +3078,7 @@
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "missing_vworld_key"
+        "network_error"
       ]
     },
     {
