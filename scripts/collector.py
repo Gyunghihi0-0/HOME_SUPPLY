@@ -1,5 +1,8 @@
 import hashlib
 import re
+import time
+import os
+from copy import deepcopy
 from datetime import date, datetime, timedelta, timezone
 from urllib.parse import urlencode, urljoin
 from bs4 import BeautifulSoup
@@ -99,17 +102,22 @@ def parse_notice(html,row,now):
         listing['collection_issues'].append('announcement_only_update')
     return listing
 
-def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None):
+def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,previous=None,on_record=None,budget_seconds=None,page_order=None,attempted_at=None):
+    deadline=time.monotonic()+budget_seconds if budget_seconds is not None else float('inf')
+    previous=previous or []
     client.request(BOARD,robots=True)
     records={}; errors=[]; seen=set(); partial=False
-    for page in range(start_page,start_page+pages):
+    for page in page_order or range(start_page,start_page+pages):
+        if time.monotonic()>=deadline:partial=True;errors.extend(['notice_budget_exhausted','notice_budget_exhausted_page_'+str(page)]);break
         url=ORIGIN+'/ajax/board/getList.do'
         import json
         raw=client.request(url,method='POST',data=dict(bsIdx='504',bcIdx='0',menuId='1878',offset=page*15,limit=15),robots=True)
         try:d=json.loads(raw)
         except ValueError:raise SourceError('board_invalid_json') from None
         if not isinstance(d.get('items'),list) or not isinstance(d.get('total'),int):raise SourceError('board_structure_changed')
-        for row in d['items']:
+        page_rows=sorted(d['items'],key=lambda row:(attempted_at or {}).get('gg_'+str(row.get('B_IDX')),'')) if attempted_at is not None else d['items']
+        for row in page_rows:
+            if time.monotonic()>=deadline:partial=True;errors.extend(['notice_budget_exhausted','notice_budget_exhausted_page_'+str(page)]);break
             if not all(k in row for k in ('B_IDX','SUBJECT','WRITE_DATE2')):raise SourceError('board_row_changed')
             if str(row['B_IDX']) in seen:continue
             seen.add(str(row['B_IDX']))
@@ -122,9 +130,27 @@ def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None):
             notice_url=ORIGIN+'/bbs/boardView.do?'+urlencode(dict(bsIdx=504,menuId=1878,bIdx=row['B_IDX']))
             try:
                 item=parse_notice(client.request(notice_url,robots=True),row,now)
+                reusable=[p for p in previous if '_p' not in p['id'] and p['notice_url']==item['notice_url']
+                          and p['notice_history'][-1]['content_sha256']==item['notice_history'][-1]['content_sha256']
+                          and {(a['url'],a['name']) for a in p['attachments']}=={(a['url'],a['name']) for a in item['attachments']}
+                          and os.getenv('HOME_SUPPLY_FORCE_REFRESH','').lower()!='true'
+                          and p.get('updated_at') and 0 <= (now-datetime.fromisoformat(p['updated_at'])).total_seconds() <= 3600
+                          and p['attachments'] and all(a['parse_status']=='parsed' for a in p['attachments'])]
+                if len(reusable)==1:
+                    prior=reusable[0]
+                    for key in ('attachments','units','eligibility'):item[key]=deepcopy(prior[key])
+                    item['collection_issues']=sorted(set(prior['collection_issues']+['unchanged_attachment_evidence_reused']))
+                    records[item['id']]=item
+                    if on_record:on_record(item)
+                    continue
                 documents=[];unit_candidates=[];attachment_eligibility=[]
                 if attachments:
                     for a in item['attachments']:
+                        if time.monotonic()>=deadline:
+                            partial=True;a['error_code']='attachment_stage_deferred'
+                            item['collection_issues'].append('attachment_stage_deferred')
+                            item['eligibility']['yongin_status']='unknown';item['eligibility']['disability_scope']='unknown'
+                            continue
                         try:
                             document=read_document(client.request(a['url'],robots=True),a['name'])
                             extracted=document['text'];documents.append(extracted)
@@ -160,7 +186,8 @@ def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None):
                     unique={(e['yongin_status'],e['disability_scope']) for e in attachment_eligibility}
                     if len(unique)==1:item['eligibility']=attachment_eligibility[0]
                 item['collection_issues']=sorted(set(item['collection_issues']))
+                if on_record:on_record(item)
             except Exception:
                 errors.append('gg_'+str(row['B_IDX']));partial=True
-        if (page+1)*15>=d['total']:break
+        if page_order is None and (page+1)*15>=d['total']:break
     return list(records.values()),partial,errors

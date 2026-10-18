@@ -14,10 +14,11 @@ class SourceError(RuntimeError):
     pass
 
 class Client:
-    def __init__(self, cache_dir='.cache', pause=1):
+    def __init__(self, cache_dir='.cache', pause=1, timeout=(8,20), retries=2):
+        self.timeout=timeout
         self.session=requests.Session()
         self.session.headers['User-Agent']='HomeSupplyResearch/1.0 (official public housing notices; daily)'
-        self.session.mount('https://',HTTPAdapter(max_retries=Retry(total=2,backoff_factor=1,status_forcelist=[429,500,502,503,504],allowed_methods=['GET','POST'],respect_retry_after_header=False,raise_on_status=False)))
+        self.session.mount('https://',HTTPAdapter(max_retries=Retry(total=retries,backoff_factor=1,status_forcelist=[429,500,502,503,504],allowed_methods=['GET','POST'],respect_retry_after_header=False,raise_on_status=False)))
         self.cache_dir=Path(cache_dir)
         self.pause=pause
         self.robots={}
@@ -41,7 +42,7 @@ class Client:
             raise SourceError(self.failed_origins[origin])
         try:
             time.sleep(self.pause)
-            with self.session.request(method,url,params=params,data=data,headers=headers,timeout=(8,20),stream=True,allow_redirects=False) as response:
+            with self.session.request(method,url,params=params,data=data,headers=headers,timeout=self.timeout,stream=True,allow_redirects=False) as response:
                 if response.status_code!=200:
                     if response.status_code==429 or response.status_code>=500:
                         self.failed_origins[origin]=f'http_{response.status_code}'
@@ -66,6 +67,9 @@ class Client:
                 except ValueError:raise SourceError('invalid_json_response') from None
                 odcloud=isinstance(payload.get('data'),list) and 'totalCount' in payload
                 vworld=isinstance(payload.get('response'),dict) and payload['response'].get('status')=='OK'
+                if isinstance(payload.get('response'),dict) and payload['response'].get('status')=='ERROR':
+                    code=str(payload['response'].get('error',{}).get('code','UNKNOWN'))
+                    raise SourceError('vworld_api_'+code if re.fullmatch(r'[A-Z_]{1,60}',code) else 'vworld_api_UNKNOWN')
                 if not (odcloud or vworld):
                     raise SourceError('api_application_error')
             else:

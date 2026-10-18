@@ -12,7 +12,7 @@ from scripts.apis import Applyhome,Molit,APPLY_SOURCE,TRADE_SOURCE,empty_unit,wo
 from scripts.analysis import calculate,months_before
 from scripts.validate import validate,freshness
 from scripts.matching import address_key,compact
-from scripts.structured import normalize_type
+from scripts.structured import normalize_type,official_type_area
 from scripts.price_ranges import family_price
 from scripts.project_groups import expand_projects
 from scripts.geocoding import VWorld
@@ -96,7 +96,7 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
             'missing_vworld_key','official_geocode_not_found','geocode_address_mismatch','api_application_error','network_error',
             'verified_target_location_required','target_build_year_uses_official_planned_move_year','disability_allocation_table_required',
             'some_comparison_locations_unverified','comparison_geocode_budget_reached'}
-        item['collection_issues']=[x for x in item['collection_issues'] if x not in transient and not x.startswith(('vworld_','kakao_')) and x!='district_coverage_sampled']
+        item['collection_issues']=[x for x in item['collection_issues'] if x not in transient and not x.startswith(('vworld_','kakao_','official_project_')) and x!='district_coverage_sampled']
         if not mapping:
             try:
                 mapping,detail,models=apply.discover(item);discovered=(detail,models)
@@ -125,7 +125,7 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                     matches=[m for m in models if str(m['MODEL_NO'])==original['type_id'] and str(m['MODEL_NO']) in mapping.get('units',{})]
                 if len(matches)!=1:
                     fallback=family_price(original,models)
-                    units.append(fallback or dict(original,analysis_reason='unit_model_not_unique'));continue
+                    units.append(fallback or dict(original,analysis_reason='official_unit_type_ambiguous' if matches else 'official_unit_type_not_found'));continue
                 model=matches[0]
                 unit=dict(original)
                 for field in ('sale_price_range_krw','price_candidate_types','estimated_gap_range_krw'):
@@ -134,10 +134,20 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                 if unit_mapping:
                     if unit_mapping['house_ty']!=model['HOUSE_TY'] or not unit_mapping.get('evidence_url'):raise SourceError('unit_evidence_mismatch')
                     unit['area_sqm']=unit_mapping.get('area_sqm');unit['allocation_count']=unit_mapping.get('disability_allocation_count')
+                # The verified official HOUSE_TY can encode exact exclusive
+                # area (e.g. 084.9947A). Never use supply area (SUPLY_AR).
+                explicit_area=official_type_area(model.get('HOUSE_TY'))
+                if unit['area_sqm'] is None and explicit_area is not None:
+                    unit['area_sqm']=explicit_area
                 if unit['area_sqm'] is not None:
                     import re
                     number=re.match(r'0*(\d+(?:\.\d+)?)',model['HOUSE_TY'])
-                    if not number or abs(float(number[1])-unit['area_sqm'])>0.02:raise SourceError('exclusive_area_mismatch')
+                    if not number or abs(float(number[1])-unit['area_sqm'])>0.0001:
+                        held=dict(original,sale_price_krw=None,sale_price_basis='unknown',sale_price_evidence_url=None,
+                            comparison_median_krw=None,estimated_gap_krw=None,gap_rate_pct=None,comparables=[],comparables_count=0,
+                            confidence='unavailable',analysis_reason='official_exclusive_area_conflict')
+                        for field in ('sale_price_range_krw','price_candidate_types','estimated_gap_range_krw'):held.pop(field,None)
+                        units.append(held);item['collection_issues'].append('official_exclusive_area_conflict');continue
                 unit.update(sale_price_krw=won(model.get('LTTOT_TOP_AMOUNT')),comparison_median_krw=None,
                     estimated_gap_krw=None,gap_rate_pct=None,comparables=[],comparables_count=0,confidence='unavailable')
                 if unit['sale_price_krw']:
@@ -158,11 +168,22 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
         target=mapping.get('location')
         if not target:
             try:
-                target=geo.locate(item['address'])
+                try:target=geo.locate(item['address'])
+                except SourceError:
+                    from scripts.block_locations import resolve_block_location
+                    block_path=ROOT/'config/block-locations.json'
+                    if not block_path.exists() or not load(block_path)['projects'].get(item['id']):raise
+                    target=resolve_block_location(item,geo,load(block_path)['projects'])
                 move=str(detail.get('MVN_PREARNGE_YM',''))
                 target['build_year']=int(move[:4]) if move[:4].isdigit() else None
-                target['district_prefixes']=geo.districts(target['coordinates'],policy['radius_m'])
-                target['lawd_codes']=sorted(target['district_prefixes'])
+                try:
+                    target['district_prefixes']=geo.districts(target['coordinates'],policy['radius_m'])
+                    target['lawd_codes']=sorted(target['district_prefixes'])
+                except SourceError:
+                    # A neighboring-district outage does not invalidate a verified
+                    # target coordinate. Retain its proven district, label coverage.
+                    item['collection_issues'].append('district_discovery_failed')
+                    item['collection_issues'].append('district_coverage_sampled')
                 if getattr(geo,'coverage_complete',True) is False:
                     item['collection_issues'].append('district_coverage_sampled')
                 item['collection_issues'].append('target_build_year_uses_official_planned_move_year')
@@ -259,6 +280,15 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
     for item in items:item['collection_issues']=sorted(set(item['collection_issues']))
     if diagnostics is not None:
         diagnostics.update(vworld_error=geo_error,geocoder='kakao' if isinstance(geo,Kakao) else 'vworld',molit_requested=bool(trade_cache))
+        if getattr(apply,'_catalog',None) is not None:
+            from scripts.diagnostics import report
+            run=os.getenv('GITHUB_RUN_ID')
+            diagnostics['project_report']=report({'listings':items},{'projects':apply._catalog,'observed_at':now.isoformat(),
+                'cutoff':(now.date()-timedelta(days=365)).isoformat(),
+                'verification_run':'https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/'+run if run else APPLY_SOURCE})
+            if geo_error:
+                from scripts.provider_diagnostics import classify_provider_error
+                diagnostics['project_report']['geocoder_failure']=classify_provider_error(geo_error)
     return pstatus,tstatus,price_count,trade_count,price_error or ('official_project_not_matched' if mapped<len(items) else None),trade_error
 
 def atomic_write(path,data):
@@ -333,6 +363,9 @@ def run(output,pages=3,attachments=True,client=None,now=None,enrichment_only=Fal
         location_audit['generated_at']=data['generated_at']
         write_locations(output.with_name('locations.json'),location_audit)
     atomic_write(output,data)
+    if diagnostics.get('project_report'):
+        from scripts.diagnostic_io import write_report
+        write_report(output.with_name('diagnostics.json'),diagnostics['project_report'])
     health=dict(data_status=status,listings=len(merged),sources={s['id']:s['status'] for s in sources},
         listings_with_units=sum(bool(x['units']) for x in merged),
         listings_with_prices=sum(any(u['sale_price_krw'] for u in x['units']) for x in merged),

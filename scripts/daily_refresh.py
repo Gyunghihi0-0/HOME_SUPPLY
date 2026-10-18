@@ -16,11 +16,13 @@ def refresh(output, timeout=540):
         try:
             notice = subprocess.run([sys.executable,'-u','-m','scripts.refresh_notices',str(output.resolve())],
                 cwd=ROOT,timeout=120,check=False)
-            if notice.returncode:raise OSError('notice_stage_failed')
-        except (subprocess.TimeoutExpired,OSError):
+            if notice.returncode:raise OSError('notice_stage_process_failed')
+        except (subprocess.TimeoutExpired,OSError) as exc:
             data=load(output)
             for entry in data['sources']:
-                if entry['id']=='gg':entry.update(status='error',error_code='notice_stage_failed',message='공고 갱신 실패 · 기존 공고로 가격 분석 진행')
+                if entry['id']=='gg':
+                    code='notice_stage_timeout' if isinstance(exc,subprocess.TimeoutExpired) else 'notice_stage_process_failed'
+                    entry.update(status='error',checked_at=datetime.now(KST).isoformat(),error_code=code,message='공고 갱신 미완료 · 마지막 체크포인트와 기존 자료 보존')
             data['data_status']='stale'
             atomic_write(output,data)
             print('::warning::Notice stage failed; continuing price analysis.',flush=True)

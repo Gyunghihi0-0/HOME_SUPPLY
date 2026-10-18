@@ -50,7 +50,14 @@ class Applyhome:
 
     def discover(self,listing):
         from scripts.matching import select_project
-        candidates=self.catalog()
+        if listing.get('housing_manage_no') and listing.get('pblanc_no'):
+            candidates=self.get('getAPTLttotPblancDetail',{'cond[HOUSE_MANAGE_NO::EQ]':listing['housing_manage_no'],
+                'cond[PBLANC_NO::EQ]':listing['pblanc_no']})
+            # Existing ids are discovery evidence, not proof that a later notice
+            # is the same sale round. Older rounds need explicit document review.
+            if candidates and any(str(r.get('RCRIT_PBLANC_DE',''))[:4] < str(listing.get('notice_updated_at') or '')[:4] for r in candidates):
+                raise SourceError('official_announcement_round_unverified')
+        else:candidates=self.catalog()
         row=select_project(listing,candidates)
         mapping=dict(housing_manage_no=str(row['HOUSE_MANAGE_NO']),pblanc_no=str(row['PBLANC_NO']),
             official_address=row['HSSPLY_ADRES'],evidence_url=listing['notice_url'])
@@ -59,7 +66,7 @@ class Applyhome:
 
     def catalog(self):
         if not hasattr(self,'_catalog'):
-            cutoff=(date.today()-timedelta(days=180)).isoformat()
+            cutoff=(date.today()-timedelta(days=365)).isoformat()
             self._catalog=self.get('getAPTLttotPblancDetail',{'cond[RCRIT_PBLANC_DE::GTE]':cutoff})
         return self._catalog
 

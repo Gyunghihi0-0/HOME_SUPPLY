@@ -5,7 +5,7 @@ from pathlib import Path
 import pytest
 from scripts.collector import parse_period,attachment_has_eligibility_restriction,KST
 from scripts.eligibility import classify
-from scripts.structured import allocation_units,exclusive_areas
+from scripts.structured import allocation_units,exclusive_areas,official_type_area
 from scripts.matching import same_project,select_project
 from scripts.pipeline import merge,enrich
 from scripts.apis import Applyhome,empty_unit
@@ -112,7 +112,17 @@ def test_explicit_application_postponement_does_not_reopen_old_dates():
     result=merge([first],[change],NOW)[0]
     assert result['apply_start_at'] is None and result['apply_end_at'] is None
 
-def test_official_capture_enrichment_does_not_need_local_secret_or_guess_area(monkeypatch):
+def test_exact_official_house_type_area_only():
+    assert official_type_area('084.9592A') == 84.9592
+    assert official_type_area('084.0000B') == 84.0
+    assert official_type_area(' 074.9845 ') == 74.9845
+    assert official_type_area('84A') is None
+    assert official_type_area('84') is None
+    assert official_type_area('SUPLY_AR=111.4') is None
+    assert official_type_area('084.9592A trailing-text') is None
+
+
+def test_official_capture_enrichment_uses_verified_model_type_area(monkeypatch):
     from scripts.replay_catalog import CapturedApplyhome
     capture=json.loads((Path(__file__).parent/'fixtures/official-applyhome-2026-10-18.json').read_text(encoding='utf-8'))
     first=sample_notice();first.update(name='쌍용 더 플래티넘 한강',address='경기도 양평군 양서면 용담리 212-3번지 일원')
@@ -123,7 +133,7 @@ def test_official_capture_enrichment_does_not_need_local_secret_or_guess_area(mo
     stats=enrich([first],NoNetwork(),NOW,dict(projects={},trade_locations={}),dict(version='test',approved=True),None,None,apply_client=CapturedApplyhome(capture))
     assert stats[2]==1
     assert first['units'][0]['sale_price_krw']==748000000
-    assert first['units'][0]['area_sqm'] is None
+    assert first['units'][0]['area_sqm']==84.9947
     assert first['units'][0]['estimated_gap_krw'] is None
     assert first['housing_manage_no'] and first['pblanc_no']
 

@@ -2,6 +2,7 @@
 __pycache__/
 .pytest_cache/
 .cache/
+.audit-evidence/
 .env
 .env.*
 !.env.example
