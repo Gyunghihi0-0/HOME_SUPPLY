@@ -16,6 +16,9 @@ jobs:
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 5
     steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Independently verify both APIs without checkout
         env:
           VWORLD_API_KEY: ${{ secrets.VWORLD_API_KEY }}
