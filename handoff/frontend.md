@@ -57,3 +57,16 @@ Vanilla JS + HTML/CSS, 외부 UI 라이브러리·폰트·인증키 없음. 상�
 - 하나의 현재시각 스냅샷을 목록·필터·요약에 적용합니다. 30초마다 및 visibilitychange/focus/pageshow 복귀 시 재평가합니다. 열린 상세는 상태·안내 텍스트만 갱신해 스크롤과 포커스를 유지합니다. 변화가 없을 때는 목록 DOM을 재작성하지 않습니다. 상태 변화로 원래 버튼이 사라지면 상세를 닫을 때 결과 영역으로 포커스를 돌려줍니다.
 - 로컬 SVG favicon과 상대경로 링크를 추가했습니다. /HOME_SUPPLY/assets/favicon.svg 응답 및 favicon 404 해소를 실제 Edge에서 확인했습니다.
 - 운영 JSON·백엔드·계약·Actions는 수정하지 않았고 Commit/Push/Merge/브랜치 변경도 실행하지 않았습니다.
+
+
+## 2026-10-18 통합 및 Pages 배포 준비
+
+사용자가 Commit/Push/Merge/배포를 승인했습니다. 로컬 커밋 2186075는 보존했고 Git 인증이 없어 사용자의 추가 승인에 따라 GitHub 커넥터로 최신 main 기준의 프론트엔드 커밋 286f23e를 발행했습니다. PR #2를 병합한 커밋은 f7cc96f입니다. 저장소 공개 전환의 전체 소스·이력 공개 영향을 안내한 뒤 사용자가 명시적으로 승인하고 직접 공개 전환 및 Pages Source=GitHub Actions를 설정했습니다.
+
+기존 수집이 30분 넘게 지속되어 사용자가 기존 backend.yml의 수동 refresh_data 옵션 추가를 승인했습니다. PR #3(804e623 병합)은 boolean 기본값 true와 수동 false일 때만 수집을 건너뛰는 조건 7줄만 추가합니다. 예약/push 수집, JSON 검증, 기존 배포·권한·Secrets는 그대로입니다. YAML 및 조건 진리표 검사와 PR CI가 통과했습니다. 새 워크플로는 만들지 않았습니다. 수집을 끈 배포는 기존 JSON의 생성시각 및 partial 상태를 보존합니다.
+
+초기 배포 실행 39093487045는 수집·JSON 검증까지 완료했지만, 실행 중 main에 옵션 PR이 병합되어 기존 checkout의 데이터 push가 non-fast-forward로 거절됐습니다. 강제 push하지 않았고 기존 운영 JSON은 보존됐습니다. 이 실행의 deploy는 skipped입니다. 기존 백엔드 workflow의 데이터 push는 동시 main 변경 시 안전하게 실패하지만 자동 재시도하지 않는 한계가 있습니다.
+
+현재 필요한 사용자 단계: Actions → Official data and Pages → Run workflow → main → Refresh official data before deployment 체크 해제 후 실행. 연결 도구에는 workflow_dispatch 및 취소 기능이 없고 로그인된 브라우저 세션도 없어 이 클릭은 사용자가 수행해야 합니다. 실행 후 Pages 성공 및 공개 URL smoke test를 확인해야 배포 완료입니다. 공개 저장소/Pages 활성화만으로 배포 완료로 간주하지 않습니다.
+
+로컬 main은 승인된 병합 결과로 fast-forward 동기화했고 기존 frontend/ui-dashboard 로컬 커밋은 삭제하거나 재작성하지 않았습니다.
