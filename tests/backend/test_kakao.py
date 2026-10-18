@@ -35,3 +35,37 @@ def test_district_sampling_is_never_called_complete():
     geo=Kakao(Client(),'test-key')
     assert geo.districts([37.54,127.32],2000)=={'41830':'경기 양평군'}
     assert geo.coverage_complete is False
+
+def test_enrichment_computes_gap_from_verified_kakao_and_trade_rows(monkeypatch):
+    from pathlib import Path
+    from scripts import pipeline
+    from scripts.apis import empty_unit, TRADE_SOURCE
+    from scripts.replay_catalog import CapturedApplyhome
+    from tests.backend.test_enrichment import sample_notice, NOW
+    root=Path(__file__).resolve().parents[2]
+    captured=json.loads((root/'tests/backend/fixtures/official-applyhome-2026-10-18.json').read_text(encoding='utf-8'))
+    policy=json.loads((root/'config/analysis.json').read_text(encoding='utf-8'))
+    item=sample_notice()
+    item.update(name='쌍용 더 플래티넘 한강',address='경기도 양평군 양서면 용담리 212-3번지 일원')
+    item['units']=[dict(empty_unit('84A',84.9947),allocation_count=1)]
+    monkeypatch.setenv('KAKAO_REST_API_KEY','test-key')
+    class Trades:
+        fallback_used=False
+        def __init__(self,*args,**kw):pass
+        def month(self,lawd,month,now):
+            if month!='202609':return []
+            return [dict(id=str(i),location='41830|양서면 용담리|212-3',apartment_name='검증 표본',
+                area_sqm=84.9,trade_date=f'2026-09-{10+i}',price_krw=price,build_year=2024,
+                distance_m=None,source_url=TRADE_SOURCE,collected_at=now.isoformat())
+                for i,price in enumerate([590000000,600000000,610000000])]
+    monkeypatch.setattr(pipeline,'Molit',Trades)
+    class Client:
+        def request(self,url,**kw):
+            if 'coord2regioncode' in url:
+                return json.dumps({'documents':[dict(region_type='B',code='4183033021',region_1depth_name='경기',region_2depth_name='양평군')]})
+            return json.dumps({'documents':[document()]})
+    pipeline.enrich([item],Client(),NOW,dict(projects={},trade_locations={}),policy,None,'trade-test-key',apply_client=CapturedApplyhome(captured))
+    unit=item['units'][0]
+    assert unit['comparables_count']==3 and unit['comparison_median_krw']==600000000
+    assert unit['estimated_gap_krw']==-148000000 and unit['gap_rate_pct']==-19.79
+    assert unit['confidence']=='low' and '전체 지역 포괄 여부 미확인' in unit['analysis_reason']
