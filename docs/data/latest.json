@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-18T13:49:59.531769+09:00",
+  "generated_at": "2026-10-18T14:24:41.983734+09:00",
   "last_success_at": null,
   "data_status": "partial",
   "sources": [
@@ -9,32 +9,43 @@
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
       "status": "partial",
-      "checked_at": "2026-10-18T13:26:24.655732+09:00",
+      "checked_at": "2026-10-18T14:13:21.958272+09:00",
       "last_success_at": null,
       "error_code": "notice_or_attachment_failed",
       "message": "notice_or_attachment_failed",
-      "records_count": 37
+      "records_count": 41
     },
     {
       "id": "applyhome",
       "name": "청약홈 분양정보",
       "url": "https://www.data.go.kr/data/15098547/openapi.do",
       "status": "partial",
-      "checked_at": "2026-10-18T13:26:24.655732+09:00",
+      "checked_at": "2026-10-18T05:07:16Z",
       "last_success_at": null,
-      "error_code": "official_project_mapping_required",
-      "message": "official_project_mapping_required",
-      "records_count": 0
+      "error_code": "official_project_not_matched",
+      "message": "Verified official API capture: https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39099431673",
+      "records_count": 6
     },
     {
       "id": "molit",
       "name": "국토교통부 실거래가",
       "url": "https://www.data.go.kr/data/15126468/openapi.do",
       "status": "partial",
-      "checked_at": "2026-10-18T13:26:24.655732+09:00",
+      "checked_at": "2026-10-18T14:13:21.958272+09:00",
       "last_success_at": null,
-      "error_code": null,
-      "message": null,
+      "error_code": "comparison_not_run_missing_coordinates",
+      "message": "Price capture replay; live comparison was not run",
+      "records_count": 0
+    },
+    {
+      "id": "vworld",
+      "name": "브이월드 공식 좌표",
+      "url": "https://www.vworld.kr/",
+      "status": "not_checked",
+      "checked_at": "2026-10-18T14:24:41.983734+09:00",
+      "last_success_at": null,
+      "error_code": "live_geocoding_not_run",
+      "message": "live_geocoding_not_run",
       "records_count": 0
     }
   ],
@@ -52,19 +63,68 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
       "notice_updated_at": "2026-10-16",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=904209",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 2.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 11. 2.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 4,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84C",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=904209",
@@ -84,7 +144,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
           "published_on": "2026-10-16",
           "content_sha256": "26b29e3c21bbb8120463969583431ec7442d176b94dc14e9702878214ff43f06",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -92,8 +152,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -109,19 +170,68 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268770591",
       "notice_updated_at": "2026-10-14",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268770591",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=904096",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 26.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 26.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": 84.7637,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": 84.8159,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84C",
+          "area_sqm": 84.6192,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=904096",
@@ -141,7 +251,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268770591",
           "published_on": "2026-10-14",
           "content_sha256": "3b40e0005c21dccfb5f0b95313cbf2b98fe7a340c6676a8f3d6b5ee078120166",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -149,9 +259,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -167,19 +277,52 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529927",
       "notice_updated_at": "2026-10-12",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529927",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=903871",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 22.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 22.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "74A",
+          "area_sqm": 74.94,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": 84.71,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903871",
@@ -199,7 +342,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529927",
           "published_on": "2026-10-12",
           "content_sha256": "d04c76af4ed07fbd0010242b307abc52ab48aaa9f8419d2f6e449641399e9101",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -207,9 +350,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -219,23 +362,90 @@
       "region": "평택시",
       "district": "평택영신지구",
       "housing_type": "unknown",
-      "status": "unknown",
-      "apply_start_at": null,
-      "apply_end_at": null,
+      "status": "closed",
+      "apply_start_at": "2026-10-01T09:00:00+09:00",
+      "apply_end_at": "2026-10-08T18:00:00+09:00",
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529926",
       "notice_updated_at": "2026-10-12",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": null,
-        "evidence_text": null,
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=902878",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 8.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [],
-        "rule_version": "1.0.0"
+        "conditions": [
+          "신청마감일 당시(’26. 10. 8.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 8,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84C",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84D",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903870",
@@ -249,14 +459,14 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886741",
           "published_on": "2026-09-29",
           "content_sha256": "88733d6e3c9015327d267ca60faf1b7654a4082712241cc32d82cc3828d0cfc3",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         },
         {
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529926",
           "published_on": "2026-10-12",
           "content_sha256": "fdf06f776f29951c373b76c690f3c89937bbb6369c17f92df0e3d248c549b5f7",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         }
       ],
@@ -264,9 +474,8 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -282,19 +491,68 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567650",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567650",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=903531",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 20.) 경기도 거주 만19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 20.) 경기도 거주 만19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "59A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903531",
@@ -314,7 +572,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567650",
           "published_on": "2026-10-07",
           "content_sha256": "3b965e26901472eaae630156180b0b72910ace529a4823471cdc5f668189f25d",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -322,8 +580,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -339,19 +598,52 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567647",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567647",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=903520",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 20.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 20.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "75",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903520",
@@ -371,7 +663,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567647",
           "published_on": "2026-10-07",
           "content_sha256": "826c6828e0d5c7112c54497801716b3bf453ecbc1dfaf0914adf986d3ae2722f",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -379,8 +671,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -396,19 +689,68 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327319",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327319",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=903439",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 23.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 23.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": 84.9343,
+          "allocation_count": 6,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": 84.9075,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84D",
+          "area_sqm": 84.8505,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903439",
@@ -428,7 +770,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327319",
           "published_on": "2026-10-07",
           "content_sha256": "822d0abc486844230ddd2e088e56197569b6de9e09c5e79038e0adc43b0ba22d",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -436,8 +778,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -453,19 +796,68 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327317",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327317",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=903435",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 19.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 19.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": 84.3473,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": 84.6971,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84D",
+          "area_sqm": 84.5968,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903435",
@@ -491,7 +883,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327317",
           "published_on": "2026-10-07",
           "content_sha256": "73a98da287c50d3a448182e5aa1f1bacf0e0357f2492055aa7f52aa07db1d95b",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -499,8 +891,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -516,17 +909,116 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567671",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": null,
-        "evidence_text": null,
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=900386",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 4.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [],
-        "rule_version": "1.0.0"
+        "conditions": [
+          "신청마감일 당시(’26. 9. 4.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "59A",
+          "area_sqm": 59.9299,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59B",
+          "area_sqm": 59.8802,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59D",
+          "area_sqm": 59.9064,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A2",
+          "area_sqm": null,
+          "allocation_count": 7,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84C",
+          "area_sqm": 84.9481,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84E",
+          "area_sqm": 84.9309,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903568",
@@ -540,21 +1032,28 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=256574856",
           "published_on": "2026-08-18",
           "content_sha256": "a4ad2d1ac6cac9582c86c00177909d380d0981cf64338a083417a1a384790b5a",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         },
         {
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=261338536",
           "published_on": "2026-09-07",
           "content_sha256": "5509d5dd4e9391c408bd73f38fbe84c874e437bbcbb850f056a308f860fe5c57",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
+          "change_type": "correction"
+        },
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=263730012",
+          "published_on": "2026-09-18",
+          "content_sha256": "441f2fd1e459948c4bd5401f83cf8f6b2a94f7933e36beeef90ac0037819e44a",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         },
         {
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567671",
           "published_on": "2026-10-07",
           "content_sha256": "a8bae6545cf7507c5fecb4c7cfaaf24f4c9bc1ee378624f3039a7cfa0a2b8d51",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         }
       ],
@@ -562,8 +1061,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -579,19 +1079,52 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366601",
       "notice_updated_at": "2026-10-02",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366601",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=903142",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 26.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 26.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903142",
@@ -611,7 +1144,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366601",
           "published_on": "2026-10-02",
           "content_sha256": "a23e45403b2dc4997df0656a5c46a5aeac6ad64bfd04d8313c23daa84b053cbd",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -619,8 +1152,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -636,19 +1170,36 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366609",
       "notice_updated_at": "2026-10-01",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366609",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=903152",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "74",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903152",
@@ -668,7 +1219,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366609",
           "published_on": "2026-10-01",
           "content_sha256": "9c83740fb2bd4e48db8796d8df0e1847d32e857acebe495288cf4aacfe6450c9",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -676,34 +1227,118 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
-      "id": "gg_266366606",
+      "id": "gg_260145183",
       "name": "부천대장 하우스스토리 디센트",
       "address": "부천시 부천대장 공공주택지구 A2 블록",
       "region": "부천시",
       "district": "공공주택지구",
       "housing_type": "unknown",
-      "status": "unknown",
-      "apply_start_at": null,
-      "apply_end_at": null,
-      "deadline_note": null,
+      "status": "closed",
+      "apply_start_at": "2026-09-14",
+      "apply_end_at": "2026-09-18",
+      "deadline_note": "연도는 공고 게시연도 기준으로 해석했습니다. 정확한 마감 시각은 공식 안내 확인 필요",
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366606",
       "notice_updated_at": "2026-10-01",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": null,
-        "evidence_text": null,
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=901243",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 18.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [],
-        "rule_version": "1.0.0"
+        "conditions": [
+          "신청마감일 당시(’26. 9. 18.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "59A",
+          "area_sqm": null,
+          "allocation_count": 5,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59B",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59C",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "74A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=903148",
@@ -714,10 +1349,17 @@
       ],
       "notice_history": [
         {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145183",
+          "published_on": "2026-09-01",
+          "content_sha256": "b3509e343d1c6b41f81d0e769a5720e1318a1f8a61d1f051bc6da2ac1f0d125d",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
+          "change_type": "initial"
+        },
+        {
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366606",
           "published_on": "2026-10-01",
           "content_sha256": "6c4139d031481b7b7fdb7a610973c131ae3e0fd1c5e9c8f4bf9fa21ddcf82922",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         }
       ],
@@ -725,9 +1367,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -743,19 +1385,132 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266126622",
       "notice_updated_at": "2026-09-30",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:20:34.756633+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266126622",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=902976",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "아크메르 동탄 95:84C",
+          "area_sqm": null,
+          "allocation_count": 4,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "아크메르 동탄 95:84F",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "아크메르 동탄 99:84A",
+          "area_sqm": null,
+          "allocation_count": 7,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "아크메르 동탄 99:84B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "아크메르 동탄 99:84C",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "아크메르 동탄 99:84D",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "아크메르 동탄 99:84E",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=902976",
@@ -775,7 +1530,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266126622",
           "published_on": "2026-09-30",
           "content_sha256": "31d875b8304a4791863f9f8848be6e4bfb04881a20e57d6f98bc8595b3f4b7cf",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -783,8 +1538,10 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "multi_project_notice_requires_block_match",
+        "official_project_not_matched"
       ]
     },
     {
@@ -800,19 +1557,132 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886763",
       "notice_updated_at": "2026-09-30",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886763",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=902947",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 5,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84C",
+          "area_sqm": null,
+          "allocation_count": 4,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84D",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84E",
+          "area_sqm": null,
+          "allocation_count": 5,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84F",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84G",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=902947",
@@ -832,7 +1702,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886763",
           "published_on": "2026-09-30",
           "content_sha256": "fe2536aec7621baac85333230b264453b4092554f1ea85bc143f517d3bb55eac",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -840,8 +1710,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -857,19 +1728,52 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886757",
       "notice_updated_at": "2026-09-30",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886757",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=902924",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 16.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 16.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "60",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84",
+          "area_sqm": null,
+          "allocation_count": 4,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=902924",
@@ -889,7 +1793,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886757",
           "published_on": "2026-09-30",
           "content_sha256": "257f259c0038894286f2df30bdaa988a9135b92185dc073f4125ae1a8e2fb3c6",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -897,8 +1801,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -914,19 +1819,52 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886756",
       "notice_updated_at": "2026-09-30",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886756",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=902922",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 16.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 10. 16.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": 84.9594,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": 84.4998,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=902922",
@@ -946,7 +1884,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886756",
           "published_on": "2026-09-30",
           "content_sha256": "1864baffa055f7b5b27e69c82cfdd17f665b3f5d05654f9572ee20296d1fa771",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -954,8 +1892,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -971,7 +1910,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886762",
       "notice_updated_at": "2026-09-29",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -979,7 +1918,7 @@
         "evidence_text": null,
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
       "units": [],
       "attachments": [
@@ -995,7 +1934,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886762",
           "published_on": "2026-09-29",
           "content_sha256": "f5a37598ff733d9bf2934307180f318f4f675248e32fd9e8b8d15aa2499d1c54",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         }
       ],
@@ -1003,57 +1942,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
-      ]
-    },
-    {
-      "id": "gg_263730012",
-      "name": "경기광주역 롯데캐슬 시그니처 2단지",
-      "address": "경기도 광주시 쌍령동 산 54-29 번지",
-      "region": "광주시",
-      "district": null,
-      "housing_type": "unknown",
-      "status": "unknown",
-      "apply_start_at": null,
-      "apply_end_at": null,
-      "deadline_note": null,
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=263730012",
-      "notice_updated_at": "2026-09-18",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
-      "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": null,
-        "evidence_text": null,
-        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [],
-        "rule_version": "1.0.0"
-      },
-      "units": [],
-      "attachments": [
-        {
-          "url": "https://www.gg.go.kr/cmmn/download.do?idx=902441",
-          "name": "광주시 「경기광주역 롯데캐슬 시그니처 2단지」 장애인 기관추천 특별공급 안내문(일정변경).pdf",
-          "parse_status": "parsed",
-          "error_code": null
-        }
-      ],
-      "notice_history": [
-        {
-          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=263730012",
-          "published_on": "2026-09-18",
-          "content_sha256": "441f2fd1e459948c4bd5401f83cf8f6b2a94f7933e36beeef90ac0037819e44a",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
-          "change_type": "correction"
-        }
-      ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
-      "location_verified": false,
-      "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -1062,26 +1953,107 @@
       "address": "화성특례시 만세구 향남읍 하길리 404-2 번지 일원",
       "region": "화성특례시",
       "district": "만세구",
-      "housing_type": "unknown",
+      "housing_type": "private_apt",
       "status": "closed",
       "apply_start_at": "2026-09-16T09:00:00+09:00",
       "apply_end_at": "2026-09-22T18:00:00+09:00",
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=262772736",
       "notice_updated_at": "2026-09-14",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=262772736",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=902080",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 22.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 9. 22.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "71",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 470300000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 4,
+          "sale_price_krw": 557500000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 557200000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84C",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 559700000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84D",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 554500000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=902080",
@@ -1101,17 +2073,17 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=262772736",
           "published_on": "2026-09-14",
           "content_sha256": "57e0410d3d262f17150a0122e4d44c656bb5f3bca3c4365749d4ecb246d593fc",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
+      "housing_manage_no": "2026000463",
+      "pblanc_no": "2026000463",
       "location_verified": false,
       "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "missing_vworld_key"
       ]
     },
     {
@@ -1120,26 +2092,75 @@
       "address": "경기도 양평군 양서면 용담리 212-3번지 일원",
       "region": "양평군",
       "district": null,
-      "housing_type": "unknown",
+      "housing_type": "private_apt",
       "status": "closed",
       "apply_start_at": "2026-09-21T09:00:00+09:00",
       "apply_end_at": "2026-09-29T18:00:00+09:00",
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=262294421",
       "notice_updated_at": "2026-09-14",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=262294421",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=901924",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 29.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 9. 29.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "74",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 614000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": 84.9947,
+          "allocation_count": 1,
+          "sale_price_krw": 748000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "verified_coordinates_missing",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": 84.8542,
+          "allocation_count": 1,
+          "sale_price_krw": 746000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "verified_coordinates_missing",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=901924",
@@ -1159,16 +2180,17 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=262294421",
           "published_on": "2026-09-14",
           "content_sha256": "6dbdb12b7c6f77dc640aa9d6ea1d883bdffc3b0449014c7379ae73c1005f56c5",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
+      "housing_manage_no": "2026000468",
+      "pblanc_no": "2026000468",
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "missing_vworld_key"
       ]
     },
     {
@@ -1177,26 +2199,91 @@
       "address": "경기도 수원시 권선구 서둔동 212-1번지 일원",
       "region": "수원시",
       "district": "권선구",
-      "housing_type": "unknown",
+      "housing_type": "private_apt",
       "status": "closed",
       "apply_start_at": "2026-09-01T09:00:00+09:00",
       "apply_end_at": "2026-09-07T18:00:00+09:00",
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260860996",
       "notice_updated_at": "2026-09-04",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260860996",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=901429",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 7.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 9. 7.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 898000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": 893000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84C",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 893000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84D",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": 893000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=901429",
@@ -1216,23 +2303,24 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260861016",
           "published_on": "2026-08-28",
           "content_sha256": "e0ddf7c00410f51b946921d43ca9bb50a74233fe7356a2261a2053f7bea0e2fa",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         },
         {
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260860996",
           "published_on": "2026-09-04",
           "content_sha256": "323e52fc22d208376777048be7f1a7ea74d81f48806ee3da30af206253abd9b5",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         }
       ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
+      "housing_manage_no": "2026000449",
+      "pblanc_no": "2026000449",
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "missing_vworld_key"
       ]
     },
     {
@@ -1241,24 +2329,75 @@
       "address": "경기도 광명시 구름산지구 A6블록",
       "region": "광명시",
       "district": "구름산지구",
-      "housing_type": "unknown",
+      "housing_type": "private_apt",
       "status": "unknown",
       "apply_start_at": null,
       "apply_end_at": null,
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260860997",
       "notice_updated_at": "2026-09-04",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": null,
-        "evidence_text": null,
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=901235",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 8.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [],
-        "rule_version": "1.0.0"
+        "conditions": [
+          "신청마감일 당시(’26. 9. 8.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "59A",
+          "area_sqm": 59.9742,
+          "allocation_count": 1,
+          "sale_price_krw": 879000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "verified_coordinates_missing",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": 84.8481,
+          "allocation_count": 1,
+          "sale_price_krw": 1185000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "verified_coordinates_missing",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84D",
+          "area_sqm": 84.9796,
+          "allocation_count": 1,
+          "sale_price_krw": 1198000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "verified_coordinates_missing",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=901431",
@@ -1272,22 +2411,23 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=259191850",
           "published_on": "2026-09-01",
           "content_sha256": "bc0bf79fe99ea363ff6d54bc0c4e123ae3f69b49a83832b4d96ce73ab99f8197",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         },
         {
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260860997",
           "published_on": "2026-09-04",
           "content_sha256": "a3f9f2a24eaec73ccf76cbf9d329a5b27aa60e8c43616bb7de0bc736eb44205a",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         }
       ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
+      "housing_manage_no": "2026000453",
+      "pblanc_no": "2026000453",
       "location_verified": false,
       "collection_issues": [
-        "official_project_mapping_required"
+        "application_schedule_postponed",
+        "missing_vworld_key"
       ]
     },
     {
@@ -1303,19 +2443,84 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260383709",
       "notice_updated_at": "2026-09-03",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260383709",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=901307",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 15.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 9. 15.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "59A",
+          "area_sqm": 59.928,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59B",
+          "area_sqm": 59.9374,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": 84.9964,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": 84.9991,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=901307",
@@ -1335,7 +2540,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260383709",
           "published_on": "2026-09-03",
           "content_sha256": "10eec50df266d120769da8ef9026d0b527d40a95e525640ca710d7b51216e18c",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -1343,9 +2548,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -1354,14 +2559,14 @@
       "address": "경기도 부천시 소사구 송내동 365-1번지 일원",
       "region": "부천시",
       "district": "소사구",
-      "housing_type": "unknown",
+      "housing_type": "private_apt",
       "status": "unknown",
       "apply_start_at": null,
       "apply_end_at": null,
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260383696",
       "notice_updated_at": "2026-09-02",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1369,9 +2574,106 @@
         "evidence_text": null,
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "054.8244 ",
+          "area_sqm": null,
+          "allocation_count": null,
+          "sale_price_krw": 549000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "disability_allocation_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "059.9935B",
+          "area_sqm": null,
+          "allocation_count": null,
+          "sale_price_krw": 610000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "disability_allocation_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "060.7403 ",
+          "area_sqm": null,
+          "allocation_count": null,
+          "sale_price_krw": 612000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "disability_allocation_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "084.9888A",
+          "area_sqm": null,
+          "allocation_count": null,
+          "sale_price_krw": 753000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "disability_allocation_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "084.9933B",
+          "area_sqm": null,
+          "allocation_count": null,
+          "sale_price_krw": 793000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "disability_allocation_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "084.9894C",
+          "area_sqm": null,
+          "allocation_count": null,
+          "sale_price_krw": 796000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "disability_allocation_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=901288",
@@ -1382,20 +2684,49 @@
       ],
       "notice_history": [
         {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=248767728",
+          "published_on": "2026-07-07",
+          "content_sha256": "50d4eec2c3821bc6fcabec3d6e884f2b128c28644ea5a0126b61dffb5aff04ac",
+          "observed_at": "2026-10-18T14:19:38.342923+09:00",
+          "change_type": "correction"
+        },
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=251361519",
+          "published_on": "2026-07-20",
+          "content_sha256": "d9f8582758afad8c078e88e01fd7dfa530505598143512354e3ec4ae40405655",
+          "observed_at": "2026-10-18T14:19:38.342923+09:00",
+          "change_type": "correction"
+        },
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=253016665",
+          "published_on": "2026-07-28",
+          "content_sha256": "377d273b78e2fcf3846026f82b027c61098b7633ea03d467dc5ec76e67aaccac",
+          "observed_at": "2026-10-18T14:19:38.342923+09:00",
+          "change_type": "correction"
+        },
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=254438082",
+          "published_on": "2026-08-04",
+          "content_sha256": "978d50bfc50b6ff2043795c68e3aecb002aacfd017c7889c9e9e4f973f9597da",
+          "observed_at": "2026-10-18T14:19:38.342923+09:00",
+          "change_type": "correction"
+        },
+        {
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260383696",
           "published_on": "2026-09-02",
           "content_sha256": "469b67aae6f42bb6a3feb53789dcd9010afb3072e66b6f3b9a5e81a23741bddd",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         }
       ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
+      "housing_manage_no": "2026000314",
+      "pblanc_no": "2026000314",
       "location_verified": false,
       "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "application_schedule_postponed",
+        "attachment_text_extracted",
+        "disability_allocation_table_required",
+        "missing_vworld_key"
       ]
     },
     {
@@ -1411,19 +2742,68 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145184",
       "notice_updated_at": "2026-09-02",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145184",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=901237",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 11.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 9. 11.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "59A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59E",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "74",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=901237",
@@ -1443,7 +2823,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145184",
           "published_on": "2026-09-02",
           "content_sha256": "5c6b747dba399163f3f3abe0282279a47f54f865803a36e29bb204d799531fda",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -1451,42 +2831,75 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
-      "id": "gg_260145193",
+      "id": "gg_256337248",
       "name": "동백호수공원 두산위브더제니스",
       "address": "경기도 용인시 기흥구 동백동 478-10 번지 일원",
       "region": "용인시",
       "district": "기흥구",
       "housing_type": "unknown",
-      "status": "unknown",
-      "apply_start_at": null,
-      "apply_end_at": null,
+      "status": "closed",
+      "apply_start_at": "2026-08-18T09:00:00+09:00",
+      "apply_end_at": "2026-08-25T18:00:00+09:00",
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145193",
       "notice_updated_at": "2026-09-01",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:20:34.756633+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": null,
-        "evidence_text": null,
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=900728",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 8. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [],
-        "rule_version": "1.0.0"
+        "conditions": [
+          "신청마감일 당시(’26. 8. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "61A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [],
       "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=256337248",
+          "published_on": "2026-08-13",
+          "content_sha256": "8cd40fe8c1b28abbd586c64e8c52260975207bfed62d6b80de066df5351ad731",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
+          "change_type": "initial"
+        },
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477424",
+          "published_on": "2026-08-24",
+          "content_sha256": "5c74ac645242ee6e7c8a508f889d30a808125cac95136787439c9991483731a8",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
+          "change_type": "correction"
+        },
         {
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145193",
           "published_on": "2026-09-01",
           "content_sha256": "4084ad09202044e2014a710d11a33d439b0024e95535f8c21ecefafd68e029b7",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "correction"
         }
       ],
@@ -1494,65 +2907,8 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "official_project_mapping_required"
-      ]
-    },
-    {
-      "id": "gg_260145183",
-      "name": "부천대장 하우스스토리 디센트",
-      "address": "경기도 부천시 부천대장 공공주택지구 A2블록",
-      "region": "부천시",
-      "district": "공공주택지구",
-      "housing_type": "unknown",
-      "status": "unknown",
-      "apply_start_at": null,
-      "apply_end_at": null,
-      "deadline_note": null,
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145183",
-      "notice_updated_at": "2026-09-01",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
-      "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145183",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
-        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [
-          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
-        ],
-        "rule_version": "1.0.0"
-      },
-      "units": [],
-      "attachments": [
-        {
-          "url": "https://www.gg.go.kr/cmmn/download.do?idx=901243",
-          "name": "붙임2) 부천대장 하우스토리 디센트 공공분양주택 장애인 특별공급 안내 및 관련서식 (1) (2).hwpx",
-          "parse_status": "parsed",
-          "error_code": null
-        },
-        {
-          "url": "https://www.gg.go.kr/cmmn/download.do?idx=901234",
-          "name": "붙임3) 부천대장 하우스토리 디센트 공공분양주택 장애인 기관추천 안내문.hwpx",
-          "parse_status": "parsed",
-          "error_code": null
-        }
-      ],
-      "notice_history": [
-        {
-          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145183",
-          "published_on": "2026-09-01",
-          "content_sha256": "b3509e343d1c6b41f81d0e769a5720e1318a1f8a61d1f051bc6da2ac1f0d125d",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
-          "change_type": "initial"
-        }
-      ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
-      "location_verified": false,
-      "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "official_project_not_matched"
       ]
     },
     {
@@ -1568,17 +2924,17 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477426",
       "notice_updated_at": "2026-08-27",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477426",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=900741",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 7.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 9. 7.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
       "units": [],
       "attachments": [
@@ -1606,7 +2962,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477426",
           "published_on": "2026-08-27",
           "content_sha256": "b41bf51ca99a14f52b271bab9488366d85fecce1ed61b279143d7ee4c8491165",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -1614,9 +2970,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_eligibility_review_required",
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     },
     {
@@ -1625,26 +2981,75 @@
       "address": "성남시 분당구 정자동 90",
       "region": "성남시",
       "district": "분당구",
-      "housing_type": "unknown",
+      "housing_type": "private_apt",
       "status": "closed",
       "apply_start_at": "2026-08-27T09:00:00+09:00",
       "apply_end_at": "2026-09-03T18:00:00+09:00",
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477420",
       "notice_updated_at": "2026-08-24",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477420",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=900715",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 3.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 9. 3.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "66A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 2163000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 2958000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84G",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": 2920000000,
+          "sale_price_basis": "maximum_base_price",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "exclusive_area_unverified",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=900715",
@@ -1664,78 +3069,17 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477420",
           "published_on": "2026-08-24",
           "content_sha256": "f6b1024f47d60f88748594eb52bb6eb069f0d3b27222542be14faeced4c734a4",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
+      "housing_manage_no": "2026000103",
+      "pblanc_no": "2026000103",
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
-      ]
-    },
-    {
-      "id": "gg_256337248",
-      "name": "동백호수공원 두산위브더제니스",
-      "address": "용인시 기흥구 동백동 478-10 번지 일원",
-      "region": "용인시",
-      "district": "기흥구",
-      "housing_type": "unknown",
-      "status": "unknown",
-      "apply_start_at": null,
-      "apply_end_at": null,
-      "deadline_note": null,
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477424",
-      "notice_updated_at": "2026-08-24",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
-      "eligibility": {
-        "yongin_status": "unknown",
-        "disability_scope": "unknown",
-        "evidence_url": null,
-        "evidence_text": null,
-        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [],
-        "rule_version": "1.0.0"
-      },
-      "units": [],
-      "attachments": [
-        {
-          "url": "https://www.gg.go.kr/cmmn/download.do?idx=900728",
-          "name": "붙임2) 용인 「동백호수공원 두산위브더제니스」 장애인 특별공급 안내 및 관련서식.hwpx",
-          "parse_status": "parsed",
-          "error_code": null
-        },
-        {
-          "url": "https://www.gg.go.kr/cmmn/download.do?idx=900729",
-          "name": "붙임3) 용인 「동백호수공원 두산위브더제니스」기관추천 안내문(일정변경).hwp",
-          "parse_status": "unsupported",
-          "error_code": "unsupported_hwp_or_document"
-        }
-      ],
-      "notice_history": [
-        {
-          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=256337248",
-          "published_on": "2026-08-13",
-          "content_sha256": "8cd40fe8c1b28abbd586c64e8c52260975207bfed62d6b80de066df5351ad731",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
-          "change_type": "initial"
-        },
-        {
-          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477424",
-          "published_on": "2026-08-24",
-          "content_sha256": "5c74ac645242ee6e7c8a508f889d30a808125cac95136787439c9991483731a8",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
-          "change_type": "correction"
-        }
-      ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
-      "location_verified": false,
-      "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "missing_vworld_key"
       ]
     },
     {
@@ -1751,19 +3095,116 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=256337249",
       "notice_updated_at": "2026-08-13",
-      "updated_at": "2026-10-18T13:26:24.655732+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=256337249",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=900284",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 9. 7.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만 19 세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 9. 7.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "50A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59A",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59B",
+          "area_sqm": null,
+          "allocation_count": 4,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59C",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "75A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=900284",
@@ -1783,7 +3224,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=256337249",
           "published_on": "2026-08-13",
           "content_sha256": "ecfabfdf9c483d814fd57b10b92467c88a72090b31ef59551e4125e6b66d888c",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -1791,8 +3232,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     }
   ]

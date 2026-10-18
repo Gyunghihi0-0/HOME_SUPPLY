@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "policy": "Only explicit applicant-qualification sentences from the institution recommendation notice. Ambiguity stays unknown.",
   "region_allow_patterns": ["경기도\\s*거주", "용인시\\s*거주"],
   "severe_only_patterns": ["장애의\\s*정도가\\s*심한\\s*장애인만", "중증\\s*장애인만"],

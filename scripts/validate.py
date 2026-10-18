@@ -38,6 +38,7 @@ def validate(data):
             if u['confidence']=='unavailable' and any(x is not None for x in metrics):
                 raise ValueError('unavailable analysis must be null')
             if u['confidence']!='unavailable':
+                if not u['allocation_count'] or u['allocation_count']<1:raise ValueError('analysis requires verified disability allocation')
                 if not listing['location_verified'] or not u['sale_price_krw'] or len(u['comparables'])<3 or any(x is None for x in metrics):
                     raise ValueError('insufficient analysis evidence')
                 from statistics import median

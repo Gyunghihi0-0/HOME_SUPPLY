@@ -52,12 +52,15 @@ def test_corrections_and_id_preservation():
 def test_new_post_correction_keeps_id_but_followup_stays_separate():
     first=notice();correction=deepcopy(first)
     correction['id']='gg_2';correction['notice_updated_at']='2026-10-17'
+    correction['notice_url']='https://www.gg.go.kr/bbs/boardView.do?bIdx=2'
     correction['notice_history'][0].update(notice_url='https://www.gg.go.kr/bbs/boardView.do?bIdx=2',content_sha256='b'*64,change_type='correction')
     correction['apply_end_at']='2026-11-04'
     merged=merge([first],[correction],NOW)
     assert len(merged)==1 and merged[0]['id']==first['id']
     assert merged[0]['apply_end_at']=='2026-11-04'
     followup=deepcopy(correction);followup['id']='gg_3';followup['notice_history'][0]['change_type']='initial'
+    followup['notice_url']='https://www.gg.go.kr/bbs/boardView.do?bIdx=3'
+    followup['notice_history'][0]['notice_url']=followup['notice_url']
     assert len(merge(merged,[followup],NOW))==2
 
 def trade_rows():
@@ -72,7 +75,7 @@ def test_won_cancel_and_duplicates():
     assert normalize_trades([dict(row,cdealDay='20261002')],'41463',NOW)==[]
 
 def analysis_inputs():
-    u=empty_unit('84',84.9);u['sale_price_krw']=500000000
+    u=empty_unit('84',84.9);u['sale_price_krw']=500000000;u['allocation_count']=1
     t=normalize_trades(trade_rows(),'41463',NOW)[0]
     trades=[dict(t,id=str(i),price_krw=p) for i,p in enumerate([600000000,700000000,800000000])]
     loc={t['location']+'|'+t['apartment_name']:dict(coordinates=[37.25,127.1],evidence_url='https://www.gg.go.kr')}

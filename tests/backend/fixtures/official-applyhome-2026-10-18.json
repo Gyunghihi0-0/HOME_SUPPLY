@@ -1,0 +1,534 @@
+{
+  "source_url": "https://www.data.go.kr/data/15098547/openapi.do",
+  "verification_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39099431673",
+  "observed_on": "2026-10-18",
+  "observed_at": "2026-10-18T05:07:16Z",
+  "projects": [
+    {
+      "HOUSE_MANAGE_NO": "2026000508",
+      "PBLANC_NO": "2026000508",
+      "HOUSE_NM": "아크메르 동탄 95",
+      "HSSPLY_ADRES": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
+      "RCRIT_PBLANC_DE": "2026-10-16",
+      "MVN_PREARNGE_YM": "203201",
+      "HOUSE_DTL_SECD": "01",
+      "models": [
+        {
+          "HOUSE_MANAGE_NO": "2026000508",
+          "PBLANC_NO": "2026000508",
+          "MODEL_NO": "01",
+          "HOUSE_TY": "084.9970C",
+          "LTTOT_TOP_AMOUNT": "171210"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000508",
+          "PBLANC_NO": "2026000508",
+          "MODEL_NO": "02",
+          "HOUSE_TY": "084.9998F",
+          "LTTOT_TOP_AMOUNT": "171530"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000508",
+          "PBLANC_NO": "2026000508",
+          "MODEL_NO": "03",
+          "HOUSE_TY": "116.9981A",
+          "LTTOT_TOP_AMOUNT": "218670"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000508",
+          "PBLANC_NO": "2026000508",
+          "MODEL_NO": "04",
+          "HOUSE_TY": "116.9987B",
+          "LTTOT_TOP_AMOUNT": "221350"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000508",
+          "PBLANC_NO": "2026000508",
+          "MODEL_NO": "05",
+          "HOUSE_TY": "128.9983A",
+          "LTTOT_TOP_AMOUNT": "243610"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000508",
+          "PBLANC_NO": "2026000508",
+          "MODEL_NO": "06",
+          "HOUSE_TY": "129.9995B",
+          "LTTOT_TOP_AMOUNT": "248290"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000508",
+          "PBLANC_NO": "2026000508",
+          "MODEL_NO": "07",
+          "HOUSE_TY": "184.9968B",
+          "LTTOT_TOP_AMOUNT": "391150"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000508",
+          "PBLANC_NO": "2026000508",
+          "MODEL_NO": "08",
+          "HOUSE_TY": "188.9949A",
+          "LTTOT_TOP_AMOUNT": "401320"
+        }
+      ]
+    },
+    {
+      "HOUSE_MANAGE_NO": "2026000468",
+      "PBLANC_NO": "2026000468",
+      "HOUSE_NM": "쌍용 더 플래티넘 한강",
+      "HSSPLY_ADRES": "경기도 양평군 양서면 용담리 212-3번지 일원",
+      "RCRIT_PBLANC_DE": "2026-10-02",
+      "MVN_PREARNGE_YM": "202905",
+      "HOUSE_DTL_SECD": "01",
+      "models": [
+        {
+          "HOUSE_MANAGE_NO": "2026000468",
+          "PBLANC_NO": "2026000468",
+          "MODEL_NO": "01",
+          "HOUSE_TY": "074.9845 ",
+          "LTTOT_TOP_AMOUNT": "61400"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000468",
+          "PBLANC_NO": "2026000468",
+          "MODEL_NO": "02",
+          "HOUSE_TY": "084.9947A",
+          "LTTOT_TOP_AMOUNT": "74800"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000468",
+          "PBLANC_NO": "2026000468",
+          "MODEL_NO": "03",
+          "HOUSE_TY": "084.8542B",
+          "LTTOT_TOP_AMOUNT": "74600"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000468",
+          "PBLANC_NO": "2026000468",
+          "MODEL_NO": "04",
+          "HOUSE_TY": "084.8894C",
+          "LTTOT_TOP_AMOUNT": "67800"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000468",
+          "PBLANC_NO": "2026000468",
+          "MODEL_NO": "05",
+          "HOUSE_TY": "123.7781 ",
+          "LTTOT_TOP_AMOUNT": "109500"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000468",
+          "PBLANC_NO": "2026000468",
+          "MODEL_NO": "06",
+          "HOUSE_TY": "146.8598P",
+          "LTTOT_TOP_AMOUNT": "165000"
+        }
+      ]
+    },
+    {
+      "HOUSE_MANAGE_NO": "2026000463",
+      "PBLANC_NO": "2026000463",
+      "HOUSE_NM": "향남역 그로브 스위첸",
+      "HSSPLY_ADRES": "경기도 화성특례시 만세구 향남읍 하길리 404-2번지 일원",
+      "RCRIT_PBLANC_DE": "2026-10-02",
+      "MVN_PREARNGE_YM": "202906",
+      "HOUSE_DTL_SECD": "01",
+      "models": [
+        {
+          "HOUSE_MANAGE_NO": "2026000463",
+          "PBLANC_NO": "2026000463",
+          "MODEL_NO": "01",
+          "HOUSE_TY": "071.8178 ",
+          "LTTOT_TOP_AMOUNT": "47030"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000463",
+          "PBLANC_NO": "2026000463",
+          "MODEL_NO": "02",
+          "HOUSE_TY": "084.9592A",
+          "LTTOT_TOP_AMOUNT": "55750"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000463",
+          "PBLANC_NO": "2026000463",
+          "MODEL_NO": "03",
+          "HOUSE_TY": "084.9767B",
+          "LTTOT_TOP_AMOUNT": "55720"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000463",
+          "PBLANC_NO": "2026000463",
+          "MODEL_NO": "04",
+          "HOUSE_TY": "084.9221C",
+          "LTTOT_TOP_AMOUNT": "55970"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000463",
+          "PBLANC_NO": "2026000463",
+          "MODEL_NO": "05",
+          "HOUSE_TY": "084.9140D",
+          "LTTOT_TOP_AMOUNT": "55450"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000463",
+          "PBLANC_NO": "2026000463",
+          "MODEL_NO": "06",
+          "HOUSE_TY": "107.9722A",
+          "LTTOT_TOP_AMOUNT": "67850"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000463",
+          "PBLANC_NO": "2026000463",
+          "MODEL_NO": "07",
+          "HOUSE_TY": "107.8263B",
+          "LTTOT_TOP_AMOUNT": "67903"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000463",
+          "PBLANC_NO": "2026000463",
+          "MODEL_NO": "08",
+          "HOUSE_TY": "147.9931P",
+          "LTTOT_TOP_AMOUNT": "124758"
+        }
+      ]
+    },
+    {
+      "HOUSE_MANAGE_NO": "2026000453",
+      "PBLANC_NO": "2026000453",
+      "HOUSE_NM": "광명 시티프라디움 에듀하임",
+      "HSSPLY_ADRES": "경기도 광명시 소하동 광명 구름산지구 도시개발사업지구 A6BL",
+      "RCRIT_PBLANC_DE": "2026-09-18",
+      "MVN_PREARNGE_YM": "202903",
+      "HOUSE_DTL_SECD": "01",
+      "models": [
+        {
+          "HOUSE_MANAGE_NO": "2026000453",
+          "PBLANC_NO": "2026000453",
+          "MODEL_NO": "01",
+          "HOUSE_TY": "059.9742A",
+          "LTTOT_TOP_AMOUNT": "87900"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000453",
+          "PBLANC_NO": "2026000453",
+          "MODEL_NO": "02",
+          "HOUSE_TY": "059.7421B",
+          "LTTOT_TOP_AMOUNT": "87700"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000453",
+          "PBLANC_NO": "2026000453",
+          "MODEL_NO": "03",
+          "HOUSE_TY": "084.8481A",
+          "LTTOT_TOP_AMOUNT": "118500"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000453",
+          "PBLANC_NO": "2026000453",
+          "MODEL_NO": "04",
+          "HOUSE_TY": "084.9648B",
+          "LTTOT_TOP_AMOUNT": "119700"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000453",
+          "PBLANC_NO": "2026000453",
+          "MODEL_NO": "05",
+          "HOUSE_TY": "084.9558C",
+          "LTTOT_TOP_AMOUNT": "118000"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000453",
+          "PBLANC_NO": "2026000453",
+          "MODEL_NO": "06",
+          "HOUSE_TY": "084.9796D",
+          "LTTOT_TOP_AMOUNT": "119800"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000453",
+          "PBLANC_NO": "2026000453",
+          "MODEL_NO": "07",
+          "HOUSE_TY": "084.9149E",
+          "LTTOT_TOP_AMOUNT": "118000"
+        }
+      ]
+    },
+    {
+      "HOUSE_MANAGE_NO": "2026000449",
+      "PBLANC_NO": "2026000449",
+      "HOUSE_NM": "화서역 호수공원 아너스빌",
+      "HSSPLY_ADRES": "경기도 수원시 권선구 서둔동 212-1번지 일원",
+      "RCRIT_PBLANC_DE": "2026-09-11",
+      "MVN_PREARNGE_YM": "202910",
+      "HOUSE_DTL_SECD": "01",
+      "models": [
+        {
+          "HOUSE_MANAGE_NO": "2026000449",
+          "PBLANC_NO": "2026000449",
+          "MODEL_NO": "01",
+          "HOUSE_TY": "084.7459A",
+          "LTTOT_TOP_AMOUNT": "89800"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000449",
+          "PBLANC_NO": "2026000449",
+          "MODEL_NO": "02",
+          "HOUSE_TY": "084.8508B",
+          "LTTOT_TOP_AMOUNT": "89300"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000449",
+          "PBLANC_NO": "2026000449",
+          "MODEL_NO": "03",
+          "HOUSE_TY": "084.6391C",
+          "LTTOT_TOP_AMOUNT": "89300"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000449",
+          "PBLANC_NO": "2026000449",
+          "MODEL_NO": "04",
+          "HOUSE_TY": "084.9663D",
+          "LTTOT_TOP_AMOUNT": "89300"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000449",
+          "PBLANC_NO": "2026000449",
+          "MODEL_NO": "05",
+          "HOUSE_TY": "084.9739E",
+          "LTTOT_TOP_AMOUNT": "89300"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000449",
+          "PBLANC_NO": "2026000449",
+          "MODEL_NO": "06",
+          "HOUSE_TY": "094.9503A",
+          "LTTOT_TOP_AMOUNT": "90400"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000449",
+          "PBLANC_NO": "2026000449",
+          "MODEL_NO": "07",
+          "HOUSE_TY": "094.9610B",
+          "LTTOT_TOP_AMOUNT": "90400"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000449",
+          "PBLANC_NO": "2026000449",
+          "MODEL_NO": "08",
+          "HOUSE_TY": "099.6774A",
+          "LTTOT_TOP_AMOUNT": "91100"
+        }
+      ]
+    },
+    {
+      "HOUSE_MANAGE_NO": "2026000438",
+      "PBLANC_NO": "2026000438",
+      "HOUSE_NM": "힐스테이트 고덕엘리스트 A65BL 공공분양주택",
+      "HSSPLY_ADRES": "경기도 평택시 고덕동 고덕면 일원(평택고덕국제화계획지구 A65BL)",
+      "RCRIT_PBLANC_DE": "2026-09-11",
+      "MVN_PREARNGE_YM": "202906",
+      "HOUSE_DTL_SECD": "03",
+      "models": [
+        {
+          "HOUSE_MANAGE_NO": "2026000438",
+          "PBLANC_NO": "2026000438",
+          "MODEL_NO": "01",
+          "HOUSE_TY": "084.0000A",
+          "LTTOT_TOP_AMOUNT": "56617"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000438",
+          "PBLANC_NO": "2026000438",
+          "MODEL_NO": "02",
+          "HOUSE_TY": "084.0000B",
+          "LTTOT_TOP_AMOUNT": "55973"
+        }
+      ]
+    },
+    {
+      "HOUSE_MANAGE_NO": "2026000437",
+      "PBLANC_NO": "2026000437",
+      "HOUSE_NM": "힐스테이트 고덕엘리스트 A12BL 공공분양주택",
+      "HSSPLY_ADRES": "경기도 평택시 고덕동 고덕면 일원(평택고덕국제화계획지구 A12BL)",
+      "RCRIT_PBLANC_DE": "2026-09-11",
+      "MVN_PREARNGE_YM": "202906",
+      "HOUSE_DTL_SECD": "03",
+      "models": [
+        {
+          "HOUSE_MANAGE_NO": "2026000437",
+          "PBLANC_NO": "2026000437",
+          "MODEL_NO": "01",
+          "HOUSE_TY": "084.0000A",
+          "LTTOT_TOP_AMOUNT": "58420"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000437",
+          "PBLANC_NO": "2026000437",
+          "MODEL_NO": "02",
+          "HOUSE_TY": "084.0000B",
+          "LTTOT_TOP_AMOUNT": "57755"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000437",
+          "PBLANC_NO": "2026000437",
+          "MODEL_NO": "03",
+          "HOUSE_TY": "084.9500C",
+          "LTTOT_TOP_AMOUNT": "57440"
+        }
+      ]
+    },
+    {
+      "HOUSE_MANAGE_NO": "2026000103",
+      "PBLANC_NO": "2026000103",
+      "HOUSE_NM": "더샵 분당하이스트",
+      "HSSPLY_ADRES": "경기도 성남시 분당구 정자동 90번지",
+      "RCRIT_PBLANC_DE": "2026-09-11",
+      "MVN_PREARNGE_YM": "202712",
+      "HOUSE_DTL_SECD": "01",
+      "models": [
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "01",
+          "HOUSE_TY": "066.0000A",
+          "LTTOT_TOP_AMOUNT": "216300"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "02",
+          "HOUSE_TY": "074.0000A",
+          "LTTOT_TOP_AMOUNT": "238200"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "03",
+          "HOUSE_TY": "074.0000B",
+          "LTTOT_TOP_AMOUNT": "238200"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "04",
+          "HOUSE_TY": "074.0000C",
+          "LTTOT_TOP_AMOUNT": "240200"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "05",
+          "HOUSE_TY": "074.4400D",
+          "LTTOT_TOP_AMOUNT": "235200"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "06",
+          "HOUSE_TY": "084.0000A",
+          "LTTOT_TOP_AMOUNT": "298100"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "07",
+          "HOUSE_TY": "084.0000B",
+          "LTTOT_TOP_AMOUNT": "295800"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "08",
+          "HOUSE_TY": "084.0000C",
+          "LTTOT_TOP_AMOUNT": "273900"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "09",
+          "HOUSE_TY": "084.0900D",
+          "LTTOT_TOP_AMOUNT": "276200"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "10",
+          "HOUSE_TY": "084.0000E",
+          "LTTOT_TOP_AMOUNT": "291100"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "11",
+          "HOUSE_TY": "084.7200F",
+          "LTTOT_TOP_AMOUNT": "290100"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "12",
+          "HOUSE_TY": "084.6400G",
+          "LTTOT_TOP_AMOUNT": "292000"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000103",
+          "PBLANC_NO": "2026000103",
+          "MODEL_NO": "13",
+          "HOUSE_TY": "084.7800H",
+          "LTTOT_TOP_AMOUNT": "290600"
+        }
+      ]
+    },
+    {
+      "HOUSE_MANAGE_NO": "2026000314",
+      "PBLANC_NO": "2026000314",
+      "HOUSE_NM": "중동역 다채로움 더원",
+      "HSSPLY_ADRES": "경기도 부천시 소사구 송내동 365-1번지 일원",
+      "RCRIT_PBLANC_DE": "2026-09-10",
+      "MVN_PREARNGE_YM": "202808",
+      "HOUSE_DTL_SECD": "01",
+      "models": [
+        {
+          "HOUSE_MANAGE_NO": "2026000314",
+          "PBLANC_NO": "2026000314",
+          "MODEL_NO": "01",
+          "HOUSE_TY": "054.8244 ",
+          "LTTOT_TOP_AMOUNT": "54900"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000314",
+          "PBLANC_NO": "2026000314",
+          "MODEL_NO": "02",
+          "HOUSE_TY": "059.9935B",
+          "LTTOT_TOP_AMOUNT": "61000"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000314",
+          "PBLANC_NO": "2026000314",
+          "MODEL_NO": "03",
+          "HOUSE_TY": "060.7403 ",
+          "LTTOT_TOP_AMOUNT": "61200"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000314",
+          "PBLANC_NO": "2026000314",
+          "MODEL_NO": "04",
+          "HOUSE_TY": "084.9888A",
+          "LTTOT_TOP_AMOUNT": "75300"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000314",
+          "PBLANC_NO": "2026000314",
+          "MODEL_NO": "05",
+          "HOUSE_TY": "084.9933B",
+          "LTTOT_TOP_AMOUNT": "79300"
+        },
+        {
+          "HOUSE_MANAGE_NO": "2026000314",
+          "PBLANC_NO": "2026000314",
+          "MODEL_NO": "06",
+          "HOUSE_TY": "084.9894C",
+          "LTTOT_TOP_AMOUNT": "79600"
+        }
+      ]
+    }
+  ]
+}

@@ -4,3 +4,4 @@ jsonschema==4.26.0
 defusedxml==0.7.1
 pytest==9.1.1
 pypdf==6.21.1
+olefile==0.47
