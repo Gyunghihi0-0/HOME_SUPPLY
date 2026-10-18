@@ -381,7 +381,7 @@ def run(output,pages=3,attachments=True,client=None,now=None,enrichment_only=Fal
         application_dates_unknown=sum(not x['apply_start_at'] or not x['apply_end_at'] for x in merged),
         eligibility_unknown=sum(x['eligibility']['yongin_status']=='unknown' for x in merged))
     print(json.dumps(health))
-    summary=os.getenv('GITHUB_STEP_SUMMARY')
+    summary=os.getenv('GITHUB_STEP_SUMMARY') if os.getenv('HOME_SUPPLY_OPERATIONAL_SUMMARY')=='true' and output.resolve()==(ROOT/'docs/data/latest.json').resolve() else None
     if summary:
         with open(summary,'a',encoding='utf-8') as handle:
             handle.write('\n### Official data completeness\n\nWorkflow success does not mean full data coverage.\n\n')

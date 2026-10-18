@@ -15,7 +15,7 @@ test('gap sorting includes negative values and puts missing analysis last',()=>{
 test('closed and cancelled records appear only in history',()=>{for(const status of ['closed','cancelled']){const l={...listing,status};assert.equal(c.select([l],{},'current',now).length,0);assert.equal(c.select([l],{},'history',now).length,1);}});
 test('unknown fields and dangerous links are handled safely',()=>{assert.equal(c.status({},now),'unknown');assert.equal(c.select([{}],{},'current',now).length,1);for(const url of ['javascript:alert(1)','http://example.org','https://u:p@example.org',null]) assert.equal(c.safeURL(url),null);});
 test('source freshness uses successful update, not last attempt',()=>{assert.equal(c.delayed({last_success_at:'2026-10-16T10:00:00+09:00',checked_at:now.toISOString()},now),true);assert.equal(c.delayed({last_success_at:null},now),false);});
-test('real operating snapshot renders without fabricated analysis',()=>{const d=JSON.parse(fs.readFileSync('docs/data/latest.json','utf8'));assert.equal(d.schema_version,'1.0.0');assert.ok(d.listings.length>0);for(const scope of ['all','mild','severe']){const rows=c.select(d.listings,{scope},'current',now);assert.ok(rows.length>0);for(const row of rows)assert.ok(d.listings.includes(row.l));}assert.ok(d.listings.every(l=>!l.units.some(c.analyzed)));});
+test('real operating snapshot renders without fabricated analysis',()=>{const d=JSON.parse(fs.readFileSync('docs/data/latest.json','utf8'));assert.equal(d.schema_version,'1.0.0');assert.ok(d.listings.length>0);for(const scope of ['all','mild','severe']){const rows=c.select(d.listings,{scope},'current',now);assert.ok(rows.length>0);for(const row of rows)assert.ok(d.listings.includes(row.l));}for(const l of d.listings)for(const u of l.units.filter(c.analyzed))assert.equal(u.estimated_gap_krw,u.comparison_median_krw-u.sale_price_krw);});
 
 const period = {...listing,status:'upcoming',apply_start_at:'2026-10-18',apply_end_at:'2026-10-20'};
 for(const [time,expected] of [
@@ -94,4 +94,18 @@ test('date sorting never fabricates a deadline time and missing dates sort last'
   assert.deepEqual(c.sortRows(rows,'recent').map(r=>r.l.notice_updated_at),['2026-10-20','2026-10-18T10:00:00+09:00','2026-10-18T09:00:00+09:00',null,'bad']);
   const sameDay=['2026-10-18T10:00:00+09:00','2026-10-18','2026-10-18T09:00:00+09:00'].map(v=>({l:{apply_end_at:v}}));
   assert.deepEqual(c.sortRows(sameDay,'deadline').map(r=>r.l.apply_end_at),['2026-10-18T09:00:00+09:00','2026-10-18T10:00:00+09:00','2026-10-18']);
+});
+
+test('positive opportunities exclude negative, unverified, past and ineligible records',()=>{
+ const u={...unit,comparables_count:3,sale_price_basis:'maximum_base_price',sale_price_evidence_url:'https://www.data.go.kr/'};
+ const l={...listing,location_verified:true,apply_start_at:'2026-10-17T09:00:00+09:00',apply_end_at:'2026-10-20T18:00:00+09:00',units:[u]};
+ assert.equal(c.select([l],{scope:'mild',positive:'yes'},'current',now).length,1);
+ for(const changed of [{status:'closed'},{attachments:[{parse_status:'error'}]},{location_verified:false},{eligibility:{}},{units:[{...u,estimated_gap_krw:-1}]},{units:[{...u,sale_price_basis:'area_family_maximum'}]}]){
+  assert.equal(c.select([{...l,...changed}],{scope:'mild',positive:'yes'},'current',now).length,0);
+ }
+});
+test('future opportunity sorting favors eligible positive gaps before unknown eligibility',()=>{
+ const us=[{...unit,comparables_count:3,sale_price_basis:'maximum_base_price',sale_price_evidence_url:'https://www.data.go.kr/'}];
+ const rows=[{l:{name:'unknown',location_verified:true},s:'open',e:'check',us},{l:{name:'confirmed',location_verified:true},s:'upcoming',e:'eligible',us}];
+ assert.equal(c.sortRows(rows,'gap',true)[0].l.name,'confirmed');
 });

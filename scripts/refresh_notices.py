@@ -16,9 +16,9 @@ def refresh(path):
     from scripts.diagnostic_io import write_report
     deferred=int(progress.get('next_page',0))
     order=list(dict.fromkeys([0]+([deferred] if deferred in (1,2) else [])+[1,2]))
-    checkpointed=[]
+    checkpointed={}
     def checkpoint(item):
-        checkpointed.append(item)
+        checkpointed[item['id']]=item
         data['listings']=merge(data['listings'],[item],now)
         entry=source('gg','경기도 장애인 특별공급',BOARD,now,'partial',previous,len(checkpointed),'notice_update_in_progress')
         data['sources']=[entry]+[s for s in data['sources'] if s['id']!='gg']

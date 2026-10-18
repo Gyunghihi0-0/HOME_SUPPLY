@@ -105,7 +105,9 @@ def parse_notice(html,row,now):
 def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,previous=None,on_record=None,budget_seconds=None,page_order=None,attempted_at=None):
     deadline=time.monotonic()+budget_seconds if budget_seconds is not None else float('inf')
     previous=previous or []
-    client.request(BOARD,robots=True)
+    if hasattr(client,"deadline"):client.deadline=deadline
+    if hasattr(client,"check_robots"):client.check_robots(BOARD)
+    else:client.request(BOARD,robots=True)
     records={}; errors=[]; seen=set(); partial=False
     for page in page_order or range(start_page,start_page+pages):
         if time.monotonic()>=deadline:partial=True;errors.extend(['notice_budget_exhausted','notice_budget_exhausted_page_'+str(page)]);break
@@ -115,7 +117,11 @@ def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,p
         try:d=json.loads(raw)
         except ValueError:raise SourceError('board_invalid_json') from None
         if not isinstance(d.get('items'),list) or not isinstance(d.get('total'),int):raise SourceError('board_structure_changed')
-        page_rows=sorted(d['items'],key=lambda row:(attempted_at or {}).get('gg_'+str(row.get('B_IDX')),'')) if attempted_at is not None else d['items']
+        def priority(row):
+            prior=[p for p in previous if p['notice_url'] and ('bIdx='+str(row.get('B_IDX'))) in p['notice_url']]
+            active=not prior or any(p['status'] in ('open','upcoming','unknown') for p in prior)
+            return (0 if active else 1,(attempted_at or {}).get('gg_'+str(row.get('B_IDX')),''),-int(row.get('B_IDX',0)))
+        page_rows=sorted(d['items'],key=priority)
         for row in page_rows:
             if time.monotonic()>=deadline:partial=True;errors.extend(['notice_budget_exhausted','notice_budget_exhausted_page_'+str(page)]);break
             if not all(k in row for k in ('B_IDX','SUBJECT','WRITE_DATE2')):raise SourceError('board_row_changed')
@@ -130,19 +136,14 @@ def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,p
             notice_url=ORIGIN+'/bbs/boardView.do?'+urlencode(dict(bsIdx=504,menuId=1878,bIdx=row['B_IDX']))
             try:
                 item=parse_notice(client.request(notice_url,robots=True),row,now)
-                reusable=[p for p in previous if '_p' not in p['id'] and p['notice_url']==item['notice_url']
-                          and p['notice_history'][-1]['content_sha256']==item['notice_history'][-1]['content_sha256']
-                          and {(a['url'],a['name']) for a in p['attachments']}=={(a['url'],a['name']) for a in item['attachments']}
-                          and os.getenv('HOME_SUPPLY_FORCE_REFRESH','').lower()!='true'
-                          and p.get('updated_at') and 0 <= (now-datetime.fromisoformat(p['updated_at'])).total_seconds() <= 3600
-                          and p['attachments'] and all(a['parse_status']=='parsed' for a in p['attachments'])]
-                if len(reusable)==1:
-                    prior=reusable[0]
-                    for key in ('attachments','units','eligibility'):item[key]=deepcopy(prior[key])
-                    item['collection_issues']=sorted(set(prior['collection_issues']+['unchanged_attachment_evidence_reused']))
-                    records[item['id']]=item
-                    if on_record:on_record(item)
-                    continue
+                if on_record:
+                    # Save discovery before any slow attachment download or parse.
+                    pending=deepcopy(item)
+                    if pending['attachments']:
+                        pending['eligibility']['yongin_status']='unknown'
+                        pending['eligibility']['disability_scope']='unknown'
+                        pending['collection_issues'].append('attachment_stage_deferred')
+                    on_record(pending)
                 documents=[];unit_candidates=[];attachment_eligibility=[]
                 if attachments:
                     for a in item['attachments']:
@@ -152,7 +153,11 @@ def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,p
                             item['eligibility']['yongin_status']='unknown';item['eligibility']['disability_scope']='unknown'
                             continue
                         try:
-                            document=read_document(client.request(a['url'],robots=True),a['name'])
+                            from scripts.notice_documents import read_cached
+                            if hasattr(client,'cache_dir'):
+                                content=client.request(a['url'],robots=True,public_document=True)
+                                document=read_cached(content,a['name'],client.cache_dir,min(8,max(.1,deadline-time.monotonic())))
+                            else:document=read_document(client.request(a['url'],robots=True),a['name'])
                             extracted=document['text'];documents.append(extracted)
                             evidence=classify(extracted,a['url'])
                             if evidence['yongin_status']!='unknown':attachment_eligibility.append(evidence)

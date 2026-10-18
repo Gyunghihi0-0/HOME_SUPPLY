@@ -67,21 +67,41 @@
   const priceText = u => familyPrice(u) ? `${money(u.sale_price_range_krw?.min)}～${money(u.sale_price_range_krw?.max)}` : money(u?.sale_price_krw);
   const gapText = u => familyPrice(u) && u.estimated_gap_range_krw ? `${money(u.estimated_gap_range_krw.min)}～${money(u.estimated_gap_range_krw.max)}` : money(u?.estimated_gap_krw);
   const confidence = {high:'높음',medium:'보통',low:'낮음',unavailable:'분석 불가'};
+  function analysisNote(u) {
+    if (!u) return '공식 주택형·분양가 연결 대기';
+    const missing=[];
+    if (!num(u.sale_price_krw)) missing.push('공식 분양가 연결 미확인 · 발표 여부 확인 필요');
+    if (!num(u.area_sqm)) missing.push('정확한 전용면적 미확인');
+    if (!u.allocation_count) missing.push('장애인 배정물량 미확인');
+    if (missing.length) return missing.join(' / ');
+    const reason=String(u.analysis_reason || '');
+    if (reason.includes('outlier')) return '비교 거래의 가격 편차가 커 검토 필요';
+    if (reason.includes('fewer_than_three') || reason.includes('sample_insufficient')) return '조건을 충족하는 비교 거래 최소 3건 미달';
+    if (reason.includes('location') || reason.includes('coordinate')) return '공식 위치·좌표 검증 대기';
+    if (reason.includes('round_unverified')) return '현재 모집차수와 과거 사업번호 연결 미확인';
+    return analyzed(u) ? '공식 가격과 검증된 거래의 단순 가격차' : '비교 거래·공식 근거 추가 확인 필요';
+  }
   function units(l, f = {}) { return arr(l.units).filter(u => (!f.area || num(u.area_sqm) && (f.area === 'small' ? u.area_sqm <= 60 : f.area === 'medium' ? u.area_sqm > 60 && u.area_sqm <= 85 : u.area_sqm > 85)) && (!f.price || (f.price === 'known' ? num(u.sale_price_krw) : !num(u.sale_price_krw)))); }
+  const positive = u => analyzed(u) && u.estimated_gap_krw > 0 && u.comparables_count >= 3 &&
+    ['maximum_base_price','exact_base_price'].includes(u.sale_price_basis) && safeURL(u.sale_price_evidence_url) &&
+    Math.abs(u.estimated_gap_krw - (u.comparison_median_krw - u.sale_price_krw)) <= 1;
+  const verifiedNotice = l => !arr(l.attachments).some(a=>a.parse_status !== 'parsed') && !(l.collection_issues || []).some(x=>['attachment_stage_deferred','application_schedule_postponed','attachment_eligibility_review_required'].includes(x));
+  const opportunity = r => verifiedNotice(r.l) && r.e === 'eligible' && ['open','upcoming'].includes(r.s) && r.l.location_verified === true && r.us.some(positive);
   function select(listings, f, view, now = new Date()) {
     return arr(listings).flatMap(l => {
       const s = status(l, now), e = eligibility(l, f.scope), history = ['closed','cancelled'].includes(s);
       if (view === 'history' ? !history || e === 'excluded' : view === 'ineligible' ? e !== 'excluded' : history || e === 'excluded') return [];
       if (f.search && !String(l.name || '').toLocaleLowerCase().includes(f.search.toLocaleLowerCase())) return [];
       if (f.region && (l.region || '미확인') !== f.region || f.status && s !== f.status || f.housing && (l.housing_type || 'unknown') !== f.housing) return [];
-      const us = units(l,f);
+      const us = units(l,f).filter(u=>!f.positive || positive(u));
+      if (f.positive && (e !== 'eligible' || !['open','upcoming'].includes(s) || l.location_verified !== true || !verifiedNotice(l) || !us.length)) return [];
       if ((f.area || f.price === 'known') && !us.length || f.price === 'unknown' && arr(l.units).length && !us.length) return [];
       return [{l,s,e,us}];
     });
   }
   function representative(row, sort) {
     const key = sort === 'rate' ? 'gap_rate_pct' : 'estimated_gap_krw';
-    return [...row.us].sort((a,b) => (analyzed(b) ? b[key] : -Infinity) - (analyzed(a) ? a[key] : -Infinity))[0];
+    return [...row.us].sort((a,b) => (opportunity(row) ? Number(positive(b))-Number(positive(a)) : 0) || (analyzed(b) ? b[key] : -Infinity) - (analyzed(a) ? a[key] : -Infinity))[0];
   }
   function compareDates(a, b, descending = false) {
     const left = scheduleDate(a), right = scheduleDate(b);
@@ -92,8 +112,12 @@
     if (left.instant === null || right.instant === null) return left.instant !== null ? -1 : right.instant !== null ? 1 : 0;
     return descending ? right.instant - left.instant : left.instant - right.instant;
   }
-  function sortRows(rows, sort) {
+  function sortRows(rows, sort, futureFirst = false) {
     return [...rows].sort((a,b) => {
+      if (futureFirst) {
+        const priority = r => opportunity(r) ? 0 : (r.e === 'eligible' ? 1 : 4) + ({open:0,upcoming:1,unknown:2}[r.s] ?? 3);
+        const delta = priority(a)-priority(b); if (delta) return delta;
+      }
       if (sort === 'deadline') return compareDates(a.l.apply_end_at,b.l.apply_end_at);
       if (sort === 'recent') return compareDates(a.l.notice_updated_at,b.l.notice_updated_at,true);
       const key = sort === 'rate' ? 'gap_rate_pct' : 'estimated_gap_krw', ua = representative(a,sort), ub = representative(b,sort);
@@ -101,7 +125,7 @@
     });
   }
   function delayed(source, now = new Date()) { return !!source.last_success_at && Number.isFinite(Date.parse(source.last_success_at)) && +now - Date.parse(source.last_success_at) > 36 * 3600000; }
-  const core = {money,date,status,deadlineNote,eligibility,analyzed,select,sortRows,safeURL,delayed};
+  const core = {money,date,status,deadlineNote,eligibility,analyzed,select,sortRows,safeURL,delayed,positive,opportunity};
   if (typeof module !== 'undefined' && module.exports) module.exports = core;
   if (typeof document === 'undefined') return;
   const $ = s => document.querySelector(s);
@@ -111,34 +135,34 @@
   function render(now = new Date()) {
     if (!data) return;
     const f = filters(), sort = $('#sort').value;
-    const rows = sortRows(select(data.listings,f,view,now),sort);
+    const rows = sortRows(select(data.listings,f,view,now),sort,view==='current');
     $('#result-count').textContent = `검색 결과 ${rows.length}건 · 전체 ${data.listings.length}건`;
-    const labels = {scope:'장애 정도',region:'지역',status:'모집 상태',area:'면적',price:'분양가',housing:'공급 유형'};
-    $('#active-filters').textContent = Object.entries(f).filter(([k,v]) => v && v !== 'all').map(([k,v]) => k === 'search' ? `검색: ${v}` : `${labels[k]}: ${k === 'scope' ? (v === 'mild' ? '경증' : '중증') : $(`[name="${k}"] option:checked`).textContent}`).join(' · ') || '전체 조건 · 자격 미확인 공고는 별도로 표시합니다.';
-    if (!rows.length) { $('#results').innerHTML = empty(data.listings.length ? '조건에 맞는 공고가 없습니다' : '등록된 공고가 없습니다',data.listings.length ? '필터를 조정하거나 종료·과거 공고를 확인해 보세요.' : '데이터 출처의 수집 상태를 함께 확인해 주세요.'); return; }
-    const groups = view !== 'current' ? [{title:view === 'history' ? '종료·과거 공고' : '선택 조건의 지역·장애 정도 요건 제외',items:rows}] : [
-      {title:'예상 시세차익 분석 완료',note:'표시한 주택형 기준 · 주변 거래 중앙값과 공식 분양금액의 차이',items:rows.filter(r=>r.e==='eligible' && r.us.some(analyzed))},
-      {title:'분양가 확인 대기',note:'공식 가격과 주택형 연결이 확인되면 분석할 수 있습니다. 가격차 순위에 포함하지 않습니다.',items:rows.filter(r=>r.e==='eligible' && !r.us.some(analyzed) && !r.us.some(u=>num(u.sale_price_krw)))},
-      {title:'분석 근거 부족',note:'분양가는 있으나 비교 거래 또는 분석 근거가 부족합니다.',items:rows.filter(r=>r.e==='eligible' && !r.us.some(analyzed) && r.us.some(u=>num(u.sale_price_krw)))},
-      {title:'자격 확인 필요',note:'신청 불가를 의미하지 않습니다. 원문에서 지역·장애 정도별 요건을 확인하세요.',items:rows.filter(r=>r.e==='check')}
+    const labels = {scope:'장애 정도',region:'지역',status:'모집 상태',area:'면적',price:'분양가',housing:'공급 유형',positive:'양수 가격차'};
+    $('#active-filters').textContent = Object.entries(f).filter(([k,v]) => v && v !== 'all').map(([k,v]) => k === 'search' ? `검색: ${v}` : `${labels[k]}: ${k === 'positive' ? '확인된 양수만' : k === 'scope' ? (v === 'mild' ? '경증' : '중증') : $(`[name="${k}"] option:checked`).textContent}`).join(' · ') || '전체 조건 · 자격 미확인 공고는 별도로 표시합니다.';
+    if (!rows.length) { $('#results').innerHTML = empty(f.positive ? '현재 조건을 만족하는 양수 시세차익 공고가 없습니다' : data.listings.length ? '조건에 맞는 공고가 없습니다' : '등록된 공고가 없습니다',data.listings.length ? '필터를 조정하거나 종료·과거 공고를 확인해 보세요.' : '데이터 출처의 수집 상태를 함께 확인해 주세요.'); return; }
+    const winners=rows.filter(opportunity);
+    const groups = view !== 'current' ? [{title:view === 'history' ? '종료·과거 공고 · 당시 분석 기록' : '선택 조건의 지역·장애 정도 요건 제외',items:rows}] : [
+      {title:'신청 요건·양수 가격차 확인',note:'접수 중·예정이며 용인 거주 및 선택한 장애 정도 요건이 확인된 공고입니다. 최종 신청자격은 별도 확인하세요.',items:winners},
+      ...['open','upcoming','unknown'].map(stage=>({title:stage==='open'?'기관추천 접수 중':stage==='upcoming'?'기관추천 접수 예정':'일정·향후 모집 확인 대기',note:'음수 가격차·공식 가격 미확인·자격 확인 대기는 수익성 추천이 아닙니다.',items:rows.filter(r=>r.s===stage && !opportunity(r))}))
     ];
-    $('#results').innerHTML = groups.map(g => `<section class="group"><div class="group-title"><h3>${esc(g.title)}</h3><span class="count">${g.items.length}</span></div>${g.note ? `<p class="group-note">${esc(g.note)}</p>` : ''}${g.items.length ? g.items.map((r,i) => card(r,i,sort,g.title === '예상 시세차익 분석 완료')).join('') : empty('확인된 공고가 없습니다','제공된 공식 데이터만 표시합니다.')}</section>`).join('');
+    const noPositive = view==='current' && !winners.length ? '<p class="notice">현재 조건을 만족하는 양수 시세차익 공고가 없습니다.</p>' : '';
+    $('#results').innerHTML = noPositive + groups.map(g => `<section class="group"><div class="group-title"><h3>${esc(g.title)}</h3><span class="count">${g.items.length}</span></div>${g.note ? `<p class="group-note">${esc(g.note)}</p>` : ''}${g.items.length ? g.items.map((r,i) => card(r,i,sort,g.title === '신청 요건·양수 가격차 확인')).join('') : empty('확인된 공고가 없습니다','제공된 공식 데이터만 표시합니다.')}</section>`).join('');
   }
   function card(r,i,sort,ranked) {
     const {l,s,e} = r, u = representative(r,sort);
     const eText = e === 'eligible' ? ({both:'경증·중증 지역 요건 충족',mild_only:'경증 지역 요건 충족',severe_only:'중증 지역 요건 충족'}[l.eligibility.disability_scope]) : e === 'check' ? '자격 확인 필요' : '선택 요건 제외';
-    return `<article class="listing"><div><span class="badge ${s}">${statusText[s]}</span><span class="badge ${e === 'check' ? 'check' : ''}">${eText}</span><h4><button type="button" data-detail="${esc(l.id)}">${ranked ? `${i+1}. ` : ''}${esc(l.name || '이름 미확인')}</button></h4><p>${esc(l.region || '지역 미확인')} · ${esc(l.district || '상세 지역 미확인')}</p><p>${u ? `${esc(u.type_id || '주택형 미확인')} · 전용 ${num(u.area_sqm) ? esc(u.area_sqm) + '㎡' : '면적 미확인'}` : '주택형 · 전용면적 확인 대기'}</p></div><div class="metric"><small>${familyPrice(u) ? '면적대별 최고금액 범위 · 타입 미확인' : u?.sale_price_basis === 'maximum_base_price' ? '주택형별 최고 분양금액' : '공식 분양금액'}</small><strong>${priceText(u)}</strong><p>거래 중앙값 ${money(u?.comparison_median_krw)}</p>${u && analyzed(u) ? `<strong class="gap">${gapText(u)}</strong><p>차익률 ${esc(u.gap_rate_pct)}% · 신뢰도 ${confidence[u.confidence]}</p>` : '<p>가격차 분석 대기</p>'}</div><div class="metric"><small>기관추천 신청 마감</small><strong>${esc(date(l.apply_end_at))}</strong><p>${esc(deadlineNote(l))}</p></div><button type="button" data-detail="${esc(l.id)}" aria-label="${esc(l.name)} 상세 보기">상세 보기 ↗</button></article>`;
+    return `<article class="listing"><div><span class="badge ${s}">${statusText[s]}</span><span class="badge ${e === 'check' ? 'check' : ''}">${eText}</span><h4><button type="button" data-detail="${esc(l.id)}">${ranked ? `${i+1}. ` : ''}${esc(l.name || '이름 미확인')}</button></h4><p>${esc(l.region || '지역 미확인')} · ${esc(l.district || '상세 지역 미확인')}</p><p>${u ? `${esc(u.type_id || '주택형 미확인')} · 전용 ${num(u.area_sqm) ? esc(u.area_sqm) + '㎡' : '면적 미확인'}` : '주택형 · 전용면적 확인 대기'}</p></div><div class="metric"><small>${familyPrice(u) ? '면적대별 최고금액 범위 · 타입 미확인' : u?.sale_price_basis === 'maximum_base_price' ? '주택형별 최고 분양금액' : '공식 분양금액'}</small><strong>${priceText(u)}</strong><p>거래 중앙값 ${money(u?.comparison_median_krw)}</p>${u && analyzed(u) ? `<strong class="gap">${gapText(u)}</strong><p>차익률 ${esc(u.gap_rate_pct)}% · 신뢰도 ${confidence[u.confidence]}</p>` : `<p>${esc(analysisNote(u))}</p>`}</div><div class="metric"><small>기관추천 신청 시작</small><p>${esc(date(l.apply_start_at))}</p><small>기관추천 신청 마감</small><strong>${esc(date(l.apply_end_at))}</strong><p>${esc(deadlineNote(l))}</p><p>${link(l.notice_url,'신청 방법·공식 접수처')}</p></div><button type="button" data-detail="${esc(l.id)}" aria-label="${esc(l.name)} 상세 보기">상세 보기 ↗</button></article>`;
   }
   function details(id, now = new Date()) {
     const l = data.listings.find(x=>x.id===id); if (!l) return;
     detailId = id; detailOpener = document.activeElement;
     const e = l.eligibility || {};
-    const fields = [['공급 위치',l.address || '미확인'],['모집 상태',statusText[status(l,now)]],['공급 유형',({private_apt:'민영 아파트',public_apt:'공공 아파트'})[l.housing_type] || '미확인'],['신청 시작',date(l.apply_start_at)],['신청 마감',date(l.apply_end_at)],['일정 안내',deadlineNote(l)],['게시일',date(l.notice_updated_at)],['데이터 확인',date(l.updated_at)]];
-    $('#detail-content').innerHTML = `<h2 id="detail-title">${esc(l.name)}</h2><p>${link(l.notice_url,'공식 모집 공고 확인')}</p><dl>${fields.map(([a,b])=>`<dt>${a}</dt><dd${a === '모집 상태' ? ' id="detail-status"' : a === '일정 안내' ? ' id="detail-deadline-note"' : ''}>${esc(b)}</dd>`).join('')}</dl><h3>신청 자격과 판정 근거</h3><p>${eligibility(l)==='eligible' ? '용인시 거주자의 지역 요건 충족 · '+ ({both:'경증·중증',mild_only:'경증',severe_only:'중증'}[e.disability_scope]) : eligibility(l)==='check' ? '자격 확인 필요 · 미확인은 신청 불가를 의미하지 않습니다.' : '공고상 지역 요건 제외'}</p><p>${esc(e.evidence_text || '확인된 자격 근거 문장이 없습니다.')}</p><p>${link(e.evidence_url,'자격 근거 확인')}</p>${Array.isArray(e.conditions) ? `<ul>${e.conditions.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>` : ''}<p>${esc(e.scoring_note || '선정 배점 정보 미확인')}</p><p class="notice">개인별 최종 자격과 선정 가능성을 보장하지 않습니다.</p><h3>주택형별 가격 및 실거래 비교</h3>${arr(l.units).length ? arr(l.units).map(unitDetail).join('') : empty('공식 주택형 연결 확인 대기','전용면적·장애인 배정물량·분양가·가격차를 임의 생성하지 않습니다.')}<h3>공식 첨부자료</h3>${arr(l.attachments).map(a=>`<p>${link(a.url,a.name || '첨부자료')} <span class="badge">${a.parse_status === 'parsed' ? '텍스트 추출됨 · 구조 검토 별도' : '문서 확인 필요'}</span></p>`).join('') || '<p>제공된 첨부자료가 없습니다.</p>'}<h3>공고 변경 이력</h3>${arr(l.notice_history).map(h=>`<p>${esc(date(h.published_on))} · ${esc(({initial:'최초 관찰',changed:'변경',correction:'정정',cancellation:'취소'})[h.change_type] || '유형 미확인')} · ${link(h.notice_url,'원문')}<br><span class="muted">관찰 ${esc(date(h.observed_at))}</span></p>`).join('') || '<p>제공된 변경 이력이 없습니다.</p>'}`;
+    const fields = [['공급 위치',l.address || '미확인'],['모집 상태',statusText[status(l,now)]],['공급 유형',({private_apt:'민영 아파트',public_apt:'공공 아파트'})[l.housing_type] || '미확인'],['기관추천 신청 시작',date(l.apply_start_at)],['기관추천 신청 마감',date(l.apply_end_at)],['청약홈 실제 청약기간','기관추천 일정과 별도 · 공식 입주자모집공고에서 확인'],['신청 방법·접수처','공식 기관추천 공고에서 확인'],['전매·거주·재당첨 제한','검증된 개별 조건 미연결 · 공식 모집공고 확인 필요'],['일정 안내',deadlineNote(l)],['게시일',date(l.notice_updated_at)],['데이터 확인',date(l.updated_at)]];
+    $('#detail-content').innerHTML = `<h2 id="detail-title">${esc(l.name)}</h2><p>${link(l.notice_url,'공식 모집 공고 확인')}</p><dl>${fields.map(([a,b])=>`<dt>${a}</dt><dd${a === '모집 상태' ? ' id="detail-status"' : a === '일정 안내' ? ' id="detail-deadline-note"' : ''}>${esc(b)}</dd>`).join('')}</dl><h3>신청 자격과 판정 근거</h3><p>${eligibility(l,filters().scope)==='eligible' ? '용인시 거주자의 지역 요건 충족 · '+ ({both:'경증·중증',mild_only:'경증',severe_only:'중증'}[e.disability_scope]) : eligibility(l,filters().scope)==='check' ? '자격 확인 필요 · 미확인은 신청 불가를 의미하지 않습니다.' : '공고상 지역 요건 제외'}</p><p>${esc(e.evidence_text || '확인된 자격 근거 문장이 없습니다.')}</p><p>${link(e.evidence_url,'자격 근거 확인')}</p>${Array.isArray(e.conditions) ? `<ul>${e.conditions.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>` : ''}<p>${esc(e.scoring_note || '선정 배점 정보 미확인')}</p><p class="notice">개인별 최종 자격과 선정 가능성을 보장하지 않습니다.</p><h3>주택형별 가격 및 실거래 비교</h3>${arr(l.units).length ? arr(l.units).map(unitDetail).join('') : empty('공식 주택형 연결 확인 대기','전용면적·장애인 배정물량·분양가·가격차를 임의 생성하지 않습니다.')}<h3>당첨 기회와 제한 확인</h3><p>특별공급 당첨 이력에 따른 신청 제한, 전매제한·실거주 의무·재당첨 제한은 공급유형과 해당 모집공고의 적용 규정을 확인해야 합니다. 모든 유형을 동일한 평생 1회로 단정하지 않습니다. 현재 자동 검증된 개별 제한 정보는 없습니다.</p><h3>공식 첨부자료</h3>${arr(l.attachments).map(a=>`<p>${link(a.url,a.name || '첨부자료')} <span class="badge">${a.parse_status === 'parsed' ? '텍스트 추출됨 · 구조 검토 별도' : '문서 확인 필요'}</span></p>`).join('') || '<p>제공된 첨부자료가 없습니다.</p>'}<h3>공고 변경 이력</h3>${arr(l.notice_history).map(h=>`<p>${esc(date(h.published_on))} · ${esc(({initial:'최초 관찰',changed:'변경',correction:'정정',cancellation:'취소'})[h.change_type] || '유형 미확인')} · ${link(h.notice_url,'원문')}<br><span class="muted">관찰 ${esc(date(h.observed_at))}</span></p>`).join('') || '<p>제공된 변경 이력이 없습니다.</p>'}`;
     $('#detail').showModal(); $('#close-detail').focus();
   }
   function unitDetail(u) {
-    return `<section class="unit"><h4>${esc(u.type_id || '주택형 미확인')} · 전용 ${num(u.area_sqm) ? esc(u.area_sqm)+'㎡' : '면적 미확인'}</h4><dl><dt>장애인 배정</dt><dd>${num(u.allocation_count) ? esc(u.allocation_count)+'세대' : '미확인'}</dd><dt>공식 분양금액</dt><dd>${priceText(u)} · ${esc(({maximum_base_price:'주택형별 최고 분양금액',exact_base_price:'공식 확인 기본금액',area_family_maximum:'같은 면적대 타입별 최고금액 범위 · 세부 타입 미확인'})[u.sale_price_basis] || '금액 기준 미확인')} ${link(u.sale_price_evidence_url,'가격 근거')}</dd><dt>거래 중앙값</dt><dd>${money(u.comparison_median_krw)}</dd><dt>예상 가격차</dt><dd>${gapText(u)} / ${num(u.gap_rate_pct) ? esc(u.gap_rate_pct)+'%' : '비율 미확인'}</dd><dt>분석 신뢰도</dt><dd>${confidence[u.confidence] || '미확인'} · ${num(u.comparables_count) ? u.comparables_count+'건' : '표본 수 미확인'}</dd></dl><p>${familyPrice(u) ? '세부 타입 미확인: '+esc((u.price_candidate_types || []).join(', '))+'의 공식 최고금액을 비교했습니다. 차익률·정렬은 가장 높은 분양가를 적용한 보수적 값입니다. 전체 층별 최저~최고 가격은 아닙니다.' : ''}</p><p>${analyzed(u) ? '가격차 = 비교 거래 중앙값 − 공식 분양금액. 차익률 = 가격차 ÷ 분양금액 × 100.' : '분석 근거가 부족해 가격차를 제공하지 않습니다.'}</p>${u.analysis_reason ? `<p>백엔드 분석 사유: ${esc(u.analysis_reason)}</p>` : ''}<p class="muted">정책: 반경 2km · 면적 ±10% · 준공연도 차이 10년 이내 · 최근 6개월 최소 3건, 부족하면 12개월. 표본의 신뢰도이며 투자수익을 보장하지 않습니다.</p>${arr(u.comparables).map(t=>`<div class="trade"><strong>${esc(t.apartment_name || '이름 미확인')}</strong><p>${esc(date(t.trade_date))} · ${num(t.area_sqm) ? esc(t.area_sqm)+'㎡' : '면적 미확인'} · ${money(t.price_krw)}</p><p>${esc(t.location || '위치 미확인')} · ${num(t.distance_m) ? esc(t.distance_m)+'m' : '거리 미확인'} · 준공 ${esc(t.build_year || '미확인')}</p>${link(t.source_url,'거래 출처')}</div>`).join('') || '<p>제공된 비교 거래가 없습니다.</p>'}</section>`;
+    return `<section class="unit"><h4>${esc(u.type_id || '주택형 미확인')} · 전용 ${num(u.area_sqm) ? esc(u.area_sqm)+'㎡' : '면적 미확인'}</h4><dl><dt>장애인 배정</dt><dd>${num(u.allocation_count) ? esc(u.allocation_count)+'세대' : '미확인'}</dd><dt>공식 분양금액</dt><dd>${priceText(u)} · ${esc(({maximum_base_price:'주택형별 최고 분양금액',exact_base_price:'공식 확인 기본금액',area_family_maximum:'같은 면적대 타입별 최고금액 범위 · 세부 타입 미확인'})[u.sale_price_basis] || '금액 기준 미확인')} ${link(u.sale_price_evidence_url,'가격 근거')}</dd><dt>거래 중앙값</dt><dd>${money(u.comparison_median_krw)}</dd><dt>예상 가격차</dt><dd>${gapText(u)} / ${num(u.gap_rate_pct) ? esc(u.gap_rate_pct)+'%' : '비율 미확인'}</dd><dt>분석 신뢰도</dt><dd>${confidence[u.confidence] || '미확인'} · ${num(u.comparables_count) ? u.comparables_count+'건' : '표본 수 미확인'}</dd></dl><p>${familyPrice(u) ? '세부 타입 미확인: '+esc((u.price_candidate_types || []).join(', '))+'의 공식 최고금액을 비교했습니다. 차익률·정렬은 가장 높은 분양가를 적용한 보수적 값입니다. 전체 층별 최저~최고 가격은 아닙니다.' : ''}</p><p>${analyzed(u) ? '가격차 = 비교 거래 중앙값 − 공식 분양금액. 차익률 = 가격차 ÷ 분양금액 × 100.' : '분석 근거가 부족해 가격차를 제공하지 않습니다.'}</p><p>${esc(analysisNote(u))}</p><p class="muted">정책: 반경 2km · 면적 ±10% · 준공연도 차이 10년 이내 · 최근 6개월 최소 3건, 부족하면 12개월. 기준 준공연도는 공식 입주예정 연도이므로 기존 주택과의 차이가 있습니다. 표본 부족·행정구역 검색 범위의 한계가 있으며, 세금·옵션·금융비용·매도 가능 시점을 반영한 확정 수익이 아닙니다.</p>${arr(u.comparables).map(t=>`<div class="trade"><strong>${esc(t.apartment_name || '이름 미확인')}</strong><p>${esc(date(t.trade_date))} · ${num(t.area_sqm) ? esc(t.area_sqm)+'㎡' : '면적 미확인'} · ${money(t.price_krw)}</p><p>${esc(t.location || '위치 미확인')} · ${num(t.distance_m) ? esc(t.distance_m)+'m' : '거리 미확인'} · 준공 ${esc(t.build_year || '미확인')}</p>${link(t.source_url,'거래 출처')}</div>`).join('') || '<p>제공된 비교 거래가 없습니다.</p>'}</section>`;
   }
   function renderMeta(now = new Date()) {
     const delayedSources = data.sources.filter(s=>delayed(s,now));
@@ -146,7 +170,7 @@
     const healthText = {ok:'정상 갱신',partial:'일부 자료 확인 대기',stale:'수집 실패 · 이전 자료 표시',error:'수집 오류'};
     $('#health').textContent = `${healthText[data.data_status] || '데이터 상태 확인 필요'}${oldAttempt || delayedSources.length ? ' · 36시간 이상 갱신 지연' : ''} — 미확인 자격·가격은 확정하지 않습니다. 신청 전 공식 공고를 확인하세요.`;
     $('#updated').textContent = `JSON 생성: ${date(data.generated_at)} · 전체 출처 마지막 정상 갱신: ${data.last_success_at ? date(data.last_success_at) : '아직 전체 정상 갱신 기록 없음'}`;
-    const active = data.listings.filter(l=>eligibility(l)==='eligible');
+    const active = data.listings.filter(l=>eligibility(l,filters().scope)==='eligible');
     const current = active.filter(l=>['open','upcoming'].includes(status(l,now)));
     const nearest = [...current].filter(l=>l.apply_end_at).sort((a,b)=>compareDates(a.apply_end_at,b.apply_end_at))[0];
     const stats = [['접수 중',active.filter(l=>status(l,now)==='open').length,'단지'],['접수 예정',active.filter(l=>status(l,now)==='upcoming').length,'단지'],['차익 분석 가능',current.filter(l=>arr(l.units).some(analyzed)).length,'단지'],['가장 가까운 마감',nearest ? date(nearest.apply_end_at) : '확인된 일정 없음','']];

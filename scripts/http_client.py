@@ -23,8 +23,11 @@ class Client:
         self.pause=pause
         self.robots={}
         self.failed_origins={}
+        self.deadline=None
 
-    def request(self,url,method='GET',params=None,data=None,ttl=0,robots=False,headers=None):
+    def request(self,url,method='GET',params=None,data=None,ttl=0,robots=False,headers=None,public_document=False):
+        remaining=self.deadline-time.monotonic() if self.deadline else None
+        if remaining is not None and remaining<=0:raise SourceError('notice_budget_exhausted')
         if os.getenv('HOME_SUPPLY_FORCE_REFRESH','').lower()=='true':ttl=0
         if urlsplit(url).scheme!='https':
             raise SourceError('insecure_url')
@@ -34,6 +37,14 @@ class Client:
         public_params={k:v for k,v in (params or {}).items() if k.lower() not in ('servicekey','key','apikey','api_key','token')}
         digest=hashlib.sha256(json.dumps([url,method,public_params,data],sort_keys=True).encode()).hexdigest()
         cache=self.cache_dir/(digest+'.bin')
+        metadata=self.cache_dir/(digest+'.headers.json')
+        request_headers=dict(headers or {})
+        if public_document and cache.exists() and metadata.exists():
+            try:
+                validators=json.loads(metadata.read_text(encoding='utf-8'))
+                if validators.get('etag'):request_headers['If-None-Match']=validators['etag']
+                if validators.get('modified'):request_headers['If-Modified-Since']=validators['modified']
+            except (ValueError,OSError):pass
         if ttl and cache.exists() and time.time()-cache.stat().st_mtime<ttl:
             return cache.read_bytes()
         parts=urlsplit(url)
@@ -42,18 +53,25 @@ class Client:
             raise SourceError(self.failed_origins[origin])
         try:
             time.sleep(self.pause)
-            with self.session.request(method,url,params=params,data=data,headers=headers,timeout=self.timeout,stream=True,allow_redirects=False) as response:
+            timeout=self.timeout if remaining is None else tuple(max(.1,min(v,remaining)) for v in self.timeout)
+            with self.session.request(method,url,params=params,data=data,headers=request_headers,timeout=timeout,stream=True,allow_redirects=False) as response:
+                if response.status_code==304 and public_document and cache.exists():return cache.read_bytes()
                 if response.status_code!=200:
                     if response.status_code==429 or response.status_code>=500:
                         self.failed_origins[origin]=f'http_{response.status_code}'
                     raise SourceError(f'http_{response.status_code}')
                 chunks=[]; size=0
                 for chunk in response.iter_content(65536):
+                    if self.deadline and time.monotonic()>=self.deadline:raise SourceError('notice_budget_exhausted')
                     size+=len(chunk)
                     if size>20_000_000:
                         raise SourceError('response_too_large')
                     chunks.append(chunk)
                 content=b''.join(chunks)
+                if public_document:
+                    cache.parent.mkdir(parents=True,exist_ok=True)
+                    cache.write_bytes(content)
+                    metadata.write_text(json.dumps({'etag':response.headers.get('ETag'),'modified':response.headers.get('Last-Modified')}),encoding='utf-8')
         except requests.RequestException:
             # Retries have already been exhausted. Stop repeating a host outage
             # for every listing; another source and the next daily run still proceed.
