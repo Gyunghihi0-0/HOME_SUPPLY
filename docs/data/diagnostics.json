@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-19T00:32:56.304928+09:00",
+  "observed_at": "2026-10-19T07:42:39.057446+09:00",
   "catalog_cutoff": "2025-10-19",
   "catalog_records": 368,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39140783354",
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39173289151",
   "metrics": {
     "notices": 28,
     "project_records": 30,
