@@ -28,9 +28,13 @@ jobs:
           query='service=address&request=getcoord&version=2.0&crs=EPSG%3A4326&address=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%A0%95%EC%9E%90%EB%8F%99%2090&format=json&type=PARCEL'
           url='https://'+host+'/req/address?'+query
           for protocol in ['--http1.1','--http2']:
-           p=subprocess.run(['curl',protocol,'--silent','--show-error','--connect-timeout','10','--max-time','25','--output','/tmp/vworld-public-body','--write-out','http=%{http_code} tls_verify=%{ssl_verify_result} connect=%{time_connect} tls=%{time_appconnect} first_byte=%{time_starttransfer}',url],capture_output=True,text=True)
+           p=subprocess.run(['curl',protocol,'--silent','--show-error','--connect-timeout','10','--max-time','25','--dump-header','/tmp/vworld-public-headers','--output','/tmp/vworld-public-body','--write-out','http=%{http_code} tls_verify=%{ssl_verify_result} connect=%{time_connect} tls=%{time_appconnect} first_byte=%{time_starttransfer}',url],capture_output=True,text=True)
            print('CURL '+protocol+' exit='+str(p.returncode)+' '+p.stdout+' '+p.stderr[:200])
            if p.returncode==0:
+            from pathlib import Path
+            import re
+            print('PUBLIC_HEADERS '+json.dumps([line for line in Path('/tmp/vworld-public-headers').read_text(errors='replace').splitlines() if line.lower().startswith(('http/','server:','via:','content-type:','x-cache:','x-request-id:'))]))
+            print('PUBLIC_BODY '+re.sub(r'\\s+',' ',Path('/tmp/vworld-public-body').read_text(errors='replace'))[:1500])
             try:
              payload=json.load(open('/tmp/vworld-public-body'));resp=payload.get('response',{})
              print('PUBLIC_API_RESPONSE '+json.dumps({'status':resp.get('status'),'code':resp.get('error',{}).get('code')}))
