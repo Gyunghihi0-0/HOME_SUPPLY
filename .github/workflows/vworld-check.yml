@@ -57,3 +57,5 @@ jobs:
           print('DISTRICTS_PUBLIC '+json.dumps([dict(sig_cd=f['properties'].get('sig_cd'),sig_kor_nm=f['properties'].get('sig_kor_nm'),full_nm=f['properties'].get('full_nm')) for f in fs],ensure_ascii=False))
           print('RESULT vworld_auth_geocode_district_success')
           PY
+
+# Revalidate connectivity for the requested production data refresh.
