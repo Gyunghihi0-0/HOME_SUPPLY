@@ -211,7 +211,15 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                         if loc:locations[identity]=loc
                         else:item['collection_issues'].append('some_comparison_locations_unverified')
                 print('trade_coordinates: '+item['id']+' requested='+str(len(geocode_jobs))+' verified='+str(len(locations)),flush=True)
-            item['units']=[calculate(u,trades,target,locations,policy,now.date()) for u in item['units']]
+            analyzed=[]
+            for unit in item['units']:
+                audit={}
+                calculated=calculate(unit,trades,target,locations,policy,now.date(),audit=audit)
+                print('analysis_screening: '+json.dumps(dict(listing=item['id'],unit=unit['type_id'],**audit)),flush=True)
+                if calculated['analysis_reason']=='fewer_than_three_verified_trades':
+                    calculated['analysis_reason']+='; '+str(audit.get('within_radius',0))+'건 통과 / 최소 3건 필요'
+                analyzed.append(calculated)
+            item['units']=analyzed
             if 'comparison_geocode_budget_reached' in item['collection_issues']:
                 trade_error='comparison_geocode_budget_reached'
                 item['units']=[dict(u,comparison_median_krw=None,estimated_gap_krw=None,gap_rate_pct=None,
