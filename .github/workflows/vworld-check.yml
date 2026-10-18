@@ -59,3 +59,48 @@ jobs:
            except Exception as exc:
             print(label+': FAIL error_type='+type(exc).__name__);failed=True
           sys.exit(1 if failed else 0)
+
+  browser:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install official browser tooling without repository checkout
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Verify official APIs using a normal Chromium session
+        env:
+          VWORLD_API_KEY: ${{ secrets.VWORLD_API_KEY }}
+          VWORLD_DOMAIN: ${{ vars.VWORLD_DOMAIN || 'https://gyunghihi0-0.github.io/HOME_SUPPLY/' }}
+        shell: bash
+        run: |
+          node <<'JS'
+          const { chromium } = require('playwright');
+          (async () => {
+           const key=(process.env.VWORLD_API_KEY||'').trim();
+           if(!key){console.log('browser: FAIL missing_secret');process.exitCode=1;return;}
+           const domain=process.env.VWORLD_DOMAIN;
+           const browser=await chromium.launch({headless:true});
+           try {
+            const context=await browser.newContext();
+            const page=await context.newPage();
+            for (const [label,path,params] of [
+             ['geocoder','address',{service:'address',request:'getcoord',version:'2.0',crs:'EPSG:4326',address:'경기도 성남시 분당구 정자동 90',format:'json',type:'PARCEL'}],
+             ['district_2d','data',{service:'data',request:'GetFeature',version:'2.0',data:'LT_C_ADSIGG_INFO',format:'json',size:'1',geometry:'false',attribute:'true',crs:'EPSG:4326',geomFilter:'BOX(127.09,37.35,127.11,37.37)'}]
+            ]) {
+             try {
+              const url='https://api.vworld.kr/req/'+path+'?'+new URLSearchParams({...params,key,domain});
+              const response=await page.goto(url,{waitUntil:'domcontentloaded',timeout:25000});
+              if(response.status()!==200){console.log('browser_'+label+': FAIL http_status='+response.status());process.exitCode=1;continue;}
+              const data=JSON.parse(await page.locator('body').innerText()).response;
+              if(data.status==='OK'){console.log('browser_'+label+': PASS authenticated');}
+              else{const code=String(data.error?.code||'UNKNOWN');console.log('browser_'+label+': FAIL api_code='+(/^[A-Z_]{1,80}$/.test(code)?code:'UNKNOWN'));process.exitCode=1;}
+             } catch {console.log('browser_'+label+': FAIL navigation_or_response');process.exitCode=1;}
+            }
+           } finally {await browser.close();}
+          })().catch(()=>{console.log('browser: FAIL startup');process.exitCode=1;});
+          JS
