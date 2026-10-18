@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-18T11:13:53.952843+09:00",
+  "generated_at": "2026-10-18T12:10:11.100534+09:00",
   "last_success_at": null,
   "data_status": "partial",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
       "status": "partial",
-      "checked_at": "2026-10-18T11:10:19.533159+09:00",
+      "checked_at": "2026-10-18T11:53:35.218692+09:00",
       "last_success_at": null,
       "error_code": "notice_or_attachment_failed",
       "message": "notice_or_attachment_failed",
@@ -19,8 +19,8 @@
       "id": "applyhome",
       "name": "청약홈 분양정보",
       "url": "https://www.data.go.kr/data/15098547/openapi.do",
-      "status": "not_configured",
-      "checked_at": "2026-10-18T11:10:19.533159+09:00",
+      "status": "partial",
+      "checked_at": "2026-10-18T11:53:35.218692+09:00",
       "last_success_at": null,
       "error_code": "official_project_mapping_required",
       "message": "official_project_mapping_required",
@@ -29,12 +29,12 @@
     {
       "id": "molit",
       "name": "국토교통부 실거래가",
-      "url": "https://www.data.go.kr/data/15126469/openapi.do",
-      "status": "not_configured",
-      "checked_at": "2026-10-18T11:10:19.533159+09:00",
+      "url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "status": "partial",
+      "checked_at": "2026-10-18T11:53:35.218692+09:00",
       "last_success_at": null,
-      "error_code": "missing_molit_key",
-      "message": "missing_molit_key",
+      "error_code": null,
+      "message": null,
       "records_count": 0
     }
   ],
@@ -52,7 +52,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
       "notice_updated_at": "2026-10-16",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -109,7 +109,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268770591",
       "notice_updated_at": "2026-10-14",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -167,7 +167,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529927",
       "notice_updated_at": "2026-10-12",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -225,7 +225,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529926",
       "notice_updated_at": "2026-10-12",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -282,7 +282,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567650",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -339,7 +339,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567647",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -396,7 +396,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327319",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -453,7 +453,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327317",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -516,7 +516,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567671",
       "notice_updated_at": "2026-10-07",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -579,7 +579,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366601",
       "notice_updated_at": "2026-10-02",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -636,7 +636,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366609",
       "notice_updated_at": "2026-10-01",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -693,7 +693,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366606",
       "notice_updated_at": "2026-10-01",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -743,7 +743,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266126622",
       "notice_updated_at": "2026-09-30",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -800,7 +800,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886763",
       "notice_updated_at": "2026-09-30",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -857,7 +857,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886757",
       "notice_updated_at": "2026-09-30",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -914,7 +914,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886756",
       "notice_updated_at": "2026-09-30",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -971,7 +971,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886762",
       "notice_updated_at": "2026-09-29",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1020,7 +1020,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=263730012",
       "notice_updated_at": "2026-09-18",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1069,7 +1069,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=262772736",
       "notice_updated_at": "2026-09-14",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1127,7 +1127,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=262294421",
       "notice_updated_at": "2026-09-14",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -1184,7 +1184,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260860996",
       "notice_updated_at": "2026-09-04",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1248,7 +1248,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260860997",
       "notice_updated_at": "2026-09-04",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1303,7 +1303,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260383709",
       "notice_updated_at": "2026-09-03",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1361,7 +1361,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260383696",
       "notice_updated_at": "2026-09-02",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1411,7 +1411,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145184",
       "notice_updated_at": "2026-09-02",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1469,7 +1469,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145193",
       "notice_updated_at": "2026-09-01",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1510,7 +1510,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=260145183",
       "notice_updated_at": "2026-09-01",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1568,7 +1568,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477426",
       "notice_updated_at": "2026-08-27",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1632,7 +1632,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477420",
       "notice_updated_at": "2026-08-24",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -1689,7 +1689,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=258477424",
       "notice_updated_at": "2026-08-24",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "unknown",
         "disability_scope": "unknown",
@@ -1751,7 +1751,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=256337249",
       "notice_updated_at": "2026-08-13",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T11:53:35.218692+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
