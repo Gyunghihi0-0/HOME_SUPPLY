@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-18T17:40:33.027466+09:00",
+  "generated_at": "2026-10-18T19:03:54.034005+09:00",
   "last_success_at": null,
   "data_status": "stale",
   "sources": [
@@ -8,45 +8,45 @@
       "id": "gg",
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
-      "status": "error",
+      "status": "not_checked",
       "checked_at": "2026-10-18T17:38:24.538416+09:00",
       "last_success_at": null,
-      "error_code": "network_error",
-      "message": "network_error",
+      "error_code": "daily_refresh_timeout",
+      "message": "daily_refresh_timeout",
       "records_count": null
     },
     {
       "id": "applyhome",
       "name": "청약홈 분양정보",
       "url": "https://www.data.go.kr/data/15098547/openapi.do",
-      "status": "partial",
+      "status": "not_checked",
       "checked_at": "2026-10-18T17:38:24.538416+09:00",
       "last_success_at": null,
-      "error_code": "official_project_not_matched",
-      "message": "official_project_not_matched",
-      "records_count": 7
+      "error_code": "daily_refresh_timeout",
+      "message": "daily_refresh_timeout",
+      "records_count": null
     },
     {
       "id": "molit",
       "name": "국토교통부 실거래가",
       "url": "https://www.data.go.kr/data/15126468/openapi.do",
-      "status": "partial",
+      "status": "not_checked",
       "checked_at": "2026-10-18T17:38:24.538416+09:00",
       "last_success_at": null,
-      "error_code": "network_error",
-      "message": "network_error",
-      "records_count": 0
+      "error_code": "daily_refresh_timeout",
+      "message": "daily_refresh_timeout",
+      "records_count": null
     },
     {
       "id": "vworld",
       "name": "브이월드 공식 좌표",
       "url": "https://www.vworld.kr/",
-      "status": "partial",
+      "status": "not_checked",
       "checked_at": "2026-10-18T17:38:24.538416+09:00",
       "last_success_at": null,
-      "error_code": "coordinates_not_fully_verified",
-      "message": "coordinates_not_fully_verified",
-      "records_count": 0
+      "error_code": "daily_refresh_timeout",
+      "message": "daily_refresh_timeout",
+      "records_count": null
     }
   ],
   "listings": [
