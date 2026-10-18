@@ -1,7 +1,8 @@
 name: Official data and Pages
 on:
   schedule:
-    - cron: '17 23 * * *'
+    - cron: '0 6 * * *'
+      timezone: 'Asia/Seoul'
   workflow_dispatch:
     inputs:
       refresh_data:
@@ -21,6 +22,7 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,6 +36,7 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: test
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
     outputs:
@@ -56,14 +59,15 @@ jobs:
         if: github.event_name != 'workflow_dispatch' || inputs.refresh_data
         id: collect
         continue-on-error: true
+        timeout-minutes: 11
         env:
           APPLYHOME_SERVICE_KEY: ${{ secrets.APPLYHOME_SERVICE_KEY }}
           MOLIT_SERVICE_KEY: ${{ secrets.MOLIT_SERVICE_KEY }}
           MOLIT_GENERAL_SERVICE_KEY: ${{ secrets.MOLIT_GENERAL_SERVICE_KEY }}
           MOLIT_ALLOW_GENERAL_FALLBACK: ${{ vars.MOLIT_ALLOW_GENERAL_FALLBACK }}
           VWORLD_API_KEY: ${{ secrets.VWORLD_API_KEY }}
-          VWORLD_DOMAIN: ${{ vars.VWORLD_DOMAIN }}
-        run: python -m scripts.pipeline
+          VWORLD_DOMAIN: ${{ vars.VWORLD_DOMAIN || 'https://gyunghihi0-0.github.io/HOME_SUPPLY/' }}
+        run: python -u -m scripts.daily_refresh
       - run: python -m scripts.validate docs/data/latest.json
       - name: Commit only generated data
         run: |
@@ -84,11 +88,14 @@ jobs:
           path: docs
       - name: Surface source outage
         if: steps.collect.outcome == 'failure'
-        run: exit 1
+        run: |
+          echo '::error::Collection was incomplete. Validated partial or previous records were retained and published; this run is not a full refresh success.'
+          exit 1
   deploy:
     if: always() && needs.refresh.outputs.has_frontend == 'true'
     needs: refresh
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       pages: write
       id-token: write

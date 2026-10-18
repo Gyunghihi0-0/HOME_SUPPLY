@@ -16,10 +16,11 @@ class Client:
     def __init__(self, cache_dir='.cache', pause=1):
         self.session=requests.Session()
         self.session.headers['User-Agent']='HomeSupplyResearch/1.0 (official public housing notices; daily)'
-        self.session.mount('https://',HTTPAdapter(max_retries=Retry(total=2,backoff_factor=1,status_forcelist=[429,500,502,503,504],allowed_methods=['GET','POST'],respect_retry_after_header=False)))
+        self.session.mount('https://',HTTPAdapter(max_retries=Retry(total=2,backoff_factor=1,status_forcelist=[429,500,502,503,504],allowed_methods=['GET','POST'],respect_retry_after_header=False,raise_on_status=False)))
         self.cache_dir=Path(cache_dir)
         self.pause=pause
         self.robots={}
+        self.failed_origins={}
 
     def request(self,url,method='GET',params=None,data=None,ttl=0,robots=False):
         if urlsplit(url).scheme!='https':
@@ -32,10 +33,16 @@ class Client:
         cache=self.cache_dir/(digest+'.bin')
         if ttl and cache.exists() and time.time()-cache.stat().st_mtime<ttl:
             return cache.read_bytes()
+        parts=urlsplit(url)
+        origin=(parts.scheme,parts.netloc)
+        if origin in self.failed_origins:
+            raise SourceError(self.failed_origins[origin])
         try:
             time.sleep(self.pause)
-            with self.session.request(method,url,params=params,data=data,timeout=(10,45),stream=True,allow_redirects=False) as response:
+            with self.session.request(method,url,params=params,data=data,timeout=(8,20),stream=True,allow_redirects=False) as response:
                 if response.status_code!=200:
+                    if response.status_code==429 or response.status_code>=500:
+                        self.failed_origins[origin]=f'http_{response.status_code}'
                     raise SourceError(f'http_{response.status_code}')
                 chunks=[]; size=0
                 for chunk in response.iter_content(65536):
@@ -45,6 +52,9 @@ class Client:
                     chunks.append(chunk)
                 content=b''.join(chunks)
         except requests.RequestException:
+            # Retries have already been exhausted. Stop repeating a host outage
+            # for every listing; another source and the next daily run still proceed.
+            self.failed_origins[origin]='network_error'
             raise SourceError('network_error') from None
         if ttl:
             # Many public gateways return authentication/quota failures with HTTP 200.

@@ -1,5 +1,13 @@
 # 백엔드 인수인계
 
+## 2026-10-18 오전 6시 자동 갱신 변경
+
+사용자는 PC/국내 서버를 상시 켜는 방식을 제외하고 GitHub 기본 호스팅 환경만 사용하도록 결정했습니다. `backend.yml` 예약을 매일 06:00 Asia/Seoul로 변경했습니다. Actions 예약의 정각 시작/완료는 보장되지 않습니다. `VWORLD_DOMAIN`이 없으면 사용자가 확인한 등록 주소 `https://gyunghihi0-0.github.io/HOME_SUPPLY/`를 전달합니다.
+
+로컬에서 브이월드 두 API가 OK인 것은 확인됐으나 GitHub Ubuntu/Windows/macOS 및 정상 Chromium 세션에서는 조회에 실패했습니다. 도메인 누락이 모든 장애의 원인이라고 단정하지 않습니다. `INCORRECT_KEY`에는 도메인 불일치도 포함됩니다. 이 조건에서 자동 시세차익까지 정상 완료됐다고 보고하면 안 됩니다.
+
+`scripts.daily_refresh`가 수집을 9분으로 제한하고 시간 초과 시 기존 레코드/마지막 성공시각을 보존하며 stale로 표시합니다. HTTP 재시도를 소진한 서버는 같은 실행에서 재요청하지 않아 공고별 무한 대기를 줄였습니다. 브이월드 오류 코드는 별도로 표시하고, 국토부 조회 전 좌표가 막히면 국토부에는 verified_target_location_required를 기록합니다. 검증된 부분 결과와 기존 자료는 Pages에 배포하되 실제 출처 장애는 Actions 실패로 표시합니다. 50개 회귀 테스트로 호스트 장애 차단·다른 출처 진행·타임아웃 보존·오류 분리를 확인했습니다. 아래 내용은 이전 단계의 이력입니다.
+
 ## 작업 환경 및 협업
 
 2026-10-18, 저장소 `Gyunghihi0-0/HOME_SUPPLY`, 기준 main 커밋 `32db51de5f69ad5c15321540af1bfe32abdfb104`. 확인 시 README만 존재했습니다. 로컬 Git 실행 파일이 없어 GitHub 커넥터로 독립 브랜치 `backend/official-data-pipeline`을 생성했습니다. 로컬 소스는 `E:\GPT_SET`에 작성했습니다. 프론트엔드 파일은 만들거나 수정하지 않았습니다. main에는 직접 반영하지 않습니다.
