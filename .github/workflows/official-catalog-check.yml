@@ -46,7 +46,7 @@ jobs:
           for page in range(1,11):
            d=get('getAPTLttotPblancDetail',{'page':page,'perPage':100,'cond[RCRIT_PBLANC_DE::GTE]':cutoff})
            rows.extend(d['data'])
-           if len(rows)>=int(d['totalCount']):break
+           if len(rows)>=int(d.get('matchCount',d['totalCount'])) or len(d['data'])<100:break
            time.sleep(0.3)
           else:raise SystemExit('catalog_pagination_limit')
           fields=['HOUSE_MANAGE_NO','PBLANC_NO','HOUSE_NM','HSSPLY_ADRES','RCRIT_PBLANC_DE','MVN_PREARNGE_YM','HOUSE_DTL_SECD']
@@ -56,7 +56,7 @@ jobs:
            if not any(len(norm(label))>=5 and (norm(label) in name or name in norm(label)) for label in labels):continue
            public={k:row.get(k) for k in fields}
            models=get('getAPTLttotPblancMdl',{'page':1,'perPage':100,'cond[HOUSE_MANAGE_NO::EQ]':row['HOUSE_MANAGE_NO'],'cond[PBLANC_NO::EQ]':row['PBLANC_NO']})
-           if int(models['totalCount'])>100:raise SystemExit('model_pagination_required')
+           if int(models.get('matchCount',len(models['data'])))>100:raise SystemExit('model_pagination_required')
            public['models']=[{k:m.get(k) for k in ['HOUSE_MANAGE_NO','PBLANC_NO','MODEL_NO','HOUSE_TY','LTTOT_TOP_AMOUNT']} for m in models['data']]
            print('PUBLIC_HOUSING_CATALOG '+json.dumps(public,ensure_ascii=False))
            count+=1;time.sleep(0.5)
