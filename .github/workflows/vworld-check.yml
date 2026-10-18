@@ -29,8 +29,8 @@ jobs:
            if domain:params['domain']=domain
            try:
             with urllib.request.urlopen('https://api.vworld.kr/req/'+path+'?'+urllib.parse.urlencode(params),timeout=30) as r:return json.load(r)['response']
-           except Exception:
-            print('RESULT request_failed (details suppressed)');sys.exit(1)
+           except Exception as exc:
+            print('RESULT request_failed type='+type(exc).__name__+' http='+str(getattr(exc,'code','none')));sys.exit(1)
           address='경기도 성남시 분당구 정자동 90'
           r=get('address',dict(service='address',request='getcoord',version='2.0',crs='EPSG:4326',address=address,format='json',type='PARCEL',refine='false',simple='false'))
           if r.get('status')!='OK':
