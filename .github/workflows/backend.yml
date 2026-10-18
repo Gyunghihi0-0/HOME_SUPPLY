@@ -28,7 +28,10 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python -m pytest tests/backend -q
+        env:
+          GITHUB_STEP_SUMMARY: ''
       - run: python -m scripts.validate contracts/example-latest.json docs/data/latest.json
+      - run: node tests/frontend/core.test.cjs
   refresh:
     if: github.event_name != 'pull_request'
     needs: test
@@ -58,6 +61,7 @@ jobs:
         continue-on-error: true
         timeout-minutes: 13
         env:
+          HOME_SUPPLY_OPERATIONAL_SUMMARY: 'true'
           HOME_SUPPLY_FORCE_REFRESH: ${{ github.event_name != 'schedule' }}
           APPLYHOME_SERVICE_KEY: ${{ secrets.APPLYHOME_SERVICE_KEY }}
           KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
