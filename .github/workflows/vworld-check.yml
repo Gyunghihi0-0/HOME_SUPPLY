@@ -32,6 +32,12 @@ jobs:
             with urllib.request.urlopen(request,timeout=30) as r:return json.load(r)['response']
            except Exception as exc:
             print('RESULT request_failed type='+type(exc).__name__+' http='+str(getattr(exc,'code','none')));sys.exit(1)
+          for endpoint in ['https://api.vworld.kr/req/address?service=address&request=getcoord&format=json','https://api.vworld.kr/req/data?service=data&request=getfeature&format=json']:
+           try:
+            with urllib.request.urlopen(urllib.request.Request(endpoint,headers={'User-Agent':'Mozilla/5.0'}),timeout=20) as probe:
+             print('PREFLIGHT '+endpoint.split('/req/')[1].split('?')[0]+' http='+str(probe.status))
+           except Exception as exc:
+            print('PREFLIGHT '+endpoint.split('/req/')[1].split('?')[0]+' type='+type(exc).__name__+' http='+str(getattr(exc,'code','none')))
           address='경기도 성남시 분당구 정자동 90'
           r=get('address',dict(service='address',request='getcoord',version='2.0',crs='EPSG:4326',address=address,format='json',type='PARCEL',refine='false',simple='false'))
           if r.get('status')!='OK':
