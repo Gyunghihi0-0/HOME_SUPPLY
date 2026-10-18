@@ -1,0 +1,636 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "last_success_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "data_status": {
+      "enum": [
+        "ok",
+        "partial",
+        "stale",
+        "error"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "listings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/listing"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "last_success_at",
+    "data_status",
+    "sources",
+    "listings"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "comparable": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "apartment_name": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "area_sqm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "trade_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "price_krw": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "build_year": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1900
+        },
+        "distance_m": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "collected_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+        }
+      },
+      "required": [
+        "id",
+        "apartment_name",
+        "location",
+        "area_sqm",
+        "trade_date",
+        "price_krw",
+        "build_year",
+        "distance_m",
+        "source_url",
+        "collected_at"
+      ],
+      "additionalProperties": false
+    },
+    "unit": {
+      "type": "object",
+      "properties": {
+        "type_id": {
+          "type": "string"
+        },
+        "area_sqm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "allocation_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "sale_price_krw": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "sale_price_basis": {
+          "enum": [
+            "maximum_base_price",
+            "exact_base_price",
+            "unknown"
+          ]
+        },
+        "sale_price_evidence_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "comparison_median_krw": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "estimated_gap_krw": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "gap_rate_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "comparables_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unavailable"
+          ]
+        },
+        "analysis_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "analysis_policy_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "comparables": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/comparable"
+          }
+        }
+      },
+      "required": [
+        "type_id",
+        "area_sqm",
+        "allocation_count",
+        "sale_price_krw",
+        "sale_price_basis",
+        "sale_price_evidence_url",
+        "comparison_median_krw",
+        "estimated_gap_krw",
+        "gap_rate_pct",
+        "comparables_count",
+        "confidence",
+        "analysis_reason",
+        "analysis_policy_version",
+        "comparables"
+      ],
+      "additionalProperties": false
+    },
+    "eligibility": {
+      "type": "object",
+      "properties": {
+        "yongin_status": {
+          "enum": [
+            "eligible",
+            "ineligible",
+            "unknown"
+          ]
+        },
+        "disability_scope": {
+          "enum": [
+            "both",
+            "mild_only",
+            "severe_only",
+            "unknown"
+          ]
+        },
+        "evidence_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "evidence_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scoring_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rule_version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "yongin_status",
+        "disability_scope",
+        "evidence_url",
+        "evidence_text",
+        "scoring_note",
+        "conditions",
+        "rule_version"
+      ],
+      "additionalProperties": false
+    },
+    "listing": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "address": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "district": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "housing_type": {
+          "enum": [
+            "private_apt",
+            "public_apt",
+            "unknown"
+          ]
+        },
+        "status": {
+          "enum": [
+            "open",
+            "upcoming",
+            "closed",
+            "cancelled",
+            "unknown"
+          ]
+        },
+        "apply_start_at": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+            }
+          ]
+        },
+        "apply_end_at": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+            }
+          ]
+        },
+        "deadline_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notice_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "notice_updated_at": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+            }
+          ]
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "eligibility": {
+          "$ref": "#/$defs/eligibility"
+        },
+        "units": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/unit"
+          }
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attachment"
+          }
+        },
+        "notice_history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/notice_revision"
+          }
+        },
+        "housing_manage_no": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pblanc_no": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "location_verified": {
+          "type": "boolean"
+        },
+        "collection_issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "address",
+        "region",
+        "district",
+        "housing_type",
+        "status",
+        "apply_start_at",
+        "apply_end_at",
+        "deadline_note",
+        "notice_url",
+        "notice_updated_at",
+        "updated_at",
+        "eligibility",
+        "units",
+        "attachments",
+        "notice_history",
+        "housing_manage_no",
+        "pblanc_no",
+        "location_verified",
+        "collection_issues"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "partial",
+            "error",
+            "not_configured",
+            "not_checked"
+          ]
+        },
+        "checked_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "last_success_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "error_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "records_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "url",
+        "status",
+        "checked_at",
+        "last_success_at",
+        "error_code",
+        "message",
+        "records_count"
+      ],
+      "additionalProperties": false
+    },
+    "notice_revision": {
+      "type": "object",
+      "properties": {
+        "notice_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "published_on": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "observed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "change_type": {
+          "enum": [
+            "initial",
+            "changed",
+            "correction",
+            "cancellation"
+          ]
+        }
+      },
+      "required": [
+        "notice_url",
+        "published_on",
+        "content_sha256",
+        "observed_at",
+        "change_type"
+      ],
+      "additionalProperties": false
+    },
+    "attachment": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "name": {
+          "type": "string"
+        },
+        "parse_status": {
+          "enum": [
+            "parsed",
+            "unsupported",
+            "error",
+            "not_checked"
+          ]
+        },
+        "error_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "url",
+        "name",
+        "parse_status",
+        "error_code"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": "2026-10-18-user-1",
+  "approved": true,
+  "radius_m": 2000,
+  "area_tolerance_pct": 10,
+  "build_year_tolerance": 10,
+  "minimum_trades": 3,
+  "preferred_months": 6,
+  "maximum_months": 12
+}

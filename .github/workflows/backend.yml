@@ -1,0 +1,92 @@
+name: Official data and Pages
+on:
+  schedule:
+    - cron: '17 23 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/**', 'config/**', 'contracts/**', 'tests/backend/**', 'requirements.txt', '.github/workflows/backend.yml', 'docs/**']
+  pull_request:
+    paths: ['scripts/**', 'config/**', 'contracts/**', 'tests/backend/**', 'requirements.txt', '.github/workflows/backend.yml']
+permissions:
+  contents: read
+concurrency:
+  group: official-data-and-pages-${{ github.event_name == 'pull_request' && github.head_ref || 'main' }}
+  cancel-in-progress: false
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m pytest tests/backend -q
+      - run: python -m scripts.validate contracts/example-latest.json docs/data/latest.json
+  refresh:
+    if: github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      has_frontend: ${{ steps.frontend.outputs.exists }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: official-api-${{ github.run_id }}
+          restore-keys: official-api-
+      - name: Collect official data
+        id: collect
+        continue-on-error: true
+        env:
+          APPLYHOME_SERVICE_KEY: ${{ secrets.APPLYHOME_SERVICE_KEY }}
+          MOLIT_SERVICE_KEY: ${{ secrets.MOLIT_SERVICE_KEY }}
+          MOLIT_GENERAL_SERVICE_KEY: ${{ secrets.MOLIT_GENERAL_SERVICE_KEY }}
+          MOLIT_ALLOW_GENERAL_FALLBACK: ${{ vars.MOLIT_ALLOW_GENERAL_FALLBACK }}
+        run: python -m scripts.pipeline
+      - run: python -m scripts.validate docs/data/latest.json
+      - name: Commit only generated data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- docs/data/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: refresh official housing notices [skip ci]'
+            git push origin HEAD:main
+          fi
+      - id: frontend
+        run: |
+          if test -f docs/index.html; then echo 'exists=true' >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.frontend.outputs.exists == 'true'
+        with:
+          path: docs
+      - name: Surface source outage
+        if: steps.collect.outcome == 'failure'
+        run: exit 1
+  deploy:
+    if: always() && needs.refresh.outputs.has_frontend == 'true'
+    needs: refresh
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/deploy-pages@v4
+        id: deployment
