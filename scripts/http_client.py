@@ -1,4 +1,5 @@
 """Bounded requests. Never serialize request URLs containing credentials."""
+import os
 import hashlib
 import json
 import re
@@ -23,6 +24,7 @@ class Client:
         self.failed_origins={}
 
     def request(self,url,method='GET',params=None,data=None,ttl=0,robots=False,headers=None):
+        if os.getenv('HOME_SUPPLY_FORCE_REFRESH','').lower()=='true':ttl=0
         if urlsplit(url).scheme!='https':
             raise SourceError('insecure_url')
         if robots:

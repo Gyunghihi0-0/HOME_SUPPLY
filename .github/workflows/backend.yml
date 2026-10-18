@@ -61,6 +61,7 @@ jobs:
         continue-on-error: true
         timeout-minutes: 13
         env:
+          HOME_SUPPLY_FORCE_REFRESH: ${{ github.event_name != 'schedule' }}
           APPLYHOME_SERVICE_KEY: ${{ secrets.APPLYHOME_SERVICE_KEY }}
           KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
           MOLIT_SERVICE_KEY: ${{ secrets.MOLIT_SERVICE_KEY }}
