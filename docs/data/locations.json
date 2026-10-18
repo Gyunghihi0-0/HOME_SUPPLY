@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-18T20:37:58.810349+09:00"
+      "checked_at": "2026-10-18T21:06:46.880586+09:00"
     }
   },
   "comparables": {
@@ -26,7 +26,7 @@
         127.319276045292
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-18T20:37:58.810349+09:00"
+      "checked_at": "2026-10-18T21:06:46.880586+09:00"
     },
     "e68516f7988cd39c6052c4b0": {
       "location": "41830|양서면 양수리|1188",
@@ -36,7 +36,7 @@
         127.319276045292
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-18T20:37:58.810349+09:00"
+      "checked_at": "2026-10-18T21:06:46.880586+09:00"
     },
     "cc433a0882239ef070908ad2": {
       "location": "41830|양서면 양수리|1188",
@@ -46,7 +46,7 @@
         127.319276045292
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-18T20:37:58.810349+09:00"
+      "checked_at": "2026-10-18T21:06:46.880586+09:00"
     },
     "21806c2efddcb4e67015fbf5": {
       "location": "41830|양서면 용담리|242-5",
@@ -56,7 +56,7 @@
         127.327530261979
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-18T20:37:58.810349+09:00"
+      "checked_at": "2026-10-18T21:06:46.880586+09:00"
     },
     "e5c7b9747fa1595d37d4a5ed": {
       "location": "41830|양서면 용담리|242-5",
@@ -66,7 +66,7 @@
         127.327530261979
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-18T20:37:58.810349+09:00"
+      "checked_at": "2026-10-18T21:06:46.880586+09:00"
     },
     "72ea8d0aa0cf46b2f2d7b6b1": {
       "location": "41830|양서면 용담리|242-5",
@@ -76,8 +76,8 @@
         127.327530261979
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-18T20:37:58.810349+09:00"
+      "checked_at": "2026-10-18T21:06:46.880586+09:00"
     }
   },
-  "generated_at": "2026-10-18T20:40:54.869332+09:00"
+  "generated_at": "2026-10-18T21:09:12.080415+09:00"
 }
