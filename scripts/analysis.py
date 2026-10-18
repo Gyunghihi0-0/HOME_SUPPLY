@@ -19,6 +19,8 @@ def calculate(unit,trades,target,locations,policy,today):
         comparables=[],confidence='unavailable',analysis_policy_version=policy['version'])
     if not policy['approved']:
         result['analysis_reason']='policy_pending';return result
+    if not unit.get('allocation_count') or unit['allocation_count']<1:
+        result['analysis_reason']='disability_allocation_unverified';return result
     if not unit['sale_price_krw'] or not unit['area_sqm'] or not target or not target.get('coordinates') or not target.get('build_year') or not target.get('evidence_url'):
         result['analysis_reason']='price_area_or_verified_location_missing';return result
     candidates={}

@@ -27,7 +27,7 @@ class Client:
         if robots:
             self.check_robots(url)
         # Key contains no secret; API responses may be cached privately, not published.
-        public_params={k:v for k,v in (params or {}).items() if k.lower()!='servicekey'}
+        public_params={k:v for k,v in (params or {}).items() if k.lower() not in ('servicekey','key','apikey','api_key','token')}
         digest=hashlib.sha256(json.dumps([url,method,public_params,data],sort_keys=True).encode()).hexdigest()
         cache=self.cache_dir/(digest+'.bin')
         if ttl and cache.exists() and time.time()-cache.stat().st_mtime<ttl:
@@ -52,7 +52,9 @@ class Client:
             if content.lstrip().startswith(b'{'):
                 try:payload=json.loads(content)
                 except ValueError:raise SourceError('invalid_json_response') from None
-                if not isinstance(payload.get('data'),list) or 'totalCount' not in payload:
+                odcloud=isinstance(payload.get('data'),list) and 'totalCount' in payload
+                vworld=isinstance(payload.get('response'),dict) and payload['response'].get('status')=='OK'
+                if not (odcloud or vworld):
                     raise SourceError('api_application_error')
             else:
                 from defusedxml import ElementTree as ET

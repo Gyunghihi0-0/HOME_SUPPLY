@@ -61,6 +61,8 @@ jobs:
           MOLIT_SERVICE_KEY: ${{ secrets.MOLIT_SERVICE_KEY }}
           MOLIT_GENERAL_SERVICE_KEY: ${{ secrets.MOLIT_GENERAL_SERVICE_KEY }}
           MOLIT_ALLOW_GENERAL_FALLBACK: ${{ vars.MOLIT_ALLOW_GENERAL_FALLBACK }}
+          VWORLD_API_KEY: ${{ secrets.VWORLD_API_KEY }}
+          VWORLD_DOMAIN: ${{ vars.VWORLD_DOMAIN }}
         run: python -m scripts.pipeline
       - run: python -m scripts.validate docs/data/latest.json
       - name: Commit only generated data
@@ -68,6 +70,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- docs/data/latest.json
+          if test -f docs/data/locations.json; then git add -- docs/data/locations.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'data: refresh official housing notices [skip ci]'
             git push origin HEAD:main

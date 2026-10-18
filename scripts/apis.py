@@ -30,7 +30,9 @@ class Applyhome:
             except (ValueError,KeyError):raise SourceError('applyhome_invalid_response') from None
             if not isinstance(d.get('data'),list) or 'totalCount' not in d:raise SourceError('applyhome_response_changed')
             rows.extend(d['data'])
-            if len(rows)>=int(d['totalCount']):return rows
+            # odcloud totalCount is the dataset total; matchCount is the filtered total.
+            matched=d.get('matchCount',d['totalCount'])
+            if len(rows)>=int(matched) or len(d['data'])<100:return rows
         raise SourceError('applyhome_pagination_limit')
     def project(self,mapping):
         filters={'cond[HOUSE_MANAGE_NO::EQ]':mapping['housing_manage_no'],'cond[PBLANC_NO::EQ]':mapping['pblanc_no']}
@@ -45,6 +47,16 @@ class Applyhome:
         if any(str(u.get('HOUSE_MANAGE_NO'))!=mapping['housing_manage_no'] or str(u.get('PBLANC_NO'))!=mapping['pblanc_no'] for u in units):
             raise SourceError('unit_project_mismatch')
         return row,units
+
+    def discover(self,listing):
+        from scripts.matching import select_project
+        # Service-side title filter reduces calls; matching still requires address evidence.
+        candidates=self.get('getAPTLttotPblancDetail',{'cond[HOUSE_NM::LIKE]':listing['name']})
+        row=select_project(listing,candidates)
+        mapping=dict(housing_manage_no=str(row['HOUSE_MANAGE_NO']),pblanc_no=str(row['PBLANC_NO']),
+            official_address=row['HSSPLY_ADRES'],evidence_url=listing['notice_url'])
+        detail,models=self.project(mapping)
+        return mapping,detail,models
 
 class Molit:
     def __init__(self,client,key,allow_general_fallback=False,general_key=None):

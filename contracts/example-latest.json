@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-18T11:13:53.986049+09:00",
+  "generated_at": "2026-10-18T14:24:41.983734+09:00",
   "last_success_at": null,
   "data_status": "partial",
   "sources": [
@@ -9,32 +9,43 @@
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
       "status": "partial",
-      "checked_at": "2026-10-18T11:10:19.533159+09:00",
+      "checked_at": "2026-10-18T14:13:21.958272+09:00",
       "last_success_at": null,
       "error_code": "notice_or_attachment_failed",
       "message": "notice_or_attachment_failed",
-      "records_count": 37
+      "records_count": 41
     },
     {
       "id": "applyhome",
       "name": "청약홈 분양정보",
       "url": "https://www.data.go.kr/data/15098547/openapi.do",
-      "status": "not_configured",
-      "checked_at": "2026-10-18T11:10:19.533159+09:00",
+      "status": "partial",
+      "checked_at": "2026-10-18T05:07:16Z",
       "last_success_at": null,
-      "error_code": "official_project_mapping_required",
-      "message": "official_project_mapping_required",
-      "records_count": 0
+      "error_code": "official_project_not_matched",
+      "message": "Verified official API capture: https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39099431673",
+      "records_count": 6
     },
     {
       "id": "molit",
       "name": "국토교통부 실거래가",
-      "url": "https://www.data.go.kr/data/15126469/openapi.do",
-      "status": "not_configured",
-      "checked_at": "2026-10-18T11:10:19.533159+09:00",
+      "url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "status": "partial",
+      "checked_at": "2026-10-18T14:13:21.958272+09:00",
       "last_success_at": null,
-      "error_code": "missing_molit_key",
-      "message": "missing_molit_key",
+      "error_code": "comparison_not_run_missing_coordinates",
+      "message": "Price capture replay; live comparison was not run",
+      "records_count": 0
+    },
+    {
+      "id": "vworld",
+      "name": "브이월드 공식 좌표",
+      "url": "https://www.vworld.kr/",
+      "status": "not_checked",
+      "checked_at": "2026-10-18T14:24:41.983734+09:00",
+      "last_success_at": null,
+      "error_code": "live_geocoding_not_run",
+      "message": "live_geocoding_not_run",
       "records_count": 0
     }
   ],
@@ -52,19 +63,68 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
       "notice_updated_at": "2026-10-16",
-      "updated_at": "2026-10-18T11:10:19.533159+09:00",
+      "updated_at": "2026-10-18T14:13:21.958272+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
-        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=904209",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 2.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
+          "신청마감일 당시(’26. 11. 2.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
         ],
-        "rule_version": "1.0.0"
+        "rule_version": "1.1.0"
       },
-      "units": [],
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 4,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84C",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
       "attachments": [
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=904209",
@@ -84,7 +144,7 @@
           "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
           "published_on": "2026-10-16",
           "content_sha256": "26b29e3c21bbb8120463969583431ec7442d176b94dc14e9702878214ff43f06",
-          "observed_at": "2026-10-18T11:10:19.533159+09:00",
+          "observed_at": "2026-10-18T14:13:21.958272+09:00",
           "change_type": "initial"
         }
       ],
@@ -92,8 +152,9 @@
       "pblanc_no": null,
       "location_verified": false,
       "collection_issues": [
-        "attachment_structured_review_required",
-        "official_project_mapping_required"
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_matched"
       ]
     }
   ]

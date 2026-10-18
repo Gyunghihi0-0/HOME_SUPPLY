@@ -5,7 +5,8 @@ from urllib.parse import urlencode, urljoin
 from bs4 import BeautifulSoup
 from scripts.eligibility import classify
 from scripts.http_client import SourceError
-from scripts.documents import extract
+from scripts.documents import read_document
+from scripts.structured import allocation_units,exclusive_areas
 
 KST=timezone(timedelta(hours=9))
 ORIGIN='https://www.gg.go.kr'
@@ -21,13 +22,16 @@ def body_text(body):
 def attachment_has_eligibility_restriction(text):
     # Residence-duration score rows do not restrict eligibility. Only explicit
     # qualifying language is a reason to hold the body-level classification.
-    return bool(re.search(r'(?:중증|경증)\s*장애인만|장애의\s*정도가\s*심(?:한|하지\s*않은)\s*장애인만|신청\s*(?:자격|대상|제한)[^\n]{0,160}(?:제외|한정|이상\s*계속\s*거주)',text))
+    return bool(re.search(r'(?:중증|경증)\s*장애인만|장애의\s*정도가\s*심(?:한|하지\s*않은)\s*장애인만|(?:신청\s*자격|신청\s*대상)[^\n]{0,100}(?:경기도|용인시|거주자)[^\n]{0,35}(?:제외|한정|이상\s*계속\s*거주)',text))
 
-def parse_period(text):
+def parse_period(text,reference_date=None):
     line=next((x for x in text.splitlines() if re.search(r'신청\s*기간\s*[:：]',x)), '')
     # Refuse inferred years/months other than a right-hand month inherited from the explicit start date.
     pattern=r"[’'‘]?(?P<y>20\d{2}|\d{2})\s*[.년]\s*(?P<m>\d{1,2})\s*[.월]\s*(?P<d>\d{1,2})\s*[.일]?(?:\s*\([^)]*\))?(?:\s*(?P<h>\d{1,2}):(?P<mi>\d{2}))?"
     left,*right=re.split(r'[~∼～]',line,maxsplit=1)
+    if reference_date and not re.search(pattern,left):
+        short=re.search(r'[:：]\s*([.\d\s월일()가-힣:]+)$',left)
+        if short:left=left[:short.start(1)]+str(date.fromisoformat(reference_date).year)+'.'+short[1]
     m=re.search(pattern,left)
     if not m or not right:return None,None
     y=int(m['y']); y=y+2000 if y<100 else y
@@ -36,7 +40,7 @@ def parse_period(text):
         return datetime(year,int(month),int(day),int(hour),int(minute),tzinfo=KST).isoformat() if hour else d.isoformat()
     try:
         start=render(y,m['m'],m['d'],m['h'],m['mi'])
-        rhs=right[0].strip()
+        rhs=right[0].strip().lstrip('.')
         full=re.search(pattern,rhs)
         if full:
             ey=int(full['y']); ey=ey+2000 if ey<100 else ey
@@ -46,6 +50,7 @@ def parse_period(text):
             if not e:return None,None
             end=render(y,*e.groups())
         if end<start:return None,None
+        if reference_date and abs((date.fromisoformat(start[:10])-date.fromisoformat(reference_date)).days)>120:return None,None
         return start,end
     except ValueError:return None,None
 
@@ -68,7 +73,7 @@ def parse_notice(html,row,now):
     # Unquoted or multi-project notices retain full official title; never guess project identity.
     name=name_match[1] if name_match else title
     url=ORIGIN+'/bbs/boardView.do?'+urlencode(dict(bsIdx=504,menuId=1878,bIdx=row['B_IDX']))
-    start,end=parse_period(text)
+    start,end=parse_period(text,row['WRITE_DATE2'])
     address_match=re.search(r'공급\s*위치\s*[:：]\s*([^\n]+)',text)
     address=address_match[1].strip() if address_match else None
     district_match=re.search(r'([가-힣]+구)\b',address or '')
@@ -86,12 +91,18 @@ def parse_notice(html,row,now):
         content_sha256=hashlib.sha256((title+'\n'+text).encode()).hexdigest(),observed_at=now.isoformat(),
         change_type='cancellation' if '취소' in title else 'correction' if re.search('변경|정정',title) else 'initial')],
         housing_manage_no=None,pblanc_no=None,location_verified=False,collection_issues=[])
+    if start and not re.search(r"[’'‘]?(?:20\d{2}|\d{2})\s*[.년]\s*\d{1,2}\s*[.월]\s*\d{1,2}",next((l for l in text.splitlines() if '신청' in l and '기간' in l),'')):
+        listing['deadline_note']='연도는 공고 게시연도 기준으로 해석했습니다. 정확한 마감 시각은 공식 안내 확인 필요'
+    if re.search(r'(?:관련|전체)\s*일정.{0,30}연기|(?:신청|접수)\s*(?:기간|일정).{0,30}(?:연기|미정)',text):
+        listing['collection_issues'].append('application_schedule_postponed')
+    elif re.search(r'선정자?\s*발표일.{0,30}연기',text):
+        listing['collection_issues'].append('announcement_only_update')
     return listing
 
-def collect(client,now,pages=3,attachments=True):
+def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None):
     client.request(BOARD,robots=True)
     records={}; errors=[]; seen=set(); partial=False
-    for page in range(pages):
+    for page in range(start_page,start_page+pages):
         url=ORIGIN+'/ajax/board/getList.do'
         import json
         raw=client.request(url,method='POST',data=dict(bsIdx='504',bcIdx='0',menuId='1878',offset=page*15,limit=15),robots=True)
@@ -104,16 +115,29 @@ def collect(client,now,pages=3,attachments=True):
             seen.add(str(row['B_IDX']))
             title=BeautifulSoup(row['SUBJECT'],'html.parser').get_text()
             if '특별공급' not in title or EXCLUDE.search(title):continue
+            if target_names:
+                from scripts.matching import compact
+                if not any(compact(name) in compact(title) for name in target_names):continue
+                if (now.date()-date.fromisoformat(row['WRITE_DATE2'])).days>120:continue
             notice_url=ORIGIN+'/bbs/boardView.do?'+urlencode(dict(bsIdx=504,menuId=1878,bIdx=row['B_IDX']))
             try:
                 item=parse_notice(client.request(notice_url,robots=True),row,now)
+                documents=[];unit_candidates=[];attachment_eligibility=[]
                 if attachments:
                     for a in item['attachments']:
                         try:
-                            extracted=extract(client.request(a['url'],robots=True),a['name'])
-                            # Extraction is checked, but tables/extra restrictions need reviewed structured mapping.
+                            document=read_document(client.request(a['url'],robots=True),a['name'])
+                            extracted=document['text'];documents.append(extracted)
+                            evidence=classify(extracted,a['url'])
+                            if evidence['yongin_status']!='unknown':attachment_eligibility.append(evidence)
                             a['parse_status']='parsed'
-                            item['collection_issues'].append('attachment_structured_review_required')
+                            item['collection_issues'].append('attachment_text_extracted')
+                            try:
+                                allocation=allocation_units(document['tables'],document.get('table_contexts'))
+                                unit_candidates.extend(allocation)
+                                if any(':' in u['type_id'] for u in allocation):item['collection_issues'].append('multi_project_notice_requires_block_match')
+                            except ValueError:
+                                item['collection_issues'].append('allocation_conflict_review_required')
                             if attachment_has_eligibility_restriction(extracted):
                                 item['eligibility']['yongin_status']='unknown'
                                 item['eligibility']['disability_scope']='unknown'
@@ -124,6 +148,18 @@ def collect(client,now,pages=3,attachments=True):
                             item['eligibility']['yongin_status']='unknown';item['eligibility']['disability_scope']='unknown'
                             partial=True
                 records[item['id']]=item
+                if unit_candidates:
+                    by_type={};conflicts=set()
+                    for unit in unit_candidates:
+                        if unit['type_id'] in by_type and by_type[unit['type_id']]['allocation_count']!=unit['allocation_count']:conflicts.add(unit['type_id'])
+                        by_type[unit['type_id']]=unit
+                    item['units']=[u for key,u in by_type.items() if key not in conflicts]
+                    for doc in documents:item['units']=exclusive_areas(doc,item['units'])
+                    if conflicts:item['collection_issues'].append('allocation_conflict_review_required')
+                if attachment_eligibility and 'attachment_eligibility_review_required' not in item['collection_issues']:
+                    unique={(e['yongin_status'],e['disability_scope']) for e in attachment_eligibility}
+                    if len(unique)==1:item['eligibility']=attachment_eligibility[0]
+                item['collection_issues']=sorted(set(item['collection_issues']))
             except Exception:
                 errors.append('gg_'+str(row['B_IDX']));partial=True
         if (page+1)*15>=d['total']:break
