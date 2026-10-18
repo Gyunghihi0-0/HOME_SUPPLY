@@ -77,10 +77,10 @@ def merge(previous,items,now):
         item['status']=status_at(item['apply_start_at'],item['apply_end_at'],now,item['status']=='cancelled')
     return sorted(result.values(),key=lambda x:(x['notice_updated_at'] or '',x['id']),reverse=True)
 
-def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,location_audit=None):
+def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,location_audit=None,diagnostics=None):
     apply=apply_client or Applyhome(client,apply_key); molit=Molit(client,trade_key,os.getenv('MOLIT_ALLOW_GENERAL_FALLBACK','').lower()=='true',general_key=os.getenv('MOLIT_GENERAL_SERVICE_KEY'))
     geo=VWorld(client,os.getenv('VWORLD_API_KEY'),os.getenv('VWORLD_DOMAIN'))
-    price_error=None;trade_error=None;price_count=0;trade_count=0;trade_cache={};connected=0
+    price_error=None;trade_error=None;price_count=0;trade_count=0;trade_cache={};connected=0;geo_error=None
     for item in items:
         mapping=config['projects'].get(item['id'])
         discovered=None
@@ -88,7 +88,7 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
             'missing_vworld_key','official_geocode_not_found','geocode_address_mismatch','api_application_error','network_error',
             'verified_target_location_required','target_build_year_uses_official_planned_move_year','disability_allocation_table_required',
             'some_comparison_locations_unverified','comparison_geocode_budget_reached'}
-        item['collection_issues']=[x for x in item['collection_issues'] if x not in transient]
+        item['collection_issues']=[x for x in item['collection_issues'] if x not in transient and not x.startswith('vworld_')]
         if not mapping:
             try:
                 mapping,detail,models=apply.discover(item);discovered=(detail,models)
@@ -153,7 +153,8 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                 item['collection_issues'].append('target_build_year_uses_official_planned_move_year')
             except SourceError as exc:
                 target=None
-                trade_error=str(exc)
+                geo_error=str(exc)
+                trade_error='verified_target_location_required'
                 item['collection_issues']=sorted(set(item['collection_issues']+[str(exc)]))
         item['location_verified']=bool(target and target.get('coordinates') and target.get('evidence_url'))
         if item['location_verified'] and location_audit is not None:
@@ -215,6 +216,8 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
     pstatus='not_configured' if not (apply_key or apply_client) else 'partial' if price_error or mapped<len(items) else 'ok'
     tstatus='not_configured' if not trade_key else 'partial' if trade_error or mapped<len(items) or not mapped or price_error else 'ok'
     for item in items:item['collection_issues']=sorted(set(item['collection_issues']))
+    if diagnostics is not None:
+        diagnostics.update(vworld_error=geo_error,molit_requested=bool(trade_cache))
     return pstatus,tstatus,price_count,trade_count,price_error or ('official_project_not_matched' if mapped<len(items) else None),trade_error
 
 def atomic_write(path,data):
@@ -257,13 +260,14 @@ def run(output,pages=3,attachments=True,client=None,now=None):
     location_path=output.with_name('locations.json')
     location_audit=load(location_path) if location_path.exists() else dict(schema_version='1.0.0',targets={},comparables={})
     location_audit['generated_at']=now.isoformat()
-    ps,ts,pc,tc,pe,te=enrich(merged,client,now,config,policy,os.getenv('APPLYHOME_SERVICE_KEY'),os.getenv('MOLIT_SERVICE_KEY'),location_audit=location_audit)
+    diagnostics={}
+    ps,ts,pc,tc,pe,te=enrich(merged,client,now,config,policy,os.getenv('APPLYHOME_SERVICE_KEY'),os.getenv('MOLIT_SERVICE_KEY'),location_audit=location_audit,diagnostics=diagnostics)
     sources.extend([source('applyhome','청약홈 분양정보',APPLY_SOURCE,now,ps,previous_sources.get('applyhome'),pc,pe or ('missing_applyhome_key' if ps=='not_configured' else None)),
         source('molit','국토교통부 실거래가',TRADE_SOURCE,now,ts,previous_sources.get('molit'),tc,te or ('missing_molit_key' if ts=='not_configured' else None))])
     from scripts.geocoding import SOURCE as GEO_SOURCE
     geostatus='not_configured' if not os.getenv('VWORLD_API_KEY') else 'ok' if location_audit['targets'] and len(location_audit['targets'])==pc and not any('unverified' in issue or 'geocode_budget' in issue for x in merged for issue in x['collection_issues']) else 'partial'
     sources.append(source('vworld','브이월드 공식 좌표',GEO_SOURCE,now,geostatus,previous_sources.get('vworld'),len(location_audit['targets']),
-        'missing_vworld_key' if geostatus=='not_configured' else 'coordinates_not_fully_verified' if geostatus=='partial' else None))
+        'missing_vworld_key' if geostatus=='not_configured' else diagnostics.get('vworld_error') or 'coordinates_not_fully_verified' if geostatus=='partial' else None))
     success=all(s['status']=='ok' for s in sources)
     last=now.isoformat() if success else (previous or {}).get('last_success_at')
     if success:status='ok'

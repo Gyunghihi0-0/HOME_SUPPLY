@@ -13,7 +13,8 @@ class VWorld:
     def _request(self,endpoint,params,ttl):
         params=dict(params,key=self.key)
         if self.domain:params['domain']=self.domain
-        return self.client.request(endpoint,params=params,ttl=ttl)
+        try:return self.client.request(endpoint,params=params,ttl=ttl)
+        except SourceError as exc:raise SourceError('vworld_'+str(exc)) from None
     def locate(self,address):
         if not self.key:raise SourceError('missing_vworld_key')
         # Only already verified parcel/road addresses, not sales-center names or project-name search.
