@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "targets": {
+    "gg_262294421": {
+      "address": "경기도 양평군 양서면 용담리 212-3번지 일원",
+      "coordinates": [
+        37.5454346905488,
+        127.326032705231
+      ],
+      "build_year": 2029,
+      "lawd_codes": [
+        "41360",
+        "41610",
+        "41830"
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-18T19:33:40.394444+09:00"
+    }
+  },
+  "comparables": {
+    "8ffc5c4a2b251cb6dd74e558": {
+      "location": "41830|양서면 양수리|1188",
+      "apartment_name": "더리버파크",
+      "coordinates": [
+        37.5464935322927,
+        127.319276045292
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-18T19:33:40.394444+09:00"
+    },
+    "e68516f7988cd39c6052c4b0": {
+      "location": "41830|양서면 양수리|1188",
+      "apartment_name": "더리버파크",
+      "coordinates": [
+        37.5464935322927,
+        127.319276045292
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-18T19:33:40.394444+09:00"
+    },
+    "cc433a0882239ef070908ad2": {
+      "location": "41830|양서면 양수리|1188",
+      "apartment_name": "더리버파크",
+      "coordinates": [
+        37.5464935322927,
+        127.319276045292
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-18T19:33:40.394444+09:00"
+    },
+    "21806c2efddcb4e67015fbf5": {
+      "location": "41830|양서면 용담리|242-5",
+      "apartment_name": "양수역이지움리버뷰",
+      "coordinates": [
+        37.5446132532569,
+        127.327530261979
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-18T19:33:40.394444+09:00"
+    },
+    "e5c7b9747fa1595d37d4a5ed": {
+      "location": "41830|양서면 용담리|242-5",
+      "apartment_name": "양수역이지움리버뷰",
+      "coordinates": [
+        37.5446132532569,
+        127.327530261979
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-18T19:33:40.394444+09:00"
+    },
+    "72ea8d0aa0cf46b2f2d7b6b1": {
+      "location": "41830|양서면 용담리|242-5",
+      "apartment_name": "양수역이지움리버뷰",
+      "coordinates": [
+        37.5446132532569,
+        127.327530261979
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-18T19:33:40.394444+09:00"
+    }
+  },
+  "generated_at": "2026-10-18T19:37:19.452019+09:00"
+}
