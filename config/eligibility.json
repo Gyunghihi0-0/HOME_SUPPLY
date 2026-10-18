@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "policy": "Only explicit applicant-qualification sentences from the institution recommendation notice. Ambiguity stays unknown.",
+  "region_allow_patterns": ["경기도\\s*거주", "용인시\\s*거주"],
+  "severe_only_patterns": ["장애의\\s*정도가\\s*심한\\s*장애인만", "중증\\s*장애인만"],
+  "mild_only_patterns": ["장애의\\s*정도가\\s*심하지\\s*않은\\s*장애인만", "경증\\s*장애인만"],
+  "unrestricted_pattern": "무주택\\s*세대구성원\\s*장애인",
+  "review_markers": ["제외", "단,", "한정", "우선", "이상 거주", "이상 계속", "거주기간"]
+}

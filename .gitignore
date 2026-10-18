@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.cache/
+.env
+.env.*
+!.env.example
+*.pyc
+config/local*.json

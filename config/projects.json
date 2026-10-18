@@ -1,0 +1,5 @@
+{
+  "description": "Reviewed official identifiers only. Key by gg notice id. Never match by name alone. See contracts/data-contract.md.",
+  "projects": {},
+  "trade_locations": {}
+}
