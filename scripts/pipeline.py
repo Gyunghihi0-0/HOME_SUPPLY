@@ -184,23 +184,42 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
             locations=dict(config['trade_locations'])
             if geo.key and (target.get('district_prefix') or target.get('district_prefixes')):
                 seen_locations=set()
+                geocode_jobs=[]
                 for t in trades:
                     # Geocode only plausible analysis candidates, not the whole district history.
                     if not any(u['area_sqm'] and abs(t['area_sqm']/u['area_sqm']-1)*100<=policy['area_tolerance_pct'] for u in item['units']):continue
                     if not target.get('build_year') or abs(t['build_year']-target['build_year'])>policy['build_year_tolerance']:continue
                     identity=t['location']+'|'+t['apartment_name']
                     if identity in locations or identity in seen_locations:continue
-                    if len(seen_locations)>=100:
+                    if len(seen_locations)>=500:
                         item['collection_issues'].append('comparison_geocode_budget_reached');break
                     seen_locations.add(identity)
                     code,dong,parcel=t['location'].split('|')
                     if code not in target['lawd_codes']:continue
                     prefix=target.get('district_prefixes',{}).get(code) or target.get('district_prefix')
                     if not prefix:continue
-                    try:locations[identity]=geo.locate(prefix+' '+dong+' '+parcel)
-                    except SourceError:
-                        item['collection_issues'].append('some_comparison_locations_unverified');continue
-            item['units']=[calculate(u,trades,target,locations,policy,now.date()) for u in item['units']]
+                    geocode_jobs.append((identity,prefix+' '+dong+' '+parcel))
+                # Bounded concurrency avoids spending the whole daily budget on
+                # serial lookups of distinct apartment addresses across districts.
+                from concurrent.futures import ThreadPoolExecutor
+                def locate_job(job):
+                    identity,address=job
+                    try:return identity,geo.locate(address)
+                    except SourceError:return identity,None
+                with ThreadPoolExecutor(max_workers=4) as workers:
+                    for identity,loc in workers.map(locate_job,geocode_jobs):
+                        if loc:locations[identity]=loc
+                        else:item['collection_issues'].append('some_comparison_locations_unverified')
+                print('trade_coordinates: '+item['id']+' requested='+str(len(geocode_jobs))+' verified='+str(len(locations)),flush=True)
+            analyzed=[]
+            for unit in item['units']:
+                audit={}
+                calculated=calculate(unit,trades,target,locations,policy,now.date(),audit=audit)
+                print('analysis_screening: '+json.dumps(dict(listing=item['id'],unit=unit['type_id'],**audit)),flush=True)
+                if calculated['analysis_reason']=='fewer_than_three_verified_trades':
+                    calculated['analysis_reason']+='; '+str(audit.get('within_radius',0))+'건 통과 / 최소 3건 필요'
+                analyzed.append(calculated)
+            item['units']=analyzed
             if 'comparison_geocode_budget_reached' in item['collection_issues']:
                 trade_error='comparison_geocode_budget_reached'
                 item['units']=[dict(u,comparison_median_krw=None,estimated_gap_krw=None,gap_rate_pct=None,

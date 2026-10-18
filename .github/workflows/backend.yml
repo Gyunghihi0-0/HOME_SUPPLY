@@ -50,7 +50,7 @@ jobs:
           python-version: '3.11'
           cache: pip
       - run: pip install -r requirements.txt
-      - uses: actions/cache@v4
+      - uses: actions/cache/restore@v4
         with:
           path: .cache
           key: official-api-${{ github.run_id }}
@@ -87,6 +87,12 @@ jobs:
         if: steps.frontend.outputs.exists == 'true'
         with:
           path: docs
+      - name: Preserve successful public API responses even on partial collection
+        if: always() && steps.collect.outcome != 'skipped'
+        uses: actions/cache/save@v4
+        with:
+          path: .cache
+          key: official-api-${{ github.run_id }}
       - name: Surface source outage
         if: steps.collect.outcome == 'failure'
         run: |

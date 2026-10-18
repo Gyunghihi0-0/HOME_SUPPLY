@@ -13,7 +13,7 @@ def distance(a,b):
     h=math.sin((lat2-lat1)/2)**2+math.cos(lat1)*math.cos(lat2)*math.sin((lon2-lon1)/2)**2
     return 6371000*2*math.asin(min(1,math.sqrt(h)))
 
-def calculate(unit,trades,target,locations,policy,today):
+def calculate(unit,trades,target,locations,policy,today,audit=None):
     result=dict(unit)
     result.update(comparison_median_krw=None,estimated_gap_krw=None,gap_rate_pct=None,comparables_count=0,
         comparables=[],confidence='unavailable',analysis_policy_version=policy['version'])
@@ -24,16 +24,23 @@ def calculate(unit,trades,target,locations,policy,today):
     if not unit['sale_price_krw'] or not unit['area_sqm'] or not target or not target.get('coordinates') or not target.get('build_year') or not target.get('evidence_url'):
         result['analysis_reason']='price_area_or_verified_location_missing';return result
     candidates={}
+    counts=dict(fetched=len(trades),within_period=0,matching_area=0,matching_build_year=0,verified_coordinates=0,within_radius=0)
     for trade in trades:
-        loc=locations.get(trade['location']+'|'+trade['apartment_name'])
-        if not loc or not loc.get('evidence_url') or not loc.get('coordinates'):continue
         day=date.fromisoformat(trade['trade_date'])
         if not months_before(today,policy['maximum_months'])<=day<=today:continue
+        counts['within_period']+=1
         if abs(trade['area_sqm']/unit['area_sqm']-1)*100>policy['area_tolerance_pct']:continue
+        counts['matching_area']+=1
         if trade['build_year'] is None or abs(trade['build_year']-target['build_year'])>policy['build_year_tolerance']:continue
+        counts['matching_build_year']+=1
+        loc=locations.get(trade['location']+'|'+trade['apartment_name'])
+        if not loc or not loc.get('evidence_url') or not loc.get('coordinates'):continue
+        counts['verified_coordinates']+=1
         dist=distance(target['coordinates'],loc['coordinates'])
         if dist>policy['radius_m']:continue
+        counts['within_radius']+=1
         candidates[trade['id']]=dict(trade,distance_m=round(dist,1))
+    if audit is not None:audit.update(counts)
     values=list(candidates.values())
     recent=[t for t in values if date.fromisoformat(t['trade_date'])>=months_before(today,policy['preferred_months'])]
     chosen=recent if len(recent)>=policy['minimum_trades'] else values
