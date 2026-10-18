@@ -41,6 +41,8 @@ python -m scripts.validate contracts/example-latest.json docs/data/latest.json
 
 로컬 키 설정 후 `python -m scripts.probe_apis`로 인증과 응답 규격을 먼저 검사할 수 있습니다. 이 명령은 공고·거래 응답이나 키를 파일/로그에 공개하지 않고 출처별 성공 여부와 건수만 출력합니다. 현재월 데이터가 0건이어도 정상 응답과 인증 실패를 구분합니다.
 
+GitHub에서 키를 등록했다면 Actions → **Verify official API credentials** → **Run workflow**로 별도 인증 점검을 실행할 수 있습니다. 이 workflow는 기본 브랜치에서만 실행하고 PR/저장소 코드를 checkout하지 않습니다. 세 API의 인증, 청약홈 주택형 공고 식별자·분양최고금액 변환, 국토부 필수 필드·취소 제외를 실제 응답으로 검사합니다. 공고 데이터 생성이나 Pages 배포는 하지 않습니다. 2026-10-18 실제 실행에서 세 API 모두 통과했습니다.
+
 로컬은 같은 이름의 환경변수를 사용합니다. 코드는 `.env`를 자동으로 읽지 않습니다. 브라우저에는 키를 제공하지 않습니다. 현재 두 API는 포털 안내상 무료이나 신청 트래픽·승인·이용 조건은 각 공식 페이지에서 확인하세요.
 
 ## 공식 연결과 분석 검토
