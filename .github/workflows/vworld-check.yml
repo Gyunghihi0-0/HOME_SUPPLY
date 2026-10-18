@@ -1,0 +1,52 @@
+name: VWorld credentials and official response check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/vworld-check.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify public geocode and district fields without checkout
+        env:
+          VWORLD_API_KEY: ${{ secrets.VWORLD_API_KEY }}
+          VWORLD_DOMAIN: ${{ vars.VWORLD_DOMAIN }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os,json,urllib.request,urllib.parse,math,sys
+          key=os.environ.get('VWORLD_API_KEY','')
+          if not key:
+           print('RESULT missing_vworld_key');sys.exit(1)
+          domain=os.environ.get('VWORLD_DOMAIN','')
+          def get(path,params):
+           params['key']=key
+           if domain:params['domain']=domain
+           try:
+            with urllib.request.urlopen('https://api.vworld.kr/req/'+path+'?'+urllib.parse.urlencode(params),timeout=30) as r:return json.load(r)['response']
+           except Exception:
+            print('RESULT request_failed (details suppressed)');sys.exit(1)
+          address='경기도 성남시 분당구 정자동 90'
+          r=get('address',dict(service='address',request='getcoord',version='2.0',crs='EPSG:4326',address=address,format='json',type='PARCEL',refine='false',simple='false'))
+          if r.get('status')!='OK':
+           code=r.get('error',{}).get('code','UNKNOWN')
+           print('RESULT geocode_failed code='+ (code if str(code).isalnum() else 'UNKNOWN'));sys.exit(1)
+          p=r['result']['point'];lon,lat=float(p['x']),float(p['y'])
+          assert math.isfinite(lat) and math.isfinite(lon) and 124<=lon<=132 and 33<=lat<=39
+          ref=r.get('refined',{})
+          print('GEOCODE_PUBLIC '+json.dumps(dict(address=ref.get('text') or r['result'].get('text'),coordinates=[lat,lon],structure=ref.get('structure') or r['result'].get('structure')),ensure_ascii=False))
+          dy=2000/110000;dx=dy/math.cos(math.radians(lat))
+          d=get('data',dict(service='data',request='getfeature',version='2.0',data='LT_C_ADSIGG_INFO',format='json',size=100,page=1,geometry='false',attribute='true',crs='EPSG:4326',geomfilter=f'BOX({lon-dx},{lat-dy},{lon+dx},{lat+dy})'))
+          if d.get('status')!='OK':
+           code=d.get('error',{}).get('code','UNKNOWN')
+           print('RESULT district_failed code='+(code if str(code).isalnum() else 'UNKNOWN'));sys.exit(1)
+          fs=d['result']['featureCollection']['features']
+          assert 0<len(fs)<100
+          print('DISTRICTS_PUBLIC '+json.dumps([dict(sig_cd=f['properties'].get('sig_cd'),sig_kor_nm=f['properties'].get('sig_kor_nm'),full_nm=f['properties'].get('full_nm')) for f in fs],ensure_ascii=False))
+          print('RESULT vworld_auth_geocode_district_success')
+          PY
