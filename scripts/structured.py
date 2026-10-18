@@ -7,6 +7,19 @@ def normalize_type(value):
     m=re.fullmatch(r'0*(\d{2,3})(?:\.(\d+))?([A-Z][A-Z0-9-]*)?',value)
     return (int(m[1]),m[3] or '') if m else None
 
+def official_type_area(value):
+    """Extract exact exclusive area from a fully qualified official HOUSE_TY.
+
+    A shorthand such as '84A' is not an exact area, and SUPLY_AR is
+    a supply-area field, not a substitute for exclusive area.
+    """
+    label=(value or '').strip().upper()
+    match=re.fullmatch(r'0*(\d{2,3})\.(\d{1,6})(?:[A-Z][A-Z0-9-]*)?',label)
+    if not match:return None
+    area=float(str(int(match[1]))+'.'+match[2])
+    return area if 10 <= area <= 400 else None
+
+
 def allocation_units(tables,contexts=None):
     result={}
     contexts=contexts or [None]*len(tables)
