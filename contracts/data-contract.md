@@ -31,7 +31,7 @@
 
 `sale_price_basis=maximum_base_price`는 청약홈 API의 `LTTOT_TOP_AMOUNT`(만원)를 원으로 변환한 **주택형별 최고 분양금액**입니다. 특정 층·호의 확정 계약금액과 다릅니다. `exact_base_price`는 별도 공식 확인 시에만 사용합니다. 발코니·옵션·세금·금융비용을 포함한 순이익이 아닙니다.
 
-APT API의 `SUPLY_AR`는 공급면적입니다. `area_sqm`에 넣지 않습니다. 전용면적·장애인 배정물량을 공식 모집문서와 연결한 검토 매핑이 필요합니다.
+APT API의 `SUPLY_AR`는 공급면적입니다. `area_sqm`에 넣지 않습니다. 공식 청약홈 APT 모델의 `HOUSE_TY`가 `084.9947A`처럼 **정확한 소수 전용면적 형식**이며 같은 공고번호·관리번호의 모델과 기관추천 주택형이 유일하게 일치할 때, 해당 수치 `84.9947`을 `area_sqm`으로 사용할 수 있습니다. `84A` 같은 약식 표기만으로 소수 면적을 추정하지 않습니다. 공식 모집문서에서 확인된 면적과 다르면 매핑 오류로 보류합니다. 장애인 배정 세대수는 기관추천 공식 공고의 검토된 값만 사용합니다.
 
 `comparables[]`: id / apartment_name / location / area_sqm / trade_date / price_krw / build_year / distance_m / source_url / collected_at. `location`은 법정동 앞5자리|법정동명|지번 형식의 아파트 위치 식별자입니다. 개인 거주주소·층·동·호 정보는 발행하지 않습니다.
 

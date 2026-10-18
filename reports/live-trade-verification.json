@@ -1,0 +1,832 @@
+{
+  "run_url": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39129634037",
+  "observed_at": "2026-10-18T22:00:13.091918+09:00",
+  "scope": "fixed read-only inspector, no production JSON update",
+  "summary": {
+    "project_connections": 6,
+    "gap_projects": 5,
+    "examined_types": 22,
+    "gap_types": 17,
+    "positive_gap_types": 0,
+    "monthly_district_requests": 156,
+    "queried_records": 58681,
+    "cancelled_records": 2737,
+    "invalid_records": 0,
+    "rows": 4471,
+    "unique_locations": 159,
+    "attempted_locations": 159,
+    "truncated": false,
+    "failed_districts": [],
+    "verified_comparable_records": 40,
+    "query_aborted": false
+  },
+  "policy": {
+    "radius_m": 2000,
+    "area_tolerance_pct": 10,
+    "build_year_tolerance": 10,
+    "minimum_trades": 3,
+    "preferred_months": 6,
+    "maximum_months": 12,
+    "extreme_spread_hold": 0.5
+  },
+  "limitations": [
+    "Nine-point administrative-district sampling is incomplete; confidence is low.",
+    "Planned official move-in year is the existing target build-year reference.",
+    "Maximum base sale price excludes options, taxes and financing costs.",
+    "Per-project queried counts overlap where districts are shared; do not sum them.",
+    "Output includes at most ten minimal trade examples per project; full responses are not retained here."
+  ],
+  "projects": [
+    {
+      "housing_manage_no": "2026000508",
+      "name": "아크메르 동탄 95",
+      "lawd_codes": [
+        "41370",
+        "41463",
+        "41595",
+        "41597"
+      ],
+      "connection": "success",
+      "queried_records": 26379,
+      "gap_units": 2,
+      "units": [
+        {
+          "housing_manage_no": "2026000508",
+          "type": "84C",
+          "area": 84.997,
+          "count": 14,
+          "price": 1712100000,
+          "median": 1277500000,
+          "gap": -434600000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000508",
+          "type": "84F",
+          "area": 84.9998,
+          "count": 14,
+          "price": 1715300000,
+          "median": 1277500000,
+          "gap": -437800000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        }
+      ],
+      "evidence": [
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-04-18",
+          "area_sqm": 81.3533,
+          "price_krw": 1180000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-04-20",
+          "area_sqm": 92.3107,
+          "price_krw": 1250000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-05",
+          "area_sqm": 81.3533,
+          "price_krw": 1190000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-13",
+          "area_sqm": 92.3107,
+          "price_krw": 1330000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-16",
+          "area_sqm": 81.3533,
+          "price_krw": 1170000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-18",
+          "area_sqm": 81.2159,
+          "price_krw": 1190000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-23",
+          "area_sqm": 81.3533,
+          "price_krw": 1255000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-30",
+          "area_sqm": 92.3107,
+          "price_krw": 1480000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-06-03",
+          "area_sqm": 81.3533,
+          "price_krw": 1250000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-06-06",
+          "area_sqm": 92.0809,
+          "price_krw": 1610000000,
+          "build_year": 2022,
+          "distance_m": 1688.7
+        }
+      ]
+    },
+    {
+      "housing_manage_no": "2026000509",
+      "name": "아크메르 동탄 99",
+      "lawd_codes": [
+        "41370",
+        "41463",
+        "41595",
+        "41597"
+      ],
+      "connection": "success",
+      "queried_records": 26379,
+      "gap_units": 5,
+      "units": [
+        {
+          "housing_manage_no": "2026000509",
+          "type": "84A",
+          "area": 84.9916,
+          "count": 14,
+          "price": 1714200000,
+          "median": 1277500000,
+          "gap": -436700000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000509",
+          "type": "84B",
+          "area": 84.9979,
+          "count": 14,
+          "price": 1716800000,
+          "median": 1277500000,
+          "gap": -439300000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000509",
+          "type": "84C",
+          "area": 84.997,
+          "count": 14,
+          "price": 1713200000,
+          "median": 1277500000,
+          "gap": -435700000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000509",
+          "type": "84D",
+          "area": 84.9948,
+          "count": 14,
+          "price": 1713800000,
+          "median": 1277500000,
+          "gap": -436300000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000509",
+          "type": "84E",
+          "area": 84.9975,
+          "count": 14,
+          "price": 1715200000,
+          "median": 1277500000,
+          "gap": -437700000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        }
+      ],
+      "evidence": [
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-04-18",
+          "area_sqm": 81.3533,
+          "price_krw": 1180000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-04-20",
+          "area_sqm": 92.3107,
+          "price_krw": 1250000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-05",
+          "area_sqm": 81.3533,
+          "price_krw": 1190000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-13",
+          "area_sqm": 92.3107,
+          "price_krw": 1330000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-16",
+          "area_sqm": 81.3533,
+          "price_krw": 1170000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-18",
+          "area_sqm": 81.2159,
+          "price_krw": 1190000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-23",
+          "area_sqm": 81.3533,
+          "price_krw": 1255000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-05-30",
+          "area_sqm": 92.3107,
+          "price_krw": 1480000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-06-03",
+          "area_sqm": 81.3533,
+          "price_krw": 1250000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        },
+        {
+          "apartment_name": "동탄역삼정그린코아",
+          "trade_date": "2026-06-06",
+          "area_sqm": 92.0809,
+          "price_krw": 1610000000,
+          "build_year": 2022,
+          "distance_m": 1685.7
+        }
+      ]
+    },
+    {
+      "housing_manage_no": "2026000463",
+      "name": "향남역 그로브 스위첸",
+      "lawd_codes": [
+        "41591"
+      ],
+      "connection": "success",
+      "queried_records": 1437,
+      "gap_units": 5,
+      "units": [
+        {
+          "housing_manage_no": "2026000463",
+          "type": "71",
+          "area": 71.8178,
+          "count": 8,
+          "price": 470300000,
+          "median": 425000000,
+          "gap": -45300000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000463",
+          "type": "84A",
+          "area": 84.9592,
+          "count": 8,
+          "price": 557500000,
+          "median": 464000000,
+          "gap": -93500000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000463",
+          "type": "84B",
+          "area": 84.9767,
+          "count": 8,
+          "price": 557200000,
+          "median": 464000000,
+          "gap": -93200000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000463",
+          "type": "84C",
+          "area": 84.9221,
+          "count": 8,
+          "price": 559700000,
+          "median": 464000000,
+          "gap": -95700000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000463",
+          "type": "84D",
+          "area": 84.914,
+          "count": 8,
+          "price": 554500000,
+          "median": 464000000,
+          "gap": -90500000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        }
+      ],
+      "evidence": [
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-04-26",
+          "area_sqm": 84.9892,
+          "price_krw": 495000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        },
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-05-11",
+          "area_sqm": 84.9479,
+          "price_krw": 486000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        },
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-05-16",
+          "area_sqm": 84.9944,
+          "price_krw": 493000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        },
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-06-10",
+          "area_sqm": 67.5283,
+          "price_krw": 410000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        },
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-06-21",
+          "area_sqm": 76.8208,
+          "price_krw": 435000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        },
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-06-22",
+          "area_sqm": 76.8208,
+          "price_krw": 435000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        },
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-07-25",
+          "area_sqm": 76.8208,
+          "price_krw": 440000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        },
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-08-01",
+          "area_sqm": 67.5283,
+          "price_krw": 405000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        },
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-08-16",
+          "area_sqm": 67.5283,
+          "price_krw": 413000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        },
+        {
+          "apartment_name": "한양수자인디에스티지",
+          "trade_date": "2026-09-09",
+          "area_sqm": 84.9479,
+          "price_krw": 489000000,
+          "build_year": 2024,
+          "distance_m": 1353.1
+        }
+      ]
+    },
+    {
+      "housing_manage_no": "2026000468",
+      "name": "쌍용 더 플래티넘 한강",
+      "lawd_codes": [
+        "41360",
+        "41610",
+        "41830"
+      ],
+      "connection": "success",
+      "queried_records": 14742,
+      "gap_units": 2,
+      "units": [
+        {
+          "housing_manage_no": "2026000468",
+          "type": "74",
+          "area": 74.9845,
+          "count": 1,
+          "price": 614000000,
+          "median": null,
+          "gap": null,
+          "reason": "sample_insufficient",
+          "window": 12,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000468",
+          "type": "84A",
+          "area": 84.9947,
+          "count": 6,
+          "price": 748000000,
+          "median": 515000000,
+          "gap": -233000000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000468",
+          "type": "84B",
+          "area": 84.8542,
+          "count": 6,
+          "price": 746000000,
+          "median": 515000000,
+          "gap": -231000000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        }
+      ],
+      "evidence": [
+        {
+          "apartment_name": "더리버파크",
+          "trade_date": "2026-06-11",
+          "area_sqm": 84.5947,
+          "price_krw": 423000000,
+          "build_year": 2019,
+          "distance_m": 607.2
+        },
+        {
+          "apartment_name": "더리버파크",
+          "trade_date": "2026-06-13",
+          "area_sqm": 81.1831,
+          "price_krw": 500000000,
+          "build_year": 2019,
+          "distance_m": 607.2
+        },
+        {
+          "apartment_name": "더리버파크",
+          "trade_date": "2026-06-29",
+          "area_sqm": 84.5947,
+          "price_krw": 437500000,
+          "build_year": 2019,
+          "distance_m": 607.2
+        },
+        {
+          "apartment_name": "양수역이지움리버뷰",
+          "trade_date": "2026-07-11",
+          "area_sqm": 84.79,
+          "price_krw": 565000000,
+          "build_year": 2024,
+          "distance_m": 160.5
+        },
+        {
+          "apartment_name": "양수역이지움리버뷰",
+          "trade_date": "2026-08-10",
+          "area_sqm": 84.79,
+          "price_krw": 530000000,
+          "build_year": 2024,
+          "distance_m": 160.5
+        },
+        {
+          "apartment_name": "양수역이지움리버뷰",
+          "trade_date": "2026-09-18",
+          "area_sqm": 84.79,
+          "price_krw": 580000000,
+          "build_year": 2024,
+          "distance_m": 160.5
+        }
+      ]
+    },
+    {
+      "housing_manage_no": "2026000449",
+      "name": "화서역 호수공원 아너스빌",
+      "lawd_codes": [
+        "41111",
+        "41113",
+        "41115"
+      ],
+      "connection": "success",
+      "queried_records": 11825,
+      "gap_units": 0,
+      "units": [
+        {
+          "housing_manage_no": "2026000449",
+          "type": "84A",
+          "area": 84.7459,
+          "count": 51,
+          "price": 898000000,
+          "median": null,
+          "gap": null,
+          "reason": "outlier_review_required",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000449",
+          "type": "84B",
+          "area": 84.8508,
+          "count": 51,
+          "price": 893000000,
+          "median": null,
+          "gap": null,
+          "reason": "outlier_review_required",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000449",
+          "type": "84C",
+          "area": 84.6391,
+          "count": 51,
+          "price": 893000000,
+          "median": null,
+          "gap": null,
+          "reason": "outlier_review_required",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000449",
+          "type": "84D",
+          "area": 84.9663,
+          "count": 51,
+          "price": 893000000,
+          "median": null,
+          "gap": null,
+          "reason": "outlier_review_required",
+          "window": 6,
+          "confidence": "low"
+        }
+      ],
+      "evidence": [
+        {
+          "apartment_name": "수원역푸르지오자이",
+          "trade_date": "2026-04-20",
+          "area_sqm": 84.98,
+          "price_krw": 873000000,
+          "build_year": 2021,
+          "distance_m": 1464.6
+        },
+        {
+          "apartment_name": "수원역푸르지오자이",
+          "trade_date": "2026-04-22",
+          "area_sqm": 84.99,
+          "price_krw": 805000000,
+          "build_year": 2021,
+          "distance_m": 1464.6
+        },
+        {
+          "apartment_name": "화서역푸르지오브리시엘",
+          "trade_date": "2026-04-23",
+          "area_sqm": 84.8641,
+          "price_krw": 1350000000,
+          "build_year": 2023,
+          "distance_m": 1799.8
+        },
+        {
+          "apartment_name": "수원역푸르지오자이",
+          "trade_date": "2026-04-24",
+          "area_sqm": 84.99,
+          "price_krw": 870000000,
+          "build_year": 2021,
+          "distance_m": 1464.6
+        },
+        {
+          "apartment_name": "수원역푸르지오자이",
+          "trade_date": "2026-04-25",
+          "area_sqm": 84.99,
+          "price_krw": 570000000,
+          "build_year": 2021,
+          "distance_m": 1464.6
+        },
+        {
+          "apartment_name": "수원역푸르지오자이",
+          "trade_date": "2026-04-27",
+          "area_sqm": 84.99,
+          "price_krw": 857000000,
+          "build_year": 2021,
+          "distance_m": 1464.6
+        },
+        {
+          "apartment_name": "수원역푸르지오자이",
+          "trade_date": "2026-04-28",
+          "area_sqm": 84.99,
+          "price_krw": 870000000,
+          "build_year": 2021,
+          "distance_m": 1464.6
+        },
+        {
+          "apartment_name": "화서역푸르지오브리시엘",
+          "trade_date": "2026-04-29",
+          "area_sqm": 84.9343,
+          "price_krw": 1338000000,
+          "build_year": 2023,
+          "distance_m": 1799.8
+        },
+        {
+          "apartment_name": "수원역푸르지오자이",
+          "trade_date": "2026-05-02",
+          "area_sqm": 84.99,
+          "price_krw": 870000000,
+          "build_year": 2021,
+          "distance_m": 1464.6
+        },
+        {
+          "apartment_name": "수원역푸르지오자이",
+          "trade_date": "2026-05-04",
+          "area_sqm": 84.99,
+          "price_krw": 864000000,
+          "build_year": 2021,
+          "distance_m": 1464.6
+        }
+      ]
+    },
+    {
+      "housing_manage_no": "2026000103",
+      "name": "더샵 분당하이스트",
+      "lawd_codes": [
+        "41135",
+        "41610"
+      ],
+      "connection": "success",
+      "queried_records": 7981,
+      "gap_units": 3,
+      "units": [
+        {
+          "housing_manage_no": "2026000103",
+          "type": "66A",
+          "area": 66,
+          "count": 3,
+          "price": 2163000000,
+          "median": 1530000000,
+          "gap": -633000000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000103",
+          "type": "84B",
+          "area": 84,
+          "count": 5,
+          "price": 2958000000,
+          "median": 1770000000,
+          "gap": -1188000000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        },
+        {
+          "housing_manage_no": "2026000103",
+          "type": "84G",
+          "area": 84.64,
+          "count": 5,
+          "price": 2920000000,
+          "median": 1770000000,
+          "gap": -1150000000,
+          "reason": "verified",
+          "window": 6,
+          "confidence": "low"
+        }
+      ],
+      "evidence": [
+        {
+          "apartment_name": "더샵분당파크리버",
+          "trade_date": "2026-04-24",
+          "area_sqm": 59.9474,
+          "price_krw": 1530000000,
+          "build_year": 2021,
+          "distance_m": 1404.8
+        },
+        {
+          "apartment_name": "더샵분당파크리버",
+          "trade_date": "2026-04-29",
+          "area_sqm": 84.925,
+          "price_krw": 1830000000,
+          "build_year": 2021,
+          "distance_m": 1404.8
+        },
+        {
+          "apartment_name": "더샵분당파크리버",
+          "trade_date": "2026-05-07",
+          "area_sqm": 84.9807,
+          "price_krw": 1725000000,
+          "build_year": 2021,
+          "distance_m": 1404.8
+        },
+        {
+          "apartment_name": "더샵분당파크리버",
+          "trade_date": "2026-05-11",
+          "area_sqm": 59.9474,
+          "price_krw": 1440000000,
+          "build_year": 2021,
+          "distance_m": 1404.8
+        },
+        {
+          "apartment_name": "더샵분당파크리버",
+          "trade_date": "2026-05-16",
+          "area_sqm": 84.9987,
+          "price_krw": 1770000000,
+          "build_year": 2021,
+          "distance_m": 1404.8
+        },
+        {
+          "apartment_name": "더샵분당파크리버",
+          "trade_date": "2026-05-29",
+          "area_sqm": 59.9474,
+          "price_krw": 1660000000,
+          "build_year": 2021,
+          "distance_m": 1404.8
+        },
+        {
+          "apartment_name": "더샵분당파크리버",
+          "trade_date": "2026-06-07",
+          "area_sqm": 84.925,
+          "price_krw": 1730000000,
+          "build_year": 2021,
+          "distance_m": 1404.8
+        },
+        {
+          "apartment_name": "더샵분당파크리버",
+          "trade_date": "2026-08-17",
+          "area_sqm": 84.9987,
+          "price_krw": 1845000000,
+          "build_year": 2021,
+          "distance_m": 1404.8
+        }
+      ]
+    }
+  ]
+}

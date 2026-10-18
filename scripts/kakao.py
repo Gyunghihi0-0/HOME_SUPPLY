@@ -38,7 +38,7 @@ class Kakao:
             raise SourceError('kakao_response_changed') from None
 
     def locate(self, address):
-        clean = re.sub(r'\([^)]*\)', '', address or '').strip()
+        clean = re.sub(r'\([^)]*\)|\[[^]]*\]', '', address or '').strip()
         clean = re.sub(r'\s*일원\s*$', '', clean).replace('번지', '').strip()
         if clean in self.memo:
             return dict(self.memo[clean])

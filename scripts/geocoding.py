@@ -8,13 +8,19 @@ from scripts.matching import address_key
 SOURCE='https://www.vworld.kr/'
 ENDPOINT='https://api.vworld.kr/req/address'
 
+def require_success(response,fallback):
+    if response.get('status')=='OK':return
+    code=str(response.get('error',{}).get('code',''))
+    if re.fullmatch(r'[A-Z_]{1,60}',code):raise SourceError('vworld_api_'+code)
+    raise SourceError(fallback)
+
 class VWorld:
     def __init__(self,client,key,domain=None):self.client,self.key,self.domain=client,key,domain
     def _request(self,endpoint,params,ttl):
         params=dict(params,key=self.key)
         if self.domain:params['domain']=self.domain
         try:return self.client.request(endpoint,params=params,ttl=ttl)
-        except SourceError as exc:raise SourceError('vworld_'+str(exc)) from None
+        except SourceError as exc:raise SourceError(str(exc) if str(exc).startswith('vworld_') else 'vworld_'+str(exc)) from None
     def locate(self,address):
         if not self.key:raise SourceError('missing_vworld_key')
         # Only already verified parcel/road addresses, not sales-center names or project-name search.
@@ -26,7 +32,7 @@ class VWorld:
             address=clean,format='json',type=kind,refine='false',simple='false'),86400)
         try:
             response=json.loads(raw)['response']
-            if response.get('status')!='OK':raise SourceError('official_geocode_not_found')
+            require_success(response,'official_geocode_not_found')
             result=response['result'];point=result['point']
             lon,lat=float(point['x']),float(point['y'])
             if not math.isfinite(lon) or not math.isfinite(lat) or not (124<=lon<=132 and 33<=lat<=39):raise SourceError('geocode_coordinates_invalid')
@@ -51,7 +57,7 @@ class VWorld:
             geomfilter=f'BOX({lon-dx},{lat-dy},{lon+dx},{lat+dy})')
         try:
             response=json.loads(self._request('https://api.vworld.kr/req/data',params,86400))['response']
-            if response.get('status')!='OK':raise SourceError('official_district_query_failed')
+            require_success(response,'official_district_query_failed')
             features=response['result']['featureCollection']['features']
             if not features or len(features)>=100:raise SourceError('official_district_coverage_incomplete')
             provinces={'11':'서울특별시','28':'인천광역시','41':'경기도'}

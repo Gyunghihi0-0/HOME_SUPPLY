@@ -9,9 +9,6 @@ on:
         description: Refresh official data before deployment
         type: boolean
         default: true
-  push:
-    branches: [main]
-    paths: ['scripts/**', 'config/**', 'contracts/**', 'tests/backend/**', 'requirements.txt', '.github/workflows/backend.yml', 'docs/**']
   pull_request:
     paths: ['scripts/**', 'config/**', 'contracts/**', 'tests/backend/**', 'requirements.txt', '.github/workflows/backend.yml']
 permissions:
@@ -77,6 +74,8 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- docs/data/latest.json
           if test -f docs/data/locations.json; then git add -- docs/data/locations.json; fi
+          if test -f docs/data/diagnostics.json; then git add -- docs/data/diagnostics.json; fi
+          if test -f docs/data/notice-progress.json; then git add -- docs/data/notice-progress.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'data: refresh official housing notices [skip ci]'
             git push origin HEAD:main
