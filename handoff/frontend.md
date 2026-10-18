@@ -67,6 +67,17 @@ Vanilla JS + HTML/CSS, 외부 UI 라이브러리·폰트·인증키 없음. 상�
 
 초기 배포 실행 39093487045는 수집·JSON 검증까지 완료했지만, 실행 중 main에 옵션 PR이 병합되어 기존 checkout의 데이터 push가 non-fast-forward로 거절됐습니다. 강제 push하지 않았고 기존 운영 JSON은 보존됐습니다. 이 실행의 deploy는 skipped입니다. 기존 백엔드 workflow의 데이터 push는 동시 main 변경 시 안전하게 실패하지만 자동 재시도하지 않는 한계가 있습니다.
 
-현재 필요한 사용자 단계: Actions → Official data and Pages → Run workflow → main → Refresh official data before deployment 체크 해제 후 실행. 연결 도구에는 workflow_dispatch 및 취소 기능이 없고 로그인된 브라우저 세션도 없어 이 클릭은 사용자가 수행해야 합니다. 실행 후 Pages 성공 및 공개 URL smoke test를 확인해야 배포 완료입니다. 공개 저장소/Pages 활성화만으로 배포 완료로 간주하지 않습니다.
+당시 필요했던 사용자 단계: Actions → Official data and Pages → Run workflow → main → Refresh official data before deployment 체크 해제 후 실행. 연결 도구에는 workflow_dispatch 및 취소 기능이 없고 로그인된 브라우저 세션도 없어 이 클릭은 사용자가 수행해야 합니다. 실행 후 Pages 성공 및 공개 URL smoke test를 확인해야 배포 완료입니다. 공개 저장소/Pages 활성화만으로 배포 완료로 간주하지 않습니다.
 
 로컬 main은 승인된 병합 결과로 fast-forward 동기화했고 기존 frontend/ui-dashboard 로컬 커밋은 삭제하거나 재작성하지 않았습니다.
+
+
+## 2026-10-18 실제 GitHub Pages 배포 완료
+
+로그인 후 브라우저에서 main의 Run workflow를 실행했고 refresh_data=false를 확인했습니다. 실행 https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39096344418 이 약 50초 만에 test/refresh/deploy 모두 success로 완료됐습니다. Collect official data는 의도적으로 skipped이며 기존 검증 JSON으로 배포했습니다. 배포 커밋 79685b67cdaf97b3eae1c7fb475753d0cd0b0922에는 사용자의 README 제목 변경도 보존됐습니다.
+
+공개 사이트: https://gyunghihi0-0.github.io/HOME_SUPPLY/
+
+실제 공개 URL을 Headless Edge 및 앱 브라우저에서 확인했습니다. HTML/CSS/JS/JSON/favicon HTTP 200, 배포 app.js가 로컬 수정본과 동일함, 실제 31개 공고, 전체/경증/중증 필터, 검색·초기화, 상세·공식 링크, 과거 공고, 320/390/768/1440px 가로 넘침 없음, JavaScript 콘솔 및 리소스 오류 없음 검증을 통과했습니다. 데스크톱·모바일 화면을 저장했습니다.
+
+배포 데이터의 generated_at은 2026-10-18T12:10:11.100534+09:00, data_status=partial입니다. 이번 실행은 새 수집 성공이나 가격 분석 완료를 의미하지 않습니다. 주택형 검토 매핑·가격 분석은 기존 백엔드 미완료 사항이며 가짜 가격을 표시하지 않습니다. 예약 실행과 기본 수집 true는 유지됩니다.
