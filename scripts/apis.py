@@ -53,6 +53,7 @@ class Applyhome:
         if listing.get('housing_manage_no') and listing.get('pblanc_no'):
             candidates=self.get('getAPTLttotPblancDetail',{'cond[HOUSE_MANAGE_NO::EQ]':listing['housing_manage_no'],
                 'cond[PBLANC_NO::EQ]':listing['pblanc_no']})
+            if not candidates:raise SourceError('official_announcement_round_unverified')
             # Existing ids are discovery evidence, not proof that a later notice
             # is the same sale round. Older rounds need explicit document review.
             if candidates and any(str(r.get('RCRIT_PBLANC_DE',''))[:4] < str(listing.get('notice_updated_at') or '')[:4] for r in candidates):

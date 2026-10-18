@@ -8,7 +8,7 @@
     "project_records": 30,
     "matched_projects": 13,
     "units": 98,
-    "priced_units": 46,
+    "priced_units": 45,
     "exact_area_units": 67,
     "coordinate_projects": 6,
     "verified_trade_records": 6,
@@ -1816,17 +1816,17 @@
         "project": "official_announcement_round_unverified"
       },
       "category": "추가 개발 필요",
-      "project_label": "이전 연도 사업번호만 보존됨 · 현재 모집차수와 연결 근거 미확인",
+      "project_label": "기존 사업번호·현재 모집차수 연결 근거 미확인",
       "catalog_window_only": false,
       "units": [
         {
           "type": "61A",
-          "price": 480000000,
+          "price": null,
           "exclusive_area": null,
           "allocation": 1,
           "gap": null,
-          "code": "official_exclusive_area_missing",
-          "label": "정확한 공식 전용면적 미확인"
+          "code": "official_announcement_round_unverified",
+          "label": "기존 사업번호·현재 모집차수 연결 근거 미확인"
         }
       ],
       "review_candidates": [
@@ -1852,7 +1852,7 @@
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
-        "official_project_not_in_catalog"
+        "official_announcement_round_unverified"
       ]
     },
     {
@@ -2166,7 +2166,7 @@
     "project_records": 30,
     "matched_projects": 13,
     "units": 98,
-    "priced_units": 46,
+    "priced_units": 45,
     "exact_area_units": 67,
     "coordinate_projects": 6,
     "verified_trade_records": 6,

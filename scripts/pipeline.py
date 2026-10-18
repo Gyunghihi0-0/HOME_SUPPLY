@@ -103,6 +103,14 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
             except SourceError as exc:
                 reason=str(exc);price_error=reason
                 item['collection_issues']=sorted(set(item['collection_issues']+[reason]))
+                if reason=='official_announcement_round_unverified':
+                    # An old sale round is evidence to review, not a current price.
+                    item['location_verified']=False
+                    for unit in item['units']:
+                        unit.update(sale_price_krw=None,sale_price_basis='unknown',sale_price_evidence_url=None,
+                            comparison_median_krw=None,estimated_gap_krw=None,gap_rate_pct=None,
+                            comparables=[],comparables_count=0,confidence='unavailable',analysis_reason=reason)
+                        for field in ('sale_price_range_krw','price_candidate_types','estimated_gap_range_krw'):unit.pop(field,None)
                 continue
         if not mapping.get('evidence_url') or not mapping.get('official_address'):
             price_error='mapping_evidence_required';continue

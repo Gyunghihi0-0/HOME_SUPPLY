@@ -1,7 +1,9 @@
 """Classify transport observations without guessing who closed a connection."""
 def classify_provider_error(code):
     value=str(code or '')
-    if any(x in value for x in ('INCORRECT_KEY','INVALID_KEY','EXPIRE_KEY','UNAVAILABLE_KEY','http_401','http_403')):
+    if 'http_403' in value:
+        return {'stage':'access_denied','certainty':'origin_unconfirmed','reason':'접근 거부 응답; 키·도메인·서비스 또는 네트워크 정책 중 원인 미확정'}
+    if any(x in value for x in ('INCORRECT_KEY','INVALID_KEY','EXPIRE_KEY','UNAVAILABLE_KEY','http_401')):
         return {'stage':'authentication_configuration','certainty':'error_class_confirmed','reason':'키·도메인·허용 범위 확인 필요'}
     if any(x in value for x in ('PARAM_REQUIRED','INVALID_REQUEST','INVALID_TYPE','INVALID_CRS','INVALID_FORMAT')):
         return {'stage':'request_format','certainty':'error_class_confirmed','reason':'공식 오류 코드에 따른 요청 형식 확인 필요'}

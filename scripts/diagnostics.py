@@ -15,7 +15,7 @@ LABELS={
  'official_project_address_mismatch':'공식 주소·지번 근거 불일치 또는 불충분',
  'official_project_block_mismatch':'개발지구 블록 불일치',
  'official_project_multiple_candidates':'동일 근거의 청약홈 후보가 여러 개',
- 'official_announcement_round_unverified':'이전 연도 사업번호만 보존됨 · 현재 모집차수와 연결 근거 미확인',
+ 'official_announcement_round_unverified':'기존 사업번호·현재 모집차수 연결 근거 미확인',
  'official_unit_type_not_found':'기관추천 주택형에 대응하는 공식 모델 없음',
  'official_unit_type_ambiguous':'주택형 후보가 여러 개',
  'official_exclusive_area_conflict':'공식 전용면적 근거끼리 충돌',

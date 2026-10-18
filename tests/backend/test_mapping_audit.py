@@ -43,6 +43,25 @@ def test_same_block_name_cannot_override_different_city():
 def test_provider_error_does_not_guess_auth_from_transport(code,stage):
     assert classify_provider_error(code)['stage']==stage
 
+
+def test_http_forbidden_alone_does_not_prove_bad_key():
+    result=classify_provider_error('vworld_http_403')
+    assert result['stage']=='access_denied' and result['certainty']=='origin_unconfirmed'
+
+
+def test_unverified_old_announcement_round_cannot_supply_current_price():
+    from scripts.pipeline import enrich
+    from scripts.apis import empty_unit
+    from tests.backend.test_pipeline import notice,NOW,BrokenClient
+    item=notice();item['units']=[dict(empty_unit('84A'),sale_price_krw=500000000,
+        sale_price_basis='maximum_base_price',sale_price_evidence_url='https://www.data.go.kr')]
+    class PriorRound:
+        def discover(self,item):raise SourceError('official_announcement_round_unverified')
+    policy=json.loads((ROOT/'config/analysis.json').read_text(encoding='utf-8'))
+    enrich([item],BrokenClient(),NOW,{'projects':{},'trade_locations':{}},policy,None,None,apply_client=PriorRound())
+    assert item['units'][0]['sale_price_krw'] is None
+    assert item['units'][0]['analysis_reason']=='official_announcement_round_unverified'
+
 def test_reviewed_block_geometry_requires_project_identity_and_government_evidence():
     item={'id':'example','address':'경기도 광명시 구름산지구 A6BL','housing_manage_no':'1','pblanc_no':'2'}
     record={'reviewed':True,'evidence_url':'https://www.gm.go.kr/example','source_sha256':'a'*64,'checked_at':'2026-10-18T10:00:00+09:00',

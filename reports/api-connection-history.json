@@ -1,0 +1,87 @@
+{
+  "runs": [
+    {
+      "id": 39128254668,
+      "result": "transport_failure_before_analysis",
+      "completed_month_district_queries": 26,
+      "returned_trade_records": 10012,
+      "cancelled_records": 576,
+      "invalid_records": 0,
+      "query_errors": []
+    },
+    {
+      "id": 39128476426,
+      "result": "15_minute_job_timeout_before_analysis",
+      "completed_month_district_queries": 0,
+      "returned_trade_records": 0,
+      "cancelled_records": 0,
+      "invalid_records": 0,
+      "query_errors": [
+        {
+          "district": "41111",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        },
+        {
+          "district": "41113",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        },
+        {
+          "district": "41115",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        },
+        {
+          "district": "41135",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        },
+        {
+          "district": "41360",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        },
+        {
+          "district": "41370",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        },
+        {
+          "district": "41463",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        },
+        {
+          "district": "41591",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        },
+        {
+          "district": "41595",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        },
+        {
+          "district": "41597",
+          "month": "202510",
+          "page": 1,
+          "code": "transport_error"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Counts cover only completed requests and must not be interpreted as full-project sample counts.",
+    "No comparison median or gap was finalized by these incomplete runs."
+  ]
+}
