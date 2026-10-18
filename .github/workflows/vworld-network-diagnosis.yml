@@ -1,0 +1,38 @@
+name: VWorld transport diagnosis without credentials
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/vworld-network-diagnosis.yml']
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Compare DNS TLS HTTP protocols with identical public request
+        shell: bash
+        run: |
+          python - <<'PY'
+          import socket,ssl,json,urllib.request,urllib.error,os,subprocess
+          host='api.vworld.kr'
+          print('PROXY_ENV_PRESENT',json.dumps({k:bool(os.environ.get(k)) for k in ['HTTPS_PROXY','HTTP_PROXY','ALL_PROXY','https_proxy','http_proxy']}))
+          try:
+           infos=socket.getaddrinfo(host,443,type=socket.SOCK_STREAM)
+           print('DNS_OK families='+','.join(sorted(set(str(x[0]) for x in infos))))
+           with socket.create_connection((host,443),timeout=15) as raw:
+            with ssl.create_default_context().wrap_socket(raw,server_hostname=host) as tls:
+             print('TLS_OK version='+tls.version())
+          except Exception as exc:print('TRANSPORT_FAIL '+type(exc).__name__)
+          query='service=address&request=getcoord&version=2.0&crs=EPSG%3A4326&address=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%A0%95%EC%9E%90%EB%8F%99%2090&format=json&type=PARCEL'
+          url='https://'+host+'/req/address?'+query
+          for protocol in ['--http1.1','--http2']:
+           p=subprocess.run(['curl',protocol,'--silent','--show-error','--connect-timeout','10','--max-time','25','--output','/tmp/vworld-public-body','--write-out','http=%{http_code} tls_verify=%{ssl_verify_result} connect=%{time_connect} tls=%{time_appconnect} first_byte=%{time_starttransfer}',url],capture_output=True,text=True)
+           print('CURL '+protocol+' exit='+str(p.returncode)+' '+p.stdout+' '+p.stderr[:200])
+           if p.returncode==0:
+            try:
+             payload=json.load(open('/tmp/vworld-public-body'));resp=payload.get('response',{})
+             print('PUBLIC_API_RESPONSE '+json.dumps({'status':resp.get('status'),'code':resp.get('error',{}).get('code')}))
+            except Exception:print('PUBLIC_API_RESPONSE non_json')
+          PY
