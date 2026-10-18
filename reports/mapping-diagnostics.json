@@ -866,18 +866,42 @@
           "price": 1712100000,
           "exclusive_area": 84.997,
           "allocation": 4,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -434600000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000508",
+            "type": "84C",
+            "area": 84.997,
+            "count": 14,
+            "price": 1712100000,
+            "median": 1277500000,
+            "gap": -434600000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84F",
           "price": 1715300000,
           "exclusive_area": 84.9998,
           "allocation": 2,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -437800000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000508",
+            "type": "84F",
+            "area": 84.9998,
+            "count": 14,
+            "price": 1715300000,
+            "median": 1277500000,
+            "gap": -437800000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         }
       ],
       "review_candidates": [
@@ -909,7 +933,8 @@
         "grouped_notice_project_split",
         "multi_project_notice_requires_block_match",
         "target_build_year_uses_official_planned_move_year"
-      ]
+      ],
+      "live_trade_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39129634037"
     },
     {
       "id": "gg_266126622_p2026000509_2026000509",
@@ -929,45 +954,105 @@
           "price": 1714200000,
           "exclusive_area": 84.9916,
           "allocation": 7,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -436700000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000509",
+            "type": "84A",
+            "area": 84.9916,
+            "count": 14,
+            "price": 1714200000,
+            "median": 1277500000,
+            "gap": -436700000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84B",
           "price": 1716800000,
           "exclusive_area": 84.9979,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -439300000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000509",
+            "type": "84B",
+            "area": 84.9979,
+            "count": 14,
+            "price": 1716800000,
+            "median": 1277500000,
+            "gap": -439300000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84C",
           "price": 1713200000,
           "exclusive_area": 84.997,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -435700000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000509",
+            "type": "84C",
+            "area": 84.997,
+            "count": 14,
+            "price": 1713200000,
+            "median": 1277500000,
+            "gap": -435700000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84D",
           "price": 1713800000,
           "exclusive_area": 84.9948,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -436300000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000509",
+            "type": "84D",
+            "area": 84.9948,
+            "count": 14,
+            "price": 1713800000,
+            "median": 1277500000,
+            "gap": -436300000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84E",
           "price": 1715200000,
           "exclusive_area": 84.9975,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -437700000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000509",
+            "type": "84E",
+            "area": 84.9975,
+            "count": 14,
+            "price": 1715200000,
+            "median": 1277500000,
+            "gap": -437700000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         }
       ],
       "review_candidates": [
@@ -999,7 +1084,8 @@
         "grouped_notice_project_split",
         "multi_project_notice_requires_block_match",
         "target_build_year_uses_official_planned_move_year"
-      ]
+      ],
+      "live_trade_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39129634037"
     },
     {
       "id": "gg_265886763",
@@ -1281,45 +1367,105 @@
           "price": 470300000,
           "exclusive_area": 71.8178,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -45300000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000463",
+            "type": "71",
+            "area": 71.8178,
+            "count": 8,
+            "price": 470300000,
+            "median": 425000000,
+            "gap": -45300000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84A",
           "price": 557500000,
           "exclusive_area": 84.9592,
           "allocation": 4,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -93500000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000463",
+            "type": "84A",
+            "area": 84.9592,
+            "count": 8,
+            "price": 557500000,
+            "median": 464000000,
+            "gap": -93500000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84B",
           "price": 557200000,
           "exclusive_area": 84.9767,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -93200000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000463",
+            "type": "84B",
+            "area": 84.9767,
+            "count": 8,
+            "price": 557200000,
+            "median": 464000000,
+            "gap": -93200000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84C",
           "price": 559700000,
           "exclusive_area": 84.9221,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -95700000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000463",
+            "type": "84C",
+            "area": 84.9221,
+            "count": 8,
+            "price": 559700000,
+            "median": 464000000,
+            "gap": -95700000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84D",
           "price": 554500000,
           "exclusive_area": 84.914,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -90500000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000463",
+            "type": "84D",
+            "area": 84.914,
+            "count": 8,
+            "price": 554500000,
+            "median": 464000000,
+            "gap": -90500000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         }
       ],
       "review_candidates": [
@@ -1349,7 +1495,8 @@
         "district_coverage_sampled",
         "district_discovery_failed",
         "target_build_year_uses_official_planned_move_year"
-      ]
+      ],
+      "live_trade_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39129634037"
     },
     {
       "id": "gg_262294421",
@@ -1371,25 +1518,61 @@
           "allocation": 1,
           "gap": null,
           "code": "fewer_than_three_verified_trades",
-          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
+          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달",
+          "live_trade": {
+            "housing_manage_no": "2026000468",
+            "type": "74",
+            "area": 74.9845,
+            "count": 1,
+            "price": 614000000,
+            "median": null,
+            "gap": null,
+            "reason": "sample_insufficient",
+            "window": 12,
+            "confidence": "low"
+          }
         },
         {
           "type": "84A",
           "price": 748000000,
           "exclusive_area": 84.9947,
           "allocation": 1,
-          "gap": -233000000.0,
+          "gap": -233000000,
           "code": "verified",
-          "label": "실제 연결 성공"
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000468",
+            "type": "84A",
+            "area": 84.9947,
+            "count": 6,
+            "price": 748000000,
+            "median": 515000000,
+            "gap": -233000000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84B",
           "price": 746000000,
           "exclusive_area": 84.8542,
           "allocation": 1,
-          "gap": -231000000.0,
+          "gap": -231000000,
           "code": "verified",
-          "label": "실제 연결 성공"
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000468",
+            "type": "84B",
+            "area": 84.8542,
+            "count": 6,
+            "price": 746000000,
+            "median": 515000000,
+            "gap": -231000000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         }
       ],
       "review_candidates": [
@@ -1419,7 +1602,8 @@
         "district_coverage_sampled",
         "district_discovery_failed",
         "target_build_year_uses_official_planned_move_year"
-      ]
+      ],
+      "live_trade_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39129634037"
     },
     {
       "id": "gg_260861016",
@@ -1440,8 +1624,20 @@
           "exclusive_area": 84.7459,
           "allocation": 1,
           "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요",
+          "live_trade": {
+            "housing_manage_no": "2026000449",
+            "type": "84A",
+            "area": 84.7459,
+            "count": 51,
+            "price": 898000000,
+            "median": null,
+            "gap": null,
+            "reason": "outlier_review_required",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84B",
@@ -1449,8 +1645,20 @@
           "exclusive_area": 84.8508,
           "allocation": 2,
           "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요",
+          "live_trade": {
+            "housing_manage_no": "2026000449",
+            "type": "84B",
+            "area": 84.8508,
+            "count": 51,
+            "price": 893000000,
+            "median": null,
+            "gap": null,
+            "reason": "outlier_review_required",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84C",
@@ -1458,8 +1666,20 @@
           "exclusive_area": 84.6391,
           "allocation": 1,
           "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요",
+          "live_trade": {
+            "housing_manage_no": "2026000449",
+            "type": "84C",
+            "area": 84.6391,
+            "count": 51,
+            "price": 893000000,
+            "median": null,
+            "gap": null,
+            "reason": "outlier_review_required",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84D",
@@ -1467,8 +1687,20 @@
           "exclusive_area": 84.9663,
           "allocation": 2,
           "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요",
+          "live_trade": {
+            "housing_manage_no": "2026000449",
+            "type": "84D",
+            "area": 84.9663,
+            "count": 51,
+            "price": 893000000,
+            "median": null,
+            "gap": null,
+            "reason": "outlier_review_required",
+            "window": 6,
+            "confidence": "low"
+          }
         }
       ],
       "review_candidates": [
@@ -1498,7 +1730,8 @@
         "district_coverage_sampled",
         "district_discovery_failed",
         "target_build_year_uses_official_planned_move_year"
-      ]
+      ],
+      "live_trade_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39129634037"
     },
     {
       "id": "gg_259191850",
@@ -2002,27 +2235,63 @@
           "price": 2163000000,
           "exclusive_area": 66.0,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -633000000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000103",
+            "type": "66A",
+            "area": 66,
+            "count": 3,
+            "price": 2163000000,
+            "median": 1530000000,
+            "gap": -633000000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84B",
           "price": 2958000000,
           "exclusive_area": 84.0,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -1188000000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000103",
+            "type": "84B",
+            "area": 84,
+            "count": 5,
+            "price": 2958000000,
+            "median": 1770000000,
+            "gap": -1188000000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         },
         {
           "type": "84G",
           "price": 2920000000,
           "exclusive_area": 84.64,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_validation_pending",
-          "label": "새 단지 실거래 검증 대기 · 저장된 기존 6건만으로 표본 부족을 확정하지 않음"
+          "gap": -1150000000,
+          "code": "verified",
+          "label": "실제 연결 성공",
+          "live_trade": {
+            "housing_manage_no": "2026000103",
+            "type": "84G",
+            "area": 84.64,
+            "count": 5,
+            "price": 2920000000,
+            "median": 1770000000,
+            "gap": -1150000000,
+            "reason": "verified",
+            "window": 6,
+            "confidence": "low"
+          }
         }
       ],
       "review_candidates": [
@@ -2052,7 +2321,8 @@
         "district_coverage_sampled",
         "district_discovery_failed",
         "target_build_year_uses_official_planned_move_year"
-      ]
+      ],
+      "live_trade_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39129634037"
     },
     {
       "id": "gg_256337249",
@@ -2159,7 +2429,8 @@
     "exact_area_units": 27,
     "coordinate_projects": 1,
     "verified_trade_records": 6,
-    "gap_units": 2
+    "gap_units": 2,
+    "confirmed_catalog_projects": 6
   },
   "after": {
     "notices": 28,
@@ -2174,5 +2445,34 @@
     "confirmed_catalog_projects": 12,
     "retained_historical_projects": 1
   },
-  "comparison_limit": "Catalog and target coordinates are newly captured actual responses; trade recalculation uses only 6 previously published actual comparables, so new-target trade sufficiency is untested."
+  "comparison_limit": "Offline replay metrics retain the original 6 trades / 2 gaps. Separate fixed readonly live verification covers the same cohort, 6 verified targets / 22 types, and supplies the live_trade fields without changing production JSON.",
+  "live_trade_validation": {
+    "run_url": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39129634037",
+    "observed_at": "2026-10-18T22:00:13.091918+09:00",
+    "summary": {
+      "project_connections": 6,
+      "gap_projects": 5,
+      "examined_types": 22,
+      "gap_types": 17,
+      "positive_gap_types": 0,
+      "monthly_district_requests": 156,
+      "queried_records": 58681,
+      "cancelled_records": 2737,
+      "invalid_records": 0,
+      "rows": 4471,
+      "unique_locations": 159,
+      "attempted_locations": 159,
+      "truncated": false,
+      "failed_districts": [],
+      "verified_comparable_records": 40,
+      "query_aborted": false
+    },
+    "limitations": [
+      "Nine-point administrative-district sampling is incomplete; confidence is low.",
+      "Planned official move-in year is the existing target build-year reference.",
+      "Maximum base sale price excludes options, taxes and financing costs.",
+      "Per-project queried counts overlap where districts are shared; do not sum them.",
+      "Output includes at most ten minimal trade examples per project; full responses are not retained here."
+    ]
+  }
 }

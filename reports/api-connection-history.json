@@ -1,4 +1,5 @@
 {
+  "latest_completed_run": {"id":39129634037,"result":"completed_readonly_analysis","summary":{"project_connections":6,"gap_projects":5,"examined_types":22,"gap_types":17,"positive_gap_types":0,"monthly_district_requests":156,"queried_records":58681,"cancelled_records":2737,"invalid_records":0,"rows":4471,"unique_locations":159,"attempted_locations":159,"truncated":false,"failed_districts":[],"verified_comparable_records":40,"query_aborted":false}},
   "runs": [
     {
       "id": 39128254668,
