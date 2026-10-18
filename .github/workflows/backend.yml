@@ -9,9 +9,6 @@ on:
         description: Refresh official data before deployment
         type: boolean
         default: true
-  push:
-    branches: [main]
-    paths: ['scripts/**', 'config/**', 'contracts/**', 'tests/backend/**', 'requirements.txt', '.github/workflows/backend.yml', 'docs/**']
   pull_request:
     paths: ['scripts/**', 'config/**', 'contracts/**', 'tests/backend/**', 'requirements.txt', '.github/workflows/backend.yml']
 permissions:
@@ -116,4 +113,3 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/deploy-pages@v4
         id: deployment
-
