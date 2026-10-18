@@ -9,16 +9,19 @@ permissions:
 jobs:
   verify:
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 5
     steps:
       - name: Independently verify both APIs without checkout
         env:
           VWORLD_API_KEY: ${{ secrets.VWORLD_API_KEY }}
-          VWORLD_DOMAIN: ${{ vars.VWORLD_DOMAIN }}
-        shell: bash
+          VWORLD_DOMAIN: ${{ vars.VWORLD_DOMAIN || 'https://gyunghihi0-0.github.io/HOME_SUPPLY/' }}
+        shell: python
         run: |
-          python - <<'PY'
           import os,json,sys,urllib.request,urllib.parse,urllib.error
           key=os.environ.get('VWORLD_API_KEY','').strip()
           domain=os.environ.get('VWORLD_DOMAIN','').strip()
@@ -27,7 +30,7 @@ jobs:
           if not key:sys.exit(1)
           checks=[
            ('geocoder','address',dict(service='address',request='getcoord',version='2.0',crs='EPSG:4326',address='경기도 성남시 분당구 정자동 90',format='json',type='PARCEL')),
-           ('district_2d','data',dict(service='data',request='getfeature',version='2.0',data='LT_C_ADSIGG_INFO',format='json',size=1,page=1,geometry='false',attribute='true',crs='EPSG:4326',geomfilter='BOX(127.09,37.35,127.11,37.37)'))]
+           ('district_2d','data',dict(service='data',request='GetFeature',version='2.0',data='LT_C_ADSIGG_INFO',format='json',size=1,page=1,geometry='false',attribute='true',crs='EPSG:4326',geomFilter='BOX(127.09,37.35,127.11,37.37)'))]
           failed=False
           for label,path,params in checks:
            params['key']=key
@@ -53,4 +56,3 @@ jobs:
            except Exception as exc:
             print(label+': FAIL error_type='+type(exc).__name__);failed=True
           sys.exit(1 if failed else 0)
-          PY
