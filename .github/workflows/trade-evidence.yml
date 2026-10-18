@@ -36,17 +36,23 @@ jobs:
               def redirect_request(self,*args,**kwargs):return None
           
           def main():
+              deadline=time.monotonic()+480
               now=datetime.now(timezone(timedelta(hours=9)));key=os.environ.get('MOLIT_SERVICE_KEY','').strip();kakao=os.environ.get('KAKAO_REST_API_KEY','').strip()
               if not key or not kakao:raise SystemExit('missing_secret')
               def get(url,params,headers=None):
                   code='transport_error'
-                  for attempt in range(3):
+                  for attempt in range(2):
+                      if time.monotonic()>=deadline:raise RuntimeError('capture_budget_exhausted')
                       try:
-                          with build_opener(NoRedirect()).open(Request(url+'?'+urlencode(params),headers=headers or {}),timeout=25) as response:return response.read(15000000)
+                          with build_opener(NoRedirect()).open(Request(url+'?'+urlencode(params),headers=headers or {}),timeout=12) as response:return response.read(15000000)
                       except HTTPError as exc:
                           code='http_'+str(exc.code)
                           if exc.code not in (429,500,502,503,504):raise RuntimeError(code) from None
-                      except Exception:code='transport_error'
+                      except Exception as exc:
+                          # Exception classes distinguish timeout/TLS/DNS without exposing URLs or keys.
+                          cause=getattr(exc,'reason',exc)
+                          kind=type(cause).__name__
+                          code='transport_'+(kind if kind in ('TimeoutError','SSLError','gaierror','ConnectionResetError','RemoteDisconnected') else 'error')
                       time.sleep(attempt+1)
                   raise RuntimeError(code) from None
               def local(path,params):return json.loads(get('https://dapi.kakao.com/v2/local/'+path,params,{'Authorization':'KakaoAK '+kakao}))['documents']
@@ -60,7 +66,7 @@ jobs:
                                   codes.add(row['code'][:5]);prefixes[row['code'][:5]]=row['region_1depth_name']+' '+row['region_2depth_name']
                   target['lawd_codes']=sorted(codes);districts.update(codes)
               print('TRADE_META '+json.dumps({'observed_at':now.isoformat(),'targets':TARGETS,'coverage':'nine_point_district_sampling_incomplete'},ensure_ascii=False),flush=True)
-              locations=set();records=0;all_rows=[];failed_districts=set()
+              locations=set();records=0;all_rows=[];failed_districts=set();consecutive_failures=0;aborted=False
               oldest=now.date().replace(year=now.year-1,day=min(now.day,calendar.monthrange(now.year-1,now.month)[1]))
               month=oldest.replace(day=1)
               while month<=now.date():
@@ -70,8 +76,10 @@ jobs:
                           try:raw=get('https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev',{'serviceKey':key,'LAWD_CD':district,'DEAL_YMD':month.strftime('%Y%m'),'pageNo':page,'numOfRows':1000})
                           except RuntimeError as exc:
                               failed_districts.add(district)
+                              consecutive_failures+=1
                               print('TRADE_MONTH_ERROR '+json.dumps({'district':district,'month':month.strftime('%Y%m'),'page':page,'code':str(exc)}),flush=True)
                               break
+                          consecutive_failures=0
                           root=ET.fromstring(raw)
                           if root.findtext('.//resultCode') not in ('000','00'):raise RuntimeError('molit_application_error')
                           total=int(root.findtext('.//totalCount'));items=root.findall('.//items/item')
@@ -93,6 +101,11 @@ jobs:
                           if page*1000>=total:break
                       records+=len(rows);all_rows.extend(rows)
                       print('TRADE_MONTH '+json.dumps({'district':district,'month':month.strftime('%Y%m'),'total':total,'cancelled':cancelled,'invalid':invalid,'candidate_count':len(rows)},ensure_ascii=False),flush=True)
+                      if consecutive_failures>=3 or time.monotonic()>=deadline:
+                          aborted=True;failed_districts.update(districts)
+                          print('TRADE_CIRCUIT_OPEN '+json.dumps({'reason':'consecutive_source_failures' if consecutive_failures>=3 else 'capture_budget_exhausted'}),flush=True)
+                          break
+                  if aborted:break
                   month=(month.replace(day=28)+timedelta(days=4)).replace(day=1)
               selected=sorted(locations)[:500]
               def locate(identity):
@@ -119,6 +132,7 @@ jobs:
                   return 6371000*2*math.asin(min(1,math.sqrt(h)))
               i=now.year*12+now.month-1-6;year,month=divmod(i,12);month+=1
               recent=date(year,month,min(now.day,calendar.monthrange(year,month)[1]))
+              verified_ids=set()
               for target in TARGETS:
                   project_evidence={}
                   for unit in target['units']:
@@ -142,6 +156,7 @@ jobs:
                       reason='sample_insufficient' if len(chosen)<3 else 'outlier_review_required' if max(abs(r['price_krw']-mid)/mid for r in chosen)>.5 else 'verified'
                       if budget_missing:reason='geocode_budget_exhausted'
                       if failed_districts.intersection(target['lawd_codes']):reason='trade_query_incomplete'
+                      if reason=='verified':verified_ids.update(r['id'] for r in chosen)
                       for row in chosen:project_evidence[row['id']]=row
                       print('TRADE_ANALYSIS '+json.dumps({'housing_manage_no':target['housing_manage_no'],'type':unit['type'],'area':area,'count':len(chosen),'price':unit['price'],
                           'median':mid if reason=='verified' else None,'gap':mid-unit['price'] if reason=='verified' else None,
@@ -149,6 +164,6 @@ jobs:
                   sample=sorted(project_evidence.values(),key=lambda r:(r['trade_date'],r['id']))[:10]
                   print('TRADE_PROJECT_EVIDENCE '+json.dumps({'housing_manage_no':target['housing_manage_no'],
                       'sample':[{k:r[k] for k in ['apartment_name','trade_date','area_sqm','price_krw','build_year','distance_m']} for r in sample]},ensure_ascii=False),flush=True)
-              print('TRADE_COMPLETE '+json.dumps({'rows':records,'unique_locations':len(locations),'attempted_locations':len(selected),'truncated':len(locations)>500,'failed_districts':sorted(failed_districts)}),flush=True)
+              print('TRADE_COMPLETE '+json.dumps({'rows':records,'unique_locations':len(locations),'attempted_locations':len(selected),'truncated':len(locations)>500,'failed_districts':sorted(failed_districts),'verified_comparable_records':len(verified_ids),'query_aborted':aborted}),flush=True)
           
           if __name__=='__main__':main()
