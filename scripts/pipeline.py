@@ -54,7 +54,7 @@ def merge(previous,items,now):
     return sorted(result.values(),key=lambda x:(x['notice_updated_at'] or '',x['id']),reverse=True)
 
 def enrich(items,client,now,config,policy,apply_key,trade_key):
-    apply=Applyhome(client,apply_key); molit=Molit(client,trade_key)
+    apply=Applyhome(client,apply_key); molit=Molit(client,trade_key,os.getenv('MOLIT_ALLOW_GENERAL_FALLBACK','').lower()=='true')
     price_error=None;trade_error=None;price_count=0;trade_count=0;trade_cache={}
     for item in items:
         mapping=config['projects'].get(item['id'])
@@ -102,6 +102,7 @@ def enrich(items,client,now,config,policy,apply_key,trade_key):
             trade_error=str(exc) if isinstance(exc,SourceError) else 'trade_data_invalid'
             # A successful new sale price invalidates any previous gap until fresh comparison succeeds.
             for u in item['units']:u['analysis_reason']='trade_source_failed'
+    if molit.fallback_used:trade_error=trade_error or 'general_fallback_used'
     mapped=sum(x['id'] in config['projects'] for x in items)
     pstatus='not_configured' if not apply_key else 'partial' if price_error or mapped<len(items) else 'ok'
     tstatus='not_configured' if not trade_key else 'partial' if trade_error or mapped<len(items) or not mapped or price_error else 'ok'

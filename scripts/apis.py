@@ -1,14 +1,17 @@
 import hashlib
 import json
+import math
 from datetime import date
 from decimal import Decimal
 from defusedxml import ElementTree as ET
 from scripts.http_client import SourceError
 
 APPLYHOME='https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/'
-MOLIT='https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade'
+MOLIT='https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev'
+MOLIT_GENERAL='https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade'
 APPLY_SOURCE='https://www.data.go.kr/data/15098547/openapi.do'
-TRADE_SOURCE='https://www.data.go.kr/data/15126469/openapi.do'
+TRADE_SOURCE='https://www.data.go.kr/data/15126468/openapi.do'
+TRADE_GENERAL_SOURCE='https://www.data.go.kr/data/15126469/openapi.do'
 
 def won(value):
     if value is None or str(value).strip() in ('','-'):return None
@@ -44,12 +47,29 @@ class Applyhome:
         return row,units
 
 class Molit:
-    def __init__(self,client,key):self.client,self.key=client,key
+    def __init__(self,client,key,allow_general_fallback=False):
+        self.client,self.key=client,key
+        self.allow_general_fallback=allow_general_fallback
+        self.fallback_used=False
+        self.last_source_url=TRADE_SOURCE
     def month(self,lawd,month,now):
         if not self.key:raise SourceError('missing_molit_key')
+        try:
+            result=normalize_trades(self._rows(MOLIT,lawd,month),lawd,now,TRADE_SOURCE)
+            self.last_source_url=TRADE_SOURCE
+            return result
+        except SourceError as exc:
+            # No fallback for authentication, quota, outages, empty success, or
+            # invalid values. Only an explicitly enabled missing-field fallback.
+            if str(exc)!='trade_required_fields_missing' or not self.allow_general_fallback:raise
+        result=normalize_trades(self._rows(MOLIT_GENERAL,lawd,month),lawd,now,TRADE_GENERAL_SOURCE)
+        self.fallback_used=True
+        self.last_source_url=TRADE_GENERAL_SOURCE
+        return result
+    def _rows(self,endpoint,lawd,month):
         rows=[]
         for page in range(1,101):
-            raw=self.client.request(MOLIT,params=dict(serviceKey=self.key,LAWD_CD=lawd,DEAL_YMD=month,pageNo=page,numOfRows=1000),ttl=20*3600)
+            raw=self.client.request(endpoint,params=dict(serviceKey=self.key,LAWD_CD=lawd,DEAL_YMD=month,pageNo=page,numOfRows=1000),ttl=20*3600)
             try:root=ET.fromstring(raw)
             except Exception:raise SourceError('molit_invalid_xml') from None
             if root.findtext('.//resultCode') not in ('000','00'):raise SourceError('molit_api_error')
@@ -60,24 +80,29 @@ class Molit:
             if page*1000>=int(total):break
             if not items:raise SourceError('molit_empty_page')
         else:raise SourceError('molit_pagination_limit')
-        return normalize_trades(rows,lawd,now)
+        return rows
 
-def normalize_trades(rows,lawd,now):
+def normalize_trades(rows,lawd,now,source_url=TRADE_SOURCE):
     result={}
     for row in rows:
+        if any(k not in row for k in ('cdealType','cdealDay')):
+            raise SourceError('trade_required_fields_missing')
         # Both cancellation indicator and cancellation date are authoritative.
         if row.get('cdealType') or row.get('cdealDay'):continue
-        required=('aptNm','umdNm','jibun','excluUseAr','dealYear','dealMonth','dealDay','dealAmount','floor','buildYear')
-        if any(not row.get(k) for k in required):continue
-        if row.get('sggCd') and row['sggCd']!=lawd:raise SourceError('trade_region_mismatch')
+        required=('sggCd','aptNm','umdNm','jibun','excluUseAr','dealYear','dealMonth','dealDay','dealAmount','floor','buildYear')
+        if any(not row.get(k) for k in required):raise SourceError('trade_required_fields_missing')
+        if row['sggCd']!=lawd:raise SourceError('trade_region_mismatch')
         try:
             trade_date=date(int(row['dealYear']),int(row['dealMonth']),int(row['dealDay'])).isoformat()
+            floor=int(row['floor']);area=float(row['excluUseAr']);year=int(row['buildYear']);price=won(row['dealAmount'])
+            if not math.isfinite(area) or area<=0 or not 1900<=year<=now.year or price is None:
+                raise SourceError('trade_value_changed')
             location='|'.join([lawd,row['umdNm'],row['jibun']])
-            fingerprint='|'.join([location,row['aptNm'],row['excluUseAr'],trade_date,row['dealAmount'],row['floor']])
+            fingerprint='|'.join([location,row['aptNm'],str(area),trade_date,str(price),str(floor)])
             ident=hashlib.sha256(fingerprint.encode()).hexdigest()[:24]
-            result[ident]=dict(id=ident,apartment_name=row['aptNm'],location=location,area_sqm=float(row['excluUseAr']),
-                trade_date=trade_date,price_krw=won(row['dealAmount']),build_year=int(row['buildYear']),
-                distance_m=None,source_url=TRADE_SOURCE,collected_at=now.isoformat())
+            result[ident]=dict(id=ident,apartment_name=row['aptNm'],location=location,area_sqm=area,
+                trade_date=trade_date,price_krw=price,build_year=year,
+                distance_m=None,source_url=source_url,collected_at=now.isoformat())
         except (ValueError,ArithmeticError):raise SourceError('trade_value_changed') from None
     return list(result.values())
 

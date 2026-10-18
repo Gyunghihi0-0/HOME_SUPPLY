@@ -9,7 +9,7 @@ def main():
     client=Client();now=datetime.now(KST);failed=False
     probes={
         'applyhome':lambda:Applyhome(client,os.getenv('APPLYHOME_SERVICE_KEY')).get('getAPTLttotPblancDetail',{'cond[RCRIT_PBLANC_DE::GTE]':now.date().replace(day=1).isoformat()}),
-        'molit':lambda:Molit(client,os.getenv('MOLIT_SERVICE_KEY')).month('41463',now.strftime('%Y%m'),now)
+        'molit_detail_15126468':lambda:Molit(client,os.getenv('MOLIT_SERVICE_KEY')).month('41463',now.strftime('%Y%m'),now)
     }
     for name,probe in probes.items():
         try:print(f'{name}: ok, records={len(probe())}')
