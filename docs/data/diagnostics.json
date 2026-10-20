@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-19T07:42:39.057446+09:00",
-  "catalog_cutoff": "2025-10-19",
-  "catalog_records": 368,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39173289151",
+  "observed_at": "2026-10-20T09:03:19.410925+09:00",
+  "catalog_cutoff": "2025-10-20",
+  "catalog_records": 369,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39345258382",
   "metrics": {
     "notices": 28,
     "project_records": 30,
@@ -11,8 +11,8 @@
     "priced_units": 45,
     "exact_area_units": 67,
     "coordinate_projects": 6,
-    "verified_trade_records": 39,
-    "gap_units": 17
+    "verified_trade_records": 0,
+    "gap_units": 0
   },
   "classification_counts": {
     "공식 정보가 아직 없음": 17,
@@ -866,45 +866,45 @@
           "price": 1714200000,
           "exclusive_area": 84.9916,
           "allocation": 7,
-          "gap": -414200000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 1716800000,
           "exclusive_area": 84.9979,
           "allocation": 1,
-          "gap": -416800000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
           "price": 1713200000,
           "exclusive_area": 84.997,
           "allocation": 3,
-          "gap": -413200000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
           "price": 1713800000,
           "exclusive_area": 84.9948,
           "allocation": 3,
-          "gap": -413800000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84E",
           "price": 1715200000,
           "exclusive_area": 84.9975,
           "allocation": 3,
-          "gap": -415200000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -955,18 +955,18 @@
           "price": 1712100000,
           "exclusive_area": 84.997,
           "allocation": 4,
-          "gap": -412100000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84F",
           "price": 1715300000,
           "exclusive_area": 84.9998,
           "allocation": 2,
-          "gap": -415300000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1279,45 +1279,45 @@
           "price": 470300000,
           "exclusive_area": 71.8178,
           "allocation": 1,
-          "gap": -45300000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84A",
           "price": 557500000,
           "exclusive_area": 84.9592,
           "allocation": 4,
-          "gap": -93500000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 557200000,
           "exclusive_area": 84.9767,
           "allocation": 1,
-          "gap": -93200000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
           "price": 559700000,
           "exclusive_area": 84.9221,
           "allocation": 1,
-          "gap": -95700000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
           "price": 554500000,
           "exclusive_area": 84.914,
           "allocation": 1,
-          "gap": -90500000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1367,26 +1367,26 @@
           "exclusive_area": 74.9845,
           "allocation": 1,
           "gap": null,
-          "code": "fewer_than_three_verified_trades",
-          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84A",
           "price": 748000000,
           "exclusive_area": 84.9947,
           "allocation": 1,
-          "gap": -233000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 746000000,
           "exclusive_area": 84.8542,
           "allocation": 1,
-          "gap": -231000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1436,8 +1436,8 @@
           "exclusive_area": 84.7459,
           "allocation": 1,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
@@ -1445,8 +1445,8 @@
           "exclusive_area": 84.8508,
           "allocation": 2,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
@@ -1454,8 +1454,8 @@
           "exclusive_area": 84.6391,
           "allocation": 1,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
@@ -1463,8 +1463,8 @@
           "exclusive_area": 84.9663,
           "allocation": 2,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1995,27 +1995,27 @@
           "price": 2163000000,
           "exclusive_area": 66.0,
           "allocation": 1,
-          "gap": -633000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 2958000000,
           "exclusive_area": 84.0,
           "allocation": 1,
-          "gap": -1188000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84G",
           "price": 2920000000,
           "exclusive_area": 84.64,
           "allocation": 1,
-          "gap": -1150000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
