@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-20T09:03:19.410925+09:00"
+      "checked_at": "2026-10-21T08:33:07.416978+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -30,7 +30,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-20T09:03:19.410925+09:00"
+      "checked_at": "2026-10-21T08:33:07.416978+09:00"
     },
     "gg_266126622_p2026000508_2026000508": {
       "address": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
@@ -46,7 +46,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-20T09:03:19.410925+09:00"
+      "checked_at": "2026-10-21T08:33:07.416978+09:00"
     },
     "gg_262772736": {
       "address": "화성특례시 만세구 향남읍 하길리 404-2 번지 일원",
@@ -59,7 +59,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-20T09:03:19.410925+09:00"
+      "checked_at": "2026-10-21T08:33:07.416978+09:00"
     },
     "gg_260861016": {
       "address": "경기도 수원시 권선구 서둔동 212-1번지 일원",
@@ -74,7 +74,7 @@
         "41115"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-20T09:03:19.410925+09:00"
+      "checked_at": "2026-10-21T08:33:07.416978+09:00"
     },
     "gg_258477420": {
       "address": "성남시 분당구 정자동 90",
@@ -88,9 +88,9 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-20T09:03:19.410925+09:00"
+      "checked_at": "2026-10-21T08:33:07.416978+09:00"
     }
   },
   "comparables": {},
-  "generated_at": "2026-10-20T09:05:41.996494+09:00"
+  "generated_at": "2026-10-21T08:35:38.388610+09:00"
 }
