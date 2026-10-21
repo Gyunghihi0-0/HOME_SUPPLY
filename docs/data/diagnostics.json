@@ -1,22 +1,22 @@
 {
-  "observed_at": "2026-10-21T08:33:07.416978+09:00",
-  "catalog_cutoff": "2025-10-21",
+  "observed_at": "2026-10-22T08:50:41.357974+09:00",
+  "catalog_cutoff": "2025-10-22",
   "catalog_records": 369,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39515689905",
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39695811295",
   "metrics": {
     "notices": 28,
     "project_records": 30,
-    "matched_projects": 13,
+    "matched_projects": 14,
     "units": 98,
-    "priced_units": 45,
-    "exact_area_units": 67,
-    "coordinate_projects": 6,
-    "verified_trade_records": 0,
-    "gap_units": 0
+    "priced_units": 52,
+    "exact_area_units": 74,
+    "coordinate_projects": 7,
+    "verified_trade_records": 38,
+    "gap_units": 24
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 17,
-    "실제 연결 성공": 12,
+    "공식 정보가 아직 없음": 16,
+    "실제 연결 성공": 13,
     "추가 개발 필요": 1
   },
   "limitations": [
@@ -640,10 +640,10 @@
           "similarity": 0.667
         },
         {
-          "name": "백석시그니처자이 2단지",
-          "address": "충청남도 천안시 서북구 백석동 94번지 일원",
-          "manage_no": "2026000226",
-          "similarity": 0.519
+          "name": "화성 향남 롯데캐슬 시그니처",
+          "address": "경기도 화성시 만세구 향남읍 상신리 산 13-13 일원",
+          "manage_no": "2026000502",
+          "similarity": 0.571
         }
       ],
       "coordinate_verified": false,
@@ -866,45 +866,45 @@
           "price": 1714200000,
           "exclusive_area": 84.9916,
           "allocation": 7,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -414200000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
           "price": 1716800000,
           "exclusive_area": 84.9979,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -416800000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84C",
           "price": 1713200000,
           "exclusive_area": 84.997,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -413200000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84D",
           "price": 1713800000,
           "exclusive_area": 84.9948,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -413800000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84E",
           "price": 1715200000,
           "exclusive_area": 84.9975,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -415200000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
@@ -955,18 +955,18 @@
           "price": 1712100000,
           "exclusive_area": 84.997,
           "allocation": 4,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -412100000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84F",
           "price": 1715300000,
           "exclusive_area": 84.9998,
           "allocation": 2,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -415300000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
@@ -1006,77 +1006,83 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886763",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "verified"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "84A",
-          "price": null,
-          "exclusive_area": null,
+          "price": 536000000,
+          "exclusive_area": 84.3522,
           "allocation": 5,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "gap": -72000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
-          "price": null,
-          "exclusive_area": null,
+          "price": 543000000,
+          "exclusive_area": 84.4355,
           "allocation": 3,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "gap": -79000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84C",
-          "price": null,
-          "exclusive_area": null,
+          "price": 535000000,
+          "exclusive_area": 84.1443,
           "allocation": 4,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "gap": -71000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84D",
-          "price": null,
-          "exclusive_area": null,
+          "price": 539000000,
+          "exclusive_area": 84.4447,
           "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "gap": -75000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84E",
-          "price": null,
-          "exclusive_area": null,
+          "price": 542000000,
+          "exclusive_area": 84.5473,
           "allocation": 5,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "gap": -78000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84F",
-          "price": null,
-          "exclusive_area": null,
+          "price": 546000000,
+          "exclusive_area": 84.8194,
           "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "gap": -82000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84G",
-          "price": null,
-          "exclusive_area": null,
+          "price": 532000000,
+          "exclusive_area": 84.3216,
           "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "gap": -68000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
+        {
+          "name": "화성 향남 롯데캐슬 시그니처",
+          "address": "경기도 화성시 만세구 향남읍 상신리 산 13-13 일원",
+          "manage_no": "2026000502",
+          "similarity": 0.909
+        },
         {
           "name": "상동역 롯데캐슬 시그니처",
           "address": "경기도 부천시 원미구 상동 540-1번지",
@@ -1088,19 +1094,14 @@
           "address": "경기도 광주시 양벌동 산54-3번지",
           "manage_no": "2026000107",
           "similarity": 0.615
-        },
-        {
-          "name": "골드클래스 시그니처",
-          "address": "전북특별자치도 전주시 덕진구 진북동 417-47번지 일원",
-          "manage_no": "2026000082",
-          "similarity": 0.421
         }
       ],
-      "coordinate_verified": false,
+      "coordinate_verified": true,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "district_coverage_sampled",
+        "target_build_year_uses_official_planned_move_year"
       ]
     },
     {
@@ -1279,45 +1280,45 @@
           "price": 470300000,
           "exclusive_area": 71.8178,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -45300000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84A",
           "price": 557500000,
           "exclusive_area": 84.9592,
           "allocation": 4,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -93500000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
           "price": 557200000,
           "exclusive_area": 84.9767,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -93200000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84C",
           "price": 559700000,
           "exclusive_area": 84.9221,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -95700000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84D",
           "price": 554500000,
           "exclusive_area": 84.914,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -90500000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
@@ -1328,15 +1329,15 @@
           "similarity": 1.0
         },
         {
+          "name": "화성 향남 롯데캐슬 시그니처",
+          "address": "경기도 화성시 만세구 향남읍 상신리 산 13-13 일원",
+          "manage_no": "2026000502",
+          "similarity": 0.286
+        },
+        {
           "name": "오남역 서희스타힐스 여의재 1단지",
           "address": "경기도 남양주시 오남읍 양지리 101번지 일원",
           "manage_no": "2026000365",
-          "similarity": 0.25
-        },
-        {
-          "name": "오남역 서희스타힐스 여의재 3단지",
-          "address": "경기도 남양주시 오남읍 양지리 186-10번지 일원",
-          "manage_no": "2025000422",
           "similarity": 0.25
         }
       ],
@@ -1367,26 +1368,26 @@
           "exclusive_area": 74.9845,
           "allocation": 1,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "fewer_than_three_verified_trades",
+          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
         },
         {
           "type": "84A",
           "price": 748000000,
           "exclusive_area": 84.9947,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -233000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
           "price": 746000000,
           "exclusive_area": 84.8542,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -231000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
@@ -1436,8 +1437,8 @@
           "exclusive_area": 84.7459,
           "allocation": 1,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요"
         },
         {
           "type": "84B",
@@ -1445,8 +1446,8 @@
           "exclusive_area": 84.8508,
           "allocation": 2,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요"
         },
         {
           "type": "84C",
@@ -1454,8 +1455,8 @@
           "exclusive_area": 84.6391,
           "allocation": 1,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요"
         },
         {
           "type": "84D",
@@ -1463,8 +1464,8 @@
           "exclusive_area": 84.9663,
           "allocation": 2,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요"
         }
       ],
       "review_candidates": [
@@ -1995,27 +1996,27 @@
           "price": 2163000000,
           "exclusive_area": 66.0,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -633000000,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
           "price": 2958000000,
           "exclusive_area": 84.0,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -1188000000,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84G",
           "price": 2920000000,
           "exclusive_area": 84.64,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -1150000000,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
