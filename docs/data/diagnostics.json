@@ -1,22 +1,22 @@
 {
-  "observed_at": "2026-10-22T08:50:41.357974+09:00",
-  "catalog_cutoff": "2025-10-22",
+  "observed_at": "2026-10-23T08:47:41.323590+09:00",
+  "catalog_cutoff": "2025-10-23",
   "catalog_records": 369,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39695811295",
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39874037405",
   "metrics": {
     "notices": 28,
     "project_records": 30,
-    "matched_projects": 14,
-    "units": 98,
-    "priced_units": 52,
-    "exact_area_units": 74,
+    "matched_projects": 15,
+    "units": 104,
+    "priced_units": 58,
+    "exact_area_units": 80,
     "coordinate_projects": 7,
-    "verified_trade_records": 38,
-    "gap_units": 24
+    "verified_trade_records": 0,
+    "gap_units": 0
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 16,
-    "실제 연결 성공": 13,
+    "공식 정보가 아직 없음": 15,
+    "실제 연결 성공": 14,
     "추가 개발 필요": 1
   },
   "limitations": [
@@ -866,45 +866,45 @@
           "price": 1714200000,
           "exclusive_area": 84.9916,
           "allocation": 7,
-          "gap": -414200000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 1716800000,
           "exclusive_area": 84.9979,
           "allocation": 1,
-          "gap": -416800000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
           "price": 1713200000,
           "exclusive_area": 84.997,
           "allocation": 3,
-          "gap": -413200000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
           "price": 1713800000,
           "exclusive_area": 84.9948,
           "allocation": 3,
-          "gap": -413800000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84E",
           "price": 1715200000,
           "exclusive_area": 84.9975,
           "allocation": 3,
-          "gap": -415200000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -921,10 +921,10 @@
           "similarity": 0.875
         },
         {
-          "name": "아크로 드 서초",
-          "address": "서울특별시 서초구 서초동 1333번지 일원",
-          "manage_no": "2025000497",
-          "similarity": 0.286
+          "name": "청라 아크원 푸르지오",
+          "address": "인천광역시 서해구 청라동 86-1번지 (청라국제업무단지 M5BL)",
+          "manage_no": "2026000496",
+          "similarity": 0.353
         }
       ],
       "coordinate_verified": true,
@@ -955,18 +955,18 @@
           "price": 1712100000,
           "exclusive_area": 84.997,
           "allocation": 4,
-          "gap": -412100000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84F",
           "price": 1715300000,
           "exclusive_area": 84.9998,
           "allocation": 2,
-          "gap": -415300000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -983,10 +983,10 @@
           "similarity": 0.875
         },
         {
-          "name": "천안 아이파크 시티 5단지",
-          "address": "충청남도 천안시 서북구 성성동 60-9번지 일원",
-          "manage_no": "2026000014",
-          "similarity": 0.316
+          "name": "청라 아크원 푸르지오",
+          "address": "인천광역시 서해구 청라동 86-1번지 (청라국제업무단지 M5BL)",
+          "manage_no": "2026000496",
+          "similarity": 0.353
         }
       ],
       "coordinate_verified": true,
@@ -1017,63 +1017,63 @@
           "price": 536000000,
           "exclusive_area": 84.3522,
           "allocation": 5,
-          "gap": -72000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 543000000,
           "exclusive_area": 84.4355,
           "allocation": 3,
-          "gap": -79000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
           "price": 535000000,
           "exclusive_area": 84.1443,
           "allocation": 4,
-          "gap": -71000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
           "price": 539000000,
           "exclusive_area": 84.4447,
           "allocation": 2,
-          "gap": -75000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84E",
           "price": 542000000,
           "exclusive_area": 84.5473,
           "allocation": 5,
-          "gap": -78000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84F",
           "price": 546000000,
           "exclusive_area": 84.8194,
           "allocation": 1,
-          "gap": -82000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84G",
           "price": 532000000,
           "exclusive_area": 84.3216,
           "allocation": 1,
-          "gap": -68000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1229,13 +1229,74 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886762",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "verified"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [],
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "084.9443A",
+          "price": 920700000,
+          "exclusive_area": 84.9443,
+          "allocation": null,
+          "gap": null,
+          "code": "kakao_exact_address_not_found",
+          "label": "공식 주소의 카카오 검색 결과 없음"
+        },
+        {
+          "type": "084.9210B",
+          "price": 900500000,
+          "exclusive_area": 84.921,
+          "allocation": null,
+          "gap": null,
+          "code": "kakao_exact_address_not_found",
+          "label": "공식 주소의 카카오 검색 결과 없음"
+        },
+        {
+          "type": "084.8592C",
+          "price": 908800000,
+          "exclusive_area": 84.8592,
+          "allocation": null,
+          "gap": null,
+          "code": "kakao_exact_address_not_found",
+          "label": "공식 주소의 카카오 검색 결과 없음"
+        },
+        {
+          "type": "084.9540D",
+          "price": 905200000,
+          "exclusive_area": 84.954,
+          "allocation": null,
+          "gap": null,
+          "code": "kakao_exact_address_not_found",
+          "label": "공식 주소의 카카오 검색 결과 없음"
+        },
+        {
+          "type": "103.8518A",
+          "price": 1171000000,
+          "exclusive_area": 103.8518,
+          "allocation": null,
+          "gap": null,
+          "code": "kakao_exact_address_not_found",
+          "label": "공식 주소의 카카오 검색 결과 없음"
+        },
+        {
+          "type": "103.9916B",
+          "price": 1163400000,
+          "exclusive_area": 103.9916,
+          "allocation": null,
+          "gap": null,
+          "code": "kakao_exact_address_not_found",
+          "label": "공식 주소의 카카오 검색 결과 없음"
+        }
+      ],
       "review_candidates": [
+        {
+          "name": "청라 아크원 푸르지오",
+          "address": "인천광역시 서해구 청라동 86-1번지 (청라국제업무단지 M5BL)",
+          "manage_no": "2026000496",
+          "similarity": 1.0
+        },
         {
           "name": "청주 푸르지오 씨엘리체",
           "address": "충청북도 청주시 서원구 미평동 54-3번지 일원",
@@ -1247,19 +1308,13 @@
           "address": "서울특별시 성북구 장위동 68-37 일대",
           "manage_no": "2026000275",
           "similarity": 0.444
-        },
-        {
-          "name": "거제 푸르지오 마린피스",
-          "address": "경상남도 거제시 장평동 1번지 외 6필지",
-          "manage_no": "2026000253",
-          "similarity": 0.421
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "disability_allocation_table_required"
       ]
     },
     {
@@ -1280,45 +1335,45 @@
           "price": 470300000,
           "exclusive_area": 71.8178,
           "allocation": 1,
-          "gap": -45300000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84A",
           "price": 557500000,
           "exclusive_area": 84.9592,
           "allocation": 4,
-          "gap": -93500000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 557200000,
           "exclusive_area": 84.9767,
           "allocation": 1,
-          "gap": -93200000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
           "price": 559700000,
           "exclusive_area": 84.9221,
           "allocation": 1,
-          "gap": -95700000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
           "price": 554500000,
           "exclusive_area": 84.914,
           "allocation": 1,
-          "gap": -90500000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1368,26 +1423,26 @@
           "exclusive_area": 74.9845,
           "allocation": 1,
           "gap": null,
-          "code": "fewer_than_three_verified_trades",
-          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84A",
           "price": 748000000,
           "exclusive_area": 84.9947,
           "allocation": 1,
-          "gap": -233000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 746000000,
           "exclusive_area": 84.8542,
           "allocation": 1,
-          "gap": -231000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1437,8 +1492,8 @@
           "exclusive_area": 84.7459,
           "allocation": 1,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
@@ -1446,8 +1501,8 @@
           "exclusive_area": 84.8508,
           "allocation": 2,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
@@ -1455,8 +1510,8 @@
           "exclusive_area": 84.6391,
           "allocation": 1,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
@@ -1464,8 +1519,8 @@
           "exclusive_area": 84.9663,
           "allocation": 2,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1996,27 +2051,27 @@
           "price": 2163000000,
           "exclusive_area": 66.0,
           "allocation": 1,
-          "gap": -633000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 2958000000,
           "exclusive_area": 84.0,
           "allocation": 1,
-          "gap": -1188000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84G",
           "price": 2920000000,
           "exclusive_area": 84.64,
           "allocation": 1,
-          "gap": -1150000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
