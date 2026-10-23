@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-23T08:50:18.179819+09:00",
+  "generated_at": "2026-10-24T08:51:42.613725+09:00",
   "last_success_at": null,
   "data_status": "stale",
   "sources": [
@@ -8,48 +8,244 @@
       "id": "gg",
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
-      "status": "error",
-      "checked_at": "2026-10-23T08:47:41.066186+09:00",
+      "status": "not_checked",
+      "checked_at": "2026-10-24T08:41:22.271965+09:00",
       "last_success_at": null,
-      "error_code": "notice_stage_process_failed",
-      "message": "공고 갱신 미완료 · 마지막 체크포인트와 기존 자료 보존",
-      "records_count": 0
+      "error_code": "daily_refresh_timeout",
+      "message": "daily_refresh_timeout",
+      "records_count": null
     },
     {
       "id": "applyhome",
       "name": "청약홈 분양정보",
       "url": "https://www.data.go.kr/data/15098547/openapi.do",
-      "status": "partial",
+      "status": "not_checked",
       "checked_at": "2026-10-23T08:47:41.323590+09:00",
       "last_success_at": null,
-      "error_code": "official_announcement_round_unverified",
-      "message": "official_announcement_round_unverified",
-      "records_count": 14
+      "error_code": "daily_refresh_timeout",
+      "message": "daily_refresh_timeout",
+      "records_count": null
     },
     {
       "id": "molit",
       "name": "국토교통부 실거래가",
       "url": "https://www.data.go.kr/data/15126468/openapi.do",
-      "status": "partial",
+      "status": "not_checked",
       "checked_at": "2026-10-23T08:47:41.323590+09:00",
       "last_success_at": null,
-      "error_code": "verified_target_location_required",
-      "message": "verified_target_location_required",
-      "records_count": 0
+      "error_code": "daily_refresh_timeout",
+      "message": "daily_refresh_timeout",
+      "records_count": null
     },
     {
       "id": "kakao",
       "name": "카카오 주소 좌표",
       "url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "status": "partial",
+      "status": "not_checked",
       "checked_at": "2026-10-23T08:47:41.323590+09:00",
       "last_success_at": null,
-      "error_code": "kakao_exact_address_not_found",
-      "message": "kakao_exact_address_not_found",
-      "records_count": 7
+      "error_code": "daily_refresh_timeout",
+      "message": "daily_refresh_timeout",
+      "records_count": null
     }
   ],
   "listings": [
+    {
+      "id": "gg_270698737",
+      "name": "해링턴 플레이스 문래",
+      "address": "서울특별시 영등포구 문래동 3가 27-1번지 일대",
+      "region": "서울특별시",
+      "district": "영등포구",
+      "housing_type": "unknown",
+      "status": "upcoming",
+      "apply_start_at": "2026-11-02T09:00:00+09:00",
+      "apply_end_at": "2026-11-06T18:00:00+09:00",
+      "deadline_note": null,
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270698737",
+      "notice_updated_at": "2026-10-22",
+      "updated_at": "2026-10-24T08:41:22.271965+09:00",
+      "eligibility": {
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=904593",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 6.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+        "conditions": [
+          "신청마감일 당시(’26. 11. 6.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
+      },
+      "units": [
+        {
+          "type_id": "84A",
+          "area_sqm": 84.9409,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
+      "attachments": [
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=904593",
+          "name": "붙임2) 서울 「해링턴 플레이스 문래」 장애인 특별공급 안내 및 관련서식.hwpx",
+          "parse_status": "parsed",
+          "error_code": null
+        },
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=904594",
+          "name": "붙임3) 해링턴 플레이스 문래_기관추천 특별공급 안내문.pdf",
+          "parse_status": "parsed",
+          "error_code": null
+        }
+      ],
+      "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270698737",
+          "published_on": "2026-10-22",
+          "content_sha256": "1298b2a34a735a35e9ab84dbc54f5c8fd923259cd13c73be23c268c615aa6f71",
+          "observed_at": "2026-10-24T08:41:22.271965+09:00",
+          "change_type": "initial"
+        }
+      ],
+      "housing_manage_no": null,
+      "pblanc_no": null,
+      "location_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted"
+      ]
+    },
+    {
+      "id": "gg_270457440",
+      "name": "의정부역 펠리스타워 양우내안愛",
+      "address": "의정부시 의정부동 424 번지",
+      "region": "의정부시",
+      "district": null,
+      "housing_type": "unknown",
+      "status": "upcoming",
+      "apply_start_at": "2026-10-26T09:00:00+09:00",
+      "apply_end_at": "2026-10-30T18:00:00+09:00",
+      "deadline_note": null,
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270457440",
+      "notice_updated_at": "2026-10-22",
+      "updated_at": "2026-10-24T08:41:22.271965+09:00",
+      "eligibility": {
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=904552",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 10. 30.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+        "conditions": [
+          "신청마감일 당시(’26. 10. 30.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
+      },
+      "units": [
+        {
+          "type_id": "59",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": 84.7415,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": 84.8836,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84C",
+          "area_sqm": 84.9911,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
+      "attachments": [
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=904552",
+          "name": "붙임2) 의정부 「의정부역 펠리스타워 양우내안愛」  장애인 특별공급 안내 및 관련서식.hwpx",
+          "parse_status": "parsed",
+          "error_code": null
+        },
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=904553",
+          "name": "붙임3) 의정부 「의정부역 펠리스타워 양우내안愛」기관추천 안내문.pdf",
+          "parse_status": "parsed",
+          "error_code": null
+        }
+      ],
+      "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270457440",
+          "published_on": "2026-10-22",
+          "content_sha256": "3960bbb798148b03dcf37a6f320130a635a3940bed10790aad4912dd93647231",
+          "observed_at": "2026-10-24T08:41:22.271965+09:00",
+          "change_type": "initial"
+        }
+      ],
+      "housing_manage_no": null,
+      "pblanc_no": null,
+      "location_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted"
+      ]
+    },
     {
       "id": "gg_269252265",
       "name": "아르뮤제이",
@@ -63,7 +259,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
       "notice_updated_at": "2026-10-16",
-      "updated_at": "2026-10-19T07:41:18.350335+09:00",
+      "updated_at": "2026-10-24T08:41:22.271965+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -153,8 +349,7 @@
       "location_verified": false,
       "collection_issues": [
         "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "attachment_text_extracted"
       ]
     },
     {
@@ -683,7 +878,7 @@
       "region": "평택시",
       "district": "국제화계획지구",
       "housing_type": "unknown",
-      "status": "open",
+      "status": "closed",
       "apply_start_at": "2026-10-19T09:00:00+09:00",
       "apply_end_at": "2026-10-23T18:00:00+09:00",
       "deadline_note": null,
