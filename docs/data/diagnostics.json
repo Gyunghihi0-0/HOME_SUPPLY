@@ -1,29 +1,156 @@
 {
-  "observed_at": "2026-10-23T08:47:41.323590+09:00",
-  "catalog_cutoff": "2025-10-23",
-  "catalog_records": 369,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/39874037405",
+  "observed_at": "2026-10-25T07:49:10.431443+09:00",
+  "catalog_cutoff": "2025-10-25",
+  "catalog_records": 373,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/40140040904",
   "metrics": {
-    "notices": 28,
-    "project_records": 30,
+    "notices": 30,
+    "project_records": 32,
     "matched_projects": 15,
-    "units": 104,
+    "units": 109,
     "priced_units": 58,
-    "exact_area_units": 80,
+    "exact_area_units": 83,
     "coordinate_projects": 7,
-    "verified_trade_records": 0,
-    "gap_units": 0
+    "verified_trade_records": 40,
+    "gap_units": 24
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 15,
-    "실제 연결 성공": 14,
-    "추가 개발 필요": 1
+    "공식 정보가 아직 없음": 13,
+    "추가 개발 필요": 5,
+    "실제 연결 성공": 14
   },
   "limitations": [
     "API 조회 기간 내 부재는 정식 공고 미발표를 확정하지 않음",
     "이름 유사도 후보는 자동 확정에 사용하지 않음"
   ],
   "records": [
+    {
+      "id": "gg_270698737",
+      "notice_id": "gg_270698737",
+      "name": "해링턴 플레이스 문래",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270698737",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "해링턴플레이스 오룡역",
+          "address": "대전광역시 중구 용두동 722번지 일원",
+          "manage_no": "2026000033",
+          "similarity": 0.737
+        },
+        {
+          "name": "해링턴플레이스 명륜역",
+          "address": "부산광역시 동래구 온천동 460-24번지 일원",
+          "manage_no": "2025000519",
+          "similarity": 0.737
+        },
+        {
+          "name": "효성해링턴 플레이스 양평",
+          "address": "경기도 양평군 양평읍 오빈리 140-1번지 일원",
+          "manage_no": "2025000469",
+          "similarity": 0.7
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_270457440",
+      "notice_id": "gg_270457440",
+      "name": "의정부역 펠리스타워 양우내안愛",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270457440",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": 84.7415,
+          "allocation": 3,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": 84.8836,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84C",
+          "price": null,
+          "exclusive_area": 84.9911,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "의정부우정 A2블록 공공분양주택(본청약)",
+          "address": "경기도 의정부시 녹양동 일원 의정부우정 공공주택지구 내 A-2블록",
+          "manage_no": "2026000409",
+          "similarity": 0.364
+        },
+        {
+          "name": "의정부역 센트럴 아이파크",
+          "address": "경기도 의정부시 의정부동 253-19번지 일원",
+          "manage_no": "2026000055",
+          "similarity": 0.333
+        },
+        {
+          "name": "상무 양우내안에 퍼스트힐(조합원 취소분)",
+          "address": "광주광역시 서구 마륵동 47-7 일원",
+          "manage_no": "2026000259",
+          "similarity": 0.267
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_269252265",
       "notice_id": "gg_269252265",
@@ -302,11 +429,11 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567650",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "official_project_address_mismatch"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "59A",
@@ -338,6 +465,12 @@
       ],
       "review_candidates": [
         {
+          "name": "시흥거모지구 S-1블록 공공분양(본청약)",
+          "address": "경기도 시흥시 거모동, 군자동 일원 시흥거모 공공주택지구 내 S-1블록",
+          "manage_no": "2026000531",
+          "similarity": 0.8
+        },
+        {
           "name": "시흥거모B1 호반써밋",
           "address": "경기도 시흥시 거모동 1171번지 일원 (시흥거모지구 B1블럭)",
           "manage_no": "2026000052",
@@ -348,19 +481,13 @@
           "address": "경기도 시흥시 거모동, 군자동 일원 시흥거모 공공주택지구 내 A-5블록",
           "manage_no": "2026820006",
           "similarity": 0.462
-        },
-        {
-          "name": "시흥거모 엘가 로제비앙",
-          "address": "경기도 시흥시 시흥거모 공공주택지구 B-6BL",
-          "manage_no": "2025000591",
-          "similarity": 0.444
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "official_project_address_mismatch"
       ]
     },
     {
@@ -497,11 +624,11 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327317",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "official_project_address_mismatch"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "84A",
@@ -533,29 +660,29 @@
       ],
       "review_candidates": [
         {
+          "name": "계양신도시 카이브 유보라(AC4BL)",
+          "address": "인천광역시 계양구 동양동 420-3번지 일원 (인천계양 테크노밸리 공공주택지구 AC4블록)",
+          "manage_no": "2026000532",
+          "similarity": 0.815
+        },
+        {
+          "name": "계양신도시 카이브 유보라(AC3BL)",
+          "address": "인천광역시 계양구 동양동 458-3번지 일원 (인천계양 테크노밸리 공공주택지구 AC3블록)",
+          "manage_no": "2026000530",
+          "similarity": 0.815
+        },
+        {
           "name": "고덕신도시 아테라 A-63블록 공공분양주택",
           "address": "경기도 평택시 고덕동, 고덕면 일원(평택고덕국제화계획지구 내 A-63BL)",
           "manage_no": "2026000124",
           "similarity": 0.333
-        },
-        {
-          "name": "도룡자이 라피크",
-          "address": "대전광역시 유성구 도룡동 382번지 일원",
-          "manage_no": "2025000541",
-          "similarity": 0.333
-        },
-        {
-          "name": "김천혁신도시 동일하이빌 파크레인",
-          "address": "경상북도 김천시 율곡동 1126",
-          "manage_no": "2025000486",
-          "similarity": 0.308
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "official_project_address_mismatch"
       ]
     },
     {
@@ -866,45 +993,45 @@
           "price": 1714200000,
           "exclusive_area": 84.9916,
           "allocation": 7,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -414200000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
           "price": 1716800000,
           "exclusive_area": 84.9979,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -416800000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84C",
           "price": 1713200000,
           "exclusive_area": 84.997,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -413200000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84D",
           "price": 1713800000,
           "exclusive_area": 84.9948,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -413800000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84E",
           "price": 1715200000,
           "exclusive_area": 84.9975,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -415200000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
@@ -955,18 +1082,18 @@
           "price": 1712100000,
           "exclusive_area": 84.997,
           "allocation": 4,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -412100000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84F",
           "price": 1715300000,
           "exclusive_area": 84.9998,
           "allocation": 2,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -415300000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
@@ -1017,63 +1144,63 @@
           "price": 536000000,
           "exclusive_area": 84.3522,
           "allocation": 5,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -72000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
           "price": 543000000,
           "exclusive_area": 84.4355,
           "allocation": 3,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -79000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84C",
           "price": 535000000,
           "exclusive_area": 84.1443,
           "allocation": 4,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -71000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84D",
           "price": 539000000,
           "exclusive_area": 84.4447,
           "allocation": 2,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -75000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84E",
           "price": 542000000,
           "exclusive_area": 84.5473,
           "allocation": 5,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -78000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84F",
           "price": 546000000,
           "exclusive_area": 84.8194,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -82000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84G",
           "price": 532000000,
           "exclusive_area": 84.3216,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -68000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
@@ -1111,11 +1238,11 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886757",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "official_project_name_mismatch"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "추가 개발 필요",
+      "project_label": "동일 위치 후보의 공식 단지명 불일치",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "60",
@@ -1138,29 +1265,29 @@
       ],
       "review_candidates": [
         {
+          "name": "GTX운정중앙역 시티프라디움 4단지(후속사업)",
+          "address": "경기도 파주시 파주운정3지구 주상복합 4블록(경기도 파주시 동패동 400-7번지 일원)",
+          "manage_no": "2026000518",
+          "similarity": 0.789
+        },
+        {
+          "name": "GTX운정중앙역 시티프라디움 3단지(후속사업)",
+          "address": "경기도 파주시 파주운정3지구 주상복합 3블록(경기도 파주시 동패동 1673번지 일원)",
+          "manage_no": "2026000517",
+          "similarity": 0.737
+        },
+        {
           "name": "광명 시티프라디움 에듀하임",
           "address": "경기도 광명시 소하동 광명 구름산지구 도시개발사업지구 A6BL",
           "manage_no": "2026000453",
           "similarity": 0.414
-        },
-        {
-          "name": "행정중심복합도시 5-1L1블록 공공분양주택",
-          "address": "행정중심복합도시 5-1생활권 L1블록(세종특별자치시 합강동 일원)",
-          "manage_no": "2025000625",
-          "similarity": 0.323
-        },
-        {
-          "name": "운정 아이파크 시티",
-          "address": "파주메디컬클러스터 도시개발구역 A2BL (경기도 파주시 서패동 432번지 일원)",
-          "manage_no": "2025000487",
-          "similarity": 0.32
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "official_project_name_mismatch"
       ]
     },
     {
@@ -1170,11 +1297,11 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=265886756",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "official_project_name_mismatch"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "추가 개발 필요",
+      "project_label": "동일 위치 후보의 공식 단지명 불일치",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "84A",
@@ -1197,29 +1324,29 @@
       ],
       "review_candidates": [
         {
+          "name": "GTX운정중앙역 시티프라디움 3단지(후속사업)",
+          "address": "경기도 파주시 파주운정3지구 주상복합 3블록(경기도 파주시 동패동 1673번지 일원)",
+          "manage_no": "2026000517",
+          "similarity": 0.789
+        },
+        {
+          "name": "GTX운정중앙역 시티프라디움 4단지(후속사업)",
+          "address": "경기도 파주시 파주운정3지구 주상복합 4블록(경기도 파주시 동패동 400-7번지 일원)",
+          "manage_no": "2026000518",
+          "similarity": 0.737
+        },
+        {
           "name": "광명 시티프라디움 에듀하임",
           "address": "경기도 광명시 소하동 광명 구름산지구 도시개발사업지구 A6BL",
           "manage_no": "2026000453",
           "similarity": 0.414
-        },
-        {
-          "name": "고덕신도시 아테라 A-63블록 공공분양주택",
-          "address": "경기도 평택시 고덕동, 고덕면 일원(평택고덕국제화계획지구 내 A-63BL)",
-          "manage_no": "2026000124",
-          "similarity": 0.333
-        },
-        {
-          "name": "행정중심복합도시 5-1L1블록 공공분양주택",
-          "address": "행정중심복합도시 5-1생활권 L1블록(세종특별자치시 합강동 일원)",
-          "manage_no": "2025000625",
-          "similarity": 0.323
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "official_project_name_mismatch"
       ]
     },
     {
@@ -1313,8 +1440,7 @@
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
-        "attachment_text_extracted",
-        "disability_allocation_table_required"
+        "attachment_text_extracted"
       ]
     },
     {
@@ -1335,45 +1461,45 @@
           "price": 470300000,
           "exclusive_area": 71.8178,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -45300000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84A",
           "price": 557500000,
           "exclusive_area": 84.9592,
           "allocation": 4,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -93500000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
           "price": 557200000,
           "exclusive_area": 84.9767,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -93200000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84C",
           "price": 559700000,
           "exclusive_area": 84.9221,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -95700000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84D",
           "price": 554500000,
           "exclusive_area": 84.914,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -90500000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
@@ -1423,26 +1549,26 @@
           "exclusive_area": 74.9845,
           "allocation": 1,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "fewer_than_three_verified_trades",
+          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
         },
         {
           "type": "84A",
           "price": 748000000,
           "exclusive_area": 84.9947,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -233000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
           "price": 746000000,
           "exclusive_area": 84.8542,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -231000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
@@ -1492,8 +1618,8 @@
           "exclusive_area": 84.7459,
           "allocation": 1,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요"
         },
         {
           "type": "84B",
@@ -1501,8 +1627,8 @@
           "exclusive_area": 84.8508,
           "allocation": 2,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요"
         },
         {
           "type": "84C",
@@ -1510,8 +1636,8 @@
           "exclusive_area": 84.6391,
           "allocation": 1,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요"
         },
         {
           "type": "84D",
@@ -1519,8 +1645,8 @@
           "exclusive_area": 84.9663,
           "allocation": 2,
           "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "code": "outlier_review_required",
+          "label": "비교 거래 가격 편차 검토 필요"
         }
       ],
       "review_candidates": [
@@ -1606,10 +1732,10 @@
           "similarity": 0.444
         },
         {
-          "name": "에코델타시티 금강펜테리움 에코리버",
-          "address": "부산광역시 강서구 강동동 5048-5번지 일원 에코델타시티 공동6BL",
-          "manage_no": "2026000443",
-          "similarity": 0.308
+          "name": "GTX운정중앙역 시티프라디움 4단지(후속사업)",
+          "address": "경기도 파주시 파주운정3지구 주상복합 4블록(경기도 파주시 동패동 400-7번지 일원)",
+          "manage_no": "2026000518",
+          "similarity": 0.387
         }
       ],
       "coordinate_verified": false,
@@ -2051,27 +2177,27 @@
           "price": 2163000000,
           "exclusive_area": 66.0,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -723000000,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84B",
           "price": 2958000000,
           "exclusive_area": 84.0,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -1188000000,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "84G",
           "price": 2920000000,
           "exclusive_area": 84.64,
           "allocation": 1,
-          "gap": null,
-          "code": "trade_source_failed",
-          "label": "trade_source_failed"
+          "gap": -1150000000,
+          "code": "verified",
+          "label": "실제 연결 성공"
         }
       ],
       "review_candidates": [
