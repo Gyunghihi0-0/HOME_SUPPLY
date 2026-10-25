@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-25T07:49:10.431443+09:00",
-  "catalog_cutoff": "2025-10-25",
-  "catalog_records": 373,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/40140040904",
+  "observed_at": "2026-10-26T07:56:44.994401+09:00",
+  "catalog_cutoff": "2025-10-26",
+  "catalog_records": 367,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/40242461574",
   "metrics": {
     "notices": 30,
     "project_records": 32,
@@ -274,10 +274,10 @@
           "similarity": 0.316
         },
         {
-          "name": "인하대역 수자인 로이센트",
-          "address": "인천광역시 미추홀구 용현동 604-7번지 일원 (용현·학익 2-2블록 인하대역 1구역 내)",
-          "manage_no": "2025000425",
-          "similarity": 0.3
+          "name": "두류센트레빌 더 파크(조합원 취소분)(2회차)",
+          "address": "대구광역시 달서구 두류동 638-19번지 일원",
+          "manage_no": "2025000535",
+          "similarity": 0.296
         }
       ],
       "coordinate_verified": false,
@@ -870,15 +870,15 @@
           "similarity": 0.5
         },
         {
-          "name": "만안역 중앙하이츠 포레",
-          "address": "경기도 안양시 만안구 석수동 284-1",
-          "manage_no": "2025000472",
-          "similarity": 0.455
-        },
-        {
           "name": "중앙하이츠 갈산역 센트럴",
           "address": "인천광역시 부평구 갈산동 181-11 외 1필지",
           "manage_no": "2026000062",
+          "similarity": 0.435
+        },
+        {
+          "name": "여월 중앙하이츠 아르비채",
+          "address": "경기도 부천시 오정구 여월동 8-9번지 외 4필지",
+          "manage_no": "2025000567",
           "similarity": 0.435
         }
       ],
