@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-28T09:11:03.136223+09:00",
-  "catalog_cutoff": "2025-10-28",
-  "catalog_records": 369,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/40606902384",
+  "observed_at": "2026-10-29T09:33:32.726486+09:00",
+  "catalog_cutoff": "2025-10-29",
+  "catalog_records": 367,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/40794636463",
   "metrics": {
     "notices": 30,
     "project_records": 32,
@@ -11,7 +11,7 @@
     "priced_units": 58,
     "exact_area_units": 81,
     "coordinate_projects": 7,
-    "verified_trade_records": 39,
+    "verified_trade_records": 40,
     "gap_units": 24
   },
   "classification_counts": {
@@ -1144,7 +1144,7 @@
           "price": 536000000,
           "exclusive_area": 84.3522,
           "allocation": 5,
-          "gap": -94000000,
+          "gap": -72000000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1153,7 +1153,7 @@
           "price": 543000000,
           "exclusive_area": 84.4355,
           "allocation": 3,
-          "gap": -101000000,
+          "gap": -79000000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1162,7 +1162,7 @@
           "price": 535000000,
           "exclusive_area": 84.1443,
           "allocation": 4,
-          "gap": -93000000,
+          "gap": -71000000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1171,7 +1171,7 @@
           "price": 539000000,
           "exclusive_area": 84.4447,
           "allocation": 2,
-          "gap": -97000000,
+          "gap": -75000000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1180,7 +1180,7 @@
           "price": 542000000,
           "exclusive_area": 84.5473,
           "allocation": 5,
-          "gap": -100000000,
+          "gap": -78000000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1189,7 +1189,7 @@
           "price": 546000000,
           "exclusive_area": 84.8194,
           "allocation": 1,
-          "gap": -104000000,
+          "gap": -82000000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1198,7 +1198,7 @@
           "price": 532000000,
           "exclusive_area": 84.3216,
           "allocation": 1,
-          "gap": -90000000,
+          "gap": -68000000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -1470,7 +1470,7 @@
           "price": 557500000,
           "exclusive_area": 84.9592,
           "allocation": 4,
-          "gap": -115500000,
+          "gap": -93500000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1479,7 +1479,7 @@
           "price": 557200000,
           "exclusive_area": 84.9767,
           "allocation": 1,
-          "gap": -115200000,
+          "gap": -93200000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1488,7 +1488,7 @@
           "price": 559700000,
           "exclusive_area": 84.9221,
           "allocation": 1,
-          "gap": -117700000,
+          "gap": -95700000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1497,7 +1497,7 @@
           "price": 554500000,
           "exclusive_area": 84.914,
           "allocation": 1,
-          "gap": -112500000,
+          "gap": -90500000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         }
