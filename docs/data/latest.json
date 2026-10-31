@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-30T09:41:05.272174+09:00",
+  "generated_at": "2026-10-31T09:26:15.852137+09:00",
   "last_success_at": null,
   "data_status": "stale",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
       "status": "not_checked",
-      "checked_at": "2026-10-30T09:32:05.193519+09:00",
+      "checked_at": "2026-10-31T09:15:55.626374+09:00",
       "last_success_at": null,
       "error_code": "daily_refresh_timeout",
       "message": "daily_refresh_timeout",
@@ -129,6 +129,170 @@
           "published_on": "2026-10-30",
           "content_sha256": "393565f57b6ec1f10dc9789920b77a44c610ed45f0ec812d3c0dd15e6f7e847b",
           "observed_at": "2026-10-30T09:31:04.089279+09:00",
+          "change_type": "initial"
+        }
+      ],
+      "housing_manage_no": null,
+      "pblanc_no": null,
+      "location_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted"
+      ]
+    },
+    {
+      "id": "gg_271906433",
+      "name": "화양서희스타힐스 센트럴파크",
+      "address": "경기도 평택시 현덕면 화양리 산 184-2 일원",
+      "region": "평택시",
+      "district": null,
+      "housing_type": "unknown",
+      "status": "upcoming",
+      "apply_start_at": "2026-11-02T09:00:00+09:00",
+      "apply_end_at": "2026-11-06T18:00:00+09:00",
+      "deadline_note": null,
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=271906433",
+      "notice_updated_at": "2026-10-29",
+      "updated_at": "2026-10-31T09:15:55.626374+09:00",
+      "eligibility": {
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=905005",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 6.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+        "conditions": [
+          "신청마감일 당시(’26. 11. 6.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
+      },
+      "units": [
+        {
+          "type_id": "59A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
+      "attachments": [
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=905005",
+          "name": "붙임2) 평택 「화양서희스타힐스 센트럴파크」 장애인 특별공급 안내 및 관련서식.hwpx",
+          "parse_status": "parsed",
+          "error_code": null
+        },
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=905006",
+          "name": "붙임3) 경기도청_장애인특별공급명단요청_평택화양서희.pdf",
+          "parse_status": "error",
+          "error_code": "document_text_missing"
+        }
+      ],
+      "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=271906433",
+          "published_on": "2026-10-29",
+          "content_sha256": "f4c802ae2efe0b7b66f8f31a0712e8ea510e964faa1a241202fb6d633de0332b",
+          "observed_at": "2026-10-31T09:15:55.626374+09:00",
+          "change_type": "initial"
+        }
+      ],
+      "housing_manage_no": null,
+      "pblanc_no": null,
+      "location_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted"
+      ]
+    },
+    {
+      "id": "gg_271906425",
+      "name": "진위역 서희스타힐스 더 파크뷰",
+      "address": "경기도 평택시 진위면 갈곶리 315-49번지",
+      "region": "평택시",
+      "district": null,
+      "housing_type": "unknown",
+      "status": "upcoming",
+      "apply_start_at": "2026-11-09T09:00:00+09:00",
+      "apply_end_at": "2026-11-13T18:00:00+09:00",
+      "deadline_note": null,
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=271906425",
+      "notice_updated_at": "2026-10-29",
+      "updated_at": "2026-10-31T09:15:55.626374+09:00",
+      "eligibility": {
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=904996",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+        "conditions": [
+          "신청마감일 당시(’26. 11. 13.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
+      },
+      "units": [
+        {
+          "type_id": "71B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
+      "attachments": [
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=904996",
+          "name": "붙임2) 평택 「진위역 서희스타힐스 더 파크뷰」 장애인 특별공급 안내 및 관련서식.hwpx",
+          "parse_status": "parsed",
+          "error_code": null
+        },
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=904997",
+          "name": "붙임3) 진위역 서희스타힐스 더 파크뷰 안내문.pdf",
+          "parse_status": "error",
+          "error_code": "document_text_missing"
+        }
+      ],
+      "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=271906425",
+          "published_on": "2026-10-29",
+          "content_sha256": "e871d98cf541e6f174c9d2533f54b621da769d38b06a018b1adc0d66f22c8c72",
+          "observed_at": "2026-10-31T09:15:55.626374+09:00",
           "change_type": "initial"
         }
       ],
@@ -298,15 +462,15 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270698737",
       "notice_updated_at": "2026-10-22",
-      "updated_at": "2026-10-28T09:09:40.793520+09:00",
+      "updated_at": "2026-10-31T09:15:55.626374+09:00",
       "eligibility": {
-        "yongin_status": "eligible",
-        "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=904593",
-        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 6.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "yongin_status": "unknown",
+        "disability_scope": "unknown",
+        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270698737",
+        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청마감일 당시(’26. 11. 6.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
         ],
         "rule_version": "1.1.0"
       },
@@ -332,14 +496,14 @@
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=904593",
           "name": "붙임2) 서울 「해링턴 플레이스 문래」 장애인 특별공급 안내 및 관련서식.hwpx",
-          "parse_status": "parsed",
-          "error_code": null
+          "parse_status": "error",
+          "error_code": "notice_budget_exhausted"
         },
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=904594",
           "name": "붙임3) 해링턴 플레이스 문래_기관추천 특별공급 안내문.pdf",
-          "parse_status": "parsed",
-          "error_code": null
+          "parse_status": "not_checked",
+          "error_code": "attachment_stage_deferred"
         }
       ],
       "notice_history": [
@@ -356,8 +520,7 @@
       "location_verified": false,
       "collection_issues": [
         "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "attachment_stage_deferred"
       ]
     },
     {
@@ -367,7 +530,7 @@
       "region": "의정부시",
       "district": null,
       "housing_type": "unknown",
-      "status": "open",
+      "status": "closed",
       "apply_start_at": "2026-10-26T09:00:00+09:00",
       "apply_end_at": "2026-10-30T18:00:00+09:00",
       "deadline_note": null,
