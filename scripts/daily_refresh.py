@@ -38,7 +38,7 @@ def refresh(output, timeout=540):
             data['generated_at'] = datetime.now(KST).isoformat()
             data['data_status'] = 'stale' if data['listings'] else 'error'
             for source in data['sources']:
-                source.update(status='not_checked', error_code=code, message=code, records_count=None)
+                if source['id']!='gg':source.update(status='not_checked', error_code=code, message=code, records_count=None)
             atomic_write(output, data)
         print('::error::' + code, flush=True)
         return 1

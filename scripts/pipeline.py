@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import tempfile
+import time
 from scripts.collector import BOARD,KST,collect,status_at
 from scripts.http_client import Client,SourceError
 from scripts.apis import Applyhome,Molit,APPLY_SOURCE,TRADE_SOURCE,empty_unit,won
@@ -80,15 +81,22 @@ def merge(previous,items,now):
         item['status']=status_at(item['apply_start_at'],item['apply_end_at'],now,item['status']=='cancelled')
     return sorted(result.values(),key=lambda x:(x['notice_updated_at'] or '',x['id']),reverse=True)
 
-def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,location_audit=None,diagnostics=None):
+def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,location_audit=None,diagnostics=None,on_record=None,deadline=None,attempted_at=None):
     apply=apply_client or Applyhome(client,apply_key); molit=Molit(client,trade_key,os.getenv('MOLIT_ALLOW_GENERAL_FALLBACK','').lower()=='true',general_key=os.getenv('MOLIT_GENERAL_SERVICE_KEY'))
     geo=Kakao(client,os.getenv('KAKAO_REST_API_KEY')) if os.getenv('KAKAO_REST_API_KEY') else VWorld(client,os.getenv('VWORLD_API_KEY'),os.getenv('VWORLD_DOMAIN'))
     price_error=None;trade_error=None;price_count=0;trade_count=0;trade_cache={};connected=0;geo_error=None
+    source_failures={}
+    def remember_failure(provider,code):
+        if code.startswith(('http_','missing_','vworld_http_','kakao_http_')) or any(token in code for token in
+            ('network_error','api_application_error','molit_api_error','invalid_response','response_changed',
+             'invalid_xml','invalid_json','trade_required_fields_missing','trade_data_invalid','price_data_invalid','vworld_api_')):
+            source_failures[provider]=code
     if hasattr(apply,'catalog'):
         try:items[:]=expand_projects(items,apply.catalog())
         except SourceError:
             pass  # Per-listing discovery records the source failure below.
-    for item in items:
+    def process(item):
+        nonlocal price_error,trade_error,price_count,trade_count,connected,geo_error
         print('enrich_start: '+item['id'],flush=True)
         mapping=config['projects'].get(item['id'])
         discovered=None
@@ -102,6 +110,7 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                 mapping,detail,models=apply.discover(item);discovered=(detail,models)
             except SourceError as exc:
                 reason=str(exc);price_error=reason
+                remember_failure('applyhome',reason)
                 item['collection_issues']=sorted(set(item['collection_issues']+[reason]))
                 if reason=='official_announcement_round_unverified':
                     # An old sale round is evidence to review, not a current price.
@@ -111,9 +120,9 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                             comparison_median_krw=None,estimated_gap_krw=None,gap_rate_pct=None,
                             comparables=[],comparables_count=0,confidence='unavailable',analysis_reason=reason)
                         for field in ('sale_price_range_krw','price_candidate_types','estimated_gap_range_krw'):unit.pop(field,None)
-                continue
+                return
         if not mapping.get('evidence_url') or not mapping.get('official_address'):
-            price_error='mapping_evidence_required';continue
+            price_error='mapping_evidence_required';return
         try:
             detail,models=discovered or apply.project(mapping)
             units=[]
@@ -170,9 +179,10 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
             if any(not u['sale_price_krw'] for u in units):price_error='some_unit_prices_unavailable'
         except Exception as exc:
             price_error=str(exc) if isinstance(exc,SourceError) else 'price_data_invalid'
-            continue
+            remember_failure('applyhome',price_error)
+            return
         if not any(u['sale_price_krw'] and u['area_sqm'] and u['allocation_count'] for u in item['units']):
-            continue
+            return
         target=mapping.get('location')
         if not target:
             try:
@@ -198,6 +208,7 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
             except SourceError as exc:
                 target=None
                 geo_error=str(exc)
+                remember_failure('kakao' if isinstance(geo,Kakao) else 'vworld',geo_error)
                 trade_error='verified_target_location_required'
                 item['collection_issues']=sorted(set(item['collection_issues']+[str(exc)]))
         item['location_verified']=bool(target and target.get('coordinates') and target.get('evidence_url'))
@@ -207,7 +218,7 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
         if not target or not target.get('lawd_codes'):
             for unit in item['units']:
                 if unit['analysis_reason']=='verified_coordinates_pending':unit['analysis_reason']='verified_coordinates_missing'
-            trade_error=trade_error or 'verified_target_location_required';continue
+            trade_error=trade_error or 'verified_target_location_required';return
         try:
             print('trade_start: '+item['id']+' districts='+','.join(target['lawd_codes']),flush=True)
             trades=[]
@@ -220,6 +231,13 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                 day=(day.replace(day=28)+timedelta(days=4)).replace(day=1)
             print('trade_loaded: '+item['id']+' records='+str(len(trades)),flush=True)
             locations=dict(config['trade_locations'])
+            # Exact parcel/apartment positions remain usable briefly; never
+            # cache transaction prices or invent a fresh geocoding timestamp.
+            for loc in (location_audit or {}).get('comparables',{}).values():
+                try:age=(now-datetime.fromisoformat(loc['checked_at'])).total_seconds()
+                except (KeyError,ValueError,TypeError):continue
+                if 0<=age<=30*86400 and loc.get('coordinates') and loc.get('evidence_url'):
+                    locations[loc['location']+'|'+loc['apartment_name']]=dict(loc)
             if geo.key and (target.get('district_prefix') or target.get('district_prefixes')):
                 seen_locations=set()
                 geocode_jobs=[]
@@ -243,7 +261,9 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                 def locate_job(job):
                     identity,address=job
                     try:return identity,geo.locate(address)
-                    except SourceError:return identity,None
+                    except SourceError as exc:
+                        remember_failure('kakao' if isinstance(geo,Kakao) else 'vworld',str(exc))
+                        return identity,None
                 with ThreadPoolExecutor(max_workers=4) as workers:
                     for identity,loc in workers.map(locate_job,geocode_jobs):
                         if loc:locations[identity]=loc
@@ -275,12 +295,31 @@ def enrich(items,client,now,config,policy,apply_key,trade_key,apply_client=None,
                     for t in u['comparables']:
                         loc=locations[t['location']+'|'+t['apartment_name']]
                         location_audit['comparables'][t['id']]=dict(location=t['location'],apartment_name=t['apartment_name'],
-                            coordinates=loc['coordinates'],evidence_url=loc['evidence_url'],checked_at=now.isoformat())
+                            coordinates=loc['coordinates'],evidence_url=loc['evidence_url'],checked_at=loc.get('checked_at',now.isoformat()))
             trade_count+=len(trades)
         except Exception as exc:
             trade_error=str(exc) if isinstance(exc,SourceError) else 'trade_data_invalid'
+            remember_failure('molit',trade_error)
             # A successful new sale price invalidates any previous gap until fresh comparison succeeds.
             for u in item['units']:u['analysis_reason']='trade_source_failed'
+    order=sorted(items,key=lambda item:({'open':0,'upcoming':1,'unknown':2}.get(item['status'],3),(attempted_at or {}).get(item['id'],'')))
+    processed=0;deferred=False
+    for item in order:
+        if deadline is not None and time.monotonic()>=deadline:
+            deferred=True;break
+        original=deepcopy(item)
+        started=time.monotonic()
+        process(item)
+        print('analysis_item_finished '+json.dumps({'id':item['id'],'seconds':round(time.monotonic()-started,1)}),flush=True)
+        if deadline is not None and time.monotonic()>=deadline:
+            item.clear();item.update(original)
+            item['collection_issues']=sorted(set(item['collection_issues']+['analysis_deferred']))
+            deferred=True
+            if on_record:on_record(item,False)
+            break
+        processed+=1
+        if on_record:on_record(item,True)
+    if diagnostics is not None:diagnostics.update(analysis_deferred=deferred,analysis_processed=processed,analysis_total=len(items),source_failures=source_failures)
     if molit.fallback_used:trade_error=trade_error or 'general_fallback_used'
     mapped=connected
     pstatus='not_configured' if not (apply_key or apply_client) else 'partial' if price_error or mapped<len(items) else 'ok'
@@ -341,7 +380,24 @@ def run(output,pages=3,attachments=True,client=None,now=None,enrichment_only=Fal
     location_audit=load(location_path) if location_path.exists() else dict(schema_version='1.0.0',targets={},comparables={})
     location_audit['generated_at']=now.isoformat()
     diagnostics={}
-    ps,ts,pc,tc,pe,te=enrich(merged,client,now,config,policy,os.getenv('APPLYHOME_SERVICE_KEY'),os.getenv('MOLIT_SERVICE_KEY'),location_audit=location_audit,diagnostics=diagnostics)
+    from scripts.diagnostic_io import write_report
+    progress_path=output.with_name('analysis-progress.json')
+    progress=load(progress_path) if progress_path.exists() else {'attempted_at':{}}
+    deadline=time.monotonic()+420 if enrichment_only else None
+    if hasattr(client,'deadline') and deadline:
+        client.deadline=deadline
+        client.budget_error='analysis_budget_exhausted'
+    def checkpoint(item,completed):
+        if completed:progress['attempted_at'][item['id']]=now.isoformat()
+        snapshot=dict(schema_version='1.0.0',generated_at=now.isoformat(),last_success_at=(previous or {}).get('last_success_at'),
+            data_status='partial',sources=list((previous or {}).get('sources',[])),listings=merged)
+        atomic_write(output,snapshot)
+        if location_audit['targets']:
+            from scripts.location_evidence import write_locations
+            write_locations(location_path,location_audit)
+        write_report(progress_path,progress)
+        print('analysis_checkpoint '+item['id'],flush=True)
+    ps,ts,pc,tc,pe,te=enrich(merged,client,now,config,policy,os.getenv('APPLYHOME_SERVICE_KEY'),os.getenv('MOLIT_SERVICE_KEY'),location_audit=location_audit,diagnostics=diagnostics,on_record=checkpoint if enrichment_only else None,deadline=deadline,attempted_at=progress['attempted_at'])
     sources.extend([source('applyhome','청약홈 분양정보',APPLY_SOURCE,now,ps,previous_sources.get('applyhome'),pc,pe or ('missing_applyhome_key' if ps=='not_configured' else None)),
         source('molit','국토교통부 실거래가',TRADE_SOURCE,now,ts,previous_sources.get('molit'),tc,te or ('missing_molit_key' if ts=='not_configured' else None))])
     from scripts.geocoding import SOURCE as GEO_SOURCE
@@ -353,6 +409,16 @@ def run(output,pages=3,attachments=True,client=None,now=None,enrichment_only=Fal
         'missing_geocoder_key' if geostatus=='not_configured' else diagnostics.get('vworld_error') or 'coordinates_not_fully_verified'))
     if enrichment_only and previous_sources.get('gg'):
         sources[0]=deepcopy(previous_sources['gg'])
+    if diagnostics.get('analysis_deferred'):
+        for entry in sources:
+            if entry['id'] in ('applyhome','molit') and entry['status'] not in ('not_configured','error'):
+                entry.update(status='partial',error_code='analysis_batch_deferred',message='분석 예산 내 완료분 저장 · 미완료 단지는 다음 실행에서 계속')
+    origins=getattr(client,'failed_origins',{})
+    for entry in sources:
+        hosts={'applyhome':'api.odcloud.kr','molit':'apis.data.go.kr','kakao':'dapi.kakao.com','vworld':'api.vworld.kr'}
+        errors=[code for (_,host),code in origins.items() if host==hosts.get(entry['id'])]
+        error=diagnostics.get('source_failures',{}).get(entry['id']) or (errors[0] if errors else None)
+        if error:entry.update(status='error',error_code=error,message=error)
     success=all(s['status']=='ok' for s in sources)
     last=now.isoformat() if success else (previous or {}).get('last_success_at')
     if success:status='ok'
@@ -374,7 +440,7 @@ def run(output,pages=3,attachments=True,client=None,now=None,enrichment_only=Fal
     if diagnostics.get('project_report'):
         from scripts.diagnostic_io import write_report
         write_report(output.with_name('diagnostics.json'),diagnostics['project_report'])
-    health=dict(data_status=status,listings=len(merged),sources={s['id']:s['status'] for s in sources},
+    health=dict(analysis_batch={k:diagnostics.get(k) for k in ('analysis_processed','analysis_total','analysis_deferred')},data_status=status,listings=len(merged),sources={s['id']:s['status'] for s in sources},
         listings_with_units=sum(bool(x['units']) for x in merged),
         listings_with_prices=sum(any(u['sale_price_krw'] for u in x['units']) for x in merged),
         listings_with_gaps=sum(any(u['estimated_gap_krw'] is not None for u in x['units']) for x in merged),
