@@ -8,6 +8,7 @@ from urllib.parse import urlencode, urljoin
 from bs4 import BeautifulSoup
 from scripts.eligibility import classify
 from scripts.http_client import SourceError
+from scripts.collection_health import record_success,record_failure,observe_failure
 from scripts.documents import read_document
 from scripts.structured import allocation_units,exclusive_areas
 
@@ -102,6 +103,7 @@ def parse_notice(html,row,now):
         listing['collection_issues'].append('announcement_only_update')
     return listing
 
+@observe_failure('gg')
 def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,previous=None,on_record=None,budget_seconds=None,page_order=None,attempted_at=None):
     deadline=time.monotonic()+budget_seconds if budget_seconds is not None else float('inf')
     previous=previous or []
@@ -117,6 +119,7 @@ def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,p
         try:d=json.loads(raw)
         except ValueError:raise SourceError('board_invalid_json') from None
         if not isinstance(d.get('items'),list) or not isinstance(d.get('total'),int):raise SourceError('board_structure_changed')
+        record_success(client,'gg')
         def priority(row):
             prior=[p for p in previous if p['notice_url'] and ('bIdx='+str(row.get('B_IDX'))) in p['notice_url']]
             active=not prior or any(p['status'] in ('open','upcoming','unknown') for p in prior)
@@ -136,6 +139,7 @@ def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,p
             notice_url=ORIGIN+'/bbs/boardView.do?'+urlencode(dict(bsIdx=504,menuId=1878,bIdx=row['B_IDX']))
             try:
                 item=parse_notice(client.request(notice_url,robots=True),row,now)
+                record_success(client,'gg')
                 if on_record:
                     # Save discovery before any slow attachment download or parse.
                     pending=deepcopy(item)
@@ -174,6 +178,7 @@ def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,p
                                 item['eligibility']['disability_scope']='unknown'
                                 item['collection_issues'].append('attachment_eligibility_review_required')
                         except Exception as exc:
+                            if isinstance(exc,SourceError) and (str(exc).startswith('http_') or str(exc)=='network_error'):record_failure(client,'gg')
                             a['parse_status']='unsupported' if isinstance(exc,SourceError) and 'unsupported' in str(exc) else 'error'
                             a['error_code']=str(exc) if isinstance(exc,SourceError) else 'document_parse_error'
                             item['eligibility']['yongin_status']='unknown';item['eligibility']['disability_scope']='unknown'
@@ -192,7 +197,8 @@ def collect(client,now,pages=3,attachments=True,start_page=0,target_names=None,p
                     if len(unique)==1:item['eligibility']=attachment_eligibility[0]
                 item['collection_issues']=sorted(set(item['collection_issues']))
                 if on_record:on_record(item)
-            except Exception:
+            except Exception as exc:
+                if 'budget_exhausted' not in str(exc):record_failure(client,'gg')
                 errors.append('gg_'+str(row['B_IDX']));partial=True
         if page_order is None and (page+1)*15>=d['total']:break
     return list(records.values()),partial,errors

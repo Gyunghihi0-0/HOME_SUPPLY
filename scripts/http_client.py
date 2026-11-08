@@ -4,6 +4,8 @@ import hashlib
 import json
 import re
 import time
+import threading
+from datetime import datetime,timezone
 from pathlib import Path
 from urllib.parse import urlsplit, urljoin
 import requests
@@ -24,8 +26,13 @@ class Client:
         self.robots={}
         self.failed_origins={}
         self.deadline=None
+        self.collection_audit={}
+        self.collection_lock=threading.Lock()
+        self.response_meta=threading.local()
 
     def request(self,url,method='GET',params=None,data=None,ttl=0,robots=False,headers=None,public_document=False):
+        self.response_meta.observed_at=None
+        self.response_meta.cached=False
         remaining=self.deadline-time.monotonic() if self.deadline else None
         if remaining is not None and remaining<=0:raise SourceError(getattr(self,'budget_error','notice_budget_exhausted'))
         if os.getenv('HOME_SUPPLY_FORCE_REFRESH','').lower()=='true':ttl=0
@@ -46,6 +53,8 @@ class Client:
                 if validators.get('modified'):request_headers['If-Modified-Since']=validators['modified']
             except (ValueError,OSError):pass
         if ttl and cache.exists() and time.time()-cache.stat().st_mtime<ttl:
+            self.response_meta.cached=True
+            self.response_meta.observed_at=datetime.fromtimestamp(cache.stat().st_mtime,timezone.utc).isoformat()
             return cache.read_bytes()
         parts=urlsplit(url)
         origin=(parts.scheme,parts.netloc)
@@ -55,7 +64,9 @@ class Client:
             time.sleep(self.pause)
             timeout=self.timeout if remaining is None else tuple(max(.1,min(v,remaining)) for v in self.timeout)
             with self.session.request(method,url,params=params,data=data,headers=request_headers,timeout=timeout,stream=True,allow_redirects=False) as response:
-                if response.status_code==304 and public_document and cache.exists():return cache.read_bytes()
+                if response.status_code==304 and public_document and cache.exists():
+                    self.response_meta.observed_at=datetime.now(timezone.utc).isoformat()
+                    return cache.read_bytes()
                 if response.status_code!=200:
                     if response.status_code==429 or response.status_code>=500:
                         self.failed_origins[origin]=f'http_{response.status_code}'
@@ -98,6 +109,7 @@ class Client:
                     raise SourceError('api_application_error')
             cache.parent.mkdir(parents=True,exist_ok=True)
             cache.write_bytes(content)
+        self.response_meta.observed_at=datetime.now(timezone.utc).isoformat()
         return content
 
     def check_robots(self,url):

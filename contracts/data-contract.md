@@ -78,3 +78,14 @@ trade_locations는 `법정동앞5자리|법정동명|지번|아파트명`으로 
 국토부 출처는 상세자료 15126468 우선으로 변경했습니다. 공개 필드와 schema_version은 변경하지 않습니다. 거래금액·전용면적·계약일·층·건축년도·취소 필드의 공식 명세와 검증은 [molit-api.md](molit-api.md)를 따릅니다. 층은 내부 검증/중복 판별에만 사용합니다. 비교 거래 source_url은 실제 사용한 상세/일반 출처를 구분합니다. 이미 발행된 JSON의 과거 출처 URL은 소급 변경하지 않습니다.
 
 필드 제거·타입/의미 변경은 major 버전을 올립니다. 필드 추가와 enum 추가도 소비자 조율 후 minor 버전을 올립니다. 모든 변경은 handoff/backend.md에 기록합니다. `python -m scripts.validate`는 구조와 날짜 형식, 근거, 거래 수, 계산식까지 검증합니다.
+
+
+## 출처 수집 판정과 분석 범위 분리 (선택 필드)
+
+기존 sources[].status 및 last_success_at은 전체 작업 범위 완료의 의미를 유지합니다. 다음 선택 필드를 지원합니다. 기존 JSON도 계속 유효합니다.
+
+- collection_status: ok(검증된 실제 응답, 오류 없음), partial(성공 응답과 오류 혼재), error(실제 실패), cached(저장 응답만 사용), not_checked(검증 응답 없음), not_configured(미설정).
+- last_collected_at: 검증된 응답의 원래 수집시각. 캐시 읽기 시각으로 갱신하지 않고 실패 시 이전 성공시각을 보존합니다.
+- collection_responses / collection_cached_responses / collection_errors: 이번 실행에서 확인한 실제 응답·저장 응답·오류 작업 횟수. 고유 데이터 건수가 아닙니다.
+
+0건인 정상 응답도 수집 성공입니다. 공고 매칭 실패·주소 검색 결과 없음·분할 처리 대기는 수집 성공과 독립입니다. 오류가 섞이면 정상으로 표시하지 않습니다. 이전 JSON은 records_count나 checked_at만으로 수집 성공을 추정하지 않고 판정 정보 미기록으로 표시합니다. 최상위 last_success_at을 수집 성공시각으로 바꿔 쓰지 않습니다.

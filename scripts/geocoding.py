@@ -3,6 +3,7 @@ import json
 import math
 import re
 from scripts.http_client import SourceError
+from scripts.collection_health import record_success,record_failure,observe_failure
 from scripts.matching import address_key
 
 SOURCE='https://www.vworld.kr/'
@@ -16,10 +17,17 @@ def require_success(response,fallback):
 
 class VWorld:
     def __init__(self,client,key,domain=None):self.client,self.key,self.domain=client,key,domain
+    @observe_failure('vworld')
     def _request(self,endpoint,params,ttl):
         params=dict(params,key=self.key)
         if self.domain:params['domain']=self.domain
-        try:return self.client.request(endpoint,params=params,ttl=ttl)
+        try:
+            raw=self.client.request(endpoint,params=params,ttl=ttl)
+            try:response=json.loads(raw).get('response',{})
+            except (ValueError,AttributeError):raise SourceError('geocode_response_changed') from None
+            if response.get('status')=='OK':record_success(self.client,'vworld')
+            elif response.get('status')=='ERROR':record_failure(self.client,'vworld')
+            return raw
         except SourceError as exc:raise SourceError(str(exc) if str(exc).startswith('vworld_') else 'vworld_'+str(exc)) from None
     def locate(self,address):
         if not self.key:raise SourceError('missing_vworld_key')

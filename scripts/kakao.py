@@ -3,6 +3,7 @@ import json
 import math
 import re
 from scripts.http_client import SourceError
+from scripts.collection_health import record_success,observe_failure
 from scripts.matching import address_key
 
 SOURCE = 'https://developers.kakao.com/docs/ko/kakaomap/rest-api'
@@ -21,6 +22,7 @@ class Kakao:
         self.client, self.key = client, key
         self.memo = {}
 
+    @observe_failure('kakao')
     def get(self, path, params):
         if not self.key:
             raise SourceError('missing_kakao_key')
@@ -30,6 +32,7 @@ class Kakao:
             data = json.loads(raw)
             if not isinstance(data.get('documents'), list):
                 raise SourceError('kakao_response_changed')
+            record_success(self.client,'kakao')
             return data['documents']
         except SourceError as exc:
             code = str(exc)
