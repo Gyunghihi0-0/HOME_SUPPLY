@@ -1,23 +1,23 @@
 {
-  "observed_at": "2026-10-29T09:33:32.726486+09:00",
-  "catalog_cutoff": "2025-10-29",
-  "catalog_records": 367,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/40794636463",
+  "observed_at": "2026-11-08T16:30:32.231326+09:00",
+  "catalog_cutoff": "2025-11-08",
+  "catalog_records": 369,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/42458945888",
   "metrics": {
-    "notices": 30,
-    "project_records": 32,
-    "matched_projects": 15,
-    "units": 109,
-    "priced_units": 58,
-    "exact_area_units": 81,
-    "coordinate_projects": 7,
-    "verified_trade_records": 40,
-    "gap_units": 24
+    "notices": 36,
+    "project_records": 38,
+    "matched_projects": 19,
+    "units": 123,
+    "priced_units": 68,
+    "exact_area_units": 95,
+    "coordinate_projects": 10,
+    "verified_trade_records": 193,
+    "gap_units": 31
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 13,
-    "추가 개발 필요": 5,
-    "실제 연결 성공": 14
+    "공식 정보가 아직 없음": 9,
+    "실제 연결 성공": 18,
+    "추가 개발 필요": 11
   },
   "limitations": [
     "API 조회 기간 내 부재는 정식 공고 미발표를 확정하지 않음",
@@ -25,671 +25,10 @@
   ],
   "records": [
     {
-      "id": "gg_270698737",
-      "notice_id": "gg_270698737",
-      "name": "해링턴 플레이스 문래",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270698737",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": 84.9409,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "해링턴플레이스 오룡역",
-          "address": "대전광역시 중구 용두동 722번지 일원",
-          "manage_no": "2026000033",
-          "similarity": 0.737
-        },
-        {
-          "name": "해링턴플레이스 명륜역",
-          "address": "부산광역시 동래구 온천동 460-24번지 일원",
-          "manage_no": "2025000519",
-          "similarity": 0.737
-        },
-        {
-          "name": "효성해링턴 플레이스 양평",
-          "address": "경기도 양평군 양평읍 오빈리 140-1번지 일원",
-          "manage_no": "2025000469",
-          "similarity": 0.7
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_270457440",
-      "notice_id": "gg_270457440",
-      "name": "의정부역 펠리스타워 양우내안愛",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270457440",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "59",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 3,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84B",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84C",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "의정부우정 A2블록 공공분양주택(본청약)",
-          "address": "경기도 의정부시 녹양동 일원 의정부우정 공공주택지구 내 A-2블록",
-          "manage_no": "2026000409",
-          "similarity": 0.364
-        },
-        {
-          "name": "의정부역 센트럴 아이파크",
-          "address": "경기도 의정부시 의정부동 253-19번지 일원",
-          "manage_no": "2026000055",
-          "similarity": 0.333
-        },
-        {
-          "name": "상무 양우내안에 퍼스트힐(조합원 취소분)",
-          "address": "광주광역시 서구 마륵동 47-7 일원",
-          "manage_no": "2026000259",
-          "similarity": 0.267
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_269252265",
-      "notice_id": "gg_269252265",
-      "name": "아르뮤제이",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 4,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84B",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84C",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "연제갤러리자이",
-          "address": "부산광역시 연제구 연산동 1123-1번지",
-          "manage_no": "2026000469",
-          "similarity": 0.333
-        },
-        {
-          "name": "드파인 아르티아",
-          "address": "서울특별시 동작구 노량진동 312-75번지 일대",
-          "manage_no": "2026000241",
-          "similarity": 0.333
-        },
-        {
-          "name": "더샵 관저아르테",
-          "address": "대전광역시 서구 관저동 1988번지",
-          "manage_no": "2026000129",
-          "similarity": 0.333
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_268770591",
-      "notice_id": "gg_268770591",
-      "name": "광교 자연앤 센트레빌",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268770591",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": 84.7637,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84B",
-          "price": null,
-          "exclusive_area": 84.8159,
-          "allocation": 3,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84C",
-          "price": null,
-          "exclusive_area": 84.6192,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "센트레빌 아스테리움 거제",
-          "address": "경상남도 거제시 상동동 681-2번지 일원",
-          "manage_no": "2026000331",
-          "similarity": 0.4
-        },
-        {
-          "name": "더 플래티넘 센트럴포레",
-          "address": "경기도 양주시 삼숭동 187-47번지 일원",
-          "manage_no": "2026000034",
-          "similarity": 0.316
-        },
-        {
-          "name": "두류센트레빌 더 파크(조합원 취소분)(2회차)",
-          "address": "대구광역시 달서구 두류동 638-19번지 일원",
-          "manage_no": "2025000535",
-          "similarity": 0.296
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_268529927",
-      "notice_id": "gg_268529927",
-      "name": "안산신길2 B-1",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529927",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "74A",
-          "price": null,
-          "exclusive_area": 74.94,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": 84.71,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "울산다운2지구 A-10블록 공공분양주택",
-          "address": "울산광역시 울주군 범서읍 서사리 일원 울산다운2 공공주택지구내 A-10블록",
-          "manage_no": "2025000649",
-          "similarity": 0.353
-        },
-        {
-          "name": "남양주진접2지구 B-1블록 공공분양(본청약)",
-          "address": "경기도 남양주시 진접읍 내각리, 연평리 일원 남양주진접2 공공주택지구 내 B-1블록",
-          "manage_no": "2025000644",
-          "similarity": 0.286
-        },
-        {
-          "name": "동탄 그웬 160 (동탄2 B11BL)",
-          "address": "경기도 화성특례시 동탄2 택지개발지구 B11BL (신동720)",
-          "manage_no": "2026000113",
-          "similarity": 0.273
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_265886741",
-      "notice_id": "gg_265886741",
-      "name": "한화포레나 지제역",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529926",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 8,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84B",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 3,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84C",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 3,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84D",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "한화포레나 부산당리",
-          "address": "부산광역시 사하구 당리동 340-3번지 일원",
-          "manage_no": "2026000066",
-          "similarity": 0.588
-        },
-        {
-          "name": "한화포레나 부산대연",
-          "address": "부산광역시 남구 대연동 455-25번지",
-          "manage_no": "2025000552",
-          "similarity": 0.588
-        },
-        {
-          "name": "포레나더샵 인천시청역",
-          "address": "인천광역시 남동구 간석1동 311-1번지 일원",
-          "manage_no": "2025000572",
-          "similarity": 0.444
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_267567650",
-      "notice_id": "gg_267567650",
-      "name": "시흥 거모 S-1블록 공공분양주택 장애인 특별공급 안내",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567650",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_address_mismatch"
-      },
-      "category": "추가 개발 필요",
-      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
-      "catalog_window_only": false,
-      "units": [
-        {
-          "type": "59A",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "59B",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "시흥거모지구 S-1블록 공공분양(본청약)",
-          "address": "경기도 시흥시 거모동, 군자동 일원 시흥거모 공공주택지구 내 S-1블록",
-          "manage_no": "2026000531",
-          "similarity": 0.8
-        },
-        {
-          "name": "시흥거모B1 호반써밋",
-          "address": "경기도 시흥시 거모동 1171번지 일원 (시흥거모지구 B1블럭)",
-          "manage_no": "2026000052",
-          "similarity": 0.556
-        },
-        {
-          "name": "시흥거모 A-5블록 신혼희망타운(공공분양)(본청약)",
-          "address": "경기도 시흥시 거모동, 군자동 일원 시흥거모 공공주택지구 내 A-5블록",
-          "manage_no": "2026820006",
-          "similarity": 0.462
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_address_mismatch"
-      ]
-    },
-    {
-      "id": "gg_267567647",
-      "notice_id": "gg_267567647",
-      "name": "구리갈매역세권 B-1블록 신안인스빌 디센트",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567647",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "75",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "구리갈매역세권 A-4블록 공공분양주택(본청약)",
-          "address": "경기도 구리시 갈매동 241-28 일원, 구리갈매역세권 공공주택지구 내 A-4블록",
-          "manage_no": "2025000646",
-          "similarity": 0.6
-        },
-        {
-          "name": "구리갈매역세권 A-4블록 6년 분양전환공공임대주택(본청약)",
-          "address": "경기도 구리시 갈매동 241-28 일원, 구리갈매역세권 공공주택지구 내 A-4블록",
-          "manage_no": "2025000647",
-          "similarity": 0.429
-        },
-        {
-          "name": "풍무역세권 수자인 그라센트 2차",
-          "address": "경기도 김포시 풍무역세권도시개발사업 B1BL(김포시 사우동 167-1번지)",
-          "manage_no": "2026000073",
-          "similarity": 0.364
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_267327319",
-      "notice_id": "gg_267327319",
-      "name": "고덕 우미 린 더 프리미어",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327319",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": 84.9343,
-          "allocation": 6,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84B",
-          "price": null,
-          "exclusive_area": 84.9075,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84D",
-          "price": null,
-          "exclusive_area": 84.8505,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "강릉 우미 린 더 프리미어",
-          "address": "강원특별자치도 강릉시 송정동 1048번지 일원",
-          "manage_no": "2026000089",
-          "similarity": 0.8
-        },
-        {
-          "name": "평택 고덕 우미 린 프레스티지(Abc-36BL)",
-          "address": "경기도 평택시 고덕 국제화계획지구 내 Abc-36블록",
-          "manage_no": "2026000237",
-          "similarity": 0.414
-        },
-        {
-          "name": "고양 창릉 우미 린 그레니티 공공분양주택(본청약)",
-          "address": "경기도 고양시 덕양구 행신동 313번지 일원 고양창릉 공공주택지구 내 S-1BL ",
-          "manage_no": "2026000128",
-          "similarity": 0.381
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_267327317",
-      "notice_id": "gg_267327317",
-      "name": "계양신도시 카이브 유보라",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327317",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_address_mismatch"
-      },
-      "category": "추가 개발 필요",
-      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
-      "catalog_window_only": false,
-      "units": [
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": 84.3473,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84B",
-          "price": null,
-          "exclusive_area": 84.6971,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84D",
-          "price": null,
-          "exclusive_area": 84.5968,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "계양신도시 카이브 유보라(AC4BL)",
-          "address": "인천광역시 계양구 동양동 420-3번지 일원 (인천계양 테크노밸리 공공주택지구 AC4블록)",
-          "manage_no": "2026000532",
-          "similarity": 0.815
-        },
-        {
-          "name": "계양신도시 카이브 유보라(AC3BL)",
-          "address": "인천광역시 계양구 동양동 458-3번지 일원 (인천계양 테크노밸리 공공주택지구 AC3블록)",
-          "manage_no": "2026000530",
-          "similarity": 0.815
-        },
-        {
-          "name": "고덕신도시 아테라 A-63블록 공공분양주택",
-          "address": "경기도 평택시 고덕동, 고덕면 일원(평택고덕국제화계획지구 내 A-63BL)",
-          "manage_no": "2026000124",
-          "similarity": 0.333
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_address_mismatch"
-      ]
-    },
-    {
       "id": "gg_256574856",
       "notice_id": "gg_256574856",
       "name": "경기광주역 롯데캐슬 시그니처 2단지",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567671",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=273844273",
       "stages": {
         "notice": "verified",
         "project": "official_project_not_in_catalog"
@@ -781,10 +120,78 @@
       ]
     },
     {
-      "id": "gg_266366601",
-      "notice_id": "gg_266366601",
-      "name": "엘리프 시흥 더프라임",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366601",
+      "id": "gg_272148403",
+      "notice_id": "gg_272148403",
+      "name": "왕숙 한신더휴 센텀",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=272148403",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": 59.96,
+          "allocation": 4,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": 59.71,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59C",
+          "price": null,
+          "exclusive_area": 59.14,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "의왕역 한신더휴",
+          "address": "경기도 의왕시 삼동 244-1번지 일원",
+          "manage_no": "2026000377",
+          "similarity": 0.667
+        },
+        {
+          "name": "창원 한신더휴 메가센텀",
+          "address": "경상남도 창원시 마산회원구 회원동 480-31번지 일대",
+          "manage_no": "2026000282",
+          "similarity": 0.667
+        },
+        {
+          "name": "쌍용 더 플래티넘 센텀",
+          "address": "부산광역시 수영구 망미동 253-1번지 일원",
+          "manage_no": "2026000424",
+          "similarity": 0.353
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_272148402",
+      "notice_id": "gg_272148402",
+      "name": "계양신도시 대방 엘리움 에듀파크",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=272148402",
       "stages": {
         "notice": "verified",
         "project": "official_project_not_in_catalog"
@@ -797,7 +204,7 @@
           "type": "84A",
           "price": null,
           "exclusive_area": null,
-          "allocation": 2,
+          "allocation": 1,
           "gap": null,
           "code": "sale_price_and_exclusive_area_pending",
           "label": "공식 분양가·전용면적 연결 대기"
@@ -814,22 +221,22 @@
       ],
       "review_candidates": [
         {
-          "name": "엘리프 역곡",
-          "address": "경기도 부천시 소사구 괴안동 106-1번지 일원",
-          "manage_no": "2026000187",
-          "similarity": 0.429
+          "name": "시흥거모지구 대방 엘리움 더 루체Ⅱ(B-2BL)",
+          "address": "경기도 시흥시 시흥거모 공공주택지구 B-2블럭(경기도 시흥시 거모동 일원)",
+          "manage_no": "2025000547",
+          "similarity": 0.4
         },
         {
-          "name": "엘리프 창원",
-          "address": "경상남도 창원시 의창구 창원명곡 공공주택지구 B-1BL",
-          "manage_no": "2026000110",
-          "similarity": 0.429
+          "name": "시흥거모지구 대방 엘리움 더 루체Ⅰ(S-2BL)",
+          "address": "경기도 시흥시 시흥거모 공공주택지구 S-2블럭(경기도 시흥시 거모동 일원)",
+          "manage_no": "2025000546",
+          "similarity": 0.4
         },
         {
-          "name": "엘리프 원종",
-          "address": "경기도 부천시 오정구 원종동 298-1번지 일원",
-          "manage_no": "2025000550",
-          "similarity": 0.429
+          "name": "계양신도시 카이브 유보라(AC4BL)",
+          "address": "인천광역시 계양구 동양동 420-3번지 일원 (인천계양 테크노밸리 공공주택지구 AC4블록)",
+          "manage_no": "2026000532",
+          "similarity": 0.333
         }
       ],
       "coordinate_verified": false,
@@ -840,10 +247,10 @@
       ]
     },
     {
-      "id": "gg_266366609",
-      "notice_id": "gg_266366609",
-      "name": "중앙하이츠 구성 플랫폼시티",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366609",
+      "id": "gg_272390416",
+      "notice_id": "gg_272390416",
+      "name": "디에이치 반포124",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=272390416",
       "stages": {
         "notice": "verified",
         "project": "official_project_not_in_catalog"
@@ -853,7 +260,153 @@
       "catalog_window_only": true,
       "units": [
         {
-          "type": "74",
+          "type": "59A",
+          "price": null,
+          "exclusive_area": 59.98,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": 59.99,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": 84.98,
+          "allocation": 3,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": 84.99,
+          "allocation": 5,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "오티에르 반포",
+          "address": "서울특별시 서초구 잠원동 59-10번지 외 3필지",
+          "manage_no": "2026000058",
+          "similarity": 0.4
+        },
+        {
+          "name": "연수 월드메르디앙 어반포레",
+          "address": "인천광역시 연수구 동춘동 1152번지 일원",
+          "manage_no": "2026000035",
+          "similarity": 0.286
+        },
+        {
+          "name": "천안 아이파크 시티 1단지(2회차)",
+          "address": "충청남도 천안시 서북구 성성동 34-4번지 일원",
+          "manage_no": "2026000300",
+          "similarity": 0.261
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_272148401",
+      "notice_id": "gg_272148401",
+      "name": "제일풍경채 광주 포에듀",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=272148401",
+      "stages": {
+        "notice": "verified",
+        "project": "verified"
+      },
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "84A",
+          "price": 691000000,
+          "exclusive_area": 84.9904,
+          "allocation": 9,
+          "gap": -22000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
+        },
+        {
+          "type": "84B",
+          "price": 691000000,
+          "exclusive_area": 84.9732,
+          "allocation": 4,
+          "gap": -22000000.0,
+          "code": "verified",
+          "label": "실제 연결 성공"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "제일풍경채 광주 포에듀",
+          "address": "경기도 광주시 탄벌동 203-4번지 일원 (탄벌A지구 A5블럭)",
+          "manage_no": "2026000557",
+          "similarity": 1.0
+        },
+        {
+          "name": "제일풍경채 첨단3지구(A6BL)",
+          "address": "광주연구개발특구 첨단3지구 A6블록(전남광주통합특별시 북구 월출동) ",
+          "manage_no": "2026000342",
+          "similarity": 0.455
+        },
+        {
+          "name": "고덕국제신도시 수자인풍경채 2단지",
+          "address": "경기도 평택시 고덕국제화계획지구 Abc-61블록",
+          "manage_no": "2026000155",
+          "similarity": 0.308
+        }
+      ],
+      "coordinate_verified": true,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "district_coverage_sampled",
+        "target_build_year_uses_official_planned_move_year"
+      ]
+    },
+    {
+      "id": "gg_271906433",
+      "notice_id": "gg_271906433",
+      "name": "화양서희스타힐스 센트럴파크",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=271906433",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_address_mismatch"
+      },
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84",
           "price": null,
           "exclusive_area": null,
           "allocation": 1,
@@ -864,22 +417,72 @@
       ],
       "review_candidates": [
         {
-          "name": "중앙하이츠 원종역",
-          "address": "경기도 부천시 오정구 원종동 276-2",
-          "manage_no": "2026000178",
+          "name": "평택화양 서희스타힐스 센트럴파크(조합원 취소분)",
+          "address": "경기도 평택시 현덕면 화양리 평택화양지구 8블록(A8BL 2LOT)",
+          "manage_no": "2025000657",
+          "similarity": 0.765
+        },
+        {
+          "name": "용인 양지 서희스타힐스 하이뷰",
+          "address": "경기도 용인시 처인구 양지읍 양지리 산105-8번지 일원",
+          "manage_no": "2026000088",
+          "similarity": 0.538
+        },
+        {
+          "name": "태화강 센트럴 아이파크",
+          "address": "울산광역시 중구 반구동 554-5번지 일원",
+          "manage_no": "2025000610",
+          "similarity": 0.522
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_address_mismatch"
+      ]
+    },
+    {
+      "id": "gg_271906425",
+      "notice_id": "gg_271906425",
+      "name": "진위역 서희스타힐스 더 파크뷰",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=271906425",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "71B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "용인 양지 서희스타힐스 하이뷰",
+          "address": "경기도 용인시 처인구 양지읍 양지리 산105-8번지 일원",
+          "manage_no": "2026000088",
+          "similarity": 0.538
+        },
+        {
+          "name": "야목역 서희스타힐스 그랜드힐",
+          "address": "경기도 화성시 효행구 비봉면 구포리 614-18번지 일원",
+          "manage_no": "2026000069",
+          "similarity": 0.538
+        },
+        {
+          "name": "오남역 서희스타힐스 여의재 1단지",
+          "address": "경기도 남양주시 오남읍 양지리 101번지 일원",
+          "manage_no": "2026000365",
           "similarity": 0.5
-        },
-        {
-          "name": "중앙하이츠 갈산역 센트럴",
-          "address": "인천광역시 부평구 갈산동 181-11 외 1필지",
-          "manage_no": "2026000062",
-          "similarity": 0.435
-        },
-        {
-          "name": "여월 중앙하이츠 아르비채",
-          "address": "경기도 부천시 오정구 여월동 8-9번지 외 4필지",
-          "manage_no": "2025000567",
-          "similarity": 0.435
         }
       ],
       "coordinate_verified": false,
@@ -893,7 +496,7 @@
       "id": "gg_260145183",
       "notice_id": "gg_260145183",
       "name": "부천대장 하우스스토리 디센트",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366606",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=272148351",
       "stages": {
         "notice": "verified",
         "project": "official_project_not_in_catalog"
@@ -962,10 +565,59 @@
           "similarity": 0.316
         },
         {
-          "name": "고덕국제신도시 수자인하우스디",
-          "address": "경기도 평택시 고덕국제화계획지구 A-67블록",
-          "manage_no": "2026000258",
-          "similarity": 0.296
+          "name": "남춘천 센트레빌",
+          "address": "강원특별자치도 춘천시 효자동 681-12 일원",
+          "manage_no": "2026000539",
+          "similarity": 0.3
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_270698737",
+      "notice_id": "gg_270698737",
+      "name": "해링턴 플레이스 문래",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270698737",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": 84.9409,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "해링턴플레이스 오룡역",
+          "address": "대전광역시 중구 용두동 722번지 일원",
+          "manage_no": "2026000033",
+          "similarity": 0.737
+        },
+        {
+          "name": "해링턴플레이스 노원 센트럴",
+          "address": "서울특별시 노원구 노원로 495 (상계동 690)",
+          "manage_no": "2026000028",
+          "similarity": 0.667
+        },
+        {
+          "name": "이안 연동스퀘어",
+          "address": "제주특별자치도 제주시 연동 282-4 외 4필지",
+          "manage_no": "2025000592",
+          "similarity": 0.25
         }
       ],
       "coordinate_verified": false,
@@ -973,6 +625,730 @@
         "announcement_only_update",
         "attachment_text_extracted",
         "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_270457440",
+      "notice_id": "gg_270457440",
+      "name": "의정부역 펠리스타워 양우내안愛",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270457440",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_address_mismatch"
+      },
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "59",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 3,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84C",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "의정부역 펠리스타워 양우내안애",
+          "address": "경기도 의정부시 의정부동 424번지 일원 ",
+          "manage_no": "2026000553",
+          "similarity": 0.963
+        },
+        {
+          "name": "의정부우정 A2블록 공공분양주택(본청약)",
+          "address": "경기도 의정부시 녹양동 일원 의정부우정 공공주택지구 내 A-2블록",
+          "manage_no": "2026000409",
+          "similarity": 0.364
+        },
+        {
+          "name": "의정부역 센트럴 아이파크",
+          "address": "경기도 의정부시 의정부동 253-19번지 일원",
+          "manage_no": "2026000055",
+          "similarity": 0.333
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_address_mismatch"
+      ]
+    },
+    {
+      "id": "gg_269252265",
+      "notice_id": "gg_269252265",
+      "name": "아르뮤제이",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 4,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84C",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "연제갤러리자이",
+          "address": "부산광역시 연제구 연산동 1123-1번지",
+          "manage_no": "2026000469",
+          "similarity": 0.333
+        },
+        {
+          "name": "드파인 아르티아",
+          "address": "서울특별시 동작구 노량진동 312-75번지 일대",
+          "manage_no": "2026000241",
+          "similarity": 0.333
+        },
+        {
+          "name": "더샵 관저아르테",
+          "address": "대전광역시 서구 관저동 1988번지",
+          "manage_no": "2026000129",
+          "similarity": 0.333
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_268770591",
+      "notice_id": "gg_268770591",
+      "name": "광교 자연앤 센트레빌",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268770591",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_address_mismatch"
+      },
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": 84.7637,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": 84.8159,
+          "allocation": 3,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84C",
+          "price": null,
+          "exclusive_area": 84.6192,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "광교 자연앤 센트레빌(A17BL) 공공분양주택",
+          "address": "경기도 수원시 영통구 원천동 633번지 일원",
+          "manage_no": "2026000528",
+          "similarity": 0.783
+        },
+        {
+          "name": "광교 자연앤 센트레빌(A17BL) 지분적립형 분양주택",
+          "address": "경기도 수원시 영통구 원천동 633번지 일원",
+          "manage_no": "2026000527",
+          "similarity": 0.562
+        },
+        {
+          "name": "남춘천 센트레빌",
+          "address": "강원특별자치도 춘천시 효자동 681-12 일원",
+          "manage_no": "2026000539",
+          "similarity": 0.5
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_address_mismatch"
+      ]
+    },
+    {
+      "id": "gg_268529927",
+      "notice_id": "gg_268529927",
+      "name": "안산신길2 B-1",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529927",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_address_mismatch"
+      },
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "74A",
+          "price": null,
+          "exclusive_area": 74.94,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": 84.71,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "안산신길2지구 B-1블록 공공분양주택(본청약)",
+          "address": "경기도 안산시 단원구 신길동 일원 안산신길2 공공주택지구 내 B-1블록",
+          "manage_no": "2026000533",
+          "similarity": 0.875
+        },
+        {
+          "name": "안산신길2 A-6블록 신혼희망타운(공공분양)(본청약)",
+          "address": "경기도 안산시 단원구 신길동 일원 안산신길2 공공주택지구 내 A-6블록",
+          "manage_no": "2026820013",
+          "similarity": 0.385
+        },
+        {
+          "name": "울산다운2지구 A-10블록 공공분양주택",
+          "address": "울산광역시 울주군 범서읍 서사리 일원 울산다운2 공공주택지구내 A-10블록",
+          "manage_no": "2025000649",
+          "similarity": 0.353
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_address_mismatch"
+      ]
+    },
+    {
+      "id": "gg_265886741",
+      "notice_id": "gg_265886741",
+      "name": "한화포레나 지제역",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=268529926",
+      "stages": {
+        "notice": "verified",
+        "project": "verified"
+      },
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "84A",
+          "price": 708750000,
+          "exclusive_area": 84.9424,
+          "allocation": 8,
+          "gap": -228750000,
+          "code": "verified",
+          "label": "실제 연결 성공"
+        },
+        {
+          "type": "84B",
+          "price": 700950000,
+          "exclusive_area": 84.9927,
+          "allocation": 3,
+          "gap": -220950000,
+          "code": "verified",
+          "label": "실제 연결 성공"
+        },
+        {
+          "type": "84C",
+          "price": 724500000,
+          "exclusive_area": 84.9839,
+          "allocation": 3,
+          "gap": -244500000,
+          "code": "verified",
+          "label": "실제 연결 성공"
+        },
+        {
+          "type": "84D",
+          "price": 723500000,
+          "exclusive_area": 84.9199,
+          "allocation": 2,
+          "gap": -243500000,
+          "code": "verified",
+          "label": "실제 연결 성공"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "한화포레나 지제역",
+          "address": "경기도 평택시 세교동 725번지 일원",
+          "manage_no": "2026000499",
+          "similarity": 1.0
+        },
+        {
+          "name": "한화포레나 부산당리",
+          "address": "부산광역시 사하구 당리동 340-3번지 일원",
+          "manage_no": "2026000066",
+          "similarity": 0.588
+        },
+        {
+          "name": "한화포레나 부산대연",
+          "address": "부산광역시 남구 대연동 455-25번지",
+          "manage_no": "2025000552",
+          "similarity": 0.588
+        }
+      ],
+      "coordinate_verified": true,
+      "collection_issues": [
+        "attachment_text_extracted",
+        "district_coverage_sampled",
+        "some_comparison_locations_unverified",
+        "target_build_year_uses_official_planned_move_year"
+      ]
+    },
+    {
+      "id": "gg_267567650",
+      "notice_id": "gg_267567650",
+      "name": "시흥 거모 S-1블록 공공분양주택 장애인 특별공급 안내",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567650",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_address_mismatch"
+      },
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "시흥거모지구 S-1블록 공공분양(본청약)",
+          "address": "경기도 시흥시 거모동, 군자동 일원 시흥거모 공공주택지구 내 S-1블록",
+          "manage_no": "2026000531",
+          "similarity": 0.8
+        },
+        {
+          "name": "시흥거모B1 호반써밋",
+          "address": "경기도 시흥시 거모동 1171번지 일원 (시흥거모지구 B1블럭)",
+          "manage_no": "2026000052",
+          "similarity": 0.556
+        },
+        {
+          "name": "시흥거모 A-5블록 신혼희망타운(공공분양)(본청약)",
+          "address": "경기도 시흥시 거모동, 군자동 일원 시흥거모 공공주택지구 내 A-5블록",
+          "manage_no": "2026820006",
+          "similarity": 0.462
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_address_mismatch"
+      ]
+    },
+    {
+      "id": "gg_267567647",
+      "notice_id": "gg_267567647",
+      "name": "구리갈매역세권 B-1블록 신안인스빌 디센트",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267567647",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_address_mismatch"
+      },
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "75",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "구리갈매역세권 B-1블록 신안인스빌 디센트",
+          "address": "경기도 구리시 구리갈매역세권 B-1블록",
+          "manage_no": "2026000472",
+          "similarity": 1.0
+        },
+        {
+          "name": "구리갈매역세권 A-4블록 공공분양주택(본청약)",
+          "address": "경기도 구리시 갈매동 241-28 일원, 구리갈매역세권 공공주택지구 내 A-4블록",
+          "manage_no": "2025000646",
+          "similarity": 0.6
+        },
+        {
+          "name": "구리갈매역세권 A-4블록 6년 분양전환공공임대주택(본청약)",
+          "address": "경기도 구리시 갈매동 241-28 일원, 구리갈매역세권 공공주택지구 내 A-4블록",
+          "manage_no": "2025000647",
+          "similarity": 0.429
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_address_mismatch"
+      ]
+    },
+    {
+      "id": "gg_267327319",
+      "notice_id": "gg_267327319",
+      "name": "고덕 우미 린 더 프리미어",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327319",
+      "stages": {
+        "notice": "verified",
+        "project": "verified"
+      },
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "84A",
+          "price": 591300000,
+          "exclusive_area": 84.9343,
+          "allocation": 6,
+          "gap": null,
+          "code": "official_block_geometry_missing",
+          "label": "개발지구 좌표·지번 연결 근거 미확인"
+        },
+        {
+          "type": "84B",
+          "price": 591300000,
+          "exclusive_area": 84.9075,
+          "allocation": 1,
+          "gap": null,
+          "code": "official_block_geometry_missing",
+          "label": "개발지구 좌표·지번 연결 근거 미확인"
+        },
+        {
+          "type": "84D",
+          "price": 578900000,
+          "exclusive_area": 84.8505,
+          "allocation": 1,
+          "gap": null,
+          "code": "official_block_geometry_missing",
+          "label": "개발지구 좌표·지번 연결 근거 미확인"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "평택 고덕 우미 린 더 프리미어",
+          "address": "경기도 평택시 고덕 국제화계획지구 내 Abc-33블록",
+          "manage_no": "2026000515",
+          "similarity": 0.909
+        },
+        {
+          "name": "강릉 우미 린 더 프리미어",
+          "address": "강원특별자치도 강릉시 송정동 1048번지 일원",
+          "manage_no": "2026000089",
+          "similarity": 0.8
+        },
+        {
+          "name": "평택 고덕 우미 린 프레스티지(Abc-36BL)",
+          "address": "경기도 평택시 고덕 국제화계획지구 내 Abc-36블록",
+          "manage_no": "2026000237",
+          "similarity": 0.414
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "geocode_address_incomplete"
+      ]
+    },
+    {
+      "id": "gg_267327317",
+      "notice_id": "gg_267327317",
+      "name": "계양신도시 카이브 유보라",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=267327317",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_address_mismatch"
+      },
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": 84.3473,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": 84.6971,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84D",
+          "price": null,
+          "exclusive_area": 84.5968,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "계양신도시 카이브 유보라(AC4BL)",
+          "address": "인천광역시 계양구 동양동 420-3번지 일원 (인천계양 테크노밸리 공공주택지구 AC4블록)",
+          "manage_no": "2026000532",
+          "similarity": 0.815
+        },
+        {
+          "name": "계양신도시 카이브 유보라(AC3BL)",
+          "address": "인천광역시 계양구 동양동 458-3번지 일원 (인천계양 테크노밸리 공공주택지구 AC3블록)",
+          "manage_no": "2026000530",
+          "similarity": 0.815
+        },
+        {
+          "name": "고덕신도시 아테라 A-63블록 공공분양주택",
+          "address": "경기도 평택시 고덕동, 고덕면 일원(평택고덕국제화계획지구 내 A-63BL)",
+          "manage_no": "2026000124",
+          "similarity": 0.333
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_address_mismatch"
+      ]
+    },
+    {
+      "id": "gg_266366601",
+      "notice_id": "gg_266366601",
+      "name": "엘리프 시흥 더프라임",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366601",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_address_mismatch"
+      },
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "엘리프 시흥 더프라임",
+          "address": "경기도 시흥시 거모동 시흥거모지구 B-5블록",
+          "manage_no": "2026000525",
+          "similarity": 1.0
+        },
+        {
+          "name": "엘리프 역곡",
+          "address": "경기도 부천시 소사구 괴안동 106-1번지 일원",
+          "manage_no": "2026000187",
+          "similarity": 0.429
+        },
+        {
+          "name": "엘리프 창원",
+          "address": "경상남도 창원시 의창구 창원명곡 공공주택지구 B-1BL",
+          "manage_no": "2026000110",
+          "similarity": 0.429
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_address_mismatch"
+      ]
+    },
+    {
+      "id": "gg_266366609",
+      "notice_id": "gg_266366609",
+      "name": "중앙하이츠 구성 플랫폼시티",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=266366609",
+      "stages": {
+        "notice": "verified",
+        "project": "verified"
+      },
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "74",
+          "price": 771100000,
+          "exclusive_area": 74.9857,
+          "allocation": 1,
+          "gap": 528900000,
+          "code": "verified",
+          "label": "실제 연결 성공"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "중앙하이츠 구성 플랫폼시티",
+          "address": "경기도 용인시 기흥구 마북동 298-1번지 일원",
+          "manage_no": "2026000535",
+          "similarity": 1.0
+        },
+        {
+          "name": "중앙하이츠 원종역",
+          "address": "경기도 부천시 오정구 원종동 276-2",
+          "manage_no": "2026000178",
+          "similarity": 0.5
+        },
+        {
+          "name": "중앙하이츠 갈산역 센트럴",
+          "address": "인천광역시 부평구 갈산동 181-11 외 1필지",
+          "manage_no": "2026000062",
+          "similarity": 0.435
+        }
+      ],
+      "coordinate_verified": true,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "district_coverage_sampled",
+        "some_comparison_locations_unverified",
+        "target_build_year_uses_official_planned_move_year"
       ]
     },
     {
@@ -993,7 +1369,7 @@
           "price": 1714200000,
           "exclusive_area": 84.9916,
           "allocation": 7,
-          "gap": -414200000.0,
+          "gap": -414200000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1002,7 +1378,7 @@
           "price": 1716800000,
           "exclusive_area": 84.9979,
           "allocation": 1,
-          "gap": -416800000.0,
+          "gap": -416800000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1011,7 +1387,7 @@
           "price": 1713200000,
           "exclusive_area": 84.997,
           "allocation": 3,
-          "gap": -413200000.0,
+          "gap": -413200000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1020,7 +1396,7 @@
           "price": 1713800000,
           "exclusive_area": 84.9948,
           "allocation": 3,
-          "gap": -413800000.0,
+          "gap": -413800000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1029,7 +1405,7 @@
           "price": 1715200000,
           "exclusive_area": 84.9975,
           "allocation": 3,
-          "gap": -415200000.0,
+          "gap": -415200000,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -1082,7 +1458,7 @@
           "price": 1712100000,
           "exclusive_area": 84.997,
           "allocation": 4,
-          "gap": -412100000.0,
+          "gap": -412100000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1091,7 +1467,7 @@
           "price": 1715300000,
           "exclusive_area": 84.9998,
           "allocation": 2,
-          "gap": -415300000.0,
+          "gap": -415300000,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -1593,6 +1969,7 @@
       ],
       "coordinate_verified": true,
       "collection_issues": [
+        "analysis_deferred",
         "announcement_only_update",
         "attachment_text_extracted",
         "district_coverage_sampled",
@@ -1732,10 +2109,10 @@
           "similarity": 0.444
         },
         {
-          "name": "GTX운정중앙역 시티프라디움 4단지(후속사업)",
-          "address": "경기도 파주시 파주운정3지구 주상복합 4블록(경기도 파주시 동패동 400-7번지 일원)",
-          "manage_no": "2026000518",
-          "similarity": 0.387
+          "name": "엘리프 시흥 더프라임",
+          "address": "경기도 시흥시 거모동 시흥거모지구 B-5블록",
+          "manage_no": "2026000525",
+          "similarity": 0.421
         }
       ],
       "coordinate_verified": false,
@@ -1796,6 +2173,12 @@
       ],
       "review_candidates": [
         {
+          "name": "남춘천 센트레빌",
+          "address": "강원특별자치도 춘천시 효자동 681-12 일원",
+          "manage_no": "2026000539",
+          "similarity": 0.471
+        },
+        {
           "name": "더 플래티넘 센트럴포레",
           "address": "경기도 양주시 삼숭동 187-47번지 일원",
           "manage_no": "2026000034",
@@ -1806,12 +2189,6 @@
           "address": "경상남도 거제시 상동동 681-2번지 일원",
           "manage_no": "2026000331",
           "similarity": 0.381
-        },
-        {
-          "name": "기장 이진캐스빌 포레",
-          "address": "부산광역시 기장군 기장읍 대라리 541-1번지 일원",
-          "manage_no": "2026000146",
-          "similarity": 0.316
         }
       ],
       "coordinate_verified": false,
@@ -1897,16 +2274,16 @@
           "similarity": 1.0
         },
         {
+          "name": "중화역 라온프라이빗 센트로",
+          "address": "서울특별시 중랑구 중화동 303-9번지 일원",
+          "manage_no": "2026000497",
+          "similarity": 0.286
+        },
+        {
           "name": "구서 다움포레",
           "address": "부산광역시 금정구 구서동 203-14번지 일원",
           "manage_no": "2026000040",
           "similarity": 0.267
-        },
-        {
-          "name": "선운지구다사로움 공가세대 일반공급",
-          "address": "광주광역시 광산구 선운로 34 (선운지구다사로움아파트)",
-          "manage_no": "2026000081",
-          "similarity": 0.261
         }
       ],
       "coordinate_verified": false,
@@ -2146,10 +2523,10 @@
           "similarity": 0.875
         },
         {
-          "name": "힐스테이트 광명 11",
-          "address": "경기도 광명시 광명4동 158-403번지 및 철산4동 467-83번지 일원",
-          "manage_no": "2025000556",
-          "similarity": 0.48
+          "name": "힐스테이트 양산더스카이 2단지",
+          "address": "경상남도 양산시 물금읍 범어리 940-2번지 일원",
+          "manage_no": "2026000224",
+          "similarity": 0.467
         }
       ],
       "coordinate_verified": false,
@@ -2304,15 +2681,15 @@
           "similarity": 1.0
         },
         {
-          "name": "힐스테이트 광명 11",
-          "address": "경기도 광명시 광명4동 158-403번지 및 철산4동 467-83번지 일원",
-          "manage_no": "2025000556",
-          "similarity": 0.435
-        },
-        {
           "name": "포레나힐스테이트 진주",
           "address": "경상남도 진주시 이현동 10-1번지 외 13필지",
           "manage_no": "2026000383",
+          "similarity": 0.417
+        },
+        {
+          "name": "힐스테이트 평거 센트럴",
+          "address": "경상남도 진주시 평거동 148번지 외 4필지",
+          "manage_no": "2026000085",
           "similarity": 0.417
         }
       ],

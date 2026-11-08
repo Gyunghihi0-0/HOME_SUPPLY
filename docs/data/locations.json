@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -30,7 +30,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     },
     "gg_266126622_p2026000508_2026000508": {
       "address": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
@@ -46,7 +46,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     },
     "gg_262772736": {
       "address": "화성특례시 만세구 향남읍 하길리 404-2 번지 일원",
@@ -59,7 +59,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     },
     "gg_260861016": {
       "address": "경기도 수원시 권선구 서둔동 212-1번지 일원",
@@ -101,20 +101,50 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "gg_272148401": {
+      "address": "경기도 광주시 탄벌동 203-4 번지 일원",
+      "coordinates": [
+        37.4215618832669,
+        127.243982552725
+      ],
+      "build_year": 2029,
+      "lawd_codes": [
+        "41610"
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "gg_265886741": {
+      "address": "경기도 평택시 세교동 725번지 일원 (평택영신지구 도시개발사업 2BL)",
+      "coordinates": [
+        37.0227747908165,
+        127.084350726501
+      ],
+      "build_year": 2029,
+      "lawd_codes": [
+        "41220"
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "gg_266366609": {
+      "address": "용인시 기흥구 마북동 298-1 번지 일원",
+      "coordinates": [
+        37.2965888218872,
+        127.117753986424
+      ],
+      "build_year": 2028,
+      "lawd_codes": [
+        "41463",
+        "41465"
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     }
   },
   "comparables": {
-    "add91080c7dd85124a809b0d": {
-      "location": "41597|여울동|975",
-      "apartment_name": "동탄역삼정그린코아",
-      "coordinates": [
-        37.2010150854,
-        127.088938874374
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
     "d0d60796705d21f624258e06": {
       "location": "41597|여울동|975",
       "apartment_name": "동탄역삼정그린코아",
@@ -504,7 +534,1547 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-10-29T09:33:32.726486+09:00"
+    },
+    "501dd417476428fb517b28db": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "bb30b8fcdc92bae0804a31e6": {
+      "location": "41610|탄벌동|771",
+      "apartment_name": "두산위브광주센트럴파크",
+      "coordinates": [
+        37.4153933881875,
+        127.240575827796
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f7b52196f52292908944ca3a": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "3cb2310a25a53744a57207c5": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f36a21ae4ee132a29890ce77": {
+      "location": "41610|탄벌동|771",
+      "apartment_name": "두산위브광주센트럴파크",
+      "coordinates": [
+        37.4153933881875,
+        127.240575827796
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "1bff953fe8ff483ffd98c742": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "964c1e5bf2f779a63308456c": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "276b90f8e98f44a73df26b6f": {
+      "location": "41610|탄벌동|771",
+      "apartment_name": "두산위브광주센트럴파크",
+      "coordinates": [
+        37.4153933881875,
+        127.240575827796
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "59631cebb32a47bfef115889": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "0af6d5c2dc59a4d1a275b3e0": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "5f80064e997646d6ef60a50b": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "96bba6a8ded0258756807352": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "65ba759a133842062e10a669": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "31ac36d4ce63c7cc475025b8": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "596ab46807fe771ff80635c9": {
+      "location": "41610|경안동|447",
+      "apartment_name": "경기광주역금호리첸시아",
+      "coordinates": [
+        37.4082946161185,
+        127.256277987611
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "1b04003432e494f91ae542dd": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "d2689fe0909a3a0ce3b4d917": {
+      "location": "41610|경안동|447",
+      "apartment_name": "경기광주역금호리첸시아",
+      "coordinates": [
+        37.4082946161185,
+        127.256277987611
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "94395dc1a72d3153ec116611": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "15218412f9b60eec1ed3776b": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "d32e04f539d6861d916fc143": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "11939bf45451132d25cf8b0c": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "df813403051757e7cffc6b22": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "0bf2336391911c1ac79f3830": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "732c4ffbc7f4614f25747407": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f5b2ad1cfb428d63767ec302": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "3ec1ee6ceb333ebade3ad18f": {
+      "location": "41610|탄벌동|771",
+      "apartment_name": "두산위브광주센트럴파크",
+      "coordinates": [
+        37.4153933881875,
+        127.240575827796
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "a1337308758894afa9258cdd": {
+      "location": "41610|경안동|447",
+      "apartment_name": "경기광주역금호리첸시아",
+      "coordinates": [
+        37.4082946161185,
+        127.256277987611
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "d1dd13ec3f220d3b816a5988": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "723dc304894fed9dedd78543": {
+      "location": "41610|탄벌동|771",
+      "apartment_name": "두산위브광주센트럴파크",
+      "coordinates": [
+        37.4153933881875,
+        127.240575827796
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "ed11b7be8c046ea249abd75d": {
+      "location": "41610|탄벌동|771",
+      "apartment_name": "두산위브광주센트럴파크",
+      "coordinates": [
+        37.4153933881875,
+        127.240575827796
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "1aac195e3e8905df84a21adc": {
+      "location": "41610|탄벌동|771",
+      "apartment_name": "두산위브광주센트럴파크",
+      "coordinates": [
+        37.4153933881875,
+        127.240575827796
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "a78cc3d10df44410f8e373d6": {
+      "location": "41610|탄벌동|771",
+      "apartment_name": "두산위브광주센트럴파크",
+      "coordinates": [
+        37.4153933881875,
+        127.240575827796
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "df5ba784776790f1bad74a18": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "d44e9b7406add1e2aaa2c8b8": {
+      "location": "41610|탄벌동|771",
+      "apartment_name": "두산위브광주센트럴파크",
+      "coordinates": [
+        37.4153933881875,
+        127.240575827796
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "853dd135f4ecc883019d8040": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "fe126aceab95b68fe99b4b66": {
+      "location": "41220|칠원동|542",
+      "apartment_name": "평택지제역동문굿모닝힐맘시티1단지",
+      "coordinates": [
+        37.0268259175679,
+        127.102372202181
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "bdf378960bbeebe655871b56": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "0120e7546b8a4c9e34a24b88": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "47d521deba5e895ad78eae58": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "54917b4d62abf36df507741f": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "a8b2ddead160b2b97b397e01": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "3b1276ea2286f89a69074562": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "b7f8486c7c086cf603288de1": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f3c62a640abb202007bd2989": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "662cd105965eda6e9e258218": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "8fae0684777020c082353723": {
+      "location": "41220|세교동|596",
+      "apartment_name": "힐스테이트평택3차(3-1블록)",
+      "coordinates": [
+        37.0093858080806,
+        127.089185101396
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "cf828ce36a392f7bb6727133": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f14c11341105c53fb9f3f8b5": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "1b1a6f472e1678f0bf7d4082": {
+      "location": "41220|세교동|596",
+      "apartment_name": "힐스테이트평택3차(3-1블록)",
+      "coordinates": [
+        37.0093858080806,
+        127.089185101396
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "43200e5ceac232b72e9214ec": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "5a454421199416e52817dbf8": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "38fc02c641b276e8e5e01748": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "2d7871e88a963615169c0dd7": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "b3cfe3cd6d52d09849e48701": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "b9e464c691d21156d97cfdec": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "7d3090f4b66916443338af0f": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "c9484b5d81064759ffbc8f31": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "30485a69324d11a1cdf383eb": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "53ef3d2db7aa12bb52ab738f": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "ee987106ff6d624b00708361": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "197bdf854a071a9ade590b63": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "30582611e7f521be6c5743c3": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "b252007d571fd49daec39989": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "cabef58a1b7313084a5b3386": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "fbce314ad2847336dbd9c8f2": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "1e8316fd82911598206a499d": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "7660dedb8a51ef3412b3f1b7": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "3553ff40f4f40fc4139bda69": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "ed635b8f437441b8e08ecb4f": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "7b9becd59111ccb890741f2b": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "7f7d0c14dbfcc7c0244a37ff": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "5c1ff3c21c717c47fd4c3a0b": {
+      "location": "41220|세교동|596",
+      "apartment_name": "힐스테이트평택3차(3-1블록)",
+      "coordinates": [
+        37.0093858080806,
+        127.089185101396
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "95dd7a6013919b913c56ecf5": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "e40b743b260fdc8f671b2d78": {
+      "location": "41220|세교동|596",
+      "apartment_name": "힐스테이트평택3차(3-1블록)",
+      "coordinates": [
+        37.0093858080806,
+        127.089185101396
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "ed701e6f6534883e3fe00960": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "06c6645d9ad04436b345c39a": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "2fabd43d5f70e5ed2f37d4d5": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "66bb9a30a913af137ce3ebaa": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "7c916fc12647c89275f7bb27": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "ebe180104af2a33c7561ac24": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f6ab59aeed2bc9bd7fc7e9a0": {
+      "location": "41220|칠원동|613",
+      "apartment_name": "평택지제역동문굿모닝힐맘시티3단지",
+      "coordinates": [
+        37.0245085633232,
+        127.101488251506
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "cb0937c95ec20a10bf22d859": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "77211e2949700e54a2ed2e7d": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "34cbccec3f0356477e5e57b3": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "e97bdec6f3a65a8047471d59": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "d28309ee8ea32f125298a6d8": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "3c7c42452bf5467ee8adf283": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "6c903a81c85e428593d23723": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "5d65a809443d086c16380b22": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "982668dbb7f7a77ffbf681d3": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "e7c786e6b286358c506223a9": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "2d1635870cf327dd8529b17c": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "18ab3dbc621947647ff85d38": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "c9479a10da32abea4aa36428": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "5a3da4a0c6864bb3727564f2": {
+      "location": "41220|칠원동|542",
+      "apartment_name": "평택지제역동문굿모닝힐맘시티1단지",
+      "coordinates": [
+        37.0268259175679,
+        127.102372202181
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f8c489a7a798ca6fbda86e7d": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "459bb0f3c9afa000e2612ec0": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "e6ba99ec02f00457f7da20ed": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "b96a7f37ac97ea56c22c3e99": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "6437307c2eef0ba14cb12886": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "437a8708a55f477a4a4e4700": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "17c53f2b491298147252f958": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "4e8d3e66a4acaf843b1e7d97": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "5aa09f6f4154694a036784ac": {
+      "location": "41220|칠원동|613",
+      "apartment_name": "평택지제역동문굿모닝힐맘시티3단지",
+      "coordinates": [
+        37.0245085633232,
+        127.101488251506
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "471a53b816457da162116bfc": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f37b22c9a8c968fadf3b0b5e": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "00d8a67aa83933af223f860c": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "4bf8d3dea82c377562509a58": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "7ba4a1cf684a8d2b23bde20a": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "658cf7214a4c01f3ddee7225": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "8916281a0b39e41b96ea87d0": {
+      "location": "41220|칠원동|542",
+      "apartment_name": "평택지제역동문굿모닝힐맘시티1단지",
+      "coordinates": [
+        37.0268259175679,
+        127.102372202181
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "1e8c3f7fd16d55339878749a": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "25b8025e94f480bf36e52135": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "42dce482311413094c6bfe1b": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "eb169f0c8377d3db3f06787f": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "a7c3b78228594e4a8429b00c": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "48f9a4447ad83ce8b0feec6f": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "87193b0bb44be0c319518832": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "94cf3567f47d9925f4c31a55": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "024476546a0751f4df5f31f6": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "740a99ead7f8e463ca97a2e6": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "7abc1302a843f65d465261c0": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "b6f9d05e2489b78b19108753": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f100f49e58be7af6c017f50d": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "20860200e093410a6dabefed": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "9295c9a2187082838ae0d495": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "deabad0592486a2c58ca5e31": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f96543d046fb829d76f8098c": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "49574f50dfc16d82d1b8cbfe": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "adcc18ae0ac28b29301f86b4": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "df700d7ec19f1be4e2299709": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "02dd82c7d4f3d6dfd7db8021": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "c85fc10d5cd6378b47448605": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "d7020b3e27b95072f575071b": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "d6eb569e84e9453b2efcbf20": {
+      "location": "41220|세교동|596",
+      "apartment_name": "힐스테이트평택3차(3-1블록)",
+      "coordinates": [
+        37.0093858080806,
+        127.089185101396
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "764b0a0704bbc2a504762f5c": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "bcfebd7d1fa819a39abdb70a": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "c90d4767dc3a076e7d072e5b": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "08eb8113511e801d17c23358": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "0aeb1247e9ffda59279d3bdc": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "b2ae00925ae65589d5b271f4": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "4b62d9f23cc39b821468ec61": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "fd0abaeccd3d0ad4992f69d2": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "d451ebc55aae9e8264afe7ed": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "3313357eeaa0e3ac6d11b225": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "04a6fea0c6af3d2ff0c88a38": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "e34879c80fbf765e4d9b66c5": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "01c5d17cf28187e0f9536944": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "394cb46bc9cf51f7a6f7e5e6": {
+      "location": "41220|칠원동|613",
+      "apartment_name": "평택지제역동문굿모닝힐맘시티3단지",
+      "coordinates": [
+        37.0245085633232,
+        127.101488251506
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "8bb629e6dda80b5f7a7004c0": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "3d6a95dd79b6b844eefc1e49": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "5434444399cb4518066d78a3": {
+      "location": "41463|마북동|659",
+      "apartment_name": "e편한세상구성역플랫폼시티",
+      "coordinates": [
+        37.2962979956393,
+        127.111299474673
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "9f607995bb62ca6069c49624": {
+      "location": "41463|마북동|659",
+      "apartment_name": "e편한세상구성역플랫폼시티",
+      "coordinates": [
+        37.2962979956393,
+        127.111299474673
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "290529b44727aa05941ab6e4": {
+      "location": "41463|마북동|659",
+      "apartment_name": "e편한세상구성역플랫폼시티",
+      "coordinates": [
+        37.2962979956393,
+        127.111299474673
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     }
   },
-  "generated_at": "2026-10-29T09:41:35.878342+09:00"
+  "generated_at": "2026-11-08T16:37:33.421803+09:00"
 }
