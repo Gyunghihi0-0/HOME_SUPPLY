@@ -594,6 +594,36 @@
             "null"
           ],
           "minimum": 0
+        },
+        "collection_status": {
+          "type": "string",
+          "enum": [
+            "ok",
+            "partial",
+            "error",
+            "cached",
+            "not_checked",
+            "not_configured"
+          ]
+        },
+        "last_collected_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "collection_responses": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "collection_cached_responses": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "collection_errors": {
+          "type": "integer",
+          "minimum": 0
         }
       },
       "required": [

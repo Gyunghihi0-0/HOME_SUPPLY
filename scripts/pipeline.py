@@ -419,6 +419,9 @@ def run(output,pages=3,attachments=True,client=None,now=None,enrichment_only=Fal
         errors=[code for (_,host),code in origins.items() if host==hosts.get(entry['id'])]
         error=diagnostics.get('source_failures',{}).get(entry['id']) or (errors[0] if errors else None)
         if error:entry.update(status='error',error_code=error,message=error)
+    from scripts.collection_health import attach_health
+    for entry in sources:
+        if entry['id']!='gg' or not enrichment_only:attach_health(entry,client,previous_sources.get(entry['id']))
     success=all(s['status']=='ok' for s in sources)
     last=now.isoformat() if success else (previous or {}).get('last_success_at')
     if success:status='ok'

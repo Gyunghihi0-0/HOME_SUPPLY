@@ -124,8 +124,22 @@
       return (ub && analyzed(ub) ? ub[key] : -Infinity) - (ua && analyzed(ua) ? ua[key] : -Infinity) || String(a.l.name).localeCompare(String(b.l.name),'ko');
     });
   }
-  function delayed(source, now = new Date()) { return !!source.last_success_at && Number.isFinite(Date.parse(source.last_success_at)) && +now - Date.parse(source.last_success_at) > 36 * 3600000; }
-  const core = {money,date,status,deadlineNote,eligibility,analyzed,select,sortRows,safeURL,delayed,positive,opportunity};
+  function collectionHealth(source) {
+    const labels={ok:'정상 수집',partial:'일부 응답 실패',error:'수집 실패',cached:'저장 응답 사용 · 실시간 연결 미검사',not_checked:'이번 수집 판정 미기록',not_configured:'연동 준비 필요'};
+    const state=source.collection_status || (source.status==='ok' ? 'ok' : ['error','not_configured','not_checked'].includes(source.status) ? source.status : 'not_checked');
+    return {state,label:state==='not_checked' && source.collection_status ? '이번 실행에서 API 조회 없음' : labels[state] || labels.not_checked,stamp:source.last_collected_at || source.last_success_at || null};
+  }
+  function coverageNote(source) {
+    const code=source.error_code || '';
+    if (code==='analysis_batch_deferred') return '분석 일부 완료 · 남은 단지는 다음 실행에서 계속';
+    if (code==='notice_budget_exhausted' || code==='notice_update_in_progress') return '공고 일부 저장 · 남은 공고·첨부는 이어서 수집';
+    if (code==='notice_or_attachment_failed') return '첨부 문서 해석·공고 검증 일부 확인 대기';
+    if (code.includes('geocode_address_incomplete') || code.includes('exact_address_not_found')) return '일부 단지의 공식 주소·좌표 확인 대기';
+    if (code.includes('official_project') || code.includes('unit')) return '일부 공고의 공식 사업·주택형 연결 대기';
+    return source.status==='ok' ? '현재 작업 범위 완료' : source.status==='partial' ? '공고·가격·좌표·분석 일부 확인 대기' : '수집 상태 확인 필요';
+  }
+  function delayed(source, now = new Date()) { const stamp=collectionHealth(source).stamp;return !!stamp && Number.isFinite(Date.parse(stamp)) && +now-Date.parse(stamp)>36*3600000; }
+  const core = {money,date,status,deadlineNote,eligibility,analyzed,select,sortRows,safeURL,delayed,positive,opportunity,collectionHealth,coverageNote};
   if (typeof module !== 'undefined' && module.exports) module.exports = core;
   if (typeof document === 'undefined') return;
   const $ = s => document.querySelector(s);
@@ -167,16 +181,22 @@
   function renderMeta(now = new Date()) {
     const delayedSources = data.sources.filter(s=>delayed(s,now));
     const oldAttempt = Number.isFinite(Date.parse(data.generated_at)) && +now-Date.parse(data.generated_at)>36*3600000;
-    const healthText = {ok:'정상 갱신',partial:'일부 자료 확인 대기',stale:'수집 실패 · 이전 자료 표시',error:'수집 오류'};
+    const healthText = {ok:'정상 갱신',partial:'자료 수집·분석 일부 확인 대기',stale:'수집 실패 · 이전 자료 표시',error:'수집 오류'};
     $('#health').textContent = `${healthText[data.data_status] || '데이터 상태 확인 필요'}${oldAttempt || delayedSources.length ? ' · 36시간 이상 갱신 지연' : ''} — 미확인 자격·가격은 확정하지 않습니다. 신청 전 공식 공고를 확인하세요.`;
-    $('#updated').textContent = `JSON 생성: ${date(data.generated_at)} · 전체 출처 마지막 정상 갱신: ${data.last_success_at ? date(data.last_success_at) : '아직 전체 정상 갱신 기록 없음'}`;
+    const counts={};data.sources.forEach(s=>{const state=collectionHealth(s).state;counts[state]=(counts[state]||0)+1;});
+    $('#updated').textContent = `자료 생성: ${date(data.generated_at)} · 이번 출처 수집 판정: 정상 ${counts.ok||0} / 일부 응답 실패 ${counts.partial||0} / 실패 ${counts.error||0} / 저장 응답 ${counts.cached||0} / 미확인·미설정 ${(counts.not_checked||0)+(counts.not_configured||0)}. 공고 연결·분석 완료 여부는 아래에서 별도 확인하세요.`;
     const active = data.listings.filter(l=>eligibility(l,filters().scope)==='eligible');
     const current = active.filter(l=>['open','upcoming'].includes(status(l,now)));
     const nearest = [...current].filter(l=>l.apply_end_at).sort((a,b)=>compareDates(a.apply_end_at,b.apply_end_at))[0];
     const stats = [['접수 중',active.filter(l=>status(l,now)==='open').length,'단지'],['접수 예정',active.filter(l=>status(l,now)==='upcoming').length,'단지'],['차익 분석 가능',current.filter(l=>arr(l.units).some(analyzed)).length,'단지'],['가장 가까운 마감',nearest ? date(nearest.apply_end_at) : '확인된 일정 없음','']];
     $('#summary').innerHTML = stats.map(([a,b,c])=>`<article>${a}<strong>${esc(b)}<small>${c}</small></strong></article>`).join('');
-    const sourceStatus = {ok:'정상',partial:'일부 수집 미완료',error:'수집 실패',not_configured:'연동 준비 필요',not_checked:'미확인'};
-    $('#source-list').innerHTML = data.sources.map(s=>`<article class="source-card"><h3>${esc(s.name || '출처 미확인')}</h3><span class="badge check">${esc(sourceStatus[s.status] || '상태 미확인')}${delayed(s) ? ' · 36시간 초과 지연' : ''}</span><p>마지막 정상 갱신: ${esc(s.last_success_at ? date(s.last_success_at) : '정상 갱신 기록 없음')}</p><p>최근 확인: ${esc(date(s.checked_at))}<br>수집 건수: ${s.status === 'not_configured' || s.status === 'not_checked' || !num(s.records_count) ? '확인되지 않음' : esc(s.records_count)+'건'}</p>${s.error_code ? `<p>수집 상태 코드: ${esc(s.error_code)}</p>` : ''}${link(s.url,'공식 출처')}</article>`).join('') || empty('출처 정보 없음','제공된 수집 상태를 확인할 수 없습니다.');
+    $('#source-list').innerHTML = data.sources.map(s=>{
+      const h=collectionHealth(s);
+      const badge=h.state==='ok'?'open':h.state==='error'?'cancelled':'check';
+      const timing=h.stamp ? date(h.stamp) : '성공 시각 미기록 · 과거 자료가 없다는 의미는 아닙니다';
+      const counts=num(s.collection_responses) ? `<p>검증된 실제 응답 ${s.collection_responses}회 · 저장 응답 ${s.collection_cached_responses||0}회 · 오류 ${s.collection_errors||0}회</p>` : '<p>기존 데이터 형식 · 다음 실행부터 실제 응답 기준으로 판정합니다.</p>';
+      return `<article class="source-card"><h3>${esc(s.name || '출처 미확인')}</h3><span class="badge ${badge}">${esc(h.label)}${delayed(s) ? ' · 36시간 초과' : ''}</span><p>마지막 수집 성공: ${esc(timing)}</p><p>최근 확인 시도: ${esc(date(s.checked_at))}<br>작업 중 조회·처리 건수: ${num(s.records_count)?esc(s.records_count)+'건':'미확인'}<br><small>출처마다 집계 단위가 다르며 중복 조회가 포함될 수 있습니다.</small></p>${counts}<p>${esc(coverageNote(s))}</p>${s.error_code?`<details><summary>상세 진단 코드</summary><p>${esc(s.error_code)}</p></details>`:''}${link(s.url,'공식 출처')}</article>`;
+    }).join('') || empty('출처 정보 없음','제공된 수집 상태를 확인할 수 없습니다.');
   }
   async function load() {
     $('#reload').disabled = true; $('#results').setAttribute('aria-busy','true');

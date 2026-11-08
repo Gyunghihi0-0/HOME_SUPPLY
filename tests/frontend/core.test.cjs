@@ -109,3 +109,16 @@ test('future opportunity sorting favors eligible positive gaps before unknown el
  const rows=[{l:{name:'unknown',location_verified:true},s:'open',e:'check',us},{l:{name:'confirmed',location_verified:true},s:'upcoming',e:'eligible',us}];
  assert.equal(c.sortRows(rows,'gap',true)[0].l.name,'confirmed');
 });
+
+test('source collection and analysis coverage are independent',()=>{
+ const s={status:'partial',error_code:'analysis_batch_deferred',collection_status:'ok',last_collected_at:'2026-11-08T08:00:00Z'};
+ assert.equal(c.collectionHealth(s).label,'정상 수집');
+ assert.match(c.coverageNote(s),/분석 일부 완료/);
+ assert.equal(c.delayed(s,new Date('2026-11-08T09:00:00Z')),false);
+ assert.equal(c.collectionHealth({...s,collection_status:'error'}).label,'수집 실패');
+ assert.match(c.collectionHealth({...s,collection_status:'cached'}).label,/저장 응답/);
+});
+test('legacy partial records never imply current API success or a made-up timestamp',()=>{
+ const h=c.collectionHealth({status:'partial',records_count:75000,checked_at:'2026-11-08T08:00:00Z',last_success_at:null});
+ assert.equal(h.state,'not_checked');assert.equal(h.stamp,null);
+});

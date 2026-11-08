@@ -5,6 +5,7 @@ from datetime import date, timedelta
 from decimal import Decimal
 from defusedxml import ElementTree as ET
 from scripts.http_client import SourceError
+from scripts.collection_health import record_success,observe_failure
 
 APPLYHOME='https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/'
 MOLIT='https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev'
@@ -21,6 +22,7 @@ def won(value):
 
 class Applyhome:
     def __init__(self,client,key):self.client,self.key=client,key
+    @observe_failure('applyhome')
     def get(self,endpoint,filters):
         if not self.key:raise SourceError('missing_applyhome_key')
         rows=[]
@@ -31,7 +33,8 @@ class Applyhome:
             if not isinstance(d.get('data'),list) or 'totalCount' not in d:raise SourceError('applyhome_response_changed')
             rows.extend(d['data'])
             # odcloud totalCount is the dataset total; matchCount is the filtered total.
-            matched=d.get('matchCount',d['totalCount'])
+            matched=int(d.get('matchCount',d['totalCount']))
+            record_success(self.client,'applyhome')
             if len(rows)>=int(matched) or len(d['data'])<100:return rows
         raise SourceError('applyhome_pagination_limit')
     def project(self,mapping):
@@ -78,6 +81,7 @@ class Molit:
         self.allow_general_fallback=allow_general_fallback
         self.fallback_used=False
         self.last_source_url=TRADE_SOURCE
+    @observe_failure('molit')
     def month(self,lawd,month,now):
         if not self.key:raise SourceError('missing_molit_key')
         try:
@@ -104,7 +108,9 @@ class Molit:
             if root.findtext('.//resultCode') not in ('000','00'):raise SourceError('molit_api_error')
             total=root.findtext('.//totalCount')
             if total is None:raise SourceError('molit_structure_changed')
+            total=int(total)
             items=root.findall('.//items/item')
+            record_success(self.client,'molit')
             rows.extend({c.tag:(c.text or '').strip() for c in item} for item in items)
             if page*1000>=int(total):break
             if not items:raise SourceError('molit_empty_page')
