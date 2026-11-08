@@ -13,6 +13,7 @@ def refresh(output, timeout=540):
     output = Path(output)
     # Price analysis gets its own budget even when the notice board stalls.
     if output.exists():
+        notice_started=datetime.now(KST)
         try:
             notice = subprocess.run([sys.executable,'-u','-m','scripts.refresh_notices',str(output.resolve())],
                 cwd=ROOT,timeout=120,check=False)
@@ -22,6 +23,10 @@ def refresh(output, timeout=540):
             for entry in data['sources']:
                 if entry['id']=='gg':
                     code='notice_stage_timeout' if isinstance(exc,subprocess.TimeoutExpired) else 'notice_stage_process_failed'
+                    try:current=datetime.fromisoformat(entry['checked_at'])>=notice_started
+                    except (KeyError,TypeError,ValueError):current=False
+                    if not current:
+                        entry.update(collection_status='not_checked',collection_responses=0,collection_cached_responses=0,collection_errors=0)
                     entry.update(status='error',checked_at=datetime.now(KST).isoformat(),error_code=code,message='공고 갱신 미완료 · 마지막 체크포인트와 기존 자료 보존')
             data['data_status']='stale'
             atomic_write(output,data)
@@ -38,7 +43,9 @@ def refresh(output, timeout=540):
             data['generated_at'] = datetime.now(KST).isoformat()
             data['data_status'] = 'stale' if data['listings'] else 'error'
             for source in data['sources']:
-                if source['id']!='gg':source.update(status='not_checked', error_code=code, message=code, records_count=None)
+                if source['id']!='gg':
+                    source.update(status='not_checked',error_code=code,message=code,records_count=None,
+                        collection_status='not_checked',collection_responses=0,collection_cached_responses=0,collection_errors=0)
             atomic_write(output, data)
         print('::error::' + code, flush=True)
         return 1

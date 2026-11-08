@@ -194,7 +194,7 @@
       const h=collectionHealth(s);
       const badge=h.state==='ok'?'open':h.state==='error'?'cancelled':'check';
       const timing=h.stamp ? date(h.stamp) : '성공 시각 미기록 · 과거 자료가 없다는 의미는 아닙니다';
-      const counts=num(s.collection_responses) ? `<p>검증된 실제 응답 ${s.collection_responses}회 · 저장 응답 ${s.collection_cached_responses||0}회 · 오류 ${s.collection_errors||0}회</p>` : '<p>기존 데이터 형식 · 다음 실행부터 실제 응답 기준으로 판정합니다.</p>';
+      const counts=num(s.collection_responses) ? `<p>검증된 실제 응답 ${s.collection_responses}회 · 저장 응답 ${num(s.collection_cached_responses)?s.collection_cached_responses:0}회 · 오류 ${num(s.collection_errors)?s.collection_errors:0}회</p>` : '<p>기존 데이터 형식 · 다음 실행부터 실제 응답 기준으로 판정합니다.</p>';
       return `<article class="source-card"><h3>${esc(s.name || '출처 미확인')}</h3><span class="badge ${badge}">${esc(h.label)}${delayed(s) ? ' · 36시간 초과' : ''}</span><p>마지막 수집 성공: ${esc(timing)}</p><p>최근 확인 시도: ${esc(date(s.checked_at))}<br>작업 중 조회·처리 건수: ${num(s.records_count)?esc(s.records_count)+'건':'미확인'}<br><small>출처마다 집계 단위가 다르며 중복 조회가 포함될 수 있습니다.</small></p>${counts}<p>${esc(coverageNote(s))}</p>${s.error_code?`<details><summary>상세 진단 코드</summary><p>${esc(s.error_code)}</p></details>`:''}${link(s.url,'공식 출처')}</article>`;
     }).join('') || empty('출처 정보 없음','제공된 수집 상태를 확인할 수 없습니다.');
   }

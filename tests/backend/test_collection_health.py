@@ -78,3 +78,22 @@ def test_new_health_fields_validate_without_changing_legacy_schema_version():
     attach_health(data['sources'][0],client)
     validate(data)
     assert data['schema_version']=='1.0.0'
+
+def test_hard_timeout_cannot_reuse_last_runs_success_badge(tmp_path,monkeypatch):
+    import subprocess
+    from scripts.pipeline import ROOT
+    from scripts.daily_refresh import refresh
+    data=json.loads((ROOT/'contracts/example-latest.json').read_text(encoding='utf-8'))
+    for entry in data['sources']:
+        entry.update(collection_status='ok',collection_responses=10,last_collected_at='2026-11-07T08:00:00Z')
+    output=tmp_path/'latest.json';output.write_text(json.dumps(data),encoding='utf-8')
+    def run(args,**kwargs):
+        if 'scripts.refresh_notices' in args:return SimpleNamespace(returncode=0)
+        raise subprocess.TimeoutExpired('pipeline',540)
+    monkeypatch.setattr(subprocess,'run',run)
+    assert refresh(output)==1
+    after=json.loads(output.read_text(encoding='utf-8'))
+    for entry in after['sources']:
+        if entry['id']=='gg':continue
+        assert entry['collection_status']=='not_checked' and entry['collection_responses']==0
+        assert entry['last_collected_at']=='2026-11-07T08:00:00Z'
