@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+      "checked_at": "2026-11-08T17:36:26.353836+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -24,13 +24,10 @@
       ],
       "build_year": 2032,
       "lawd_codes": [
-        "41370",
-        "41463",
-        "41595",
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+      "checked_at": "2026-11-08T17:36:26.353836+09:00"
     },
     "gg_266126622_p2026000508_2026000508": {
       "address": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
@@ -74,7 +71,7 @@
         "41115"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
+      "checked_at": "2026-11-08T17:36:26.353836+09:00"
     },
     "gg_258477420": {
       "address": "성남시 분당구 정자동 90",
@@ -88,7 +85,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
+      "checked_at": "2026-11-08T17:36:26.353836+09:00"
     },
     "gg_265886763": {
       "address": "화성시 만세구 향남읍 상신리 산 13-13 일원",
@@ -114,7 +111,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+      "checked_at": "2026-11-08T17:36:26.353836+09:00"
     },
     "gg_265886741": {
       "address": "경기도 평택시 세교동 725번지 일원 (평택영신지구 도시개발사업 2BL)",
@@ -127,7 +124,7 @@
         "41220"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+      "checked_at": "2026-11-08T17:36:26.353836+09:00"
     },
     "gg_266366609": {
       "address": "용인시 기흥구 마북동 298-1 번지 일원",
@@ -141,7 +138,7 @@
         "41465"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+      "checked_at": "2026-11-08T17:36:26.353836+09:00"
     }
   },
   "comparables": {
@@ -425,36 +422,6 @@
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-10-29T09:33:32.726486+09:00"
     },
-    "f0ce1d0080ad0bdf0703a51c": {
-      "location": "41135|정자동|215",
-      "apartment_name": "더샵분당파크리버",
-      "coordinates": [
-        37.3550563216371,
-        127.117240942378
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
-    "9c0fb6e943ef2707ae461e74": {
-      "location": "41135|정자동|215",
-      "apartment_name": "더샵분당파크리버",
-      "coordinates": [
-        37.3550563216371,
-        127.117240942378
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
-    "3d429b457c8250ac5d322263": {
-      "location": "41135|정자동|215",
-      "apartment_name": "더샵분당파크리버",
-      "coordinates": [
-        37.3550563216371,
-        127.117240942378
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
     "0f2b6ea6c241bc3c9ee8ed6a": {
       "location": "41135|정자동|215",
       "apartment_name": "더샵분당파크리버",
@@ -466,26 +433,6 @@
       "checked_at": "2026-10-29T09:33:32.726486+09:00"
     },
     "59ea75c8c8fa061525adc24d": {
-      "location": "41135|정자동|215",
-      "apartment_name": "더샵분당파크리버",
-      "coordinates": [
-        37.3550563216371,
-        127.117240942378
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
-    "d90060931e88ea6d75045496": {
-      "location": "41135|정자동|215",
-      "apartment_name": "더샵분당파크리버",
-      "coordinates": [
-        37.3550563216371,
-        127.117240942378
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
-    "7c2936eb230eb165588c1fbe": {
       "location": "41135|정자동|215",
       "apartment_name": "더샵분당파크리버",
       "coordinates": [
@@ -2074,7 +2021,27 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "ed82a1cab1f2b71811f325bb": {
+      "location": "41135|정자동|215",
+      "apartment_name": "더샵분당파크리버",
+      "coordinates": [
+        37.3550563216371,
+        127.117240942378
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-29T09:33:32.726486+09:00"
+    },
+    "a8a04ed63a07469c82972635": {
+      "location": "41135|정자동|215",
+      "apartment_name": "더샵분당파크리버",
+      "coordinates": [
+        37.3550563216371,
+        127.117240942378
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-29T09:33:32.726486+09:00"
     }
   },
-  "generated_at": "2026-11-08T16:37:33.421803+09:00"
+  "generated_at": "2026-11-08T17:43:27.777273+09:00"
 }
