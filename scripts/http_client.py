@@ -27,7 +27,7 @@ class Client:
 
     def request(self,url,method='GET',params=None,data=None,ttl=0,robots=False,headers=None,public_document=False):
         remaining=self.deadline-time.monotonic() if self.deadline else None
-        if remaining is not None and remaining<=0:raise SourceError('notice_budget_exhausted')
+        if remaining is not None and remaining<=0:raise SourceError(getattr(self,'budget_error','notice_budget_exhausted'))
         if os.getenv('HOME_SUPPLY_FORCE_REFRESH','').lower()=='true':ttl=0
         if urlsplit(url).scheme!='https':
             raise SourceError('insecure_url')
@@ -62,7 +62,7 @@ class Client:
                     raise SourceError(f'http_{response.status_code}')
                 chunks=[]; size=0
                 for chunk in response.iter_content(65536):
-                    if self.deadline and time.monotonic()>=self.deadline:raise SourceError('notice_budget_exhausted')
+                    if self.deadline and time.monotonic()>=self.deadline:raise SourceError(getattr(self,'budget_error','notice_budget_exhausted'))
                     size+=len(chunk)
                     if size>20_000_000:
                         raise SourceError('response_too_large')

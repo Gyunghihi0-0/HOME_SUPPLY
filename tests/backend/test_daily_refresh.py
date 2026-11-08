@@ -46,7 +46,23 @@ def test_timeout_preserves_records_and_does_not_claim_source_checks(tmp_path, mo
     assert after['listings'] == before['listings']
     assert after['last_success_at'] == before['last_success_at']
     assert after['data_status'] == 'stale'
-    assert all(s['status']=='not_checked' and s['error_code']=='daily_refresh_timeout' for s in after['sources'])
+    assert all(s['status']=='not_checked' and s['error_code']=='daily_refresh_timeout' for s in after['sources'] if s['id']!='gg')
+    assert next(s for s in after['sources'] if s['id']=='gg')['error_code']=='notice_stage_timeout'
+
+
+def test_price_timeout_does_not_erase_successful_notice_source(tmp_path,monkeypatch):
+    from types import SimpleNamespace
+    data=json.loads((ROOT/'contracts/example-latest.json').read_text(encoding='utf-8'))
+    gg=next(s for s in data['sources'] if s['id']=='gg')
+    gg.update(status='ok',error_code=None,message=None)
+    output=tmp_path/'latest.json';output.write_text(json.dumps(data),encoding='utf-8')
+    def run(args,**kwargs):
+        if 'scripts.refresh_notices' in args:return SimpleNamespace(returncode=0)
+        raise subprocess.TimeoutExpired('pipeline',540)
+    monkeypatch.setattr(subprocess,'run',run)
+    assert refresh(output)==1
+    after=json.loads(output.read_text(encoding='utf-8'))
+    assert next(s for s in after['sources'] if s['id']=='gg')==gg
 
 
 def test_vworld_failure_is_not_reported_as_molit_transport_failure(monkeypatch):
