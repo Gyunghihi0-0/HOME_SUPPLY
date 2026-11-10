@@ -1,21 +1,21 @@
 {
-  "observed_at": "2026-11-09T09:21:40.131004+09:00",
-  "catalog_cutoff": "2025-11-09",
+  "observed_at": "2026-11-10T12:05:54.507102+09:00",
+  "catalog_cutoff": "2025-11-10",
   "catalog_records": 369,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/42539591606",
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/42746940604",
   "metrics": {
-    "notices": 36,
-    "project_records": 38,
+    "notices": 38,
+    "project_records": 40,
     "matched_projects": 19,
-    "units": 123,
+    "units": 127,
     "priced_units": 68,
-    "exact_area_units": 95,
+    "exact_area_units": 99,
     "coordinate_projects": 10,
-    "verified_trade_records": 189,
+    "verified_trade_records": 190,
     "gap_units": 31
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 9,
+    "공식 정보가 아직 없음": 11,
     "실제 연결 성공": 18,
     "추가 개발 필요": 11
   },
@@ -24,6 +24,121 @@
     "이름 유사도 후보는 자동 확정에 사용하지 않음"
   ],
   "records": [
+    {
+      "id": "gg_274329616",
+      "notice_id": "gg_274329616",
+      "name": "서수원 제일풍경채C-4BL",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274329616",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": 84.911,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": 84.9052,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84C",
+          "price": null,
+          "exclusive_area": 84.9191,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84D",
+          "price": null,
+          "exclusive_area": 84.9417,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "제일풍경채 첨단3지구(A6BL)",
+          "address": "광주연구개발특구 첨단3지구 A6블록(전남광주통합특별시 북구 월출동) ",
+          "manage_no": "2026000342",
+          "similarity": 0.583
+        },
+        {
+          "name": "제일풍경채 광주 포에듀",
+          "address": "경기도 광주시 탄벌동 203-4번지 일원 (탄벌A지구 A5블럭)",
+          "manage_no": "2026000557",
+          "similarity": 0.455
+        },
+        {
+          "name": "서수원 에피트 센트럴마크(M1BL)",
+          "address": "경기도 수원시 권선구 당수동 3001번지 일원 (수원당수 공공주택지구 M1BL)",
+          "manage_no": "2025000554",
+          "similarity": 0.37
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_274329581",
+      "notice_id": "gg_274329581",
+      "name": "아르뮤제자이",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274329581",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [],
+      "review_candidates": [
+        {
+          "name": "연제갤러리자이",
+          "address": "부산광역시 연제구 연산동 1123-1번지",
+          "manage_no": "2026000469",
+          "similarity": 0.462
+        },
+        {
+          "name": "상주자이르네",
+          "address": "경상북도 상주시 함창읍 윤직리 840번지 일원",
+          "manage_no": "2026000038",
+          "similarity": 0.333
+        },
+        {
+          "name": "달서자이 제니크",
+          "address": "대구광역시 달서구 본리동 661-9번지 일원",
+          "manage_no": "2026000376",
+          "similarity": 0.308
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_256574856",
       "notice_id": "gg_256574856",
@@ -917,7 +1032,7 @@
           "price": 708750000,
           "exclusive_area": 84.9424,
           "allocation": 8,
-          "gap": -228750000.0,
+          "gap": -228750000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -926,7 +1041,7 @@
           "price": 700950000,
           "exclusive_area": 84.9927,
           "allocation": 3,
-          "gap": -220950000.0,
+          "gap": -220950000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -935,7 +1050,7 @@
           "price": 724500000,
           "exclusive_area": 84.9839,
           "allocation": 3,
-          "gap": -244500000.0,
+          "gap": -244500000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -944,7 +1059,7 @@
           "price": 723500000,
           "exclusive_area": 84.9199,
           "allocation": 2,
-          "gap": -243500000.0,
+          "gap": -243500000,
           "code": "verified",
           "label": "실제 연결 성공"
         }

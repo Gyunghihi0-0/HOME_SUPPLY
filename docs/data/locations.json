@@ -9,10 +9,12 @@
       ],
       "build_year": 2029,
       "lawd_codes": [
+        "41360",
+        "41610",
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-09T09:21:40.131004+09:00"
+      "checked_at": "2026-11-10T12:05:54.507102+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -72,7 +74,7 @@
         "41115"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T17:36:26.353836+09:00"
+      "checked_at": "2026-11-10T12:05:54.507102+09:00"
     },
     "gg_258477420": {
       "address": "성남시 분당구 정자동 90",
@@ -86,7 +88,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T17:36:26.353836+09:00"
+      "checked_at": "2026-11-10T12:05:54.507102+09:00"
     },
     "gg_265886763": {
       "address": "화성시 만세구 향남읍 상신리 산 13-13 일원",
@@ -112,7 +114,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-09T09:21:40.131004+09:00"
+      "checked_at": "2026-11-10T12:05:54.507102+09:00"
     },
     "gg_265886741": {
       "address": "경기도 평택시 세교동 725번지 일원 (평택영신지구 도시개발사업 2BL)",
@@ -125,7 +127,7 @@
         "41220"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-09T09:21:40.131004+09:00"
+      "checked_at": "2026-11-10T12:05:54.507102+09:00"
     },
     "gg_266366609": {
       "address": "용인시 기흥구 마북동 298-1 번지 일원",
@@ -139,7 +141,7 @@
         "41465"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-09T09:21:40.131004+09:00"
+      "checked_at": "2026-11-10T12:05:54.507102+09:00"
     }
   },
   "comparables": {
@@ -819,16 +821,6 @@
       "coordinates": [
         37.4153933881875,
         127.240575827796
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
-    },
-    "fe126aceab95b68fe99b4b66": {
-      "location": "41220|칠원동|542",
-      "apartment_name": "평택지제역동문굿모닝힐맘시티1단지",
-      "coordinates": [
-        37.0268259175679,
-        127.102372202181
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
@@ -2032,7 +2024,27 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-10-29T09:33:32.726486+09:00"
+    },
+    "40ce3bd7a9b2e3fee6d4ae0d": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "9ca678f5788bb1fbe2d773be": {
+      "location": "41220|동삭동|416",
+      "apartment_name": "e편한세상지제역",
+      "coordinates": [
+        37.0155692265598,
+        127.088306869416
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     }
   },
-  "generated_at": "2026-11-09T09:28:41.431725+09:00"
+  "generated_at": "2026-11-10T12:12:55.918078+09:00"
 }
