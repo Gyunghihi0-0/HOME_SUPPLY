@@ -1,21 +1,21 @@
 {
-  "observed_at": "2026-11-10T12:05:54.507102+09:00",
-  "catalog_cutoff": "2025-11-10",
-  "catalog_records": 369,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/42746940604",
+  "observed_at": "2026-11-11T09:58:46.000053+09:00",
+  "catalog_cutoff": "2025-11-11",
+  "catalog_records": 367,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/42935292163",
   "metrics": {
-    "notices": 38,
-    "project_records": 40,
+    "notices": 40,
+    "project_records": 42,
     "matched_projects": 19,
-    "units": 127,
+    "units": 131,
     "priced_units": 68,
-    "exact_area_units": 99,
+    "exact_area_units": 100,
     "coordinate_projects": 10,
-    "verified_trade_records": 190,
+    "verified_trade_records": 191,
     "gap_units": 31
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 11,
+    "공식 정보가 아직 없음": 13,
     "실제 연결 성공": 18,
     "추가 개발 필요": 11
   },
@@ -24,6 +24,56 @@
     "이름 유사도 후보는 자동 확정에 사용하지 않음"
   ],
   "records": [
+    {
+      "id": "gg_274572401",
+      "notice_id": "gg_274572401",
+      "name": "소사 휴먼빌",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274572401",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": 59.9906,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "이천 휴먼빌 클래스원",
+          "address": "경기도 이천시 갈산동 572-1번지 일원",
+          "manage_no": "2026000291",
+          "similarity": 0.429
+        },
+        {
+          "name": "천안 휴먼빌 퍼스트시티(2회차)",
+          "address": "충청남도 천안시 서북구 부대동 416-1번지 일원",
+          "manage_no": "2026000127",
+          "similarity": 0.333
+        },
+        {
+          "name": "센텀 엘카사",
+          "address": "울산광역시 울주군 온양읍 화산발리로 706",
+          "manage_no": "2026000328",
+          "similarity": 0.2
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_274329616",
       "notice_id": "gg_274329616",
@@ -136,6 +186,74 @@
       ],
       "coordinate_verified": false,
       "collection_issues": [
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_274086933",
+      "notice_id": "gg_274086933",
+      "name": "한신더휴 퍼스트원",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274086933",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "71",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "의왕역 한신더휴",
+          "address": "경기도 의왕시 삼동 244-1번지 일원",
+          "manage_no": "2026000377",
+          "similarity": 0.533
+        },
+        {
+          "name": "더샵 안동더퍼스트",
+          "address": "경상북도 안동시 옥동 1069번지 일원",
+          "manage_no": "2026000093",
+          "similarity": 0.5
+        },
+        {
+          "name": "더샵 여주역더퍼스트",
+          "address": "경기도 여주시 홍문동 332-2번지 일원",
+          "manage_no": "2026000394",
+          "similarity": 0.471
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
         "official_project_not_in_catalog"
       ]
     },
@@ -1953,7 +2071,7 @@
           "price": 470300000,
           "exclusive_area": 71.8178,
           "allocation": 1,
-          "gap": -45300000.0,
+          "gap": -55300000,
           "code": "verified",
           "label": "실제 연결 성공"
         },

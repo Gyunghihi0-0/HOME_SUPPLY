@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-10T12:05:54.507102+09:00"
+      "checked_at": "2026-11-11T09:58:46.000053+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -30,7 +30,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-09T09:21:40.131004+09:00"
+      "checked_at": "2026-11-11T09:58:46.000053+09:00"
     },
     "gg_266126622_p2026000508_2026000508": {
       "address": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
@@ -46,7 +46,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-09T09:21:40.131004+09:00"
+      "checked_at": "2026-11-11T09:58:46.000053+09:00"
     },
     "gg_262772736": {
       "address": "화성특례시 만세구 향남읍 하길리 404-2 번지 일원",
@@ -59,7 +59,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-09T09:21:40.131004+09:00"
+      "checked_at": "2026-11-11T09:58:46.000053+09:00"
     },
     "gg_260861016": {
       "address": "경기도 수원시 권선구 서둔동 212-1번지 일원",
@@ -101,7 +101,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-09T09:21:40.131004+09:00"
+      "checked_at": "2026-11-11T09:58:46.000053+09:00"
     },
     "gg_272148401": {
       "address": "경기도 광주시 탄벌동 203-4 번지 일원",
@@ -114,7 +114,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-10T12:05:54.507102+09:00"
+      "checked_at": "2026-11-11T09:58:46.000053+09:00"
     },
     "gg_265886741": {
       "address": "경기도 평택시 세교동 725번지 일원 (평택영신지구 도시개발사업 2BL)",
@@ -127,7 +127,7 @@
         "41220"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-10T12:05:54.507102+09:00"
+      "checked_at": "2026-11-11T09:58:46.000053+09:00"
     },
     "gg_266366609": {
       "address": "용인시 기흥구 마북동 298-1 번지 일원",
@@ -141,7 +141,7 @@
         "41465"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-10T12:05:54.507102+09:00"
+      "checked_at": "2026-11-11T09:58:46.000053+09:00"
     }
   },
   "comparables": {
@@ -2044,7 +2044,17 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "3a1d3c2fd8a98e14efe0feb3": {
+      "location": "41591|향남읍 상신리|1349",
+      "apartment_name": "한양수자인디에스티지",
+      "coordinates": [
+        37.1014794117746,
+        126.903785384834
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-29T09:33:32.726486+09:00"
     }
   },
-  "generated_at": "2026-11-10T12:12:55.918078+09:00"
+  "generated_at": "2026-11-11T10:05:46.652335+09:00"
 }
