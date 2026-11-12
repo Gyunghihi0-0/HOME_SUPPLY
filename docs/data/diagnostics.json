@@ -1,22 +1,22 @@
 {
-  "observed_at": "2026-11-11T09:58:46.000053+09:00",
-  "catalog_cutoff": "2025-11-11",
+  "observed_at": "2026-11-12T11:05:40.937281+09:00",
+  "catalog_cutoff": "2025-11-12",
   "catalog_records": 367,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/42935292163",
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/43138745791",
   "metrics": {
-    "notices": 40,
-    "project_records": 42,
-    "matched_projects": 19,
-    "units": 131,
-    "priced_units": 68,
-    "exact_area_units": 100,
-    "coordinate_projects": 10,
-    "verified_trade_records": 191,
-    "gap_units": 31
+    "notices": 42,
+    "project_records": 44,
+    "matched_projects": 20,
+    "units": 134,
+    "priced_units": 69,
+    "exact_area_units": 101,
+    "coordinate_projects": 11,
+    "verified_trade_records": 212,
+    "gap_units": 32
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 13,
-    "실제 연결 성공": 18,
+    "공식 정보가 아직 없음": 14,
+    "실제 연결 성공": 19,
     "추가 개발 필요": 11
   },
   "limitations": [
@@ -24,6 +24,65 @@
     "이름 유사도 후보는 자동 확정에 사용하지 않음"
   ],
   "records": [
+    {
+      "id": "gg_274815288",
+      "notice_id": "gg_274815288",
+      "name": "의정부법조타운 S1블록 공공분양주택",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274815288",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "의정부우정 A2블록 공공분양주택(본청약)",
+          "address": "경기도 의정부시 녹양동 일원 의정부우정 공공주택지구 내 A-2블록",
+          "manage_no": "2026000409",
+          "similarity": 0.5
+        },
+        {
+          "name": "울산다운2지구 A-10블록 공공분양주택",
+          "address": "울산광역시 울주군 범서읍 서사리 일원 울산다운2 공공주택지구내 A-10블록",
+          "manage_no": "2025000649",
+          "similarity": 0.381
+        },
+        {
+          "name": "시흥거모지구 S-1블록 공공분양(본청약)",
+          "address": "경기도 시흥시 거모동, 군자동 일원 시흥거모 공공주택지구 내 S-1블록",
+          "manage_no": "2026000531",
+          "similarity": 0.348
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_274572401",
       "notice_id": "gg_274572401",
@@ -255,6 +314,57 @@
         "announcement_only_update",
         "attachment_text_extracted",
         "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_274086932",
+      "notice_id": "gg_274086932",
+      "name": "의왕역 한신더휴",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274086932",
+      "stages": {
+        "notice": "verified",
+        "project": "verified"
+      },
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "59A",
+          "price": 725000000,
+          "exclusive_area": 59.9942,
+          "allocation": 1,
+          "gap": -100000000,
+          "code": "verified",
+          "label": "실제 연결 성공"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "의왕역 한신더휴",
+          "address": "경기도 의왕시 삼동 244-1번지 일원",
+          "manage_no": "2026000377",
+          "similarity": 1.0
+        },
+        {
+          "name": "창원 한신더휴 메가센텀",
+          "address": "경상남도 창원시 마산회원구 회원동 480-31번지 일대",
+          "manage_no": "2026000282",
+          "similarity": 0.471
+        },
+        {
+          "name": "의왕역 SK VIEW",
+          "address": "경기도 의왕시 삼동 192-244번지 일원",
+          "manage_no": "2026000301",
+          "similarity": 0.375
+        }
+      ],
+      "coordinate_verified": true,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "district_coverage_sampled",
+        "target_build_year_uses_official_planned_move_year"
       ]
     },
     {
@@ -610,6 +720,7 @@
       ],
       "coordinate_verified": true,
       "collection_issues": [
+        "analysis_deferred",
         "announcement_only_update",
         "attachment_text_extracted",
         "district_coverage_sampled",
@@ -2788,7 +2899,7 @@
           "price": 2163000000,
           "exclusive_area": 66.0,
           "allocation": 1,
-          "gap": -503000000,
+          "gap": -633000000,
           "code": "verified",
           "label": "실제 연결 성공"
         },

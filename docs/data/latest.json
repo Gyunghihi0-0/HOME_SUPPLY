@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-11T10:05:46.652335+09:00",
+  "generated_at": "2026-11-12T11:12:42.321135+09:00",
   "last_success_at": null,
   "data_status": "partial",
   "sources": [
@@ -9,14 +9,14 @@
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
       "status": "partial",
-      "checked_at": "2026-11-11T09:57:25.058165+09:00",
+      "checked_at": "2026-11-12T11:04:19.836513+09:00",
       "last_success_at": null,
       "error_code": "notice_budget_exhausted",
       "message": "notice_budget_exhausted",
-      "records_count": 2,
+      "records_count": 3,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-11T00:58:22.677791+00:00",
-      "collection_responses": 3,
+      "last_collected_at": "2026-11-12T02:05:26.226605+00:00",
+      "collection_responses": 4,
       "collection_cached_responses": 0,
       "collection_errors": 0
     },
@@ -25,15 +25,15 @@
       "name": "청약홈 분양정보",
       "url": "https://www.data.go.kr/data/15098547/openapi.do",
       "status": "partial",
-      "checked_at": "2026-11-11T09:58:46.000053+09:00",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00",
       "last_success_at": null,
       "error_code": "analysis_batch_deferred",
       "message": "분석 예산 내 완료분 저장 · 미완료 단지는 다음 실행에서 계속",
       "records_count": 12,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-11T01:05:28.706189+00:00",
-      "collection_responses": 28,
-      "collection_cached_responses": 12,
+      "last_collected_at": "2026-11-12T02:12:34.199563+00:00",
+      "collection_responses": 29,
+      "collection_cached_responses": 11,
       "collection_errors": 0
     },
     {
@@ -41,14 +41,14 @@
       "name": "국토교통부 실거래가",
       "url": "https://www.data.go.kr/data/15126468/openapi.do",
       "status": "partial",
-      "checked_at": "2026-11-11T09:58:46.000053+09:00",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00",
       "last_success_at": null,
       "error_code": "analysis_batch_deferred",
       "message": "분석 예산 내 완료분 저장 · 미완료 단지는 다음 실행에서 계속",
-      "records_count": 75863,
+      "records_count": 51764,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-11T01:05:44.641388+00:00",
-      "collection_responses": 115,
+      "last_collected_at": "2026-11-12T02:12:17.656201+00:00",
+      "collection_responses": 119,
       "collection_cached_responses": 0,
       "collection_errors": 0
     },
@@ -57,19 +57,110 @@
       "name": "카카오 주소 좌표",
       "url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "status": "partial",
-      "checked_at": "2026-11-11T09:58:46.000053+09:00",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00",
       "last_success_at": null,
-      "error_code": "geocode_address_incomplete",
-      "message": "geocode_address_incomplete",
-      "records_count": 10,
+      "error_code": "kakao_exact_address_not_found",
+      "message": "kakao_exact_address_not_found",
+      "records_count": 11,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-11T01:05:40.538800+00:00",
-      "collection_responses": 193,
+      "last_collected_at": "2026-11-12T02:12:40.209264+00:00",
+      "collection_responses": 174,
       "collection_cached_responses": 0,
       "collection_errors": 0
     }
   ],
   "listings": [
+    {
+      "id": "gg_274815288",
+      "name": "의정부법조타운 S1블록 공공분양주택",
+      "address": "의정부법조타운 S1블록",
+      "region": null,
+      "district": null,
+      "housing_type": "unknown",
+      "status": "upcoming",
+      "apply_start_at": "2026-11-19",
+      "apply_end_at": "2026-11-25",
+      "deadline_note": "정확한 마감 시각은 공식 안내 확인 필요",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274815288",
+      "notice_updated_at": "2026-11-11",
+      "updated_at": "2026-11-12T11:04:19.836513+09:00",
+      "eligibility": {
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=906313",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+        "conditions": [
+          "신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
+      },
+      "units": [
+        {
+          "type_id": "59B",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
+      "attachments": [
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=906313",
+          "name": "붙임2) 의정부 「의정부법조타운 S1블록 공공분양주택」 장애인 특별공급 안내 및 관련서식.hwpx",
+          "parse_status": "parsed",
+          "error_code": null
+        },
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=906314",
+          "name": "붙임3) 의정부법조타운 S1블록 기관추천 안내문.pdf",
+          "parse_status": "parsed",
+          "error_code": null
+        }
+      ],
+      "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274815288",
+          "published_on": "2026-11-11",
+          "content_sha256": "9d833679d15a524af7c75e6118b9de3fb44cc4ab0482a640cb051ea4708a3400",
+          "observed_at": "2026-11-12T11:04:19.836513+09:00",
+          "change_type": "initial"
+        }
+      ],
+      "housing_manage_no": null,
+      "pblanc_no": null,
+      "location_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_274572401",
       "name": "소사 휴먼빌",
@@ -424,6 +515,322 @@
       ]
     },
     {
+      "id": "gg_274086932",
+      "name": "의왕역 한신더휴",
+      "address": "경기도 의왕시 삼동 244-1번지 일원",
+      "region": "의왕시",
+      "district": null,
+      "housing_type": "private_apt",
+      "status": "cancelled",
+      "apply_start_at": "2026-11-16T09:00:00+09:00",
+      "apply_end_at": "2026-11-20T18:00:00+09:00",
+      "deadline_note": null,
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274086932",
+      "notice_updated_at": "2026-11-09",
+      "updated_at": "2026-11-12T11:04:19.836513+09:00",
+      "eligibility": {
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=906018",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 27.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+        "conditions": [
+          "신청마감일 당시(’26. 11. 27.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
+      },
+      "units": [
+        {
+          "type_id": "59A",
+          "area_sqm": 59.9942,
+          "allocation_count": 1,
+          "sale_price_krw": 725000000,
+          "sale_price_basis": "area_family_maximum",
+          "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
+          "comparison_median_krw": 625000000,
+          "estimated_gap_krw": -100000000,
+          "gap_rate_pct": -13.79,
+          "comparables_count": 19,
+          "confidence": "low",
+          "analysis_reason": "six_month_window; area_family_type_unconfirmed; conservative_family_maximum_price; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
+          "analysis_policy_version": "2026-10-18-user-1",
+          "comparables": [
+            {
+              "id": "ae7755856ad6ade1969df52e",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9813,
+              "trade_date": "2026-06-02",
+              "price_krw": 585000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "e4046bd0b44b26398658bd14",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9994,
+              "trade_date": "2026-06-08",
+              "price_krw": 620000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "079f1477c456ba9e8c43974a",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9813,
+              "trade_date": "2026-06-13",
+              "price_krw": 600000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "30f537abf21f1bc774645f41",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9813,
+              "trade_date": "2026-06-14",
+              "price_krw": 615000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "24c8eaf4ad87bbca73947980",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9813,
+              "trade_date": "2026-07-02",
+              "price_krw": 627000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "786a5604873fae72156020d9",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9994,
+              "trade_date": "2026-07-04",
+              "price_krw": 625000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "918f303280792c23ccc68289",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9813,
+              "trade_date": "2026-07-22",
+              "price_krw": 625000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "013103bd7e9867b55058d715",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9994,
+              "trade_date": "2026-07-30",
+              "price_krw": 588000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "a94600a7da818492a647d013",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9813,
+              "trade_date": "2026-08-12",
+              "price_krw": 637000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "0104fca4913e9ab33faa47f4",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9994,
+              "trade_date": "2026-08-13",
+              "price_krw": 624000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "6486c6027d23af0dce05efaa",
+              "apartment_name": "엘리프의왕역",
+              "location": "41430|초평동|636",
+              "area_sqm": 55.99,
+              "trade_date": "2026-08-27",
+              "price_krw": 705000000,
+              "build_year": 2023,
+              "distance_m": 1154.4,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "60f9a94290f22b97d96d9111",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9813,
+              "trade_date": "2026-09-18",
+              "price_krw": 650000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "6ecb78f06d6e211a2d310fbf",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9994,
+              "trade_date": "2026-09-22",
+              "price_krw": 637000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "68b826e47ca42ffdc98491c4",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9994,
+              "trade_date": "2026-09-30",
+              "price_krw": 600000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "d933c3c880c98c9c26c63682",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9994,
+              "trade_date": "2026-10-03",
+              "price_krw": 645000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "ed3cb1d0c41fa2f992bcab7a",
+              "apartment_name": "엘리프의왕역",
+              "location": "41430|초평동|636",
+              "area_sqm": 55.98,
+              "trade_date": "2026-10-07",
+              "price_krw": 670000000,
+              "build_year": 2023,
+              "distance_m": 1154.4,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "a4a4e549d8966e9f2b451f4d",
+              "apartment_name": "의왕푸르지오포레움2블럭",
+              "location": "41430|삼동|607",
+              "area_sqm": 59.9994,
+              "trade_date": "2026-10-08",
+              "price_krw": 600000000,
+              "build_year": 2020,
+              "distance_m": 380.2,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "f969c98d5d5c397c7509314f",
+              "apartment_name": "엘리프의왕역",
+              "location": "41430|초평동|636",
+              "area_sqm": 55.99,
+              "trade_date": "2026-10-29",
+              "price_krw": 700000000,
+              "build_year": 2023,
+              "distance_m": 1154.4,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "e410f3ddfae1e4d3ea9f9364",
+              "apartment_name": "엘리프의왕역",
+              "location": "41430|초평동|636",
+              "area_sqm": 55.99,
+              "trade_date": "2026-11-07",
+              "price_krw": 700000000,
+              "build_year": 2023,
+              "distance_m": 1154.4,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            }
+          ],
+          "sale_price_range_krw": {
+            "min": 725000000,
+            "max": 725000000
+          },
+          "price_candidate_types": [
+            "059.9920B"
+          ],
+          "estimated_gap_range_krw": {
+            "min": -100000000,
+            "max": -100000000
+          }
+        }
+      ],
+      "attachments": [
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=906018",
+          "name": "붙임2) 의왕 「의왕역 한신더휴」 장애인 특별공급 안내 및 관련서식.hwpx",
+          "parse_status": "parsed",
+          "error_code": null
+        },
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=906019",
+          "name": "붙임3) 안내문_의왕역 한신더휴 기관추천 특별공급(조합원취소분).pdf",
+          "parse_status": "parsed",
+          "error_code": null
+        }
+      ],
+      "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274086932",
+          "published_on": "2026-11-09",
+          "content_sha256": "f6dbcd02851f148ad258ff119591c6b3bbdb3f35d0d48a8756143578e375a83c",
+          "observed_at": "2026-11-12T11:04:19.836513+09:00",
+          "change_type": "cancellation"
+        }
+      ],
+      "housing_manage_no": "2026000377",
+      "pblanc_no": "2026000377",
+      "location_verified": true,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "district_coverage_sampled",
+        "target_build_year_uses_official_planned_move_year"
+      ]
+    },
+    {
       "id": "gg_256574856",
       "name": "경기광주역 롯데캐슬 시그니처 2단지",
       "address": "광주시 쌍령동 산54-29번지",
@@ -436,7 +843,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=273844273",
       "notice_updated_at": "2026-11-06",
-      "updated_at": "2026-11-08T16:29:11.335986+09:00",
+      "updated_at": "2026-11-12T11:04:19.836513+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -1832,6 +2239,7 @@
       "pblanc_no": "2026000557",
       "location_verified": true,
       "collection_issues": [
+        "analysis_deferred",
         "announcement_only_update",
         "attachment_text_extracted",
         "district_coverage_sampled",
@@ -12072,7 +12480,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "e68516f7988cd39c6052c4b0",
@@ -12084,7 +12492,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "cc433a0882239ef070908ad2",
@@ -12096,7 +12504,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "21806c2efddcb4e67015fbf5",
@@ -12108,7 +12516,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "e5c7b9747fa1595d37d4a5ed",
@@ -12120,7 +12528,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "72ea8d0aa0cf46b2f2d7b6b1",
@@ -12132,7 +12540,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             }
           ]
         },
@@ -12161,7 +12569,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "e68516f7988cd39c6052c4b0",
@@ -12173,7 +12581,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "cc433a0882239ef070908ad2",
@@ -12185,7 +12593,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "21806c2efddcb4e67015fbf5",
@@ -12197,7 +12605,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "e5c7b9747fa1595d37d4a5ed",
@@ -12209,7 +12617,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "72ea8d0aa0cf46b2f2d7b6b1",
@@ -12221,7 +12629,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             }
           ]
         }
@@ -13220,14 +13628,38 @@
           "sale_price_krw": 2163000000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 1660000000,
-          "estimated_gap_krw": -503000000,
-          "gap_rate_pct": -23.25,
-          "comparables_count": 3,
+          "comparison_median_krw": 1530000000,
+          "estimated_gap_krw": -633000000,
+          "gap_rate_pct": -29.26,
+          "comparables_count": 5,
           "confidence": "low",
-          "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
+          "analysis_reason": "extended_to_twelve_months; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
+            {
+              "id": "9c0fb6e943ef2707ae461e74",
+              "apartment_name": "더샵분당파크리버",
+              "location": "41135|정자동|215",
+              "area_sqm": 59.9474,
+              "trade_date": "2025-12-13",
+              "price_krw": 1375000000,
+              "build_year": 2021,
+              "distance_m": 1404.8,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
+            {
+              "id": "3d429b457c8250ac5d322263",
+              "apartment_name": "더샵분당파크리버",
+              "location": "41135|정자동|215",
+              "area_sqm": 59.9474,
+              "trade_date": "2026-04-24",
+              "price_krw": 1530000000,
+              "build_year": 2021,
+              "distance_m": 1404.8,
+              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
+            },
             {
               "id": "0f2b6ea6c241bc3c9ee8ed6a",
               "apartment_name": "더샵분당파크리버",
@@ -13238,7 +13670,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "59ea75c8c8fa061525adc24d",
@@ -13250,7 +13682,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "ed82a1cab1f2b71811f325bb",
@@ -13262,7 +13694,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             }
           ]
         },
@@ -13291,7 +13723,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "484cc042d6e477e63d6f832b",
@@ -13303,7 +13735,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "dfde1d75b0dd26c7ac362925",
@@ -13315,7 +13747,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "a8a04ed63a07469c82972635",
@@ -13327,7 +13759,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             }
           ]
         },
@@ -13356,7 +13788,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "484cc042d6e477e63d6f832b",
@@ -13368,7 +13800,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "dfde1d75b0dd26c7ac362925",
@@ -13380,7 +13812,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             },
             {
               "id": "a8a04ed63a07469c82972635",
@@ -13392,7 +13824,7 @@
               "build_year": 2021,
               "distance_m": 1404.8,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-10T12:05:54.507102+09:00"
+              "collected_at": "2026-11-12T11:05:40.937281+09:00"
             }
           ]
         }

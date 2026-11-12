@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-11T09:58:46.000053+09:00"
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -74,7 +74,7 @@
         "41115"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-10T12:05:54.507102+09:00"
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
     },
     "gg_258477420": {
       "address": "성남시 분당구 정자동 90",
@@ -88,7 +88,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-10T12:05:54.507102+09:00"
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
     },
     "gg_265886763": {
       "address": "화성시 만세구 향남읍 상신리 산 13-13 일원",
@@ -114,7 +114,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-11T09:58:46.000053+09:00"
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
     },
     "gg_265886741": {
       "address": "경기도 평택시 세교동 725번지 일원 (평택영신지구 도시개발사업 2BL)",
@@ -142,6 +142,22 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-11-11T09:58:46.000053+09:00"
+    },
+    "gg_274086932": {
+      "address": "경기도 의왕시 삼동 244-1번지 일원",
+      "coordinates": [
+        37.32088060963,
+        126.955830705015
+      ],
+      "build_year": 2029,
+      "lawd_codes": [
+        "41111",
+        "41113",
+        "41410",
+        "41430"
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
     }
   },
   "comparables": {
@@ -2054,7 +2070,217 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-10-29T09:33:32.726486+09:00"
+    },
+    "ae7755856ad6ade1969df52e": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "e4046bd0b44b26398658bd14": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "079f1477c456ba9e8c43974a": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "30f537abf21f1bc774645f41": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "24c8eaf4ad87bbca73947980": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "786a5604873fae72156020d9": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "918f303280792c23ccc68289": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "013103bd7e9867b55058d715": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "a94600a7da818492a647d013": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "0104fca4913e9ab33faa47f4": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "6486c6027d23af0dce05efaa": {
+      "location": "41430|초평동|636",
+      "apartment_name": "엘리프의왕역",
+      "coordinates": [
+        37.3195843352936,
+        126.942877729792
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "60f9a94290f22b97d96d9111": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "6ecb78f06d6e211a2d310fbf": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "68b826e47ca42ffdc98491c4": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "d933c3c880c98c9c26c63682": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "ed3cb1d0c41fa2f992bcab7a": {
+      "location": "41430|초평동|636",
+      "apartment_name": "엘리프의왕역",
+      "coordinates": [
+        37.3195843352936,
+        126.942877729792
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "a4a4e549d8966e9f2b451f4d": {
+      "location": "41430|삼동|607",
+      "apartment_name": "의왕푸르지오포레움2블럭",
+      "coordinates": [
+        37.3195378574787,
+        126.959784205523
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "f969c98d5d5c397c7509314f": {
+      "location": "41430|초평동|636",
+      "apartment_name": "엘리프의왕역",
+      "coordinates": [
+        37.3195843352936,
+        126.942877729792
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "e410f3ddfae1e4d3ea9f9364": {
+      "location": "41430|초평동|636",
+      "apartment_name": "엘리프의왕역",
+      "coordinates": [
+        37.3195843352936,
+        126.942877729792
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-12T11:05:40.937281+09:00"
+    },
+    "9c0fb6e943ef2707ae461e74": {
+      "location": "41135|정자동|215",
+      "apartment_name": "더샵분당파크리버",
+      "coordinates": [
+        37.3550563216371,
+        127.117240942378
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-29T09:33:32.726486+09:00"
+    },
+    "3d429b457c8250ac5d322263": {
+      "location": "41135|정자동|215",
+      "apartment_name": "더샵분당파크리버",
+      "coordinates": [
+        37.3550563216371,
+        127.117240942378
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-29T09:33:32.726486+09:00"
     }
   },
-  "generated_at": "2026-11-11T10:05:46.652335+09:00"
+  "generated_at": "2026-11-12T11:12:42.321135+09:00"
 }
