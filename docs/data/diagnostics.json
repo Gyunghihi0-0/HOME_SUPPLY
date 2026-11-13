@@ -1,29 +1,183 @@
 {
-  "observed_at": "2026-11-12T11:05:40.937281+09:00",
-  "catalog_cutoff": "2025-11-12",
-  "catalog_records": 367,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/43138745791",
+  "observed_at": "2026-11-13T10:36:36.503368+09:00",
+  "catalog_cutoff": "2025-11-13",
+  "catalog_records": 369,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/43345958529",
   "metrics": {
-    "notices": 42,
-    "project_records": 44,
-    "matched_projects": 20,
-    "units": 134,
-    "priced_units": 69,
-    "exact_area_units": 101,
+    "notices": 44,
+    "project_records": 46,
+    "matched_projects": 21,
+    "units": 148,
+    "priced_units": 75,
+    "exact_area_units": 104,
     "coordinate_projects": 11,
     "verified_trade_records": 212,
     "gap_units": 32
   },
   "classification_counts": {
     "공식 정보가 아직 없음": 14,
-    "실제 연결 성공": 19,
-    "추가 개발 필요": 11
+    "실제 연결 성공": 20,
+    "추가 개발 필요": 12
   },
   "limitations": [
     "API 조회 기간 내 부재는 정식 공고 미발표를 확정하지 않음",
     "이름 유사도 후보는 자동 확정에 사용하지 않음"
   ],
   "records": [
+    {
+      "id": "gg_275301293",
+      "notice_id": "gg_275301293",
+      "name": "의정부법조타운 S3블록 공공분양주택",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=275301293",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 5,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 3,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "81A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "81B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "의정부우정 A2블록 공공분양주택(본청약)",
+          "address": "경기도 의정부시 녹양동 일원 의정부우정 공공주택지구 내 A-2블록",
+          "manage_no": "2026000409",
+          "similarity": 0.5
+        },
+        {
+          "name": "의정부역 펠리스타워 양우내안애",
+          "address": "경기도 의정부시 의정부동 424번지 일원 ",
+          "manage_no": "2026000553",
+          "similarity": 0.32
+        },
+        {
+          "name": "고양창릉 S-4블록 공공분양주택(본청약)",
+          "address": "경기도 고양시 덕양구 도내동 외 8개동 일원 고양창릉 공공주택지구 내 S-4블록",
+          "manage_no": "2026000320",
+          "similarity": 0.316
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_274329605",
+      "notice_id": "gg_274329605",
+      "name": "용인반도체클러스터 동일하이빌 파크밸리 2단지",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274329605",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "71B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "용인반도체클러스터 동일하이빌 파크밸리(D1-1블록)",
+          "address": "경기도 용인시 처인구 원삼면 용인 반도체 클러스터 일반산업단지 D1-1BL",
+          "manage_no": "2026000371",
+          "similarity": 0.818
+        },
+        {
+          "name": "용인 푸르지오 원클러스터파크",
+          "address": "경기도 용인시 처인구 양지면 양지리 산97-12번지 일원",
+          "manage_no": "2025000524",
+          "similarity": 0.471
+        },
+        {
+          "name": "천안 동일하이빌 파크레인",
+          "address": "충청남도 천안시 서북구 직산읍 삼은리 78-2번지 일원",
+          "manage_no": "2026000078",
+          "similarity": 0.438
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_274815288",
       "notice_id": "gg_274815288",
@@ -217,13 +371,74 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274329581",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "verified"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [],
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
+      "units": [
+        {
+          "type": "084.8861A",
+          "price": 1105000000,
+          "exclusive_area": 84.8861,
+          "allocation": null,
+          "gap": null,
+          "code": "official_block_geometry_missing",
+          "label": "개발지구 좌표·지번 연결 근거 미확인"
+        },
+        {
+          "type": "084.9580B",
+          "price": 1105000000,
+          "exclusive_area": 84.958,
+          "allocation": null,
+          "gap": null,
+          "code": "official_block_geometry_missing",
+          "label": "개발지구 좌표·지번 연결 근거 미확인"
+        },
+        {
+          "type": "084.8700C",
+          "price": 1099000000,
+          "exclusive_area": 84.87,
+          "allocation": null,
+          "gap": null,
+          "code": "official_block_geometry_missing",
+          "label": "개발지구 좌표·지번 연결 근거 미확인"
+        },
+        {
+          "type": "099.9001A",
+          "price": 1272000000,
+          "exclusive_area": 99.9001,
+          "allocation": null,
+          "gap": null,
+          "code": "official_block_geometry_missing",
+          "label": "개발지구 좌표·지번 연결 근거 미확인"
+        },
+        {
+          "type": "099.9015B",
+          "price": 1242000000,
+          "exclusive_area": 99.9015,
+          "allocation": null,
+          "gap": null,
+          "code": "official_block_geometry_missing",
+          "label": "개발지구 좌표·지번 연결 근거 미확인"
+        },
+        {
+          "type": "104.8286 ",
+          "price": 1408400000,
+          "exclusive_area": 104.8286,
+          "allocation": null,
+          "gap": null,
+          "code": "official_block_geometry_missing",
+          "label": "개발지구 좌표·지번 연결 근거 미확인"
+        }
+      ],
       "review_candidates": [
+        {
+          "name": "아르뮤제자이",
+          "address": "경기도 안산시 상록구 성포동 586번지 일원",
+          "manage_no": "2026000576",
+          "similarity": 1.0
+        },
         {
           "name": "연제갤러리자이",
           "address": "부산광역시 연제구 연산동 1123-1번지",
@@ -235,17 +450,11 @@
           "address": "경상북도 상주시 함창읍 윤직리 840번지 일원",
           "manage_no": "2026000038",
           "similarity": 0.333
-        },
-        {
-          "name": "달서자이 제니크",
-          "address": "대구광역시 달서구 본리동 661-9번지 일원",
-          "manage_no": "2026000376",
-          "similarity": 0.308
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
-        "official_project_not_in_catalog"
+        "disability_allocation_table_required"
       ]
     },
     {
@@ -361,6 +570,7 @@
       ],
       "coordinate_verified": true,
       "collection_issues": [
+        "analysis_deferred",
         "announcement_only_update",
         "attachment_text_extracted",
         "district_coverage_sampled",
@@ -478,7 +688,7 @@
         {
           "type": "59A",
           "price": null,
-          "exclusive_area": 59.96,
+          "exclusive_area": null,
           "allocation": 4,
           "gap": null,
           "code": "sale_price_and_exclusive_area_pending",
@@ -487,7 +697,7 @@
         {
           "type": "59B",
           "price": null,
-          "exclusive_area": 59.71,
+          "exclusive_area": null,
           "allocation": 1,
           "gap": null,
           "code": "sale_price_and_exclusive_area_pending",
@@ -496,7 +706,7 @@
         {
           "type": "59C",
           "price": null,
-          "exclusive_area": 59.14,
+          "exclusive_area": null,
           "allocation": 1,
           "gap": null,
           "code": "sale_price_and_exclusive_area_pending",
@@ -897,6 +1107,12 @@
       ],
       "review_candidates": [
         {
+          "name": "부천대장 하우스토리 디센트(부천대장지구 A2BL) 공공분양주택",
+          "address": "경기도 부천시 오정구 대장동, 오정동, 원종동, 삼정동 일원 부천대장 공공주택지구 내 A2블록",
+          "manage_no": "2026000457",
+          "similarity": 0.727
+        },
+        {
           "name": "온천장 하늘채 엘리시움",
           "address": "부산광역시 동래구 온천동 147-52 일원",
           "manage_no": "2026000101",
@@ -907,12 +1123,6 @@
           "address": "부산광역시 남구 문현동 334번지 일원",
           "manage_no": "2026000318",
           "similarity": 0.316
-        },
-        {
-          "name": "남춘천 센트레빌",
-          "address": "강원특별자치도 춘천시 효자동 681-12 일원",
-          "manage_no": "2026000539",
-          "similarity": 0.3
         }
       ],
       "coordinate_verified": false,
@@ -1055,11 +1265,11 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=269252265",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "official_project_name_mismatch"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "추가 개발 필요",
+      "project_label": "동일 위치 후보의 공식 단지명 불일치",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "84A",
@@ -1091,6 +1301,12 @@
       ],
       "review_candidates": [
         {
+          "name": "아르뮤제자이",
+          "address": "경기도 안산시 상록구 성포동 586번지 일원",
+          "manage_no": "2026000576",
+          "similarity": 0.909
+        },
+        {
           "name": "연제갤러리자이",
           "address": "부산광역시 연제구 연산동 1123-1번지",
           "manage_no": "2026000469",
@@ -1101,19 +1317,13 @@
           "address": "서울특별시 동작구 노량진동 312-75번지 일대",
           "manage_no": "2026000241",
           "similarity": 0.333
-        },
-        {
-          "name": "더샵 관저아르테",
-          "address": "대전광역시 서구 관저동 1988번지",
-          "manage_no": "2026000129",
-          "similarity": 0.333
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "official_project_name_mismatch"
       ]
     },
     {
@@ -1261,7 +1471,7 @@
           "price": 708750000,
           "exclusive_area": 84.9424,
           "allocation": 8,
-          "gap": -228750000,
+          "gap": -222750000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1270,7 +1480,7 @@
           "price": 700950000,
           "exclusive_area": 84.9927,
           "allocation": 3,
-          "gap": -220950000,
+          "gap": -214950000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1279,7 +1489,7 @@
           "price": 724500000,
           "exclusive_area": 84.9839,
           "allocation": 3,
-          "gap": -244500000,
+          "gap": -238500000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1288,7 +1498,7 @@
           "price": 723500000,
           "exclusive_area": 84.9199,
           "allocation": 2,
-          "gap": -243500000,
+          "gap": -237500000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -1865,7 +2075,7 @@
           "price": 536000000,
           "exclusive_area": 84.3522,
           "allocation": 5,
-          "gap": -72000000.0,
+          "gap": -94000000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1874,7 +2084,7 @@
           "price": 543000000,
           "exclusive_area": 84.4355,
           "allocation": 3,
-          "gap": -79000000.0,
+          "gap": -101000000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1883,7 +2093,7 @@
           "price": 535000000,
           "exclusive_area": 84.1443,
           "allocation": 4,
-          "gap": -71000000.0,
+          "gap": -93000000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1892,7 +2102,7 @@
           "price": 539000000,
           "exclusive_area": 84.4447,
           "allocation": 2,
-          "gap": -75000000.0,
+          "gap": -97000000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1901,7 +2111,7 @@
           "price": 542000000,
           "exclusive_area": 84.5473,
           "allocation": 5,
-          "gap": -78000000.0,
+          "gap": -100000000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1910,7 +2120,7 @@
           "price": 546000000,
           "exclusive_area": 84.8194,
           "allocation": 1,
-          "gap": -82000000.0,
+          "gap": -104000000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1919,7 +2129,7 @@
           "price": 532000000,
           "exclusive_area": 84.3216,
           "allocation": 1,
-          "gap": -68000000.0,
+          "gap": -90000000,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -2191,7 +2401,7 @@
           "price": 557500000,
           "exclusive_area": 84.9592,
           "allocation": 4,
-          "gap": -93500000.0,
+          "gap": -115500000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -2200,7 +2410,7 @@
           "price": 557200000,
           "exclusive_area": 84.9767,
           "allocation": 1,
-          "gap": -93200000.0,
+          "gap": -115200000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -2209,7 +2419,7 @@
           "price": 559700000,
           "exclusive_area": 84.9221,
           "allocation": 1,
-          "gap": -95700000.0,
+          "gap": -117700000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -2218,7 +2428,7 @@
           "price": 554500000,
           "exclusive_area": 84.914,
           "allocation": 1,
-          "gap": -90500000.0,
+          "gap": -112500000,
           "code": "verified",
           "label": "실제 연결 성공"
         }
