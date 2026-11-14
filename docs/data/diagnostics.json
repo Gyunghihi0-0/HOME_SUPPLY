@@ -1,22 +1,22 @@
 {
-  "observed_at": "2026-11-13T10:36:36.503368+09:00",
-  "catalog_cutoff": "2025-11-13",
-  "catalog_records": 369,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/43345958529",
+  "observed_at": "2026-11-14T10:09:50.152981+09:00",
+  "catalog_cutoff": "2025-11-14",
+  "catalog_records": 375,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/43538674883",
   "metrics": {
     "notices": 44,
     "project_records": 46,
-    "matched_projects": 21,
+    "matched_projects": 22,
     "units": 148,
-    "priced_units": 75,
+    "priced_units": 76,
     "exact_area_units": 104,
     "coordinate_projects": 11,
-    "verified_trade_records": 212,
+    "verified_trade_records": 215,
     "gap_units": 32
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 14,
-    "실제 연결 성공": 20,
+    "공식 정보가 아직 없음": 13,
+    "실제 연결 성공": 21,
     "추가 개발 필요": 12
   },
   "limitations": [
@@ -92,6 +92,149 @@
           "address": "경기도 고양시 덕양구 도내동 외 8개동 일원 고양창릉 공공주택지구 내 S-4블록",
           "manage_no": "2026000320",
           "similarity": 0.316
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_271906425",
+      "notice_id": "gg_271906425",
+      "name": "진위역 서희스타힐스 더 파크뷰",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=275301321",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "71B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "용인 양지 서희스타힐스 하이뷰",
+          "address": "경기도 용인시 처인구 양지읍 양지리 산105-8번지 일원",
+          "manage_no": "2026000088",
+          "similarity": 0.538
+        },
+        {
+          "name": "야목역 서희스타힐스 그랜드힐",
+          "address": "경기도 화성시 효행구 비봉면 구포리 614-18번지 일원",
+          "manage_no": "2026000069",
+          "similarity": 0.538
+        },
+        {
+          "name": "오남역 서희스타힐스 여의재 1단지",
+          "address": "경기도 남양주시 오남읍 양지리 101번지 일원",
+          "manage_no": "2026000365",
+          "similarity": 0.5
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_256574856",
+      "notice_id": "gg_256574856",
+      "name": "경기광주역 롯데캐슬 시그니처 2단지",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=275301323",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": 59.9299,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": 59.8802,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59D",
+          "price": null,
+          "exclusive_area": 59.9064,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A2",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 7,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84C",
+          "price": null,
+          "exclusive_area": 84.9481,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84E",
+          "price": null,
+          "exclusive_area": 84.9309,
+          "allocation": 3,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "경기광주역 롯데캐슬 시그니처 1단지",
+          "address": "경기도 광주시 양벌동 산54-3번지",
+          "manage_no": "2026000107",
+          "similarity": 0.938
+        },
+        {
+          "name": "상동역 롯데캐슬 시그니처",
+          "address": "경기도 부천시 원미구 상동 540-1번지",
+          "manage_no": "2026000354",
+          "similarity": 0.667
+        },
+        {
+          "name": "화성 향남 롯데캐슬 시그니처",
+          "address": "경기도 화성시 만세구 향남읍 상신리 산 13-13 일원",
+          "manage_no": "2026000502",
+          "similarity": 0.571
         }
       ],
       "coordinate_verified": false,
@@ -446,16 +589,14 @@
           "similarity": 0.462
         },
         {
-          "name": "상주자이르네",
-          "address": "경상북도 상주시 함창읍 윤직리 840번지 일원",
-          "manage_no": "2026000038",
+          "name": "화정1지구 아르엘",
+          "address": "울산광역시 동구 화정동 12-6번지 일원",
+          "manage_no": "2026000558",
           "similarity": 0.333
         }
       ],
       "coordinate_verified": false,
-      "collection_issues": [
-        "disability_allocation_table_required"
-      ]
+      "collection_issues": []
     },
     {
       "id": "gg_274086933",
@@ -543,7 +684,7 @@
           "price": 725000000,
           "exclusive_area": 59.9942,
           "allocation": 1,
-          "gap": -100000000,
+          "gap": -98000000,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -575,101 +716,6 @@
         "attachment_text_extracted",
         "district_coverage_sampled",
         "target_build_year_uses_official_planned_move_year"
-      ]
-    },
-    {
-      "id": "gg_256574856",
-      "notice_id": "gg_256574856",
-      "name": "경기광주역 롯데캐슬 시그니처 2단지",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=273844273",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "59A",
-          "price": null,
-          "exclusive_area": 59.9299,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "59B",
-          "price": null,
-          "exclusive_area": 59.8802,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "59D",
-          "price": null,
-          "exclusive_area": 59.9064,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84A2",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 7,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84C",
-          "price": null,
-          "exclusive_area": 84.9481,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84E",
-          "price": null,
-          "exclusive_area": 84.9309,
-          "allocation": 3,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "경기광주역 롯데캐슬 시그니처 1단지",
-          "address": "경기도 광주시 양벌동 산54-3번지",
-          "manage_no": "2026000107",
-          "similarity": 0.938
-        },
-        {
-          "name": "상동역 롯데캐슬 시그니처",
-          "address": "경기도 부천시 원미구 상동 540-1번지",
-          "manage_no": "2026000354",
-          "similarity": 0.667
-        },
-        {
-          "name": "화성 향남 롯데캐슬 시그니처",
-          "address": "경기도 화성시 만세구 향남읍 상신리 산 13-13 일원",
-          "manage_no": "2026000502",
-          "similarity": 0.571
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
       ]
     },
     {
@@ -997,56 +1043,6 @@
       ]
     },
     {
-      "id": "gg_271906425",
-      "notice_id": "gg_271906425",
-      "name": "진위역 서희스타힐스 더 파크뷰",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=271906425",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "71B",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "용인 양지 서희스타힐스 하이뷰",
-          "address": "경기도 용인시 처인구 양지읍 양지리 산105-8번지 일원",
-          "manage_no": "2026000088",
-          "similarity": 0.538
-        },
-        {
-          "name": "야목역 서희스타힐스 그랜드힐",
-          "address": "경기도 화성시 효행구 비봉면 구포리 614-18번지 일원",
-          "manage_no": "2026000069",
-          "similarity": 0.538
-        },
-        {
-          "name": "오남역 서희스타힐스 여의재 1단지",
-          "address": "경기도 남양주시 오남읍 양지리 101번지 일원",
-          "manage_no": "2026000365",
-          "similarity": 0.5
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
       "id": "gg_260145183",
       "notice_id": "gg_260145183",
       "name": "부천대장 하우스스토리 디센트",
@@ -1138,23 +1134,29 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=270698737",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "verified"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "84A",
-          "price": null,
+          "price": 1827000000,
           "exclusive_area": 84.9409,
           "allocation": 1,
           "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "code": "kakao_exact_address_not_found",
+          "label": "공식 주소의 카카오 검색 결과 없음"
         }
       ],
       "review_candidates": [
+        {
+          "name": "해링턴 플레이스 문래",
+          "address": "서울특별시 영등포구 문래동3가 27-1번지 일원",
+          "manage_no": "2026000560",
+          "similarity": 1.0
+        },
         {
           "name": "해링턴플레이스 오룡역",
           "address": "대전광역시 중구 용두동 722번지 일원",
@@ -1166,19 +1168,13 @@
           "address": "서울특별시 노원구 노원로 495 (상계동 690)",
           "manage_no": "2026000028",
           "similarity": 0.667
-        },
-        {
-          "name": "이안 연동스퀘어",
-          "address": "제주특별자치도 제주시 연동 282-4 외 4필지",
-          "manage_no": "2025000592",
-          "similarity": 0.25
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "kakao_exact_address_not_found"
       ]
     },
     {
@@ -1307,15 +1303,15 @@
           "similarity": 0.909
         },
         {
+          "name": "화정1지구 아르엘",
+          "address": "울산광역시 동구 화정동 12-6번지 일원",
+          "manage_no": "2026000558",
+          "similarity": 0.364
+        },
+        {
           "name": "연제갤러리자이",
           "address": "부산광역시 연제구 연산동 1123-1번지",
           "manage_no": "2026000469",
-          "similarity": 0.333
-        },
-        {
-          "name": "드파인 아르티아",
-          "address": "서울특별시 동작구 노량진동 312-75번지 일대",
-          "manage_no": "2026000241",
           "similarity": 0.333
         }
       ],
@@ -1525,6 +1521,7 @@
       ],
       "coordinate_verified": true,
       "collection_issues": [
+        "analysis_deferred",
         "attachment_text_extracted",
         "district_coverage_sampled",
         "some_comparison_locations_unverified",
@@ -3118,7 +3115,7 @@
           "price": 2958000000,
           "exclusive_area": 84.0,
           "allocation": 1,
-          "gap": -1153000000.0,
+          "gap": -1118000000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -3127,7 +3124,7 @@
           "price": 2920000000,
           "exclusive_area": 84.64,
           "allocation": 1,
-          "gap": -1115000000.0,
+          "gap": -1080000000,
           "code": "verified",
           "label": "실제 연결 성공"
         }
