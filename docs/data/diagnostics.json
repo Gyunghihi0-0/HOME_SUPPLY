@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-14T10:09:50.152981+09:00",
-  "catalog_cutoff": "2025-11-14",
-  "catalog_records": 375,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/43538674883",
+  "observed_at": "2026-11-15T09:33:59.674944+09:00",
+  "catalog_cutoff": "2025-11-15",
+  "catalog_records": 365,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/43658630088",
   "metrics": {
     "notices": 44,
     "project_records": 46,
@@ -820,22 +820,22 @@
       ],
       "review_candidates": [
         {
-          "name": "시흥거모지구 대방 엘리움 더 루체Ⅱ(B-2BL)",
-          "address": "경기도 시흥시 시흥거모 공공주택지구 B-2블럭(경기도 시흥시 거모동 일원)",
-          "manage_no": "2025000547",
-          "similarity": 0.4
-        },
-        {
-          "name": "시흥거모지구 대방 엘리움 더 루체Ⅰ(S-2BL)",
-          "address": "경기도 시흥시 시흥거모 공공주택지구 S-2블럭(경기도 시흥시 거모동 일원)",
-          "manage_no": "2025000546",
-          "similarity": 0.4
-        },
-        {
           "name": "계양신도시 카이브 유보라(AC4BL)",
           "address": "인천광역시 계양구 동양동 420-3번지 일원 (인천계양 테크노밸리 공공주택지구 AC4블록)",
           "manage_no": "2026000532",
           "similarity": 0.333
+        },
+        {
+          "name": "계양신도시 카이브 유보라(AC3BL)",
+          "address": "인천광역시 계양구 동양동 458-3번지 일원 (인천계양 테크노밸리 공공주택지구 AC3블록)",
+          "manage_no": "2026000530",
+          "similarity": 0.333
+        },
+        {
+          "name": "광명 시티프라디움 에듀하임",
+          "address": "경기도 광명시 소하동 광명 구름산지구 도시개발사업지구 A6BL",
+          "manage_no": "2026000453",
+          "similarity": 0.308
         }
       ],
       "coordinate_verified": false,
