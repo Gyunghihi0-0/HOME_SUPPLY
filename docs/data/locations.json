@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-14T10:09:50.152981+09:00"
+      "checked_at": "2026-11-16T09:32:22.918521+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -30,7 +30,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-15T09:33:59.674944+09:00"
+      "checked_at": "2026-11-16T09:32:22.918521+09:00"
     },
     "gg_266126622_p2026000508_2026000508": {
       "address": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
@@ -46,7 +46,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-13T10:36:36.503368+09:00"
+      "checked_at": "2026-11-16T09:32:22.918521+09:00"
     },
     "gg_262772736": {
       "address": "화성특례시 만세구 향남읍 하길리 404-2 번지 일원",
@@ -59,7 +59,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-13T10:36:36.503368+09:00"
+      "checked_at": "2026-11-16T09:32:22.918521+09:00"
     },
     "gg_260861016": {
       "address": "경기도 수원시 권선구 서둔동 212-1번지 일원",
@@ -101,7 +101,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-13T10:36:36.503368+09:00"
+      "checked_at": "2026-11-16T09:32:22.918521+09:00"
     },
     "gg_272148401": {
       "address": "경기도 광주시 탄벌동 203-4 번지 일원",
@@ -114,7 +114,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-14T10:09:50.152981+09:00"
+      "checked_at": "2026-11-16T09:32:22.918521+09:00"
     },
     "gg_265886741": {
       "address": "경기도 평택시 세교동 725번지 일원 (평택영신지구 도시개발사업 2BL)",
@@ -157,20 +157,10 @@
         "41430"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-14T10:09:50.152981+09:00"
+      "checked_at": "2026-11-16T09:32:22.918521+09:00"
     }
   },
   "comparables": {
-    "d0d60796705d21f624258e06": {
-      "location": "41597|여울동|975",
-      "apartment_name": "동탄역삼정그린코아",
-      "coordinates": [
-        37.2010150854,
-        127.088938874374
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
     "a5eca99117cbf7b67ebc3d73": {
       "location": "41597|여울동|975",
       "apartment_name": "동탄역삼정그린코아",
@@ -2312,5 +2302,5 @@
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
     }
   },
-  "generated_at": "2026-11-15T09:41:00.321137+09:00"
+  "generated_at": "2026-11-16T09:39:27.880313+09:00"
 }
