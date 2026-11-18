@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-17T12:27:56.587414+09:00",
+  "generated_at": "2026-11-18T11:48:52.439870+09:00",
   "last_success_at": null,
   "data_status": "partial",
   "sources": [
@@ -9,14 +9,14 @@
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
       "status": "partial",
-      "checked_at": "2026-11-17T12:19:35.049234+09:00",
+      "checked_at": "2026-11-18T11:40:29.556488+09:00",
       "last_success_at": null,
       "error_code": "notice_budget_exhausted",
       "message": "notice_budget_exhausted",
-      "records_count": 3,
+      "records_count": 5,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-17T03:20:36.308205+00:00",
-      "collection_responses": 4,
+      "last_collected_at": "2026-11-18T02:41:47.767576+00:00",
+      "collection_responses": 6,
       "collection_cached_responses": 0,
       "collection_errors": 0
     },
@@ -25,15 +25,15 @@
       "name": "청약홈 분양정보",
       "url": "https://www.data.go.kr/data/15098547/openapi.do",
       "status": "partial",
-      "checked_at": "2026-11-17T12:20:55.685405+09:00",
+      "checked_at": "2026-11-18T11:41:50.994701+09:00",
       "last_success_at": null,
       "error_code": "analysis_batch_deferred",
       "message": "분석 예산 내 완료분 저장 · 미완료 단지는 다음 실행에서 계속",
-      "records_count": 15,
+      "records_count": 11,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-17T03:27:42.637549+00:00",
-      "collection_responses": 35,
-      "collection_cached_responses": 15,
+      "last_collected_at": "2026-11-18T02:47:53.981553+00:00",
+      "collection_responses": 26,
+      "collection_cached_responses": 11,
       "collection_errors": 0
     },
     {
@@ -41,14 +41,14 @@
       "name": "국토교통부 실거래가",
       "url": "https://www.data.go.kr/data/15126468/openapi.do",
       "status": "partial",
-      "checked_at": "2026-11-17T12:20:55.685405+09:00",
+      "checked_at": "2026-11-18T11:41:50.994701+09:00",
       "last_success_at": null,
       "error_code": "analysis_batch_deferred",
       "message": "분석 예산 내 완료분 저장 · 미완료 단지는 다음 실행에서 계속",
-      "records_count": 60112,
+      "records_count": 65750,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-17T03:27:35.156854+00:00",
-      "collection_responses": 132,
+      "last_collected_at": "2026-11-18T02:48:50.314122+00:00",
+      "collection_responses": 140,
       "collection_cached_responses": 0,
       "collection_errors": 0
     },
@@ -57,19 +57,219 @@
       "name": "카카오 주소 좌표",
       "url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "status": "partial",
-      "checked_at": "2026-11-17T12:20:55.685405+09:00",
+      "checked_at": "2026-11-18T11:41:50.994701+09:00",
       "last_success_at": null,
-      "error_code": "geocode_address_incomplete",
-      "message": "geocode_address_incomplete",
+      "error_code": "kakao_exact_address_not_found",
+      "message": "kakao_exact_address_not_found",
       "records_count": 11,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-17T03:27:54.384197+00:00",
-      "collection_responses": 205,
+      "last_collected_at": "2026-11-18T02:48:05.547949+00:00",
+      "collection_responses": 161,
       "collection_cached_responses": 0,
       "collection_errors": 0
     }
   ],
   "listings": [
+    {
+      "id": "gg_275301293",
+      "name": "의정부법조타운 S3블록 공공분양주택",
+      "address": "의정부법조타운 S3블록",
+      "region": null,
+      "district": null,
+      "housing_type": "unknown",
+      "status": "upcoming",
+      "apply_start_at": "2026-11-19",
+      "apply_end_at": "2026-11-25",
+      "deadline_note": "정확한 마감 시각은 공식 안내 확인 필요",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276030850",
+      "notice_updated_at": "2026-11-17",
+      "updated_at": "2026-11-18T11:40:29.556488+09:00",
+      "eligibility": {
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=906401",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+        "conditions": [
+          "신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
+      },
+      "units": [
+        {
+          "type_id": "59A",
+          "area_sqm": null,
+          "allocation_count": 5,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "59B",
+          "area_sqm": null,
+          "allocation_count": 3,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "81A",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "81B",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
+      "attachments": [],
+      "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=275301293",
+          "published_on": "2026-11-13",
+          "content_sha256": "166eb5e0c44d5c74aef5b52714aebfc8847520a816beb4399e1fd5bcc97368cd",
+          "observed_at": "2026-11-13T10:35:15.253844+09:00",
+          "change_type": "initial"
+        },
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276030850",
+          "published_on": "2026-11-17",
+          "content_sha256": "f3afa28e960c6775a8a7c44effc919b618ac470d7044ac5e868a4d8d39f86ab2",
+          "observed_at": "2026-11-18T11:40:29.556488+09:00",
+          "change_type": "correction"
+        }
+      ],
+      "housing_manage_no": null,
+      "pblanc_no": null,
+      "location_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_274815288",
+      "name": "의정부법조타운 S1블록 공공분양주택",
+      "address": "의정부법조타운 S1블록",
+      "region": null,
+      "district": null,
+      "housing_type": "unknown",
+      "status": "upcoming",
+      "apply_start_at": "2026-11-19",
+      "apply_end_at": "2026-11-25",
+      "deadline_note": "정확한 마감 시각은 공식 안내 확인 필요",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276030849",
+      "notice_updated_at": "2026-11-17",
+      "updated_at": "2026-11-18T11:40:29.556488+09:00",
+      "eligibility": {
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=906313",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+        "conditions": [
+          "신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
+      },
+      "units": [
+        {
+          "type_id": "59B",
+          "area_sqm": null,
+          "allocation_count": 2,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84A",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
+      "attachments": [],
+      "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274815288",
+          "published_on": "2026-11-11",
+          "content_sha256": "9d833679d15a524af7c75e6118b9de3fb44cc4ab0482a640cb051ea4708a3400",
+          "observed_at": "2026-11-12T11:04:19.836513+09:00",
+          "change_type": "initial"
+        },
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276030849",
+          "published_on": "2026-11-17",
+          "content_sha256": "e9d369421fa0ed75ca0de3fefa3fa98d57894d1469d8c3ec7a6a57c535a2060f",
+          "observed_at": "2026-11-18T11:40:29.556488+09:00",
+          "change_type": "correction"
+        }
+      ],
+      "housing_manage_no": null,
+      "pblanc_no": null,
+      "location_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_274329598",
       "name": "반도체클러스터 라온프라이빗 파크원",
@@ -178,129 +378,6 @@
       ]
     },
     {
-      "id": "gg_275301293",
-      "name": "의정부법조타운 S3블록 공공분양주택",
-      "address": "의정부법조타운 S3블록",
-      "region": null,
-      "district": null,
-      "housing_type": "unknown",
-      "status": "upcoming",
-      "apply_start_at": "2026-11-19",
-      "apply_end_at": "2026-11-25",
-      "deadline_note": "정확한 마감 시각은 공식 안내 확인 필요",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=275301293",
-      "notice_updated_at": "2026-11-13",
-      "updated_at": "2026-11-17T12:19:35.049234+09:00",
-      "eligibility": {
-        "yongin_status": "eligible",
-        "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=906401",
-        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
-        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [
-          "신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
-        ],
-        "rule_version": "1.1.0"
-      },
-      "units": [
-        {
-          "type_id": "59A",
-          "area_sqm": null,
-          "allocation_count": 5,
-          "sale_price_krw": null,
-          "sale_price_basis": "unknown",
-          "sale_price_evidence_url": null,
-          "comparison_median_krw": null,
-          "estimated_gap_krw": null,
-          "gap_rate_pct": null,
-          "comparables_count": 0,
-          "confidence": "unavailable",
-          "analysis_reason": "sale_price_and_exclusive_area_pending",
-          "analysis_policy_version": null,
-          "comparables": []
-        },
-        {
-          "type_id": "59B",
-          "area_sqm": null,
-          "allocation_count": 3,
-          "sale_price_krw": null,
-          "sale_price_basis": "unknown",
-          "sale_price_evidence_url": null,
-          "comparison_median_krw": null,
-          "estimated_gap_krw": null,
-          "gap_rate_pct": null,
-          "comparables_count": 0,
-          "confidence": "unavailable",
-          "analysis_reason": "sale_price_and_exclusive_area_pending",
-          "analysis_policy_version": null,
-          "comparables": []
-        },
-        {
-          "type_id": "81A",
-          "area_sqm": null,
-          "allocation_count": 2,
-          "sale_price_krw": null,
-          "sale_price_basis": "unknown",
-          "sale_price_evidence_url": null,
-          "comparison_median_krw": null,
-          "estimated_gap_krw": null,
-          "gap_rate_pct": null,
-          "comparables_count": 0,
-          "confidence": "unavailable",
-          "analysis_reason": "sale_price_and_exclusive_area_pending",
-          "analysis_policy_version": null,
-          "comparables": []
-        },
-        {
-          "type_id": "81B",
-          "area_sqm": null,
-          "allocation_count": 1,
-          "sale_price_krw": null,
-          "sale_price_basis": "unknown",
-          "sale_price_evidence_url": null,
-          "comparison_median_krw": null,
-          "estimated_gap_krw": null,
-          "gap_rate_pct": null,
-          "comparables_count": 0,
-          "confidence": "unavailable",
-          "analysis_reason": "sale_price_and_exclusive_area_pending",
-          "analysis_policy_version": null,
-          "comparables": []
-        }
-      ],
-      "attachments": [
-        {
-          "url": "https://www.gg.go.kr/cmmn/download.do?idx=906401",
-          "name": "붙임2) 의정부 「의정부법조타운 S3블록 공공분양주택」 장애인 특별공급 안내 및 관련서식.hwpx",
-          "parse_status": "parsed",
-          "error_code": null
-        },
-        {
-          "url": "https://www.gg.go.kr/cmmn/download.do?idx=906402",
-          "name": "붙임3) 의정부법조타운 S3블록 기관추천 안내문.pdf",
-          "parse_status": "parsed",
-          "error_code": null
-        }
-      ],
-      "notice_history": [
-        {
-          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=275301293",
-          "published_on": "2026-11-13",
-          "content_sha256": "166eb5e0c44d5c74aef5b52714aebfc8847520a816beb4399e1fd5bcc97368cd",
-          "observed_at": "2026-11-13T10:35:15.253844+09:00",
-          "change_type": "initial"
-        }
-      ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
-      "location_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
       "id": "gg_271906425",
       "name": "진위역 서희스타힐스 더 파크뷰",
       "address": "경기도 평택시 진위면 갈곶리 315-49번지",
@@ -380,7 +457,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=275301323",
       "notice_updated_at": "2026-11-13",
-      "updated_at": "2026-11-14T10:08:29.269153+09:00",
+      "updated_at": "2026-11-18T11:40:29.556488+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -571,7 +648,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274329605",
       "notice_updated_at": "2026-11-12",
-      "updated_at": "2026-11-13T10:35:15.253844+09:00",
+      "updated_at": "2026-11-18T11:40:29.556488+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -682,104 +759,13 @@
       ]
     },
     {
-      "id": "gg_274815288",
-      "name": "의정부법조타운 S1블록 공공분양주택",
-      "address": "의정부법조타운 S1블록",
-      "region": null,
-      "district": null,
-      "housing_type": "unknown",
-      "status": "upcoming",
-      "apply_start_at": "2026-11-19",
-      "apply_end_at": "2026-11-25",
-      "deadline_note": "정확한 마감 시각은 공식 안내 확인 필요",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274815288",
-      "notice_updated_at": "2026-11-11",
-      "updated_at": "2026-11-15T09:32:39.049170+09:00",
-      "eligibility": {
-        "yongin_status": "eligible",
-        "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=906313",
-        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
-        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
-        "conditions": [
-          "신청마감일 당시(’26. 11. 25.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
-        ],
-        "rule_version": "1.1.0"
-      },
-      "units": [
-        {
-          "type_id": "59B",
-          "area_sqm": null,
-          "allocation_count": 2,
-          "sale_price_krw": null,
-          "sale_price_basis": "unknown",
-          "sale_price_evidence_url": null,
-          "comparison_median_krw": null,
-          "estimated_gap_krw": null,
-          "gap_rate_pct": null,
-          "comparables_count": 0,
-          "confidence": "unavailable",
-          "analysis_reason": "sale_price_and_exclusive_area_pending",
-          "analysis_policy_version": null,
-          "comparables": []
-        },
-        {
-          "type_id": "84A",
-          "area_sqm": null,
-          "allocation_count": 1,
-          "sale_price_krw": null,
-          "sale_price_basis": "unknown",
-          "sale_price_evidence_url": null,
-          "comparison_median_krw": null,
-          "estimated_gap_krw": null,
-          "gap_rate_pct": null,
-          "comparables_count": 0,
-          "confidence": "unavailable",
-          "analysis_reason": "sale_price_and_exclusive_area_pending",
-          "analysis_policy_version": null,
-          "comparables": []
-        }
-      ],
-      "attachments": [
-        {
-          "url": "https://www.gg.go.kr/cmmn/download.do?idx=906313",
-          "name": "붙임2) 의정부 「의정부법조타운 S1블록 공공분양주택」 장애인 특별공급 안내 및 관련서식.hwpx",
-          "parse_status": "parsed",
-          "error_code": null
-        },
-        {
-          "url": "https://www.gg.go.kr/cmmn/download.do?idx=906314",
-          "name": "붙임3) 의정부법조타운 S1블록 기관추천 안내문.pdf",
-          "parse_status": "parsed",
-          "error_code": null
-        }
-      ],
-      "notice_history": [
-        {
-          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274815288",
-          "published_on": "2026-11-11",
-          "content_sha256": "9d833679d15a524af7c75e6118b9de3fb44cc4ab0482a640cb051ea4708a3400",
-          "observed_at": "2026-11-12T11:04:19.836513+09:00",
-          "change_type": "initial"
-        }
-      ],
-      "housing_manage_no": null,
-      "pblanc_no": null,
-      "location_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
       "id": "gg_274572401",
       "name": "소사 휴먼빌",
       "address": "경기도 부천시 소사본동 227-30번지 일원",
       "region": "부천시",
       "district": null,
       "housing_type": "unknown",
-      "status": "open",
+      "status": "closed",
       "apply_start_at": "2026-11-11T09:00:00+09:00",
       "apply_end_at": "2026-11-17T18:00:00+09:00",
       "deadline_note": null,
@@ -860,15 +846,15 @@
       "deadline_note": "정확한 마감 시각은 공식 안내 확인 필요",
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274329616",
       "notice_updated_at": "2026-11-09",
-      "updated_at": "2026-11-14T10:08:29.269153+09:00",
+      "updated_at": "2026-11-18T11:40:29.556488+09:00",
       "eligibility": {
-        "yongin_status": "eligible",
-        "disability_scope": "both",
-        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=906128",
-        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 11. 23.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "yongin_status": "unknown",
+        "disability_scope": "unknown",
+        "evidence_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274329616",
+        "evidence_text": "○ 신청자격 : 신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인",
         "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
         "conditions": [
-          "신청마감일 당시(’26. 11. 23.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+          "신청일 당시 경기도 거주 만19세 이상 무주택 세대구성원 장애인"
         ],
         "rule_version": "1.1.0"
       },
@@ -942,14 +928,14 @@
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=906128",
           "name": "붙임2) 수원 「서수원 제일풍경채C-4BL」 장애인 특별공급 안내 및 관련서식.hwpx",
-          "parse_status": "parsed",
-          "error_code": null
+          "parse_status": "error",
+          "error_code": "notice_budget_exhausted"
         },
         {
           "url": "https://www.gg.go.kr/cmmn/download.do?idx=906129",
           "name": "붙임3) 서수원 제일풍경채C-4BL_기관추천 특별공급 신청 안내문(첨부， 발송용).pdf",
-          "parse_status": "parsed",
-          "error_code": null
+          "parse_status": "not_checked",
+          "error_code": "attachment_stage_deferred"
         }
       ],
       "notice_history": [
@@ -966,7 +952,7 @@
       "location_verified": false,
       "collection_issues": [
         "announcement_only_update",
-        "attachment_text_extracted",
+        "attachment_stage_deferred",
         "official_project_not_in_catalog"
       ]
     },
@@ -9840,26 +9826,14 @@
           "sale_price_krw": 1714200000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 1300000000.0,
-          "estimated_gap_krw": -414200000.0,
+          "comparison_median_krw": 1300000000,
+          "estimated_gap_krw": -414200000,
           "gap_rate_pct": -24.16,
-          "comparables_count": 10,
+          "comparables_count": 9,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "a5eca99117cbf7b67ebc3d73",
-              "apartment_name": "동탄역삼정그린코아",
-              "location": "41597|여울동|975",
-              "area_sqm": 81.3533,
-              "trade_date": "2026-05-16",
-              "price_krw": 1170000000,
-              "build_year": 2022,
-              "distance_m": 1685.7,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "f43896aab4e26e7665a45919",
               "apartment_name": "동탄역삼정그린코아",
@@ -9870,7 +9844,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "6f7edb74427320f1d38b346c",
@@ -9882,7 +9856,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "258758952b6ac0cacbce72f3",
@@ -9894,7 +9868,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -9906,7 +9880,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -9918,7 +9892,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -9930,7 +9904,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -9942,7 +9916,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -9954,7 +9928,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -9966,7 +9940,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -9977,26 +9951,14 @@
           "sale_price_krw": 1716800000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 1300000000.0,
-          "estimated_gap_krw": -416800000.0,
+          "comparison_median_krw": 1300000000,
+          "estimated_gap_krw": -416800000,
           "gap_rate_pct": -24.28,
-          "comparables_count": 10,
+          "comparables_count": 9,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "a5eca99117cbf7b67ebc3d73",
-              "apartment_name": "동탄역삼정그린코아",
-              "location": "41597|여울동|975",
-              "area_sqm": 81.3533,
-              "trade_date": "2026-05-16",
-              "price_krw": 1170000000,
-              "build_year": 2022,
-              "distance_m": 1685.7,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "f43896aab4e26e7665a45919",
               "apartment_name": "동탄역삼정그린코아",
@@ -10007,7 +9969,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "6f7edb74427320f1d38b346c",
@@ -10019,7 +9981,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "258758952b6ac0cacbce72f3",
@@ -10031,7 +9993,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10043,7 +10005,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10055,7 +10017,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10067,7 +10029,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10079,7 +10041,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10091,7 +10053,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10103,7 +10065,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -10114,26 +10076,14 @@
           "sale_price_krw": 1713200000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 1300000000.0,
-          "estimated_gap_krw": -413200000.0,
+          "comparison_median_krw": 1300000000,
+          "estimated_gap_krw": -413200000,
           "gap_rate_pct": -24.12,
-          "comparables_count": 10,
+          "comparables_count": 9,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "a5eca99117cbf7b67ebc3d73",
-              "apartment_name": "동탄역삼정그린코아",
-              "location": "41597|여울동|975",
-              "area_sqm": 81.3533,
-              "trade_date": "2026-05-16",
-              "price_krw": 1170000000,
-              "build_year": 2022,
-              "distance_m": 1685.7,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "f43896aab4e26e7665a45919",
               "apartment_name": "동탄역삼정그린코아",
@@ -10144,7 +10094,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "6f7edb74427320f1d38b346c",
@@ -10156,7 +10106,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "258758952b6ac0cacbce72f3",
@@ -10168,7 +10118,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10180,7 +10130,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10192,7 +10142,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10204,7 +10154,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10216,7 +10166,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10228,7 +10178,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10240,7 +10190,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -10251,26 +10201,14 @@
           "sale_price_krw": 1713800000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 1300000000.0,
-          "estimated_gap_krw": -413800000.0,
+          "comparison_median_krw": 1300000000,
+          "estimated_gap_krw": -413800000,
           "gap_rate_pct": -24.15,
-          "comparables_count": 10,
+          "comparables_count": 9,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "a5eca99117cbf7b67ebc3d73",
-              "apartment_name": "동탄역삼정그린코아",
-              "location": "41597|여울동|975",
-              "area_sqm": 81.3533,
-              "trade_date": "2026-05-16",
-              "price_krw": 1170000000,
-              "build_year": 2022,
-              "distance_m": 1685.7,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "f43896aab4e26e7665a45919",
               "apartment_name": "동탄역삼정그린코아",
@@ -10281,7 +10219,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "6f7edb74427320f1d38b346c",
@@ -10293,7 +10231,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "258758952b6ac0cacbce72f3",
@@ -10305,7 +10243,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10317,7 +10255,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10329,7 +10267,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10341,7 +10279,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10353,7 +10291,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10365,7 +10303,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10377,7 +10315,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -10388,26 +10326,14 @@
           "sale_price_krw": 1715200000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 1300000000.0,
-          "estimated_gap_krw": -415200000.0,
+          "comparison_median_krw": 1300000000,
+          "estimated_gap_krw": -415200000,
           "gap_rate_pct": -24.21,
-          "comparables_count": 10,
+          "comparables_count": 9,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "a5eca99117cbf7b67ebc3d73",
-              "apartment_name": "동탄역삼정그린코아",
-              "location": "41597|여울동|975",
-              "area_sqm": 81.3533,
-              "trade_date": "2026-05-16",
-              "price_krw": 1170000000,
-              "build_year": 2022,
-              "distance_m": 1685.7,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "f43896aab4e26e7665a45919",
               "apartment_name": "동탄역삼정그린코아",
@@ -10418,7 +10344,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "6f7edb74427320f1d38b346c",
@@ -10430,7 +10356,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "258758952b6ac0cacbce72f3",
@@ -10442,7 +10368,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10454,7 +10380,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10466,7 +10392,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10478,7 +10404,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10490,7 +10416,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10502,7 +10428,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10514,7 +10440,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         }
@@ -10588,26 +10514,14 @@
           "sale_price_krw": 1712100000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 1300000000.0,
-          "estimated_gap_krw": -412100000.0,
+          "comparison_median_krw": 1300000000,
+          "estimated_gap_krw": -412100000,
           "gap_rate_pct": -24.07,
-          "comparables_count": 10,
+          "comparables_count": 9,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "a5eca99117cbf7b67ebc3d73",
-              "apartment_name": "동탄역삼정그린코아",
-              "location": "41597|여울동|975",
-              "area_sqm": 81.3533,
-              "trade_date": "2026-05-16",
-              "price_krw": 1170000000,
-              "build_year": 2022,
-              "distance_m": 1688.7,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "f43896aab4e26e7665a45919",
               "apartment_name": "동탄역삼정그린코아",
@@ -10618,7 +10532,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "6f7edb74427320f1d38b346c",
@@ -10630,7 +10544,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "258758952b6ac0cacbce72f3",
@@ -10642,7 +10556,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10654,7 +10568,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10666,7 +10580,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10678,7 +10592,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10690,7 +10604,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10702,7 +10616,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10714,7 +10628,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -10725,26 +10639,14 @@
           "sale_price_krw": 1715300000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 1300000000.0,
-          "estimated_gap_krw": -415300000.0,
+          "comparison_median_krw": 1300000000,
+          "estimated_gap_krw": -415300000,
           "gap_rate_pct": -24.21,
-          "comparables_count": 10,
+          "comparables_count": 9,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "a5eca99117cbf7b67ebc3d73",
-              "apartment_name": "동탄역삼정그린코아",
-              "location": "41597|여울동|975",
-              "area_sqm": 81.3533,
-              "trade_date": "2026-05-16",
-              "price_krw": 1170000000,
-              "build_year": 2022,
-              "distance_m": 1688.7,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "f43896aab4e26e7665a45919",
               "apartment_name": "동탄역삼정그린코아",
@@ -10755,7 +10657,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "6f7edb74427320f1d38b346c",
@@ -10767,7 +10669,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "258758952b6ac0cacbce72f3",
@@ -10779,7 +10681,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10791,7 +10693,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10803,7 +10705,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10815,7 +10717,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10827,7 +10729,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10839,7 +10741,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10851,7 +10753,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         }
@@ -10924,26 +10826,14 @@
           "sale_price_krw": 536000000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -94000000,
-          "gap_rate_pct": -17.54,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -95000000.0,
+          "gap_rate_pct": -17.72,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 585.5,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -10954,7 +10844,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -10966,7 +10856,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -10978,7 +10868,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -10990,7 +10880,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11002,7 +10892,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11014,7 +10904,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -11025,26 +10915,14 @@
           "sale_price_krw": 543000000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -101000000,
-          "gap_rate_pct": -18.6,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -102000000.0,
+          "gap_rate_pct": -18.78,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 585.5,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -11055,7 +10933,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11067,7 +10945,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11079,7 +10957,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11091,7 +10969,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11103,7 +10981,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11115,7 +10993,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -11126,26 +11004,14 @@
           "sale_price_krw": 535000000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -93000000,
-          "gap_rate_pct": -17.38,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -94000000.0,
+          "gap_rate_pct": -17.57,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 585.5,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -11156,7 +11022,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11168,7 +11034,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11180,7 +11046,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11192,7 +11058,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11204,7 +11070,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11216,7 +11082,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -11227,26 +11093,14 @@
           "sale_price_krw": 539000000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -97000000,
-          "gap_rate_pct": -18.0,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -98000000.0,
+          "gap_rate_pct": -18.18,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 585.5,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -11257,7 +11111,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11269,7 +11123,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11281,7 +11135,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11293,7 +11147,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11305,7 +11159,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11317,7 +11171,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -11328,26 +11182,14 @@
           "sale_price_krw": 542000000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -100000000,
-          "gap_rate_pct": -18.45,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -101000000.0,
+          "gap_rate_pct": -18.63,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 585.5,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -11358,7 +11200,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11370,7 +11212,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11382,7 +11224,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11394,7 +11236,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11406,7 +11248,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11418,7 +11260,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -11429,26 +11271,14 @@
           "sale_price_krw": 546000000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -104000000,
-          "gap_rate_pct": -19.05,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -105000000.0,
+          "gap_rate_pct": -19.23,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 585.5,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -11459,7 +11289,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11471,7 +11301,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11483,7 +11313,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11495,7 +11325,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11507,7 +11337,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11519,7 +11349,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -11530,26 +11360,14 @@
           "sale_price_krw": 532000000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -90000000,
-          "gap_rate_pct": -16.92,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -91000000.0,
+          "gap_rate_pct": -17.11,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 585.5,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -11560,7 +11378,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11572,7 +11390,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11584,7 +11402,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11596,7 +11414,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11608,7 +11426,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11620,7 +11438,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         }
@@ -12037,7 +11855,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "055c1f05b938253ddf129dee",
@@ -12049,7 +11867,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12061,7 +11879,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12073,7 +11891,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "539dc144e2bd08f6e015ceb7",
@@ -12085,7 +11903,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "18da0e2a21b0199d8ad9ead1",
@@ -12097,7 +11915,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "3dfec72e5dbc2be10544e47a",
@@ -12109,7 +11927,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12121,7 +11939,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "3a1d3c2fd8a98e14efe0feb3",
@@ -12133,7 +11951,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -12144,26 +11962,14 @@
           "sale_price_krw": 557500000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -115500000,
-          "gap_rate_pct": -20.72,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -116500000.0,
+          "gap_rate_pct": -20.9,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 1353.1,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -12174,7 +11980,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12186,7 +11992,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12198,7 +12004,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -12210,7 +12016,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12222,7 +12028,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -12234,7 +12040,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -12245,26 +12051,14 @@
           "sale_price_krw": 557200000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -115200000,
-          "gap_rate_pct": -20.67,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -116200000.0,
+          "gap_rate_pct": -20.85,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 1353.1,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -12275,7 +12069,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12287,7 +12081,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12299,7 +12093,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -12311,7 +12105,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12323,7 +12117,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -12335,7 +12129,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -12346,26 +12140,14 @@
           "sale_price_krw": 559700000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -117700000,
-          "gap_rate_pct": -21.03,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -118700000.0,
+          "gap_rate_pct": -21.21,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 1353.1,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -12376,7 +12158,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12388,7 +12170,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12400,7 +12182,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -12412,7 +12194,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12424,7 +12206,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -12436,7 +12218,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -12447,26 +12229,14 @@
           "sale_price_krw": 554500000,
           "sale_price_basis": "maximum_base_price",
           "sale_price_evidence_url": "https://www.data.go.kr/data/15098547/openapi.do",
-          "comparison_median_krw": 442000000,
-          "estimated_gap_krw": -112500000,
-          "gap_rate_pct": -20.29,
-          "comparables_count": 7,
+          "comparison_median_krw": 441000000.0,
+          "estimated_gap_krw": -113500000.0,
+          "gap_rate_pct": -20.47,
+          "comparables_count": 6,
           "confidence": "low",
           "analysis_reason": "six_month_window; 인접 행정구역 표본 조회로 전체 지역 포괄 여부 미확인",
           "analysis_policy_version": "2026-10-18-user-1",
           "comparables": [
-            {
-              "id": "dcd6c96434283eb359ba0244",
-              "apartment_name": "한양수자인디에스티지",
-              "location": "41591|향남읍 상신리|1349",
-              "area_sqm": 84.9944,
-              "trade_date": "2026-05-16",
-              "price_krw": 493000000,
-              "build_year": 2024,
-              "distance_m": 1353.1,
-              "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
-            },
             {
               "id": "055c1f05b938253ddf129dee",
               "apartment_name": "한양수자인디에스티지",
@@ -12477,7 +12247,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12489,7 +12259,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12501,7 +12271,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -12513,7 +12283,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12525,7 +12295,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -12537,7 +12307,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         }
@@ -12642,7 +12412,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e68516f7988cd39c6052c4b0",
@@ -12654,7 +12424,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "cc433a0882239ef070908ad2",
@@ -12666,7 +12436,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "21806c2efddcb4e67015fbf5",
@@ -12678,7 +12448,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e5c7b9747fa1595d37d4a5ed",
@@ -12690,7 +12460,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "72ea8d0aa0cf46b2f2d7b6b1",
@@ -12702,7 +12472,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         },
@@ -12731,7 +12501,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e68516f7988cd39c6052c4b0",
@@ -12743,7 +12513,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "cc433a0882239ef070908ad2",
@@ -12755,7 +12525,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "21806c2efddcb4e67015fbf5",
@@ -12767,7 +12537,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "e5c7b9747fa1595d37d4a5ed",
@@ -12779,7 +12549,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             },
             {
               "id": "72ea8d0aa0cf46b2f2d7b6b1",
@@ -12791,7 +12561,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-16T09:32:22.918521+09:00"
+              "collected_at": "2026-11-18T11:41:50.994701+09:00"
             }
           ]
         }
