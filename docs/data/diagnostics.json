@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-18T11:41:50.994701+09:00",
-  "catalog_cutoff": "2025-11-18",
-  "catalog_records": 365,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/44224908052",
+  "observed_at": "2026-11-19T11:10:13.678418+09:00",
+  "catalog_cutoff": "2025-11-19",
+  "catalog_records": 367,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/44442052168",
   "metrics": {
     "notices": 45,
     "project_records": 47,
@@ -11,7 +11,7 @@
     "priced_units": 76,
     "exact_area_units": 104,
     "coordinate_projects": 11,
-    "verified_trade_records": 208,
+    "verified_trade_records": 214,
     "gap_units": 32
   },
   "classification_counts": {
@@ -24,6 +24,101 @@
     "이름 유사도 후보는 자동 확정에 사용하지 않음"
   ],
   "records": [
+    {
+      "id": "gg_256574856",
+      "notice_id": "gg_256574856",
+      "name": "경기광주역 롯데캐슬 시그니처 2단지",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276517484",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": 59.9299,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": 59.8802,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59D",
+          "price": null,
+          "exclusive_area": 59.9064,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A2",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 7,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84C",
+          "price": null,
+          "exclusive_area": 84.9481,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84E",
+          "price": null,
+          "exclusive_area": 84.9309,
+          "allocation": 3,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "경기광주역 롯데캐슬 시그니처 1단지",
+          "address": "경기도 광주시 양벌동 산54-3번지",
+          "manage_no": "2026000107",
+          "similarity": 0.938
+        },
+        {
+          "name": "상동역 롯데캐슬 시그니처",
+          "address": "경기도 부천시 원미구 상동 540-1번지",
+          "manage_no": "2026000354",
+          "similarity": 0.667
+        },
+        {
+          "name": "화성 향남 롯데캐슬 시그니처",
+          "address": "경기도 화성시 만세구 향남읍 상신리 산 13-13 일원",
+          "manage_no": "2026000502",
+          "similarity": 0.571
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_275301293",
       "notice_id": "gg_275301293",
@@ -271,101 +366,6 @@
       ],
       "coordinate_verified": false,
       "collection_issues": [
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_256574856",
-      "notice_id": "gg_256574856",
-      "name": "경기광주역 롯데캐슬 시그니처 2단지",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=275301323",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "59A",
-          "price": null,
-          "exclusive_area": 59.9299,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "59B",
-          "price": null,
-          "exclusive_area": 59.8802,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "59D",
-          "price": null,
-          "exclusive_area": 59.9064,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84A2",
-          "price": null,
-          "exclusive_area": null,
-          "allocation": 7,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84C",
-          "price": null,
-          "exclusive_area": 84.9481,
-          "allocation": 2,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84E",
-          "price": null,
-          "exclusive_area": 84.9309,
-          "allocation": 3,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "경기광주역 롯데캐슬 시그니처 1단지",
-          "address": "경기도 광주시 양벌동 산54-3번지",
-          "manage_no": "2026000107",
-          "similarity": 0.938
-        },
-        {
-          "name": "상동역 롯데캐슬 시그니처",
-          "address": "경기도 부천시 원미구 상동 540-1번지",
-          "manage_no": "2026000354",
-          "similarity": 0.667
-        },
-        {
-          "name": "화성 향남 롯데캐슬 시그니처",
-          "address": "경기도 화성시 만세구 향남읍 상신리 산 13-13 일원",
-          "manage_no": "2026000502",
-          "similarity": 0.571
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
         "official_project_not_in_catalog"
       ]
     },
@@ -1006,7 +1006,7 @@
           "price": 691000000,
           "exclusive_area": 84.9904,
           "allocation": 9,
-          "gap": -22000000.0,
+          "gap": -16000000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1015,7 +1015,7 @@
           "price": 691000000,
           "exclusive_area": 84.9732,
           "allocation": 4,
-          "gap": -22000000.0,
+          "gap": -16000000,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -1534,7 +1534,7 @@
           "price": 708750000,
           "exclusive_area": 84.9424,
           "allocation": 8,
-          "gap": -228750000,
+          "gap": -228750000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1543,7 +1543,7 @@
           "price": 700950000,
           "exclusive_area": 84.9927,
           "allocation": 3,
-          "gap": -220950000,
+          "gap": -220950000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1552,7 +1552,7 @@
           "price": 724500000,
           "exclusive_area": 84.9839,
           "allocation": 3,
-          "gap": -244500000,
+          "gap": -244500000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1561,7 +1561,7 @@
           "price": 723500000,
           "exclusive_area": 84.9199,
           "allocation": 2,
-          "gap": -243500000,
+          "gap": -243500000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -3219,6 +3219,7 @@
       ],
       "coordinate_verified": true,
       "collection_issues": [
+        "analysis_deferred",
         "announcement_only_update",
         "attachment_text_extracted",
         "district_coverage_sampled",

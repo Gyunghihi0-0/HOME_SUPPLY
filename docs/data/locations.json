@@ -74,7 +74,7 @@
         "41115"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-17T12:20:55.685405+09:00"
+      "checked_at": "2026-11-19T11:10:13.678418+09:00"
     },
     "gg_258477420": {
       "address": "성남시 분당구 정자동 90",
@@ -88,7 +88,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-17T12:20:55.685405+09:00"
+      "checked_at": "2026-11-19T11:10:13.678418+09:00"
     },
     "gg_265886763": {
       "address": "화성시 만세구 향남읍 상신리 산 13-13 일원",
@@ -114,7 +114,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-17T12:20:55.685405+09:00"
+      "checked_at": "2026-11-19T11:10:13.678418+09:00"
     },
     "gg_265886741": {
       "address": "경기도 평택시 세교동 725번지 일원 (평택영신지구 도시개발사업 2BL)",
@@ -127,7 +127,7 @@
         "41220"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-17T12:20:55.685405+09:00"
+      "checked_at": "2026-11-19T11:10:13.678418+09:00"
     },
     "gg_266366609": {
       "address": "용인시 기흥구 마북동 298-1 번지 일원",
@@ -141,7 +141,7 @@
         "41465"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-17T12:20:55.685405+09:00"
+      "checked_at": "2026-11-19T11:10:13.678418+09:00"
     },
     "gg_274086932": {
       "address": "경기도 의왕시 삼동 244-1번지 일원",
@@ -157,7 +157,7 @@
         "41430"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-18T11:41:50.994701+09:00"
+      "checked_at": "2026-11-19T11:10:13.678418+09:00"
     }
   },
   "comparables": {
@@ -787,16 +787,6 @@
       "coordinates": [
         37.4153933881875,
         127.240575827796
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
-    },
-    "662cd105965eda6e9e258218": {
-      "location": "41220|동삭동|852",
-      "apartment_name": "평택센트럴자이3단지",
-      "coordinates": [
-        37.0205605373379,
-        127.098975463646
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
@@ -1661,16 +1651,6 @@
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
     },
-    "02dd82c7d4f3d6dfd7db8021": {
-      "location": "41220|동삭동|219-9",
-      "apartment_name": "더샵지제역센트럴파크1BL",
-      "coordinates": [
-        37.0141587274575,
-        127.090274781932
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
-    },
     "c85fc10d5cd6378b47448605": {
       "location": "41220|동삭동|388-13",
       "apartment_name": "더샵지제역센트럴파크2BL",
@@ -2240,7 +2220,87 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "c978eaba1531516369c2272c": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "54f5169915b69744ed007a23": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "1065aab10fbc8e4fde1549e8": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "19127dfeb5b9da036b6cfa44": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "48447de9e51eb14ab988652a": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "58c1f281b684e6d13f8894d1": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "cbfa3bfa5eefa6c6c94e139b": {
+      "location": "41220|세교동|596",
+      "apartment_name": "힐스테이트평택3차(3-1블록)",
+      "coordinates": [
+        37.0093858080806,
+        127.089185101396
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "f1a5fa1d37e24b00d3fc6e54": {
+      "location": "41220|칠원동|542",
+      "apartment_name": "평택지제역동문굿모닝힐맘시티1단지",
+      "coordinates": [
+        37.0268259175679,
+        127.102372202181
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     }
   },
-  "generated_at": "2026-11-18T11:48:52.439870+09:00"
+  "generated_at": "2026-11-19T11:17:14.493300+09:00"
 }
