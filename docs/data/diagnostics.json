@@ -1,23 +1,23 @@
 {
-  "observed_at": "2026-11-19T11:10:13.678418+09:00",
-  "catalog_cutoff": "2025-11-19",
-  "catalog_records": 367,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/44442052168",
+  "observed_at": "2026-11-20T10:59:24.519036+09:00",
+  "catalog_cutoff": "2025-11-20",
+  "catalog_records": 370,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/44657339171",
   "metrics": {
     "notices": 45,
     "project_records": 47,
-    "matched_projects": 22,
+    "matched_projects": 23,
     "units": 151,
-    "priced_units": 76,
-    "exact_area_units": 104,
-    "coordinate_projects": 11,
-    "verified_trade_records": 214,
-    "gap_units": 32
+    "priced_units": 79,
+    "exact_area_units": 107,
+    "coordinate_projects": 12,
+    "verified_trade_records": 223,
+    "gap_units": 33
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 14,
-    "실제 연결 성공": 21,
-    "추가 개발 필요": 12
+    "공식 정보가 아직 없음": 12,
+    "실제 연결 성공": 22,
+    "추가 개발 필요": 13
   },
   "limitations": [
     "API 조회 기간 내 부재는 정식 공고 미발표를 확정하지 않음",
@@ -671,41 +671,47 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274086933",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "verified"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "실제 연결 성공",
+      "project_label": "실제 연결 성공",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "59",
-          "price": null,
-          "exclusive_area": null,
+          "price": 644720000,
+          "exclusive_area": 59.8728,
           "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "gap": -144720000,
+          "code": "verified",
+          "label": "실제 연결 성공"
         },
         {
           "type": "71",
-          "price": null,
-          "exclusive_area": null,
+          "price": 729440000,
+          "exclusive_area": 71.9348,
           "allocation": 1,
           "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "code": "fewer_than_three_verified_trades",
+          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
         },
         {
           "type": "84",
-          "price": null,
-          "exclusive_area": null,
+          "price": 845790000,
+          "exclusive_area": 84.9614,
           "allocation": 1,
           "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
+          "code": "fewer_than_three_verified_trades",
+          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
         }
       ],
       "review_candidates": [
+        {
+          "name": "고양 한신더휴 퍼스트원",
+          "address": "경기도 고양시 덕양구 행신동 173-1번지 일원",
+          "manage_no": "2026000585",
+          "similarity": 0.889
+        },
         {
           "name": "의왕역 한신더휴",
           "address": "경기도 의왕시 삼동 244-1번지 일원",
@@ -717,19 +723,14 @@
           "address": "경상북도 안동시 옥동 1069번지 일원",
           "manage_no": "2026000093",
           "similarity": 0.5
-        },
-        {
-          "name": "더샵 여주역더퍼스트",
-          "address": "경기도 여주시 홍문동 332-2번지 일원",
-          "manage_no": "2026000394",
-          "similarity": 0.471
         }
       ],
-      "coordinate_verified": false,
+      "coordinate_verified": true,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "district_coverage_sampled",
+        "target_build_year_uses_official_planned_move_year"
       ]
     },
     {
@@ -763,16 +764,16 @@
           "similarity": 1.0
         },
         {
+          "name": "고양 한신더휴 퍼스트원",
+          "address": "경기도 고양시 덕양구 행신동 173-1번지 일원",
+          "manage_no": "2026000585",
+          "similarity": 0.471
+        },
+        {
           "name": "창원 한신더휴 메가센텀",
           "address": "경상남도 창원시 마산회원구 회원동 480-31번지 일대",
           "manage_no": "2026000282",
           "similarity": 0.471
-        },
-        {
-          "name": "의왕역 SK VIEW",
-          "address": "경기도 의왕시 삼동 192-244번지 일원",
-          "manage_no": "2026000301",
-          "similarity": 0.375
         }
       ],
       "coordinate_verified": true,
@@ -791,11 +792,11 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=272148403",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "official_project_address_mismatch"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "59A",
@@ -839,10 +840,10 @@
           "similarity": 0.667
         },
         {
-          "name": "쌍용 더 플래티넘 센텀",
-          "address": "부산광역시 수영구 망미동 253-1번지 일원",
-          "manage_no": "2026000424",
-          "similarity": 0.353
+          "name": "왕숙 한신더휴 센텀(남양주 왕숙 A-17BL) 공공분양주택",
+          "address": "경기도 남양주시 진건읍 진관리 일원 남양주 왕숙 공공주택지구 A-17BL",
+          "manage_no": "2026000575",
+          "similarity": 0.615
         }
       ],
       "coordinate_verified": false,
@@ -1987,7 +1988,7 @@
           "price": 1714200000,
           "exclusive_area": 84.9916,
           "allocation": 7,
-          "gap": -414200000,
+          "gap": -319200000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1996,7 +1997,7 @@
           "price": 1716800000,
           "exclusive_area": 84.9979,
           "allocation": 1,
-          "gap": -416800000,
+          "gap": -321800000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -2005,7 +2006,7 @@
           "price": 1713200000,
           "exclusive_area": 84.997,
           "allocation": 3,
-          "gap": -413200000,
+          "gap": -318200000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -2014,7 +2015,7 @@
           "price": 1713800000,
           "exclusive_area": 84.9948,
           "allocation": 3,
-          "gap": -413800000,
+          "gap": -318800000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -2023,7 +2024,7 @@
           "price": 1715200000,
           "exclusive_area": 84.9975,
           "allocation": 3,
-          "gap": -415200000,
+          "gap": -320200000,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -2077,7 +2078,7 @@
           "price": 1712100000,
           "exclusive_area": 84.997,
           "allocation": 4,
-          "gap": -412100000,
+          "gap": -317100000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -2086,7 +2087,7 @@
           "price": 1715300000,
           "exclusive_area": 84.9998,
           "allocation": 2,
-          "gap": -415300000,
+          "gap": -320300000,
           "code": "verified",
           "label": "실제 연결 성공"
         }

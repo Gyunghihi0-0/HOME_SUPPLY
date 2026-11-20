@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-18T11:41:50.994701+09:00"
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -30,7 +30,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-18T11:41:50.994701+09:00"
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
     },
     "gg_266126622_p2026000508_2026000508": {
       "address": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
@@ -46,7 +46,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-18T11:41:50.994701+09:00"
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
     },
     "gg_262772736": {
       "address": "화성특례시 만세구 향남읍 하길리 404-2 번지 일원",
@@ -59,7 +59,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-18T11:41:50.994701+09:00"
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
     },
     "gg_260861016": {
       "address": "경기도 수원시 권선구 서둔동 212-1번지 일원",
@@ -88,7 +88,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-19T11:10:13.678418+09:00"
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
     },
     "gg_265886763": {
       "address": "화성시 만세구 향남읍 상신리 산 13-13 일원",
@@ -101,7 +101,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-18T11:41:50.994701+09:00"
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
     },
     "gg_272148401": {
       "address": "경기도 광주시 탄벌동 203-4 번지 일원",
@@ -151,26 +151,26 @@
       ],
       "build_year": 2029,
       "lawd_codes": [
-        "41111",
-        "41113",
-        "41410",
         "41430"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-19T11:10:13.678418+09:00"
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "gg_274086933": {
+      "address": "경기도 고양시 덕양구 행신동 173-1번지 일원",
+      "coordinates": [
+        37.6204753304415,
+        126.844511994579
+      ],
+      "build_year": 2029,
+      "lawd_codes": [
+        "41281"
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
     }
   },
   "comparables": {
-    "f43896aab4e26e7665a45919": {
-      "location": "41597|여울동|975",
-      "apartment_name": "동탄역삼정그린코아",
-      "coordinates": [
-        37.2010150854,
-        127.088938874374
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
     "6f7edb74427320f1d38b346c": {
       "location": "41597|여울동|975",
       "apartment_name": "동탄역삼정그린코아",
@@ -2300,7 +2300,107 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "319bd226b54de9754bcae3d5": {
+      "location": "41281|행신동|1131",
+      "apartment_name": "행신파밀리에트라이하이",
+      "coordinates": [
+        37.620113731542,
+        126.831935567322
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "863e04b93129ed7b1dda6d8d": {
+      "location": "41281|행신동|1131",
+      "apartment_name": "행신파밀리에트라이하이",
+      "coordinates": [
+        37.620113731542,
+        126.831935567322
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "03f5b4ee554e8ed51e9e7610": {
+      "location": "41281|행신동|1131",
+      "apartment_name": "행신파밀리에트라이하이",
+      "coordinates": [
+        37.620113731542,
+        126.831935567322
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "59209edfde10add694574643": {
+      "location": "41281|행신동|1131",
+      "apartment_name": "행신파밀리에트라이하이",
+      "coordinates": [
+        37.620113731542,
+        126.831935567322
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "0959020f69eab81246a571cc": {
+      "location": "41281|행신동|1131",
+      "apartment_name": "행신파밀리에트라이하이",
+      "coordinates": [
+        37.620113731542,
+        126.831935567322
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "ab5a96d4306f9d963112a979": {
+      "location": "41281|행신동|1131",
+      "apartment_name": "행신파밀리에트라이하이",
+      "coordinates": [
+        37.620113731542,
+        126.831935567322
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "72b34748fe04a503be56d750": {
+      "location": "41281|행신동|1131",
+      "apartment_name": "행신파밀리에트라이하이",
+      "coordinates": [
+        37.620113731542,
+        126.831935567322
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "3a602b73a8ee93ea54a1010e": {
+      "location": "41281|행신동|1131",
+      "apartment_name": "행신파밀리에트라이하이",
+      "coordinates": [
+        37.620113731542,
+        126.831935567322
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "541d1343a0abc3b48bcc56df": {
+      "location": "41281|행신동|1131",
+      "apartment_name": "행신파밀리에트라이하이",
+      "coordinates": [
+        37.620113731542,
+        126.831935567322
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+    },
+    "1b9e6a5a68f15914bd403f91": {
+      "location": "41597|여울동|975",
+      "apartment_name": "동탄역삼정그린코아",
+      "coordinates": [
+        37.2010150854,
+        127.088938874374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-10-29T09:33:32.726486+09:00"
     }
   },
-  "generated_at": "2026-11-19T11:17:14.493300+09:00"
+  "generated_at": "2026-11-20T11:06:25.850785+09:00"
 }
