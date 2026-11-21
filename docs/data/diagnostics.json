@@ -1,29 +1,228 @@
 {
-  "observed_at": "2026-11-20T10:59:24.519036+09:00",
-  "catalog_cutoff": "2025-11-20",
-  "catalog_records": 370,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/44657339171",
+  "observed_at": "2026-11-21T10:54:51.291336+09:00",
+  "catalog_cutoff": "2025-11-21",
+  "catalog_records": 376,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/44852740494",
   "metrics": {
-    "notices": 45,
-    "project_records": 47,
+    "notices": 46,
+    "project_records": 48,
     "matched_projects": 23,
-    "units": 151,
+    "units": 160,
     "priced_units": 79,
     "exact_area_units": 107,
     "coordinate_projects": 12,
-    "verified_trade_records": 223,
+    "verified_trade_records": 226,
     "gap_units": 33
   },
   "classification_counts": {
     "공식 정보가 아직 없음": 12,
-    "실제 연결 성공": 22,
-    "추가 개발 필요": 13
+    "추가 개발 필요": 14,
+    "실제 연결 성공": 22
   },
   "limitations": [
     "API 조회 기간 내 부재는 정식 공고 미발표를 확정하지 않음",
     "이름 유사도 후보는 자동 확정에 사용하지 않음"
   ],
   "records": [
+    {
+      "id": "gg_276760914",
+      "notice_id": "gg_276760914",
+      "name": "병점복합 주복1블록 공공분양주택",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276760914",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "61A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "63A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "65A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "66A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "71A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "72A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "72B",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "73A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 2,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "과천주암지구 C1블록 공공분양주택(본청약)",
+          "address": "경기도 과천시 주암동, 과천동 일원 과천주암지구 내 C1블록",
+          "manage_no": "2025000659",
+          "similarity": 0.471
+        },
+        {
+          "name": "청주지북지구 B1블록 공공분양주택",
+          "address": "충청북도 청주시 상당구 지북동 일원 청주지북 공공지원민간임대주택 공급촉진지구 내 B1블록",
+          "manage_no": "2025000596",
+          "similarity": 0.471
+        },
+        {
+          "name": "행정중심복합도시 5-1L1블록 공공분양주택",
+          "address": "행정중심복합도시 5-1생활권 L1블록(세종특별자치시 합강동 일원)",
+          "manage_no": "2025000625",
+          "similarity": 0.435
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
+    {
+      "id": "gg_272390416",
+      "notice_id": "gg_272390416",
+      "name": "디에이치 반포124",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276760919",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": 59.98,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": 59.99,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84A",
+          "price": null,
+          "exclusive_area": 84.98,
+          "allocation": 3,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": 84.99,
+          "allocation": 5,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "오티에르 반포",
+          "address": "서울특별시 서초구 잠원동 59-10번지 외 3필지",
+          "manage_no": "2026000058",
+          "similarity": 0.4
+        },
+        {
+          "name": "연수 월드메르디앙 어반포레",
+          "address": "인천광역시 연수구 동춘동 1152번지 일원",
+          "manage_no": "2026000035",
+          "similarity": 0.286
+        },
+        {
+          "name": "천안 아이파크 시티 1단지(2회차)",
+          "address": "충청남도 천안시 서북구 성성동 34-4번지 일원",
+          "manage_no": "2026000300",
+          "similarity": 0.261
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_256574856",
       "notice_id": "gg_256574856",
@@ -453,11 +652,11 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274572401",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "official_project_address_mismatch"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "59A",
@@ -471,6 +670,12 @@
       ],
       "review_candidates": [
         {
+          "name": "소사 휴먼빌",
+          "address": "경기도 부천시 소사구 소사본동 277-30번지 일원",
+          "manage_no": "2026000591",
+          "similarity": 1.0
+        },
+        {
           "name": "이천 휴먼빌 클래스원",
           "address": "경기도 이천시 갈산동 572-1번지 일원",
           "manage_no": "2026000291",
@@ -481,19 +686,13 @@
           "address": "충청남도 천안시 서북구 부대동 416-1번지 일원",
           "manage_no": "2026000127",
           "similarity": 0.333
-        },
-        {
-          "name": "센텀 엘카사",
-          "address": "울산광역시 울주군 온양읍 화산발리로 706",
-          "manage_no": "2026000328",
-          "similarity": 0.2
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "official_project_address_mismatch"
       ]
     },
     {
@@ -850,7 +1049,7 @@
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "official_project_address_mismatch"
       ]
     },
     {
@@ -903,83 +1102,6 @@
           "address": "경기도 광명시 소하동 광명 구름산지구 도시개발사업지구 A6BL",
           "manage_no": "2026000453",
           "similarity": 0.308
-        }
-      ],
-      "coordinate_verified": false,
-      "collection_issues": [
-        "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
-      ]
-    },
-    {
-      "id": "gg_272390416",
-      "notice_id": "gg_272390416",
-      "name": "디에이치 반포124",
-      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=272390416",
-      "stages": {
-        "notice": "verified",
-        "project": "official_project_not_in_catalog"
-      },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
-      "units": [
-        {
-          "type": "59A",
-          "price": null,
-          "exclusive_area": 59.98,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "59B",
-          "price": null,
-          "exclusive_area": 59.99,
-          "allocation": 1,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84A",
-          "price": null,
-          "exclusive_area": 84.98,
-          "allocation": 3,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        },
-        {
-          "type": "84B",
-          "price": null,
-          "exclusive_area": 84.99,
-          "allocation": 5,
-          "gap": null,
-          "code": "sale_price_and_exclusive_area_pending",
-          "label": "공식 분양가·전용면적 연결 대기"
-        }
-      ],
-      "review_candidates": [
-        {
-          "name": "오티에르 반포",
-          "address": "서울특별시 서초구 잠원동 59-10번지 외 3필지",
-          "manage_no": "2026000058",
-          "similarity": 0.4
-        },
-        {
-          "name": "연수 월드메르디앙 어반포레",
-          "address": "인천광역시 연수구 동춘동 1152번지 일원",
-          "manage_no": "2026000035",
-          "similarity": 0.286
-        },
-        {
-          "name": "천안 아이파크 시티 1단지(2회차)",
-          "address": "충청남도 천안시 서북구 성성동 34-4번지 일원",
-          "manage_no": "2026000300",
-          "similarity": 0.261
         }
       ],
       "coordinate_verified": false,
@@ -1535,7 +1657,7 @@
           "price": 708750000,
           "exclusive_area": 84.9424,
           "allocation": 8,
-          "gap": -228750000.0,
+          "gap": -228750000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1544,7 +1666,7 @@
           "price": 700950000,
           "exclusive_area": 84.9927,
           "allocation": 3,
-          "gap": -220950000.0,
+          "gap": -220950000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1553,7 +1675,7 @@
           "price": 724500000,
           "exclusive_area": 84.9839,
           "allocation": 3,
-          "gap": -244500000.0,
+          "gap": -244500000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1562,7 +1684,7 @@
           "price": 723500000,
           "exclusive_area": 84.9199,
           "allocation": 2,
-          "gap": -243500000.0,
+          "gap": -243500000,
           "code": "verified",
           "label": "실제 연결 성공"
         }

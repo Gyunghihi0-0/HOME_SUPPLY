@@ -24,13 +24,10 @@
       ],
       "build_year": 2032,
       "lawd_codes": [
-        "41370",
-        "41463",
-        "41595",
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+      "checked_at": "2026-11-21T10:54:51.291336+09:00"
     },
     "gg_266126622_p2026000508_2026000508": {
       "address": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
@@ -74,7 +71,7 @@
         "41115"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-19T11:10:13.678418+09:00"
+      "checked_at": "2026-11-21T10:54:51.291336+09:00"
     },
     "gg_258477420": {
       "address": "성남시 분당구 정자동 90",
@@ -114,7 +111,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-19T11:10:13.678418+09:00"
+      "checked_at": "2026-11-21T10:54:51.291336+09:00"
     },
     "gg_265886741": {
       "address": "경기도 평택시 세교동 725번지 일원 (평택영신지구 도시개발사업 2BL)",
@@ -127,7 +124,7 @@
         "41220"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-19T11:10:13.678418+09:00"
+      "checked_at": "2026-11-21T10:54:51.291336+09:00"
     },
     "gg_266366609": {
       "address": "용인시 기흥구 마북동 298-1 번지 일원",
@@ -141,7 +138,7 @@
         "41465"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-19T11:10:13.678418+09:00"
+      "checked_at": "2026-11-21T10:54:51.291336+09:00"
     },
     "gg_274086932": {
       "address": "경기도 의왕시 삼동 244-1번지 일원",
@@ -151,10 +148,13 @@
       ],
       "build_year": 2029,
       "lawd_codes": [
+        "41111",
+        "41113",
+        "41410",
         "41430"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+      "checked_at": "2026-11-21T10:54:51.291336+09:00"
     },
     "gg_274086933": {
       "address": "경기도 고양시 덕양구 행신동 173-1번지 일원",
@@ -167,7 +167,7 @@
         "41281"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+      "checked_at": "2026-11-21T10:54:51.291336+09:00"
     }
   },
   "comparables": {
@@ -450,16 +450,6 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
-    "501dd417476428fb517b28db": {
-      "location": "41610|송정동|662",
-      "apartment_name": "광주행정타운아이파크",
-      "coordinates": [
-        37.4197896137215,
-        127.253937697201
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     },
     "bb30b8fcdc92bae0804a31e6": {
       "location": "41610|탄벌동|771",
@@ -2400,7 +2390,47 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-10-29T09:33:32.726486+09:00"
+    },
+    "74ec2f0beb4fd9ea4f664c98": {
+      "location": "41610|송정동|662",
+      "apartment_name": "광주행정타운아이파크",
+      "coordinates": [
+        37.4197896137215,
+        127.253937697201
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "02dd82c7d4f3d6dfd7db8021": {
+      "location": "41220|동삭동|219-9",
+      "apartment_name": "더샵지제역센트럴파크1BL",
+      "coordinates": [
+        37.0141587274575,
+        127.090274781932
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "d4de292cf533a430cb6bb98d": {
+      "location": "41220|동삭동|852",
+      "apartment_name": "평택센트럴자이3단지",
+      "coordinates": [
+        37.0205605373379,
+        127.098975463646
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
+    },
+    "9f98e1e88a538e5fd71b70da": {
+      "location": "41220|동삭동|388-13",
+      "apartment_name": "더샵지제역센트럴파크2BL",
+      "coordinates": [
+        37.016196954389,
+        127.092748965374
+      ],
+      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
+      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     }
   },
-  "generated_at": "2026-11-20T11:06:25.850785+09:00"
+  "generated_at": "2026-11-21T11:01:52.603157+09:00"
 }
