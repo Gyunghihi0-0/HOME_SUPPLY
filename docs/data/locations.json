@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+      "checked_at": "2026-11-22T09:49:26.258816+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -24,10 +24,13 @@
       ],
       "build_year": 2032,
       "lawd_codes": [
+        "41370",
+        "41463",
+        "41595",
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-21T10:54:51.291336+09:00"
+      "checked_at": "2026-11-22T09:49:26.258816+09:00"
     },
     "gg_266126622_p2026000508_2026000508": {
       "address": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
@@ -43,7 +46,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+      "checked_at": "2026-11-22T09:49:26.258816+09:00"
     },
     "gg_262772736": {
       "address": "화성특례시 만세구 향남읍 하길리 404-2 번지 일원",
@@ -56,7 +59,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+      "checked_at": "2026-11-22T09:49:26.258816+09:00"
     },
     "gg_260861016": {
       "address": "경기도 수원시 권선구 서둔동 212-1번지 일원",
@@ -85,7 +88,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+      "checked_at": "2026-11-22T09:49:26.258816+09:00"
     },
     "gg_265886763": {
       "address": "화성시 만세구 향남읍 상신리 산 13-13 일원",
@@ -98,7 +101,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-20T10:59:24.519036+09:00"
+      "checked_at": "2026-11-22T09:49:26.258816+09:00"
     },
     "gg_272148401": {
       "address": "경기도 광주시 탄벌동 203-4 번지 일원",
@@ -148,13 +151,10 @@
       ],
       "build_year": 2029,
       "lawd_codes": [
-        "41111",
-        "41113",
-        "41410",
         "41430"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-21T10:54:51.291336+09:00"
+      "checked_at": "2026-11-22T09:49:26.258816+09:00"
     },
     "gg_274086933": {
       "address": "경기도 고양시 덕양구 행신동 173-1번지 일원",
@@ -167,7 +167,7 @@
         "41281"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-21T10:54:51.291336+09:00"
+      "checked_at": "2026-11-22T09:49:26.258816+09:00"
     }
   },
   "comparables": {
@@ -2432,5 +2432,5 @@
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
     }
   },
-  "generated_at": "2026-11-21T11:01:52.603157+09:00"
+  "generated_at": "2026-11-22T09:56:27.445917+09:00"
 }

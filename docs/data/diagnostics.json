@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-21T10:54:51.291336+09:00",
-  "catalog_cutoff": "2025-11-21",
-  "catalog_records": 376,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/44852740494",
+  "observed_at": "2026-11-22T09:49:26.258816+09:00",
+  "catalog_cutoff": "2025-11-22",
+  "catalog_records": 365,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/44968342656",
   "metrics": {
     "notices": 46,
     "project_records": 48,
@@ -127,16 +127,16 @@
           "similarity": 0.471
         },
         {
-          "name": "청주지북지구 B1블록 공공분양주택",
-          "address": "충청북도 청주시 상당구 지북동 일원 청주지북 공공지원민간임대주택 공급촉진지구 내 B1블록",
-          "manage_no": "2025000596",
-          "similarity": 0.471
-        },
-        {
           "name": "행정중심복합도시 5-1L1블록 공공분양주택",
           "address": "행정중심복합도시 5-1생활권 L1블록(세종특별자치시 합강동 일원)",
           "manage_no": "2025000625",
           "similarity": 0.435
+        },
+        {
+          "name": "남양주왕숙지구 B-17블록 공공분양주택(본청약)",
+          "address": "경기도 남양주시 진접읍, 진건읍, 퇴계원읍 일원 남양주왕숙 공공주택지구 내 B-17블록",
+          "manage_no": "2025000604",
+          "similarity": 0.421
         }
       ],
       "coordinate_verified": false,
@@ -3140,10 +3140,10 @@
           "similarity": 0.667
         },
         {
-          "name": "두산위브더제니스 센트럴 천안",
-          "address": "충청남도 천안시 청당동 310-6번지 일원(1BL-1Lot)",
-          "manage_no": "2025000575",
-          "similarity": 0.593
+          "name": "두산위브더제니스 구미(조합원취소분)",
+          "address": "경상북도 구미시 광평동 227번지 일원",
+          "manage_no": "2026000115",
+          "similarity": 0.533
         }
       ],
       "coordinate_verified": false,
