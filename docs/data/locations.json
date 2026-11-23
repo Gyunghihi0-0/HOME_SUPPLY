@@ -74,7 +74,7 @@
         "41115"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-21T10:54:51.291336+09:00"
+      "checked_at": "2026-11-23T10:17:24.027363+09:00"
     },
     "gg_258477420": {
       "address": "성남시 분당구 정자동 90",
@@ -114,7 +114,7 @@
         "41610"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-21T10:54:51.291336+09:00"
+      "checked_at": "2026-11-23T10:17:24.027363+09:00"
     },
     "gg_265886741": {
       "address": "경기도 평택시 세교동 725번지 일원 (평택영신지구 도시개발사업 2BL)",
@@ -127,7 +127,7 @@
         "41220"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-21T10:54:51.291336+09:00"
+      "checked_at": "2026-11-23T10:17:24.027363+09:00"
     },
     "gg_266366609": {
       "address": "용인시 기흥구 마북동 298-1 번지 일원",
@@ -141,7 +141,7 @@
         "41465"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-21T10:54:51.291336+09:00"
+      "checked_at": "2026-11-23T10:17:24.027363+09:00"
     },
     "gg_274086932": {
       "address": "경기도 의왕시 삼동 244-1번지 일원",
@@ -151,10 +151,13 @@
       ],
       "build_year": 2029,
       "lawd_codes": [
+        "41111",
+        "41113",
+        "41410",
         "41430"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-22T09:49:26.258816+09:00"
+      "checked_at": "2026-11-23T10:17:24.027363+09:00"
     },
     "gg_274086933": {
       "address": "경기도 고양시 덕양구 행신동 173-1번지 일원",
@@ -167,7 +170,7 @@
         "41281"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-22T09:49:26.258816+09:00"
+      "checked_at": "2026-11-23T10:17:24.027363+09:00"
     }
   },
   "comparables": {
@@ -450,16 +453,6 @@
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-10-29T09:33:32.726486+09:00"
-    },
-    "bb30b8fcdc92bae0804a31e6": {
-      "location": "41610|탄벌동|771",
-      "apartment_name": "두산위브광주센트럴파크",
-      "coordinates": [
-        37.4153933881875,
-        127.240575827796
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
     },
     "f7b52196f52292908944ca3a": {
       "location": "41610|송정동|662",
@@ -777,16 +770,6 @@
       "coordinates": [
         37.4153933881875,
         127.240575827796
-      ],
-      "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-08T16:30:32.231326+09:00"
-    },
-    "8fae0684777020c082353723": {
-      "location": "41220|세교동|596",
-      "apartment_name": "힐스테이트평택3차(3-1블록)",
-      "coordinates": [
-        37.0093858080806,
-        127.089185101396
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
@@ -2432,5 +2415,5 @@
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
     }
   },
-  "generated_at": "2026-11-22T09:56:27.445917+09:00"
+  "generated_at": "2026-11-23T10:24:25.743780+09:00"
 }
