@@ -1,21 +1,21 @@
 {
-  "observed_at": "2026-11-24T14:05:34.457231+09:00",
-  "catalog_cutoff": "2025-11-24",
-  "catalog_records": 365,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/45330620467",
+  "observed_at": "2026-11-25T12:54:10.616119+09:00",
+  "catalog_cutoff": "2025-11-25",
+  "catalog_records": 362,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/45542915619",
   "metrics": {
-    "notices": 46,
-    "project_records": 48,
+    "notices": 47,
+    "project_records": 49,
     "matched_projects": 23,
-    "units": 160,
+    "units": 163,
     "priced_units": 79,
-    "exact_area_units": 107,
+    "exact_area_units": 109,
     "coordinate_projects": 12,
-    "verified_trade_records": 225,
+    "verified_trade_records": 223,
     "gap_units": 33
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 12,
+    "공식 정보가 아직 없음": 13,
     "추가 개발 필요": 14,
     "실제 연결 성공": 22
   },
@@ -24,6 +24,74 @@
     "이름 유사도 후보는 자동 확정에 사용하지 않음"
   ],
   "records": [
+    {
+      "id": "gg_277247833",
+      "notice_id": "gg_277247833",
+      "name": "두산위브 더 포레 성남",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=277247833",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "51",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59A",
+          "price": null,
+          "exclusive_area": 59.9562,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "59B",
+          "price": null,
+          "exclusive_area": 59.8385,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "두산위브 트레지움 익산",
+          "address": "전북특별자치도 익산시 동산동 1057번지 일원",
+          "manage_no": "2026000559",
+          "similarity": 0.526
+        },
+        {
+          "name": "두산위브더제니스 부천",
+          "address": "경기도 부천시 소사구 소사본동 88-39번지 일대",
+          "manage_no": "2026000382",
+          "similarity": 0.526
+        },
+        {
+          "name": "두산위브더제니스 대연",
+          "address": "부산광역시 남구 대연동 1756-9번지",
+          "manage_no": "2026000356",
+          "similarity": 0.526
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_274329616",
       "notice_id": "gg_274329616",
@@ -95,7 +163,9 @@
         }
       ],
       "coordinate_verified": false,
-      "collection_issues": []
+      "collection_issues": [
+        "official_project_not_in_catalog"
+      ]
     },
     {
       "id": "gg_276760914",
@@ -947,7 +1017,7 @@
           "price": 725000000,
           "exclusive_area": 59.9942,
           "allocation": 1,
-          "gap": -98000000,
+          "gap": -93000000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         }
@@ -1654,7 +1724,7 @@
           "price": 708750000,
           "exclusive_area": 84.9424,
           "allocation": 8,
-          "gap": -222750000.0,
+          "gap": -213750000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1663,7 +1733,7 @@
           "price": 700950000,
           "exclusive_area": 84.9927,
           "allocation": 3,
-          "gap": -214950000.0,
+          "gap": -205950000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1672,7 +1742,7 @@
           "price": 724500000,
           "exclusive_area": 84.9839,
           "allocation": 3,
-          "gap": -238500000.0,
+          "gap": -229500000,
           "code": "verified",
           "label": "실제 연결 성공"
         },
@@ -1681,7 +1751,7 @@
           "price": 723500000,
           "exclusive_area": 84.9199,
           "allocation": 2,
-          "gap": -237500000.0,
+          "gap": -228500000,
           "code": "verified",
           "label": "실제 연결 성공"
         }
