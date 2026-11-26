@@ -14,7 +14,7 @@
         "41830"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-24T14:05:34.457231+09:00"
+      "checked_at": "2026-11-26T12:19:26.185274+09:00"
     },
     "gg_266126622_p2026000509_2026000509": {
       "address": "경기도 화성특례시 동탄구 반송동 99번지[동탄(1) M1-2-2블록]",
@@ -30,7 +30,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-24T14:05:34.457231+09:00"
+      "checked_at": "2026-11-26T12:19:26.185274+09:00"
     },
     "gg_266126622_p2026000508_2026000508": {
       "address": "경기도 화성특례시 동탄구 반송동 95번지[동탄(1) M1-1-2블록]",
@@ -46,7 +46,7 @@
         "41597"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-24T14:05:34.457231+09:00"
+      "checked_at": "2026-11-26T12:19:26.185274+09:00"
     },
     "gg_262772736": {
       "address": "화성특례시 만세구 향남읍 하길리 404-2 번지 일원",
@@ -59,7 +59,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-24T14:05:34.457231+09:00"
+      "checked_at": "2026-11-26T12:19:26.185274+09:00"
     },
     "gg_260861016": {
       "address": "경기도 수원시 권선구 서둔동 212-1번지 일원",
@@ -101,7 +101,7 @@
         "41591"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-24T14:05:34.457231+09:00"
+      "checked_at": "2026-11-26T12:19:26.185274+09:00"
     },
     "gg_272148401": {
       "address": "경기도 광주시 탄벌동 203-4 번지 일원",
@@ -170,7 +170,7 @@
         "41281"
       ],
       "evidence_url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
-      "checked_at": "2026-11-25T12:54:10.616119+09:00"
+      "checked_at": "2026-11-26T12:19:26.185274+09:00"
     }
   },
   "comparables": {
@@ -2405,5 +2405,5 @@
       "checked_at": "2026-11-08T16:30:32.231326+09:00"
     }
   },
-  "generated_at": "2026-11-25T13:01:12.575968+09:00"
+  "generated_at": "2026-11-26T12:26:30.642861+09:00"
 }

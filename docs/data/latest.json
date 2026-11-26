@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-25T13:01:12.575968+09:00",
+  "generated_at": "2026-11-26T12:26:30.642861+09:00",
   "last_success_at": null,
   "data_status": "partial",
   "sources": [
@@ -9,14 +9,14 @@
       "name": "경기도 장애인 특별공급",
       "url": "https://www.gg.go.kr/bbs/board.do?bsIdx=504&menuId=1878",
       "status": "partial",
-      "checked_at": "2026-11-25T12:52:49.819586+09:00",
+      "checked_at": "2026-11-26T12:18:05.749670+09:00",
       "last_success_at": null,
       "error_code": "notice_budget_exhausted",
       "message": "notice_budget_exhausted",
-      "records_count": 6,
+      "records_count": 5,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-25T03:54:03.368411+00:00",
-      "collection_responses": 7,
+      "last_collected_at": "2026-11-26T03:19:24.156259+00:00",
+      "collection_responses": 6,
       "collection_cached_responses": 0,
       "collection_errors": 0
     },
@@ -24,31 +24,31 @@
       "id": "applyhome",
       "name": "청약홈 분양정보",
       "url": "https://www.data.go.kr/data/15098547/openapi.do",
-      "status": "partial",
-      "checked_at": "2026-11-25T12:54:10.616119+09:00",
+      "status": "error",
+      "checked_at": "2026-11-26T12:19:26.185274+09:00",
       "last_success_at": null,
-      "error_code": "analysis_batch_deferred",
-      "message": "분석 예산 내 완료분 저장 · 미완료 단지는 다음 실행에서 계속",
-      "records_count": 17,
-      "collection_status": "ok",
-      "last_collected_at": "2026-11-25T04:01:03.154907+00:00",
-      "collection_responses": 39,
-      "collection_cached_responses": 17,
-      "collection_errors": 0
+      "error_code": "network_error",
+      "message": "network_error",
+      "records_count": 10,
+      "collection_status": "partial",
+      "last_collected_at": "2026-11-26T03:26:26.161656+00:00",
+      "collection_responses": 25,
+      "collection_cached_responses": 11,
+      "collection_errors": 1
     },
     {
       "id": "molit",
       "name": "국토교통부 실거래가",
       "url": "https://www.data.go.kr/data/15126468/openapi.do",
       "status": "partial",
-      "checked_at": "2026-11-25T12:54:10.616119+09:00",
+      "checked_at": "2026-11-26T12:19:26.185274+09:00",
       "last_success_at": null,
       "error_code": "analysis_batch_deferred",
       "message": "분석 예산 내 완료분 저장 · 미완료 단지는 다음 실행에서 계속",
-      "records_count": 61422,
+      "records_count": 72546,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-25T04:00:37.198133+00:00",
-      "collection_responses": 132,
+      "last_collected_at": "2026-11-26T03:26:04.329193+00:00",
+      "collection_responses": 128,
       "collection_cached_responses": 0,
       "collection_errors": 0
     },
@@ -57,19 +57,126 @@
       "name": "카카오 주소 좌표",
       "url": "https://developers.kakao.com/docs/ko/kakaomap/rest-api",
       "status": "partial",
-      "checked_at": "2026-11-25T12:54:10.616119+09:00",
+      "checked_at": "2026-11-26T12:19:26.185274+09:00",
       "last_success_at": null,
       "error_code": "kakao_exact_address_not_found",
       "message": "kakao_exact_address_not_found",
       "records_count": 12,
       "collection_status": "ok",
-      "last_collected_at": "2026-11-25T04:01:10.409468+00:00",
-      "collection_responses": 212,
+      "last_collected_at": "2026-11-26T03:26:24.000654+00:00",
+      "collection_responses": 188,
       "collection_cached_responses": 0,
       "collection_errors": 0
     }
   ],
   "listings": [
+    {
+      "id": "gg_277247811",
+      "name": "남한산성입구역 한신더휴 아르크엘",
+      "address": "성남시 중원구 금광동 4071 번지 일원",
+      "region": "성남시",
+      "district": "중원구",
+      "housing_type": "unknown",
+      "status": "upcoming",
+      "apply_start_at": "2026-11-30T09:00:00+09:00",
+      "apply_end_at": "2026-12-04T18:00:00+09:00",
+      "deadline_note": null,
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=277247811",
+      "notice_updated_at": "2026-11-25",
+      "updated_at": "2026-11-26T12:18:05.749670+09:00",
+      "eligibility": {
+        "yongin_status": "eligible",
+        "disability_scope": "both",
+        "evidence_url": "https://www.gg.go.kr/cmmn/download.do?idx=907092",
+        "evidence_text": "○ 신청자격 및 주택소유여부 확인대상자 : 신청마감일 당시(’26. 12. 4.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람",
+        "scoring_note": "장애 정도 배점과 신청 제한은 별개이며 개인별 최종 자격을 보장하지 않습니다.",
+        "conditions": [
+          "신청마감일 당시(’26. 12. 4.) 경기도 거주 19세 이상 장애인(주택공급 신청자)과 ‘세대’가 무주택인 자 ‘세대’란 다음 각 목의 사람으로 구성된 집단을 말함 가. 주택공급신청자 나. 주택공급신청자의 배우자 다. 주택공급신청자의 직계존속(배우자의 직계존속 포함)으로서 주택공급 신청자 또는 주택공급신청자의 배우자와 세대별 주민등록표에 등재되어 있는 사람 라. 주택공급신청자의 직계비속(직계비속의 배우자 포함)이면서 주택공급신청자 또는 주택공급 신청자의 배우자와 세대별 주민등록표상에 함께 등재되어 있는 사람 마. 주택공급신청자의 배우자의 직계비속이면서 주택공급신청자와 세대별주민등록표상에 함께 등재되어 있는 사람"
+        ],
+        "rule_version": "1.1.0"
+      },
+      "units": [
+        {
+          "type_id": "59",
+          "area_sqm": null,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "75B",
+          "area_sqm": 75.99,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        },
+        {
+          "type_id": "84B",
+          "area_sqm": 84.99,
+          "allocation_count": 1,
+          "sale_price_krw": null,
+          "sale_price_basis": "unknown",
+          "sale_price_evidence_url": null,
+          "comparison_median_krw": null,
+          "estimated_gap_krw": null,
+          "gap_rate_pct": null,
+          "comparables_count": 0,
+          "confidence": "unavailable",
+          "analysis_reason": "sale_price_and_exclusive_area_pending",
+          "analysis_policy_version": null,
+          "comparables": []
+        }
+      ],
+      "attachments": [
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=907092",
+          "name": "붙임2) 성남시 「남한산성입구역 한신더휴 아르크엘」 장애인 특별공급 안내 및 관련서식.hwpx",
+          "parse_status": "parsed",
+          "error_code": null
+        },
+        {
+          "url": "https://www.gg.go.kr/cmmn/download.do?idx=907093",
+          "name": "붙임3) 성남시 「남한산성입구역 한신더휴 아르크엘」 기관추천 안내문.pdf",
+          "parse_status": "parsed",
+          "error_code": null
+        }
+      ],
+      "notice_history": [
+        {
+          "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=277247811",
+          "published_on": "2026-11-25",
+          "content_sha256": "d3e6314143c6d7775958163dd98d4a040d3aefbb26c61ce238405c2729f3865f",
+          "observed_at": "2026-11-26T12:18:05.749670+09:00",
+          "change_type": "initial"
+        }
+      ],
+      "housing_manage_no": null,
+      "pblanc_no": null,
+      "location_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_277247833",
       "name": "두산위브 더 포레 성남",
@@ -77,13 +184,13 @@
       "region": "성남시",
       "district": "중원구",
       "housing_type": "unknown",
-      "status": "upcoming",
+      "status": "open",
       "apply_start_at": "2026-11-26T09:00:00+09:00",
       "apply_end_at": "2026-12-01T18:00:00+09:00",
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=277247833",
       "notice_updated_at": "2026-11-24",
-      "updated_at": "2026-11-25T12:52:49.819586+09:00",
+      "updated_at": "2026-11-26T12:18:05.749670+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -305,7 +412,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276760914",
       "notice_updated_at": "2026-11-20",
-      "updated_at": "2026-11-24T14:04:14.069244+09:00",
+      "updated_at": "2026-11-26T12:18:05.749670+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -632,7 +739,7 @@
       "deadline_note": null,
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276517484",
       "notice_updated_at": "2026-11-19",
-      "updated_at": "2026-11-25T12:52:49.819586+09:00",
+      "updated_at": "2026-11-26T12:18:05.749670+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -824,13 +931,13 @@
       "region": null,
       "district": null,
       "housing_type": "unknown",
-      "status": "unknown",
+      "status": "closed",
       "apply_start_at": "2026-11-19",
       "apply_end_at": "2026-11-25",
       "deadline_note": "정확한 마감 시각은 공식 안내 확인 필요",
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=276030850",
       "notice_updated_at": "2026-11-17",
-      "updated_at": "2026-11-25T12:52:49.819586+09:00",
+      "updated_at": "2026-11-26T12:18:05.749670+09:00",
       "eligibility": {
         "yongin_status": "eligible",
         "disability_scope": "both",
@@ -940,7 +1047,7 @@
       "region": null,
       "district": null,
       "housing_type": "unknown",
-      "status": "unknown",
+      "status": "closed",
       "apply_start_at": "2026-11-19",
       "apply_end_at": "2026-11-25",
       "deadline_note": "정확한 마감 시각은 공식 안내 확인 필요",
@@ -1583,7 +1690,7 @@
               "build_year": 2022,
               "distance_m": 1108.4,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "863e04b93129ed7b1dda6d8d",
@@ -1595,7 +1702,7 @@
               "build_year": 2022,
               "distance_m": 1108.4,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "03f5b4ee554e8ed51e9e7610",
@@ -1607,7 +1714,7 @@
               "build_year": 2022,
               "distance_m": 1108.4,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "59209edfde10add694574643",
@@ -1619,7 +1726,7 @@
               "build_year": 2022,
               "distance_m": 1108.4,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "0959020f69eab81246a571cc",
@@ -1631,7 +1738,7 @@
               "build_year": 2022,
               "distance_m": 1108.4,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ab5a96d4306f9d963112a979",
@@ -1643,7 +1750,7 @@
               "build_year": 2022,
               "distance_m": 1108.4,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "72b34748fe04a503be56d750",
@@ -1655,7 +1762,7 @@
               "build_year": 2022,
               "distance_m": 1108.4,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "3a602b73a8ee93ea54a1010e",
@@ -1667,7 +1774,7 @@
               "build_year": 2022,
               "distance_m": 1108.4,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "541d1343a0abc3b48bcc56df",
@@ -1679,7 +1786,7 @@
               "build_year": 2022,
               "distance_m": 1108.4,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -10469,7 +10576,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10481,7 +10588,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10493,7 +10600,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10505,7 +10612,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10517,7 +10624,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10529,7 +10636,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10541,7 +10648,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1b9e6a5a68f15914bd403f91",
@@ -10553,7 +10660,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -10582,7 +10689,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10594,7 +10701,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10606,7 +10713,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10618,7 +10725,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10630,7 +10737,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10642,7 +10749,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10654,7 +10761,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1b9e6a5a68f15914bd403f91",
@@ -10666,7 +10773,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -10695,7 +10802,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10707,7 +10814,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10719,7 +10826,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10731,7 +10838,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10743,7 +10850,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10755,7 +10862,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10767,7 +10874,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1b9e6a5a68f15914bd403f91",
@@ -10779,7 +10886,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -10808,7 +10915,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10820,7 +10927,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10832,7 +10939,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10844,7 +10951,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10856,7 +10963,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10868,7 +10975,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10880,7 +10987,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1b9e6a5a68f15914bd403f91",
@@ -10892,7 +10999,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -10921,7 +11028,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -10933,7 +11040,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -10945,7 +11052,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -10957,7 +11064,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -10969,7 +11076,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -10981,7 +11088,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -10993,7 +11100,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1b9e6a5a68f15914bd403f91",
@@ -11005,7 +11112,7 @@
               "build_year": 2022,
               "distance_m": 1685.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         }
@@ -11097,7 +11204,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -11109,7 +11216,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -11121,7 +11228,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -11133,7 +11240,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -11145,7 +11252,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -11157,7 +11264,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -11169,7 +11276,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1b9e6a5a68f15914bd403f91",
@@ -11181,7 +11288,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -11210,7 +11317,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "18d026abe3251303374907d4",
@@ -11222,7 +11329,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1d381d1e014fb46ddeb5301b",
@@ -11234,7 +11341,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e7c67f6d1d0d768613dd2181",
@@ -11246,7 +11353,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "324cc8074db0effa5602a01d",
@@ -11258,7 +11365,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "c89eeff631e5492b1c7d4d05",
@@ -11270,7 +11377,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "255a458e44cf5e36967ec3b7",
@@ -11282,7 +11389,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "1b9e6a5a68f15914bd403f91",
@@ -11294,7 +11401,7 @@
               "build_year": 2022,
               "distance_m": 1688.7,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         }
@@ -11385,7 +11492,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11397,7 +11504,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11409,7 +11516,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11421,7 +11528,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11433,7 +11540,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11445,7 +11552,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -11457,7 +11564,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -11486,7 +11593,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11498,7 +11605,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11510,7 +11617,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11522,7 +11629,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11534,7 +11641,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11546,7 +11653,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -11558,7 +11665,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -11587,7 +11694,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11599,7 +11706,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11611,7 +11718,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11623,7 +11730,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11635,7 +11742,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11647,7 +11754,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -11659,7 +11766,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -11688,7 +11795,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11700,7 +11807,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11712,7 +11819,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11724,7 +11831,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11736,7 +11843,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11748,7 +11855,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -11760,7 +11867,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -11789,7 +11896,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11801,7 +11908,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11813,7 +11920,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11825,7 +11932,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11837,7 +11944,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11849,7 +11956,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -11861,7 +11968,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -11890,7 +11997,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -11902,7 +12009,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -11914,7 +12021,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -11926,7 +12033,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -11938,7 +12045,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -11950,7 +12057,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -11962,7 +12069,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -11991,7 +12098,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12003,7 +12110,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12015,7 +12122,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -12027,7 +12134,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12039,7 +12146,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -12051,7 +12158,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -12063,7 +12170,7 @@
               "build_year": 2024,
               "distance_m": 585.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         }
@@ -12480,7 +12587,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "055c1f05b938253ddf129dee",
@@ -12492,7 +12599,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12504,7 +12611,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12516,7 +12623,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "539dc144e2bd08f6e015ceb7",
@@ -12528,7 +12635,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "18da0e2a21b0199d8ad9ead1",
@@ -12540,7 +12647,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "3dfec72e5dbc2be10544e47a",
@@ -12552,7 +12659,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12564,7 +12671,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "3a1d3c2fd8a98e14efe0feb3",
@@ -12576,7 +12683,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "52c6ad169ff65d35fe234487",
@@ -12588,7 +12695,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -12617,7 +12724,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12629,7 +12736,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12641,7 +12748,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -12653,7 +12760,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12665,7 +12772,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -12677,7 +12784,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -12689,7 +12796,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -12718,7 +12825,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12730,7 +12837,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12742,7 +12849,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -12754,7 +12861,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12766,7 +12873,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -12778,7 +12885,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -12790,7 +12897,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -12819,7 +12926,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12831,7 +12938,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12843,7 +12950,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -12855,7 +12962,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12867,7 +12974,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -12879,7 +12986,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -12891,7 +12998,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -12920,7 +13027,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "099647971f23517d23487fae",
@@ -12932,7 +13039,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "2990340c1f0a75751d792605",
@@ -12944,7 +13051,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "073d14ecfc063b7a542d8d6e",
@@ -12956,7 +13063,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "9ffe2f2220b5589dc61927fa",
@@ -12968,7 +13075,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "d2873fd0741fef0416c46762",
@@ -12980,7 +13087,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "ff5e389107ac5c123261ac4f",
@@ -12992,7 +13099,7 @@
               "build_year": 2024,
               "distance_m": 1353.1,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         }
@@ -13097,7 +13204,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e68516f7988cd39c6052c4b0",
@@ -13109,7 +13216,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "cc433a0882239ef070908ad2",
@@ -13121,7 +13228,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "21806c2efddcb4e67015fbf5",
@@ -13133,7 +13240,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e5c7b9747fa1595d37d4a5ed",
@@ -13145,7 +13252,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "72ea8d0aa0cf46b2f2d7b6b1",
@@ -13157,7 +13264,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         },
@@ -13186,7 +13293,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e68516f7988cd39c6052c4b0",
@@ -13198,7 +13305,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "cc433a0882239ef070908ad2",
@@ -13210,7 +13317,7 @@
               "build_year": 2019,
               "distance_m": 607.2,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "21806c2efddcb4e67015fbf5",
@@ -13222,7 +13329,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "e5c7b9747fa1595d37d4a5ed",
@@ -13234,7 +13341,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             },
             {
               "id": "72ea8d0aa0cf46b2f2d7b6b1",
@@ -13246,7 +13353,7 @@
               "build_year": 2024,
               "distance_m": 160.5,
               "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
-              "collected_at": "2026-11-24T14:05:34.457231+09:00"
+              "collected_at": "2026-11-26T12:19:26.185274+09:00"
             }
           ]
         }

@@ -1,21 +1,21 @@
 {
-  "observed_at": "2026-11-25T12:54:10.616119+09:00",
-  "catalog_cutoff": "2025-11-25",
+  "observed_at": "2026-11-26T12:19:26.185274+09:00",
+  "catalog_cutoff": "2025-11-26",
   "catalog_records": 362,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/45542915619",
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/45747966282",
   "metrics": {
-    "notices": 47,
-    "project_records": 49,
+    "notices": 48,
+    "project_records": 50,
     "matched_projects": 23,
-    "units": 163,
+    "units": 166,
     "priced_units": 79,
-    "exact_area_units": 109,
+    "exact_area_units": 111,
     "coordinate_projects": 12,
     "verified_trade_records": 223,
     "gap_units": 33
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 13,
+    "공식 정보가 아직 없음": 14,
     "추가 개발 필요": 14,
     "실제 연결 성공": 22
   },
@@ -24,6 +24,74 @@
     "이름 유사도 후보는 자동 확정에 사용하지 않음"
   ],
   "records": [
+    {
+      "id": "gg_277247811",
+      "notice_id": "gg_277247811",
+      "name": "남한산성입구역 한신더휴 아르크엘",
+      "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=277247811",
+      "stages": {
+        "notice": "verified",
+        "project": "official_project_not_in_catalog"
+      },
+      "category": "공식 정보가 아직 없음",
+      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
+      "catalog_window_only": true,
+      "units": [
+        {
+          "type": "59",
+          "price": null,
+          "exclusive_area": null,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "75B",
+          "price": null,
+          "exclusive_area": 75.99,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        },
+        {
+          "type": "84B",
+          "price": null,
+          "exclusive_area": 84.99,
+          "allocation": 1,
+          "gap": null,
+          "code": "sale_price_and_exclusive_area_pending",
+          "label": "공식 분양가·전용면적 연결 대기"
+        }
+      ],
+      "review_candidates": [
+        {
+          "name": "의왕역 한신더휴",
+          "address": "경기도 의왕시 삼동 244-1번지 일원",
+          "manage_no": "2026000377",
+          "similarity": 0.455
+        },
+        {
+          "name": "고양 한신더휴 퍼스트원",
+          "address": "경기도 고양시 덕양구 행신동 173-1번지 일원",
+          "manage_no": "2026000585",
+          "similarity": 0.32
+        },
+        {
+          "name": "창원 한신더휴 메가센텀",
+          "address": "경상남도 창원시 마산회원구 회원동 480-31번지 일대",
+          "manage_no": "2026000282",
+          "similarity": 0.32
+        }
+      ],
+      "coordinate_verified": false,
+      "collection_issues": [
+        "announcement_only_update",
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
+      ]
+    },
     {
       "id": "gg_277247833",
       "notice_id": "gg_277247833",
