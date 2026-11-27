@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-26T12:19:26.185274+09:00",
-  "catalog_cutoff": "2025-11-26",
-  "catalog_records": 362,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/45747966282",
+  "observed_at": "2026-11-27T12:24:46.477101+09:00",
+  "catalog_cutoff": "2025-11-27",
+  "catalog_records": 364,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/45933834745",
   "metrics": {
     "notices": 48,
     "project_records": 50,
@@ -332,6 +332,12 @@
       ],
       "review_candidates": [
         {
+          "name": "병점복합타운 주복1블록 공공분양",
+          "address": "경기도 화성시 병점구 병점동, 진안동 일원 병점복합타운 내 주복1블록",
+          "manage_no": "2026000611",
+          "similarity": 0.75
+        },
+        {
           "name": "과천주암지구 C1블록 공공분양주택(본청약)",
           "address": "경기도 과천시 주암동, 과천동 일원 과천주암지구 내 C1블록",
           "manage_no": "2025000659",
@@ -342,12 +348,6 @@
           "address": "행정중심복합도시 5-1생활권 L1블록(세종특별자치시 합강동 일원)",
           "manage_no": "2025000625",
           "similarity": 0.435
-        },
-        {
-          "name": "남양주왕숙지구 B-17블록 공공분양주택(본청약)",
-          "address": "경기도 남양주시 진접읍, 진건읍, 퇴계원읍 일원 남양주왕숙 공공주택지구 내 B-17블록",
-          "manage_no": "2025000604",
-          "similarity": 0.421
         }
       ],
       "coordinate_verified": false,
@@ -645,16 +645,16 @@
           "similarity": 0.5
         },
         {
+          "name": "병점복합타운 주복1블록 공공분양",
+          "address": "경기도 화성시 병점구 병점동, 진안동 일원 병점복합타운 내 주복1블록",
+          "manage_no": "2026000611",
+          "similarity": 0.385
+        },
+        {
           "name": "울산다운2지구 A-10블록 공공분양주택",
           "address": "울산광역시 울주군 범서읍 서사리 일원 울산다운2 공공주택지구내 A-10블록",
           "manage_no": "2025000649",
           "similarity": 0.381
-        },
-        {
-          "name": "시흥거모지구 S-1블록 공공분양(본청약)",
-          "address": "경기도 시흥시 거모동, 군자동 일원 시흥거모 공공주택지구 내 S-1블록",
-          "manage_no": "2026000531",
-          "similarity": 0.348
         }
       ],
       "coordinate_verified": false,
@@ -727,8 +727,7 @@
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
-        "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "attachment_text_extracted"
       ]
     },
     {
@@ -1085,7 +1084,7 @@
           "price": 725000000,
           "exclusive_area": 59.9942,
           "allocation": 1,
-          "gap": -93000000.0,
+          "gap": -88000000.0,
           "code": "verified",
           "label": "실제 연결 성공"
         }
