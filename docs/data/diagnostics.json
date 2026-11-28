@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-27T12:24:46.477101+09:00",
-  "catalog_cutoff": "2025-11-27",
-  "catalog_records": 364,
-  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/45933834745",
+  "observed_at": "2026-11-28T12:01:41.440386+09:00",
+  "catalog_cutoff": "2025-11-28",
+  "catalog_records": 370,
+  "evidence_run": "https://github.com/Gyunghihi0-0/HOME_SUPPLY/actions/runs/46100698277",
   "metrics": {
     "notices": 48,
     "project_records": 50,
@@ -11,12 +11,12 @@
     "priced_units": 79,
     "exact_area_units": 111,
     "coordinate_projects": 12,
-    "verified_trade_records": 223,
-    "gap_units": 33
+    "verified_trade_records": 0,
+    "gap_units": 0
   },
   "classification_counts": {
-    "공식 정보가 아직 없음": 14,
-    "추가 개발 필요": 14,
+    "공식 정보가 아직 없음": 13,
+    "추가 개발 필요": 15,
     "실제 연결 성공": 22
   },
   "limitations": [
@@ -712,22 +712,23 @@
           "similarity": 0.513
         },
         {
+          "name": "용인반도체클러스터 동일하이빌 파크밸리 2단지(D1-2블록)",
+          "address": "경기도 용인시 처인구 원삼면 용인 반도체 클러스터 일반산업단지 D1-2BL",
+          "manage_no": "2026000612",
+          "similarity": 0.476
+        },
+        {
           "name": "중화역 라온프라이빗 센트로",
           "address": "서울특별시 중랑구 중화동 303-9번지 일원",
           "manage_no": "2026000497",
           "similarity": 0.429
-        },
-        {
-          "name": "용인 푸르지오 원클러스터파크",
-          "address": "경기도 용인시 처인구 양지면 양지리 산97-12번지 일원",
-          "manage_no": "2025000524",
-          "similarity": 0.414
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
-        "attachment_text_extracted"
+        "attachment_text_extracted",
+        "official_project_not_in_catalog"
       ]
     },
     {
@@ -785,11 +786,11 @@
       "notice_url": "https://www.gg.go.kr/bbs/boardView.do?bsIdx=504&menuId=1878&bIdx=274329605",
       "stages": {
         "notice": "verified",
-        "project": "official_project_not_in_catalog"
+        "project": "official_project_address_mismatch"
       },
-      "category": "공식 정보가 아직 없음",
-      "project_label": "조회 기간의 청약홈 API에 해당 사업 없음 · 미공고 확정 아님",
-      "catalog_window_only": true,
+      "category": "추가 개발 필요",
+      "project_label": "공식 주소·지번 근거 불일치 또는 불충분",
+      "catalog_window_only": false,
       "units": [
         {
           "type": "59A",
@@ -830,6 +831,12 @@
       ],
       "review_candidates": [
         {
+          "name": "용인반도체클러스터 동일하이빌 파크밸리 2단지(D1-2블록)",
+          "address": "경기도 용인시 처인구 원삼면 용인 반도체 클러스터 일반산업단지 D1-2BL",
+          "manage_no": "2026000612",
+          "similarity": 0.894
+        },
+        {
           "name": "용인반도체클러스터 동일하이빌 파크밸리(D1-1블록)",
           "address": "경기도 용인시 처인구 원삼면 용인 반도체 클러스터 일반산업단지 D1-1BL",
           "manage_no": "2026000371",
@@ -840,19 +847,13 @@
           "address": "경기도 용인시 처인구 양지면 양지리 산97-12번지 일원",
           "manage_no": "2025000524",
           "similarity": 0.471
-        },
-        {
-          "name": "천안 동일하이빌 파크레인",
-          "address": "충청남도 천안시 서북구 직산읍 삼은리 78-2번지 일원",
-          "manage_no": "2026000078",
-          "similarity": 0.438
         }
       ],
       "coordinate_verified": false,
       "collection_issues": [
         "announcement_only_update",
         "attachment_text_extracted",
-        "official_project_not_in_catalog"
+        "official_project_address_mismatch"
       ]
     },
     {
@@ -1014,9 +1015,9 @@
           "price": 644720000,
           "exclusive_area": 59.8728,
           "allocation": 1,
-          "gap": -144720000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "71",
@@ -1024,8 +1025,8 @@
           "exclusive_area": 71.9348,
           "allocation": 1,
           "gap": null,
-          "code": "fewer_than_three_verified_trades",
-          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84",
@@ -1033,8 +1034,8 @@
           "exclusive_area": 84.9614,
           "allocation": 1,
           "gap": null,
-          "code": "fewer_than_three_verified_trades",
-          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1084,9 +1085,9 @@
           "price": 725000000,
           "exclusive_area": 59.9942,
           "allocation": 1,
-          "gap": -88000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1263,18 +1264,18 @@
           "price": 691000000,
           "exclusive_area": 84.9904,
           "allocation": 9,
-          "gap": -14500000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 691000000,
           "exclusive_area": 84.9732,
           "allocation": 4,
-          "gap": -14500000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1791,36 +1792,36 @@
           "price": 708750000,
           "exclusive_area": 84.9424,
           "allocation": 8,
-          "gap": -213750000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 700950000,
           "exclusive_area": 84.9927,
           "allocation": 3,
-          "gap": -205950000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
           "price": 724500000,
           "exclusive_area": 84.9839,
           "allocation": 3,
-          "gap": -229500000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
           "price": 723500000,
           "exclusive_area": 84.9199,
           "allocation": 2,
-          "gap": -228500000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -1848,7 +1849,6 @@
         "analysis_deferred",
         "attachment_text_extracted",
         "district_coverage_sampled",
-        "some_comparison_locations_unverified",
         "target_build_year_uses_official_planned_move_year"
       ]
     },
@@ -2192,9 +2192,9 @@
           "price": 771100000,
           "exclusive_area": 74.9857,
           "allocation": 1,
-          "gap": 528900000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -2222,7 +2222,6 @@
         "announcement_only_update",
         "attachment_text_extracted",
         "district_coverage_sampled",
-        "some_comparison_locations_unverified",
         "target_build_year_uses_official_planned_move_year"
       ]
     },
@@ -2244,45 +2243,45 @@
           "price": 1714200000,
           "exclusive_area": 84.9916,
           "allocation": 7,
-          "gap": -276700000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 1716800000,
           "exclusive_area": 84.9979,
           "allocation": 1,
-          "gap": -279300000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
           "price": 1713200000,
           "exclusive_area": 84.997,
           "allocation": 3,
-          "gap": -275700000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
           "price": 1713800000,
           "exclusive_area": 84.9948,
           "allocation": 3,
-          "gap": -276300000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84E",
           "price": 1715200000,
           "exclusive_area": 84.9975,
           "allocation": 3,
-          "gap": -277700000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -2334,18 +2333,18 @@
           "price": 1712100000,
           "exclusive_area": 84.997,
           "allocation": 4,
-          "gap": -274600000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84F",
           "price": 1715300000,
           "exclusive_area": 84.9998,
           "allocation": 2,
-          "gap": -277800000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -2396,63 +2395,63 @@
           "price": 536000000,
           "exclusive_area": 84.3522,
           "allocation": 5,
-          "gap": -94000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 543000000,
           "exclusive_area": 84.4355,
           "allocation": 3,
-          "gap": -101000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
           "price": 535000000,
           "exclusive_area": 84.1443,
           "allocation": 4,
-          "gap": -93000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
           "price": 539000000,
           "exclusive_area": 84.4447,
           "allocation": 2,
-          "gap": -97000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84E",
           "price": 542000000,
           "exclusive_area": 84.5473,
           "allocation": 5,
-          "gap": -100000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84F",
           "price": 546000000,
           "exclusive_area": 84.8194,
           "allocation": 1,
-          "gap": -104000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84G",
           "price": 532000000,
           "exclusive_area": 84.3216,
           "allocation": 1,
-          "gap": -90000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -2683,10 +2682,10 @@
           "similarity": 0.526
         },
         {
-          "name": "장위 푸르지오 마크원",
-          "address": "서울특별시 성북구 장위동 68-37 일대",
-          "manage_no": "2026000275",
-          "similarity": 0.444
+          "name": "경북도청 푸르지오 퍼스티온",
+          "address": "경상북도 예천군 호명읍 경북도청신도시 2단계 B-10BL ",
+          "manage_no": "2026000592",
+          "similarity": 0.476
         }
       ],
       "coordinate_verified": false,
@@ -2713,45 +2712,45 @@
           "price": 470300000,
           "exclusive_area": 71.8178,
           "allocation": 1,
-          "gap": -53300000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84A",
           "price": 557500000,
           "exclusive_area": 84.9592,
           "allocation": 4,
-          "gap": -115500000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 557200000,
           "exclusive_area": 84.9767,
           "allocation": 1,
-          "gap": -115200000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
           "price": 559700000,
           "exclusive_area": 84.9221,
           "allocation": 1,
-          "gap": -117700000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
           "price": 554500000,
           "exclusive_area": 84.914,
           "allocation": 1,
-          "gap": -112500000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -2801,26 +2800,26 @@
           "exclusive_area": 74.9845,
           "allocation": 1,
           "gap": null,
-          "code": "fewer_than_three_verified_trades",
-          "label": "반경·면적·연식 기준을 충족하는 실거래 최소 3건 미달"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84A",
           "price": 748000000,
           "exclusive_area": 84.9947,
           "allocation": 1,
-          "gap": -233000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 746000000,
           "exclusive_area": 84.8542,
           "allocation": 1,
-          "gap": -231000000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -2871,8 +2870,8 @@
           "exclusive_area": 84.7459,
           "allocation": 1,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
@@ -2880,8 +2879,8 @@
           "exclusive_area": 84.8508,
           "allocation": 2,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84C",
@@ -2889,8 +2888,8 @@
           "exclusive_area": 84.6391,
           "allocation": 1,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84D",
@@ -2898,8 +2897,8 @@
           "exclusive_area": 84.9663,
           "allocation": 2,
           "gap": null,
-          "code": "outlier_review_required",
-          "label": "비교 거래 가격 편차 검토 필요"
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
@@ -3431,27 +3430,27 @@
           "price": 2163000000,
           "exclusive_area": 66.0,
           "allocation": 1,
-          "gap": -633000000,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84B",
           "price": 2958000000,
           "exclusive_area": 84.0,
           "allocation": 1,
-          "gap": -1115500000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         },
         {
           "type": "84G",
           "price": 2920000000,
           "exclusive_area": 84.64,
           "allocation": 1,
-          "gap": -1077500000.0,
-          "code": "verified",
-          "label": "실제 연결 성공"
+          "gap": null,
+          "code": "trade_source_failed",
+          "label": "trade_source_failed"
         }
       ],
       "review_candidates": [
